@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 86422ad5312554ae1974d23e3d1ce3e0
-timeCreated: 1429302727
+guid: d83b5fa58951846c988d3b6108025c04
+timeCreated: 1429304214
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
@@ -11,27 +11,67 @@ ModelImporter:
     100006: Cauldron
     100008: Ingredient_Book
     100010: //RootNode
+    100012: Bottle
+    100014: Cylinder
+    100016: Plant
+    100018: Cheese
+    100020: Cage
+    100022: Chain
+    100024: Floor
+    100026: Book_Yellow
     400000: Apple
     400002: Bookcase
     400004: Bubbling_Acid
     400006: Cauldron
     400008: Ingredient_Book
     400010: //RootNode
+    400012: Bottle
+    400014: Cylinder
+    400016: Plant
+    400018: Cheese
+    400020: Cage
+    400022: Chain
+    400024: Floor
+    400026: Book_Yellow
     2300000: Apple
     2300002: Bookcase
     2300004: Bubbling_Acid
     2300006: Cauldron
     2300008: Ingredient_Book
+    2300010: Bottle
+    2300012: Cylinder
+    2300014: Plant
+    2300016: Cheese
+    2300018: Cage
+    2300020: Chain
+    2300022: Floor
+    2300024: Book_Yellow
     3300000: Apple
     3300002: Bookcase
     3300004: Bubbling_Acid
     3300006: Cauldron
     3300008: Ingredient_Book
+    3300010: Bottle
+    3300012: Cylinder
+    3300014: Plant
+    3300016: Cheese
+    3300018: Cage
+    3300020: Chain
+    3300022: Floor
+    3300024: Book_Yellow
     4300000: Apple
     4300002: Bookcase
     4300004: Cauldron
     4300006: Bubbling_Acid
     4300008: Ingredient_Book
+    4300010: Bottle
+    4300012: Cylinder
+    4300014: Plant
+    4300016: Cheese
+    4300018: Cage
+    4300020: Chain
+    4300022: Floor
+    4300024: Book_Yellow
     7400000: Default Take
     9500000: //RootNode
   materials:

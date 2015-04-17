@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Purple_Medium
-  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  m_Shader: {fileID: 7, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
   m_CustomRenderQueue: -1
@@ -138,7 +138,7 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: .764299989, g: .385699987, b: .773299992, a: 1}
+        second: {r: .857599974, g: .425399989, b: .873300016, a: 1}
       data:
         first:
           name: _EmissionColorUI
