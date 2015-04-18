@@ -21,6 +21,9 @@ public class Visitor : MonoBehaviour {
 	public Vector3 localPositionAtPrevLobby;
 	public Inventory inventory { get; private set; }
 	public ObtainableItem itemInHand { get; private set; }
+	public Transform book;
+	public Transform bookReadPoint;
+	public Transform bookHidePoint;
 
 	void Awake() {
 		DontDestroyOnLoad(gameObject);
@@ -54,6 +57,7 @@ public class Visitor : MonoBehaviour {
 		UpdateItemInHand();
 		UpdateInteractions();
 		UpdateFocusIndicator();
+		UpdateBook();
 		CheckObjects();
 
 		currentSpeedPerUnit = Vector3.Distance(transform.position, prevPosition) / Time.deltaTime;
@@ -67,6 +71,16 @@ public class Visitor : MonoBehaviour {
 			
 			var eulerAnhorAngle = sight.anchor.eulerAngles;
 			return eulerAnhorAngle.x >= 22 && eulerAnhorAngle.x <= 120 ? true : false;
+		}
+	}
+
+	bool isLookingAtBookReadPosition {
+		get {
+			if (sight.anchor == null)
+				return false;
+			
+			var eulerAnhorAngle = sight.anchor.eulerAngles;
+			return eulerAnhorAngle.x >= 22 && eulerAnhorAngle.x <= 120 && eulerAnhorAngle.y >= 250 && eulerAnhorAngle.y <= 330 ? true : false;
 		}
 	}
 
@@ -99,6 +113,16 @@ public class Visitor : MonoBehaviour {
 		} else {
 			sight.focusOnTargetAlpha = 0;
 		}
+	}
+
+	void UpdateBook() {
+		var targetPosition = bookHidePoint.position;
+
+		if (isLookingAtBookReadPosition) {
+			targetPosition = bookReadPoint.position;
+		}
+
+		book.position = Vector3.Lerp(book.position, targetPosition, Time.deltaTime * 3);
 	}
 
 	void UpdateItemInHand() {

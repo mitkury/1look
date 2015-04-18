@@ -15,9 +15,20 @@ public abstract class InteractiveThing : MonoBehaviour {
 	void Start () {
 		interactions = GetComponents<Interaction>().ToList();
 
+		/*
 		if (transform.root != null) {
 			transform.root.SendMessage("Add", this, SendMessageOptions.DontRequireReceiver);
 		}
+		*/
+
+		StartCoroutine(AddToPlaceCo());
+	}
+
+	IEnumerator AddToPlaceCo() {
+		while (King.placeManager.currentPlace == null)
+			yield return null;
+
+		King.placeManager.currentPlace.Add(this);
 	}
 
 }
