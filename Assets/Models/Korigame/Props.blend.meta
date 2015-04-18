@@ -38,6 +38,8 @@ ModelImporter:
     100060: Socks
     100062: Chair
     100064: Sock
+    100066: Platform
+    100068: Walls
     400000: Apple
     400002: Bookcase
     400004: Bubbling_Acid
@@ -71,6 +73,8 @@ ModelImporter:
     400060: Socks
     400062: Chair
     400064: Sock
+    400066: Platform
+    400068: Walls
     2300000: Apple
     2300002: Bookcase
     2300004: Bubbling_Acid
@@ -103,6 +107,8 @@ ModelImporter:
     2300058: Socks
     2300060: Chair
     2300062: Sock
+    2300064: Platform
+    2300066: Walls
     3300000: Apple
     3300002: Bookcase
     3300004: Bubbling_Acid
@@ -135,6 +141,8 @@ ModelImporter:
     3300058: Socks
     3300060: Chair
     3300062: Sock
+    3300064: Platform
+    3300066: Walls
     4300000: Apple
     4300002: Bookcase
     4300004: Cauldron
@@ -167,6 +175,8 @@ ModelImporter:
     4300058: Socks
     4300060: Chair
     4300062: Sock
+    4300064: Platform
+    4300066: Walls
     7400000: Default Take
     9500000: //RootNode
   materials:
