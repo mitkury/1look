@@ -46,6 +46,7 @@ ModelImporter:
     100076: Fish
     100078: Saw
     100080: Test_Tube_Set
+    100082: Candle
     400000: Apple
     400002: Bookcase
     400004: Bubbling_Acid
@@ -87,6 +88,7 @@ ModelImporter:
     400076: Fish
     400078: Saw
     400080: Test_Tube_Set
+    400082: Candle
     2300000: Apple
     2300002: Bookcase
     2300004: Bubbling_Acid
@@ -127,6 +129,7 @@ ModelImporter:
     2300074: Fish
     2300076: Saw
     2300078: Test_Tube_Set
+    2300080: Candle
     3300000: Apple
     3300002: Bookcase
     3300004: Bubbling_Acid
@@ -167,6 +170,7 @@ ModelImporter:
     3300074: Fish
     3300076: Saw
     3300078: Test_Tube_Set
+    3300080: Candle
     4300000: Apple
     4300002: Bookcase
     4300004: Cauldron
@@ -207,6 +211,7 @@ ModelImporter:
     4300074: Saw
     4300076: Fish
     4300078: Bottle_Narrow
+    4300080: Candle
     7400000: Default Take
     9500000: //RootNode
   materials:
