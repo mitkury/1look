@@ -40,6 +40,12 @@ ModelImporter:
     100064: Sock
     100066: Platform
     100068: Walls
+    100070: Skull
+    100072: Ladder
+    100074: Bottle_Narrow
+    100076: Fish
+    100078: Saw
+    100080: Test_Tube_Set
     400000: Apple
     400002: Bookcase
     400004: Bubbling_Acid
@@ -75,6 +81,12 @@ ModelImporter:
     400064: Sock
     400066: Platform
     400068: Walls
+    400070: Skull
+    400072: Ladder
+    400074: Bottle_Narrow
+    400076: Fish
+    400078: Saw
+    400080: Test_Tube_Set
     2300000: Apple
     2300002: Bookcase
     2300004: Bubbling_Acid
@@ -109,6 +121,12 @@ ModelImporter:
     2300062: Sock
     2300064: Platform
     2300066: Walls
+    2300068: Skull
+    2300070: Ladder
+    2300072: Bottle_Narrow
+    2300074: Fish
+    2300076: Saw
+    2300078: Test_Tube_Set
     3300000: Apple
     3300002: Bookcase
     3300004: Bubbling_Acid
@@ -143,6 +161,12 @@ ModelImporter:
     3300062: Sock
     3300064: Platform
     3300066: Walls
+    3300068: Skull
+    3300070: Ladder
+    3300072: Bottle_Narrow
+    3300074: Fish
+    3300076: Saw
+    3300078: Test_Tube_Set
     4300000: Apple
     4300002: Bookcase
     4300004: Cauldron
@@ -177,6 +201,12 @@ ModelImporter:
     4300062: Sock
     4300064: Platform
     4300066: Walls
+    4300068: Skull
+    4300070: Ladder
+    4300072: Test_Tube_Set
+    4300074: Saw
+    4300076: Fish
+    4300078: Bottle_Narrow
     7400000: Default Take
     9500000: //RootNode
   materials:
