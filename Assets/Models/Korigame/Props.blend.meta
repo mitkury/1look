@@ -19,6 +19,18 @@ ModelImporter:
     100022: Chain
     100024: Floor
     100026: Book_Yellow
+    100028: Poster
+    100030: Rug
+    100032: Cube
+    100034: Brick_Detail
+    100036: Cube_007
+    100038: Cube_011
+    100040: Cylinder_007
+    100042: Shelf
+    100044: Barrel
+    100046: Board
+    100048: Pallet
+    100050: Wall
     400000: Apple
     400002: Bookcase
     400004: Bubbling_Acid
@@ -33,6 +45,18 @@ ModelImporter:
     400022: Chain
     400024: Floor
     400026: Book_Yellow
+    400028: Poster
+    400030: Rug
+    400032: Cube
+    400034: Brick_Detail
+    400036: Cube_007
+    400038: Cube_011
+    400040: Cylinder_007
+    400042: Shelf
+    400044: Barrel
+    400046: Board
+    400048: Pallet
+    400050: Wall
     2300000: Apple
     2300002: Bookcase
     2300004: Bubbling_Acid
@@ -46,6 +70,18 @@ ModelImporter:
     2300020: Chain
     2300022: Floor
     2300024: Book_Yellow
+    2300026: Poster
+    2300028: Rug
+    2300030: Cube
+    2300032: Brick_Detail
+    2300034: Cube_007
+    2300036: Cube_011
+    2300038: Cylinder_007
+    2300040: Shelf
+    2300042: Barrel
+    2300044: Board
+    2300046: Pallet
+    2300048: Wall
     3300000: Apple
     3300002: Bookcase
     3300004: Bubbling_Acid
@@ -59,6 +95,18 @@ ModelImporter:
     3300020: Chain
     3300022: Floor
     3300024: Book_Yellow
+    3300026: Poster
+    3300028: Rug
+    3300030: Cube
+    3300032: Brick_Detail
+    3300034: Cube_007
+    3300036: Cube_011
+    3300038: Cylinder_007
+    3300040: Shelf
+    3300042: Barrel
+    3300044: Board
+    3300046: Pallet
+    3300048: Wall
     4300000: Apple
     4300002: Bookcase
     4300004: Cauldron
@@ -72,6 +120,18 @@ ModelImporter:
     4300020: Chain
     4300022: Floor
     4300024: Book_Yellow
+    4300026: Poster
+    4300028: Rug
+    4300030: Cube
+    4300032: Brick_Detail
+    4300034: Cube_007
+    4300036: Cube_011
+    4300038: Cylinder_007
+    4300040: Shelf
+    4300042: Wall
+    4300044: Board
+    4300046: Pallet
+    4300048: Barrel
     7400000: Default Take
     9500000: //RootNode
   materials:
