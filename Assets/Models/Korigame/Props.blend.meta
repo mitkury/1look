@@ -31,6 +31,13 @@ ModelImporter:
     100046: Board
     100048: Pallet
     100050: Wall
+    100052: Bubble
+    100054: Rock_Small
+    100056: Window_Frame
+    100058: Hat
+    100060: Socks
+    100062: Chair
+    100064: Sock
     400000: Apple
     400002: Bookcase
     400004: Bubbling_Acid
@@ -57,6 +64,13 @@ ModelImporter:
     400046: Board
     400048: Pallet
     400050: Wall
+    400052: Bubble
+    400054: Rock_Small
+    400056: Window_Frame
+    400058: Hat
+    400060: Socks
+    400062: Chair
+    400064: Sock
     2300000: Apple
     2300002: Bookcase
     2300004: Bubbling_Acid
@@ -82,6 +96,13 @@ ModelImporter:
     2300044: Board
     2300046: Pallet
     2300048: Wall
+    2300050: Bubble
+    2300052: Rock_Small
+    2300054: Window_Frame
+    2300056: Hat
+    2300058: Socks
+    2300060: Chair
+    2300062: Sock
     3300000: Apple
     3300002: Bookcase
     3300004: Bubbling_Acid
@@ -107,6 +128,13 @@ ModelImporter:
     3300044: Board
     3300046: Pallet
     3300048: Wall
+    3300050: Bubble
+    3300052: Rock_Small
+    3300054: Window_Frame
+    3300056: Hat
+    3300058: Socks
+    3300060: Chair
+    3300062: Sock
     4300000: Apple
     4300002: Bookcase
     4300004: Cauldron
@@ -132,6 +160,13 @@ ModelImporter:
     4300044: Board
     4300046: Pallet
     4300048: Barrel
+    4300050: Bubble
+    4300052: Window_Frame
+    4300054: Rock_Small
+    4300056: Hat
+    4300058: Socks
+    4300060: Chair
+    4300062: Sock
     7400000: Default Take
     9500000: //RootNode
   materials:
