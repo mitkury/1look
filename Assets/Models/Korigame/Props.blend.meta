@@ -51,6 +51,11 @@ ModelImporter:
     100086: Mushroom
     100088: Red_Potion
     100090: Salt_Bowl
+    100092: Potion_Slot
+    100094: Chest_Base
+    100096: Chest_Lid
+    100098: Lock
+    100100: Key
     400000: Apple
     400002: Bookcase
     400004: Bubbling_Acid
@@ -97,6 +102,11 @@ ModelImporter:
     400086: Mushroom
     400088: Red_Potion
     400090: Salt_Bowl
+    400092: Potion_Slot
+    400094: Chest_Base
+    400096: Chest_Lid
+    400098: Lock
+    400100: Key
     2300000: Apple
     2300002: Bookcase
     2300004: Bubbling_Acid
@@ -142,6 +152,11 @@ ModelImporter:
     2300084: Mushroom
     2300086: Red_Potion
     2300088: Salt_Bowl
+    2300090: Potion_Slot
+    2300092: Chest_Base
+    2300094: Chest_Lid
+    2300096: Lock
+    2300098: Key
     3300000: Apple
     3300002: Bookcase
     3300004: Bubbling_Acid
@@ -187,6 +202,11 @@ ModelImporter:
     3300084: Mushroom
     3300086: Red_Potion
     3300088: Salt_Bowl
+    3300090: Potion_Slot
+    3300092: Chest_Base
+    3300094: Chest_Lid
+    3300096: Lock
+    3300098: Key
     4300000: Apple
     4300002: Bookcase
     4300004: Cauldron
@@ -232,6 +252,11 @@ ModelImporter:
     4300084: Mushroom
     4300086: Salt_Bowl
     4300088: Red_Potion
+    4300090: Potion_Slot
+    4300092: Chest_Base
+    4300094: Chest_Lid
+    4300096: Lock
+    4300098: Key
     7400000: Default Take
     9500000: //RootNode
   materials:
