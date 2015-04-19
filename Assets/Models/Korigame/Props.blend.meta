@@ -56,6 +56,7 @@ ModelImporter:
     100096: Chest_Lid
     100098: Lock
     100100: Key
+    100102: Sand
     400000: Apple
     400002: Bookcase
     400004: Bubbling_Acid
@@ -107,6 +108,7 @@ ModelImporter:
     400096: Chest_Lid
     400098: Lock
     400100: Key
+    400102: Sand
     2300000: Apple
     2300002: Bookcase
     2300004: Bubbling_Acid
@@ -157,6 +159,7 @@ ModelImporter:
     2300094: Chest_Lid
     2300096: Lock
     2300098: Key
+    2300100: Sand
     3300000: Apple
     3300002: Bookcase
     3300004: Bubbling_Acid
@@ -207,6 +210,7 @@ ModelImporter:
     3300094: Chest_Lid
     3300096: Lock
     3300098: Key
+    3300100: Sand
     4300000: Apple
     4300002: Bookcase
     4300004: Cauldron
@@ -257,6 +261,7 @@ ModelImporter:
     4300094: Chest_Lid
     4300096: Lock
     4300098: Key
+    4300100: Sand
     7400000: Default Take
     9500000: //RootNode
   materials:
