@@ -2,6 +2,16 @@
 using System.Collections;
 
 public class ObtainableItem : InteractiveThing {
+	
+	protected override void Init ()
+	{
+		// Add new interactions before initializing the base class.
+		if (GetComponent<CauldronUser>() == null) {
+			gameObject.AddComponent<CauldronUser>();
+		}
+
+		base.Init();
+	}
 
 	public bool IsAbleToInteractWith(InteractiveThing thing) {
 		if (!thing.isAbleToInteract)

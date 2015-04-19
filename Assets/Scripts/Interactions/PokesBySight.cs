@@ -8,6 +8,9 @@ public class PokesBySight : Interaction {
 
 	public override void Interact ()
 	{
+		GetComponent<Rigidbody>().isKinematic = false;
+		GetComponent<Rigidbody>().useGravity = true;
+
 		GetComponent<Rigidbody>().AddForce(force, ForceMode.Impulse);
 
 		//StartCoroutine(ActivateInSecCo(1f));
@@ -22,7 +25,8 @@ public class PokesBySight : Interaction {
 	void OnDrawGizmosSelected() {
 		Gizmos.color = Color.red;
 
-		Gizmos.DrawLine(transform.position, transform.position + force);
+		var length = 1 / GetComponent<Rigidbody>().mass;
+		Gizmos.DrawLine(transform.position, transform.position + force * length);
 	}
 
 }

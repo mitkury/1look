@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 
 public class Cauldron : InteractiveObject {
 
@@ -50,7 +51,9 @@ public class Cauldron : InteractiveObject {
 	}
 
 	IEnumerator GivePotionCo() {
+		yield return new WaitForSeconds(1f);
 		potion.gameObject.SetActive(true);
+		potion.transform.position = pointInside.position;
 		LeanTween.move(potion.gameObject, transform.position + Vector3.up * 1f, 1f).setEase(LeanTweenType.easeOutCubic);
 		yield return new WaitForSeconds(1f);
 		King.visitor.Take(potion);
@@ -61,7 +64,8 @@ public class Cauldron : InteractiveObject {
 	}
 
 	public void Add(ObtainableItem item) {
-		var recipeItem = recipe.items.Find(i => i.itemName == item.name);
+		var name = Regex.Replace(item.name, @"[\d-]", string.Empty);
+		var recipeItem = recipe.items.Find(i => i.itemName.Trim().ToLower() == name.Trim().ToLower());
 
 		if (recipeItem != null) {
 			StartCoroutine(AddItemCo(item, recipeItem));

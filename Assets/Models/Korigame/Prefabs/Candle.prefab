@@ -41,6 +41,7 @@ GameObject:
   - 4: {fileID: 408436}
   - 33: {fileID: 3311366}
   - 23: {fileID: 2314146}
+  - 65: {fileID: 6598856}
   m_Layer: 0
   m_Name: Candle
   m_TagString: Untagged
@@ -148,6 +149,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 143192}
   m_Mesh: {fileID: 4300080, guid: d83b5fa58951846c988d3b6108025c04, type: 3}
+--- !u!65 &6598856
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 143192}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: .159099996, y: .183711991, z: .27274099}
+  m_Center: {x: 0, y: 0, z: -.0526414961}
 --- !u!108 &10863052
 Light:
   m_ObjectHideFlags: 1
@@ -175,7 +188,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_BounceIntensity: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0

@@ -30,4 +30,12 @@ public class King : SingletonComponent<King> {
 		}
 	}
 
+	#if UNITY_EDITOR
+	void Update() {
+		if (Input.GetKeyDown(KeyCode.Space)) {
+			Debug.Break();
+		}
+	}
+	#endif
+
 }

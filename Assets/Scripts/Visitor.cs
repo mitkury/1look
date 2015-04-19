@@ -80,7 +80,7 @@ public class Visitor : MonoBehaviour {
 				return false;
 			
 			var eulerAnhorAngle = sight.anchor.eulerAngles;
-			return eulerAnhorAngle.x >= 22 && eulerAnhorAngle.x <= 120 && eulerAnhorAngle.y >= 250 && eulerAnhorAngle.y <= 330 ? true : false;
+			return eulerAnhorAngle.x >= 22 && eulerAnhorAngle.x <= 120 && eulerAnhorAngle.y >= 265 && eulerAnhorAngle.y <= 355 ? true : false;
 		}
 	}
 
@@ -117,12 +117,15 @@ public class Visitor : MonoBehaviour {
 
 	void UpdateBook() {
 		var targetPosition = bookHidePoint.position;
+		var targetRotation = bookHidePoint.rotation;
 
 		if (isLookingAtBookReadPosition) {
 			targetPosition = bookReadPoint.position;
+			targetRotation = bookReadPoint.rotation;
 		}
 
 		book.position = Vector3.Lerp(book.position, targetPosition, Time.deltaTime * 3);
+		book.rotation = Quaternion.Lerp(book.rotation, targetRotation, Time.deltaTime * 3);
 	}
 
 	void UpdateItemInHand() {
@@ -169,8 +172,11 @@ public class Visitor : MonoBehaviour {
 		}
 
 		itemInHand.transform.position = Vector3.Lerp(itemInHand.transform.position, targetPosition, Time.deltaTime * 3);
-		itemInHand.transform.eulerAngles = targetEulerAngle;
+		//itemInHand.transform.eulerAngles = targetEulerAngle;
 
+		if (Vector3.Distance(itemInHand.transform.position, sight.anchor.position) < 2f) {
+		itemInHand.transform.rotation = Quaternion.Lerp(itemInHand.transform.rotation, Quaternion.identity, Time.deltaTime * 3);
+		}
 	}
 
 	void UpdateInteractions() {

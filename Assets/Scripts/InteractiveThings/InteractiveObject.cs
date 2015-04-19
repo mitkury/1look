@@ -12,10 +12,10 @@ public class InteractiveObject : InteractiveThing {
 	*/
 
 	public void Activate() {
-		if (!isAbleToBeActivatedOnItsOwn)
+		if (!isAbleToBeActivatedOnItsOwn || interactions.Count == 0)
 			return;
 
-		// It looses ability to interact right after its activation. 
+		// It looses the ability to interact right after its activation. 
 		// In order to resume the ability to interact change this variable from an Interaction component.
 		isAbleToInteract = false;
 

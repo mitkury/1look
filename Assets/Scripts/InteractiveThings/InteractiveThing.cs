@@ -13,18 +13,24 @@ public abstract class InteractiveThing : MonoBehaviour {
 	public Transform body;
 
 	void Start () {
-		interactions = GetComponents<Interaction>().ToList();
+		Init();
+	}
 
+	protected virtual void Init() {
+		interactions = GetComponents<Interaction>().ToList();
+		
 		/*
 		if (transform.root != null) {
 			transform.root.SendMessage("Add", this, SendMessageOptions.DontRequireReceiver);
 		}
 		*/
-
 		StartCoroutine(AddToPlaceCo());
 	}
 
 	IEnumerator AddToPlaceCo() {
+		if (King.placeManager == null)
+			yield break;
+
 		while (King.placeManager.currentPlace == null)
 			yield return null;
 
