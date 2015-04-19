@@ -47,6 +47,10 @@ ModelImporter:
     100078: Saw
     100080: Test_Tube_Set
     100082: Candle
+    100084: Broom
+    100086: Mushroom
+    100088: Red_Potion
+    100090: Salt_Bowl
     400000: Apple
     400002: Bookcase
     400004: Bubbling_Acid
@@ -89,6 +93,10 @@ ModelImporter:
     400078: Saw
     400080: Test_Tube_Set
     400082: Candle
+    400084: Broom
+    400086: Mushroom
+    400088: Red_Potion
+    400090: Salt_Bowl
     2300000: Apple
     2300002: Bookcase
     2300004: Bubbling_Acid
@@ -130,6 +138,10 @@ ModelImporter:
     2300076: Saw
     2300078: Test_Tube_Set
     2300080: Candle
+    2300082: Broom
+    2300084: Mushroom
+    2300086: Red_Potion
+    2300088: Salt_Bowl
     3300000: Apple
     3300002: Bookcase
     3300004: Bubbling_Acid
@@ -171,6 +183,10 @@ ModelImporter:
     3300076: Saw
     3300078: Test_Tube_Set
     3300080: Candle
+    3300082: Broom
+    3300084: Mushroom
+    3300086: Red_Potion
+    3300088: Salt_Bowl
     4300000: Apple
     4300002: Bookcase
     4300004: Cauldron
@@ -212,6 +228,10 @@ ModelImporter:
     4300076: Fish
     4300078: Bottle_Narrow
     4300080: Candle
+    4300082: Broom
+    4300084: Mushroom
+    4300086: Salt_Bowl
+    4300088: Red_Potion
     7400000: Default Take
     9500000: //RootNode
   materials:
