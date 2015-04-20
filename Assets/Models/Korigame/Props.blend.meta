@@ -61,6 +61,7 @@ ModelImporter:
     100106: Fireplace
     100108: Log
     100110: Painting
+    100112: Window
     400000: Apple
     400002: Bookcase
     400004: Bubbling_Acid
@@ -117,6 +118,7 @@ ModelImporter:
     400106: Fireplace
     400108: Log
     400110: Painting
+    400112: Window
     2300000: Apple
     2300002: Bookcase
     2300004: Bubbling_Acid
@@ -172,6 +174,7 @@ ModelImporter:
     2300104: Fireplace
     2300106: Log
     2300108: Painting
+    2300110: Window
     3300000: Apple
     3300002: Bookcase
     3300004: Bubbling_Acid
@@ -227,6 +230,7 @@ ModelImporter:
     3300104: Fireplace
     3300106: Log
     3300108: Painting
+    3300110: Window
     4300000: Apple
     4300002: Bookcase
     4300004: Cauldron
@@ -282,6 +286,7 @@ ModelImporter:
     4300104: Log
     4300106: Fireplace
     4300108: Painting
+    4300110: Window
     7400000: Default Take
     9500000: //RootNode
   materials:
