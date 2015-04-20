@@ -2585,9 +2585,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Refreshing
-
-    Potion'
+  m_Text: "Blue \nPotion"
 --- !u!114 &11466398
 MonoBehaviour:
   m_ObjectHideFlags: 1

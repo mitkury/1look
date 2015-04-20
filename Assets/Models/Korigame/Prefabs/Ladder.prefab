@@ -26,8 +26,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 458304}
-  - 114: {fileID: 11447666}
-  - 114: {fileID: 11415048}
   - 54: {fileID: 5497764}
   - 114: {fileID: 11400898}
   - 114: {fileID: 11488034}
@@ -122,34 +120,6 @@ BoxCollider:
   m_Size: {x: .135804027, y: .595453918, z: 2.38341165}
   m_Center: {x: 3.67809116e-10, y: -2.98268418e-07, z: -.0329107605}
 --- !u!114 &11400898
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 192866}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40f283574dc5849f4968fe12a0a78dc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  force: {x: 1, y: 0, z: -1}
---- !u!114 &11415048
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 192866}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11564784fee5d40cb8b0d69772b74ac9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hasItsOwnFocusTime: 1
-  focusTimeSec: 0
-  isAbleToInteract: 1
-  body: {fileID: 0}
-  isAbleToBeActivatedOnItsOwn: 1
---- !u!114 &11447666
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}

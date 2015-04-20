@@ -8,6 +8,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 401320}
+  - 54: {fileID: 5409814}
   m_Layer: 0
   m_Name: Mushroom
   m_TagString: Untagged
@@ -25,6 +26,8 @@ GameObject:
   - 4: {fileID: 406942}
   - 33: {fileID: 3389248}
   - 23: {fileID: 2312776}
+  - 135: {fileID: 13574780}
+  - 135: {fileID: 13545866}
   m_Layer: 0
   m_Name: Mushroom
   m_TagString: Untagged
@@ -39,8 +42,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 139686}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.88618088, y: 1.1139369, z: -1.50723588}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 4.19399977, y: .264999986, z: 3.17499995}
+  m_LocalScale: {x: 1.8037703, y: 1.80376995, z: 1.80376995}
   m_Children:
   - {fileID: 406942}
   m_Father: {fileID: 0}
@@ -90,6 +93,45 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 187870}
   m_Mesh: {fileID: 4300084, guid: d83b5fa58951846c988d3b6108025c04, type: 3}
+--- !u!54 &5409814
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 139686}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!135 &13545866
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 187870}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: .148803994
+  m_Center: {x: 0, y: 1.1920929e-07, z: -.011136001}
+--- !u!135 &13574780
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 187870}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: .148804024
+  m_Center: {x: 0, y: -4.76837158e-07, z: -.0111360019}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

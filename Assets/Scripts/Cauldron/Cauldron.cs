@@ -34,6 +34,41 @@ public class Cauldron : InteractiveObject {
 		CheckIfPoitionIsReady();
 	}
 
+	IEnumerator DeclineItemCo(ObtainableItem item) {
+		Debug.Log(item+" has been declined by the cauldron.");
+
+		var itemRigidbody = item.GetComponent<Rigidbody>();
+		if (itemRigidbody != null) {
+			itemRigidbody.useGravity = false;
+			itemRigidbody.isKinematic = true;
+		}
+		
+		LeanTween.move(item.gameObject, transform.position + Vector3.up * 1f, 1f).setEase(LeanTweenType.easeOutCubic);
+		
+		yield return new WaitForSeconds(1f);
+		
+		var targetPosition = pointInside.position;
+		
+		LeanTween.move(item.gameObject, targetPosition, 0.5f);
+		
+		yield return new WaitForSeconds(0.5f);
+
+		LeanTween.move(item.gameObject, transform.position + Vector3.up * 1f, 1f).setEase(LeanTweenType.easeOutCubic);
+
+		yield return new WaitForSeconds(1f);
+
+		LeanTween.move(item.gameObject, transform.position + Vector3.up * 1f + Vector3.forward + Vector3.left, 1f).setEase(LeanTweenType.easeOutCubic);
+
+		yield return new WaitForSeconds(1f);
+
+		if (itemRigidbody != null) {
+			itemRigidbody.useGravity = true;
+			itemRigidbody.isKinematic = false;
+		}
+
+		item.isAbleToInteract = true;
+	}
+
 	void CheckIfPoitionIsReady() {
 
 		var isReady = true;
@@ -64,11 +99,12 @@ public class Cauldron : InteractiveObject {
 	}
 
 	public void Add(ObtainableItem item) {
-		var name = Regex.Replace(item.name, @"[\d-]", string.Empty);
-		var recipeItem = recipe.items.Find(i => i.itemName.Trim().ToLower() == name.Trim().ToLower());
+		var recipeItem = recipe.items.Find(i => HName.GetPure(i.itemName) == HName.GetPure(item.name));
 
 		if (recipeItem != null) {
 			StartCoroutine(AddItemCo(item, recipeItem));
+		} else {
+			StartCoroutine(DeclineItemCo(item));
 		}
 	}
 
