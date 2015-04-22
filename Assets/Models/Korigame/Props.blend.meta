@@ -65,6 +65,9 @@ ModelImporter:
     100114: Barrel_Lid
     100116: Corn
     100118: Popcorn
+    100120: Tree_Segment
+    100122: Web_Segment
+    100124: Stool_Small
     400000: Apple
     400002: Bookcase
     400004: Bubbling_Acid
@@ -125,6 +128,9 @@ ModelImporter:
     400114: Barrel_Lid
     400116: Corn
     400118: Popcorn
+    400120: Tree_Segment
+    400122: Web_Segment
+    400124: Stool_Small
     2300000: Apple
     2300002: Bookcase
     2300004: Bubbling_Acid
@@ -184,6 +190,9 @@ ModelImporter:
     2300112: Barrel_Lid
     2300114: Corn
     2300116: Popcorn
+    2300118: Tree_Segment
+    2300120: Web_Segment
+    2300122: Stool_Small
     3300000: Apple
     3300002: Bookcase
     3300004: Bubbling_Acid
@@ -243,6 +252,9 @@ ModelImporter:
     3300112: Barrel_Lid
     3300114: Corn
     3300116: Popcorn
+    3300118: Tree_Segment
+    3300120: Web_Segment
+    3300122: Stool_Small
     4300000: Apple
     4300002: Bookcase
     4300004: Cauldron
@@ -302,6 +314,9 @@ ModelImporter:
     4300112: Barrel_Lid
     4300114: Popcorn
     4300116: Corn
+    4300118: Web_Segment
+    4300120: Tree_Segment
+    4300122: Stool_Small
     7400000: Default Take
     9500000: //RootNode
   materials:
