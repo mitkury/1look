@@ -25,6 +25,7 @@ GameObject:
   - 4: {fileID: 412708}
   - 33: {fileID: 3342838}
   - 23: {fileID: 2385116}
+  - 136: {fileID: 13637570}
   m_Layer: 0
   m_Name: Fish
   m_TagString: Untagged
@@ -50,8 +51,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 120902}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.64645958, y: .476999998, z: 1.32000005}
+  m_LocalRotation: {x: 0, y: -.158110723, z: 0, w: .987421393}
+  m_LocalPosition: {x: -5.11999989, y: 1.00100005, z: .843999982}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 412708}
@@ -94,6 +95,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 172332}
   m_Mesh: {fileID: 4300076, guid: d83b5fa58951846c988d3b6108025c04, type: 3}
+--- !u!136 &13637570
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 172332}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .140000001
+  m_Height: .564880908
+  m_Direction: 1
+  m_Center: {x: 0, y: -.0101432642, z: .0144408811}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

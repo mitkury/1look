@@ -2460,7 +2460,9 @@ MonoBehaviour:
 
     Cheese
 
-    Yellow Book
+    Mushroom
+
+    Fish
 
     2 Apples'
 --- !u!114 &11409326
@@ -2611,7 +2613,10 @@ MonoBehaviour:
     - itemName: Cheese
       amount: 1
       collected: 0
-    - itemName: Book_Yellow
+    - itemName: Mushroom
+      amount: 1
+      collected: 0
+    - itemName: Fish
       amount: 1
       collected: 0
   potion: {fileID: 11475522}

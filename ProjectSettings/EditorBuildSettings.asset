@@ -8,4 +8,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Game.unity
   - enabled: 1
-    path: Assets/Scenes/puzzle1.unity
+    path: Assets/Scenes/TowerRoom.unity
