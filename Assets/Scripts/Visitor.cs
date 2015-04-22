@@ -225,6 +225,12 @@ public class Visitor : MonoBehaviour {
 		var components = new List<Component>();
 		// Things that are in the current place, that are able to interact and not in the hand.
 		var things = King.placeManager.currentPlace.interactiveThings.FindAll(it => it.isAbleToInteract && it != itemInHand);
+
+		if (itemInHand != null) {
+			// Things that're able to interact with the item in hand.
+			things = things.FindAll(it => itemInHand.IsAbleToInteractWith(it));
+		}
+
 		// Cast things to the base class—Component.
 		components.AddRange(things.Cast<Component>().ToList());
 		

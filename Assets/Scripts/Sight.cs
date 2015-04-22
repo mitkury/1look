@@ -120,7 +120,7 @@ public class Sight : MonoBehaviour {
 		var smallestAngle = 180f;
 		var minAngle = 8;
 
-		if (target != null && target.isAbleToInteract && target != King.visitor.itemInHand) { 
+		if (target != null && target.isAbleToInteract && /*target != King.visitor.itemInHand*/ King.visitor.itemInHand == null) {
 			smallestAngle = 0;
 		} else {
 			foreach (Component component in components) {

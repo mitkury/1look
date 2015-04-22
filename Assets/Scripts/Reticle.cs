@@ -35,12 +35,12 @@ public class Reticle : MonoBehaviour {
 	public void SetBody(int index) {
 		activeFocus.completenes = 0;
 
-		foreach (Transform body in bodies) {
-			body.gameObject.SetActive(false);
+		foreach (Transform b in bodies) {
+			b.gameObject.SetActive(false);
 		}
 
-		var targetBody = bodies[index];
-		targetBody.gameObject.SetActive(true);
+		body = bodies[index];
+		body.gameObject.SetActive(true);
 		activeFocus = activeIndicators[index];
 	}
 
