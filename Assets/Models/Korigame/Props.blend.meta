@@ -63,6 +63,8 @@ ModelImporter:
     100110: Painting
     100112: Window
     100114: Barrel_Lid
+    100116: Corn
+    100118: Popcorn
     400000: Apple
     400002: Bookcase
     400004: Bubbling_Acid
@@ -121,6 +123,8 @@ ModelImporter:
     400110: Painting
     400112: Window
     400114: Barrel_Lid
+    400116: Corn
+    400118: Popcorn
     2300000: Apple
     2300002: Bookcase
     2300004: Bubbling_Acid
@@ -178,6 +182,8 @@ ModelImporter:
     2300108: Painting
     2300110: Window
     2300112: Barrel_Lid
+    2300114: Corn
+    2300116: Popcorn
     3300000: Apple
     3300002: Bookcase
     3300004: Bubbling_Acid
@@ -235,6 +241,8 @@ ModelImporter:
     3300108: Painting
     3300110: Window
     3300112: Barrel_Lid
+    3300114: Corn
+    3300116: Popcorn
     4300000: Apple
     4300002: Bookcase
     4300004: Cauldron
@@ -292,6 +300,8 @@ ModelImporter:
     4300108: Painting
     4300110: Window
     4300112: Barrel_Lid
+    4300114: Popcorn
+    4300116: Corn
     7400000: Default Take
     9500000: //RootNode
   materials:
