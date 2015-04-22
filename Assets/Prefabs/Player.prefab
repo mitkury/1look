@@ -2616,7 +2616,9 @@ MonoBehaviour:
 
     Fish
 
-    2 Apples'
+    2 Apples
+
+    Popcorn'
 --- !u!114 &11409326
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2783,6 +2785,9 @@ MonoBehaviour:
       amount: 1
       collected: 0
     - itemName: Fish
+      amount: 1
+      collected: 0
+    - itemName: Popcorn
       amount: 1
       collected: 0
   potion: {fileID: 11475522}

@@ -261,6 +261,33 @@ Transform:
 Transform:
   m_PrefabParentObject: {fileID: 457752, guid: 425c40888f09642e5ac04a708884db5f, type: 2}
   m_PrefabInternal: {fileID: 1245761453}
+--- !u!1 &51998739
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 51998740}
+  m_Layer: 0
+  m_Name: DropPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &51998740
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 51998739}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.57000005, y: -.150999993, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1296203846}
+  m_RootOrder: 0
 --- !u!1001 &88895684
 Prefab:
   m_ObjectHideFlags: 0
@@ -1383,7 +1410,6 @@ Transform:
   - {fileID: 1290217633}
   - {fileID: 48464739}
   - {fileID: 1529548906}
-  - {fileID: 2071528828}
   - {fileID: 993544660}
   m_Father: {fileID: 1958922944}
   m_RootOrder: 9
@@ -1571,6 +1597,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 632332800}
     m_Modifications:
+    - target: {fileID: 11435244, guid: ba87aa42811a842e492c7f897f808033, type: 2}
+      propertyPath: items.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 435568, guid: ba87aa42811a842e492c7f897f808033, type: 2}
       propertyPath: m_LocalPosition.x
       value: 5.05000019
@@ -1603,6 +1633,22 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 472832, guid: ba87aa42811a842e492c7f897f808033, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 487224, guid: ba87aa42811a842e492c7f897f808033, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11435244, guid: ba87aa42811a842e492c7f897f808033, type: 2}
+      propertyPath: items.Array.data[0]
+      value: 
+      objectReference: {fileID: 2071528830}
+    - target: {fileID: 11435244, guid: ba87aa42811a842e492c7f897f808033, type: 2}
+      propertyPath: dropPoint
+      value: 
+      objectReference: {fileID: 51998740}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ba87aa42811a842e492c7f897f808033, type: 2}
   m_IsPrefabParent: 0
@@ -2165,7 +2211,7 @@ Transform:
   - {fileID: 2013120432}
   - {fileID: 1774575958}
   m_Father: {fileID: 632332800}
-  m_RootOrder: 34
+  m_RootOrder: 33
 --- !u!114 &993544661
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3151,19 +3197,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 472004, guid: 0dbe313f262bb4d03abbc608139c6c7e, type: 2}
       propertyPath: m_LocalRotation.x
-      value: -.624702692
+      value: -.624702632
       objectReference: {fileID: 0}
     - target: {fileID: 472004, guid: 0dbe313f262bb4d03abbc608139c6c7e, type: 2}
       propertyPath: m_LocalRotation.y
-      value: -.33128041
+      value: -.33128038
       objectReference: {fileID: 0}
     - target: {fileID: 472004, guid: 0dbe313f262bb4d03abbc608139c6c7e, type: 2}
       propertyPath: m_LocalRotation.z
-      value: -.331280351
+      value: -.331280321
       objectReference: {fileID: 0}
     - target: {fileID: 472004, guid: 0dbe313f262bb4d03abbc608139c6c7e, type: 2}
       propertyPath: m_LocalRotation.w
-      value: .624702573
+      value: .624702513
       objectReference: {fileID: 0}
     - target: {fileID: 472004, guid: 0dbe313f262bb4d03abbc608139c6c7e, type: 2}
       propertyPath: m_RootOrder
@@ -4486,14 +4532,14 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2071528827}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.84899998, y: .0949999988, z: 1.69599998}
+  m_LocalPosition: {x: .029999733, y: -.0339999944, z: .120000005}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 347574761}
   - {fileID: 1071894045}
   - {fileID: 272367722}
-  m_Father: {fileID: 632332800}
-  m_RootOrder: 33
+  m_Father: {fileID: 1296203846}
+  m_RootOrder: 3
 --- !u!114 &2071528829
 MonoBehaviour:
   m_ObjectHideFlags: 0
