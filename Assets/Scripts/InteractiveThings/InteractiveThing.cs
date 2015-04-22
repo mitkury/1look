@@ -31,6 +31,10 @@ public abstract class InteractiveThing : MonoBehaviour {
 		if (King.placeManager == null)
 			yield break;
 
+		if (transform.parent != null && transform.parent != King.placeManager.currentPlace) {
+			transform.parent.SendMessage("Add", this, SendMessageOptions.DontRequireReceiver);
+		}
+
 		while (King.placeManager.currentPlace == null)
 			yield return null;
 
