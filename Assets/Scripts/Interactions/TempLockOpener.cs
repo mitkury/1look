@@ -45,7 +45,18 @@ public class TempLockOpener : Interaction {
 	}
 
 	public override bool IsAbleToInteractWith (InteractiveThing thing) {
-		return HName.GetPure(thing.name) == "lock";
+		//if (HName.GetPure(thing.name) != "lock")
+		if (thing.name != "Lock")
+			return false;
+
+		var targetLock = thing.interactions.Find(it => it is TempLock) as TempLock;
+
+		if (targetLock != null && targetLock.lockID == lockID)
+			return true;
+		else
+			return false;
+
+		//return HName.GetPure(thing.name) == "lock" && (thing as ObtainableItem).;
 	}
 
 	public override void InteractWith (InteractiveThing thing) {

@@ -3,7 +3,7 @@ using System.Collections;
 
 public class TempLock : Interaction {
 
-	public int LockID = 1;
+	public int lockID = 1;
 
 	public Transform keyOutsidePoint;
 	public Transform keyInsidePoint;

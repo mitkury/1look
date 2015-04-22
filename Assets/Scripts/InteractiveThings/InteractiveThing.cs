@@ -5,7 +5,8 @@ using System.Collections.Generic;
 
 public abstract class InteractiveThing : MonoBehaviour {
 
-	protected List<Interaction> interactions = new List<Interaction>();
+	//protected List<Interaction> interactions = new List<Interaction>();
+	public List<Interaction> interactions { get; private set; }
 
 	public bool hasItsOwnFocusTime;
 	public float focusTimeSec;

@@ -3855,7 +3855,7 @@ MonoBehaviour:
   focusTimeSec: 0
   isAbleToInteract: 1
   body: {fileID: 0}
-  isAbleToBeActivatedOnItsOwn: 1
+  isAbleToBeActivatedOnItsOwn: 0
 --- !u!54 &1694835610
 Rigidbody:
   m_ObjectHideFlags: 0
