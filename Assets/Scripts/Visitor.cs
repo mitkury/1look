@@ -191,6 +191,7 @@ public class Visitor : MonoBehaviour {
 				if (itemInHand.IsAbleToInteractWith(target)) {
 					itemInHand.Interact(target);
 					itemInHand = null;
+					sight.reticle.SetBody(0);
 				}
 				
 				if (target is InventorySpot) {
@@ -198,6 +199,7 @@ public class Visitor : MonoBehaviour {
 					if (inventorySpot.item == null) {
 						inventorySpot.Add(itemInHand);
 						itemInHand = null;
+						sight.reticle.SetBody(0);
 					}
 				}
 			}
@@ -299,11 +301,13 @@ public class Visitor : MonoBehaviour {
 		itemInHand = item;
 		item.Obtains();
 		sight.ResetTarget();
+		sight.reticle.SetBody(1);
 	}
 
 	public void Drop(ObtainableItem item) {
 		Debug.Log("Visitor drops "+item);
 		itemInHand = null;
+		sight.reticle.SetBody(0);
 	}
 
 	public void MoveTo(Vector3 position) {

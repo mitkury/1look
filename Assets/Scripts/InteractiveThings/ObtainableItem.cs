@@ -36,6 +36,10 @@ public class ObtainableItem : InteractiveThing {
 		if (transform.parent != null) {
 			transform.parent.SendMessage("OnItemTakeByVisitor", SendMessageOptions.DontRequireReceiver);
 		}
+
+		if (GetComponent<Animation>()) {
+			GetComponent<Animation>().enabled = false;
+		}
 	}
 
 	public bool Interact(InteractiveThing thing) {

@@ -10,13 +10,21 @@ public class HingeDoorOpener : Interaction {
 	public Vector3 axis = Vector3.forward;
 	public float add = -45f;
 	public float time = 1f;
+	public Interaction receiver;
 
+	public override void Interact (){
+		StartCoroutine(OpenCo());
+	}
 
-	public override void Interact ()
-	{
+	IEnumerator OpenCo() {
 		//LeanTween.rotateLocal(gameObject, targetLocalRotation, 1f).setEase(LeanTweenType.easeOutSine);
-
 		LeanTween.rotateAround(gameObject, axis, add, time);
+
+		yield return new WaitForSeconds(time);
+
+		if (receiver != null) {
+			receiver.Interact();
+		}
 	}
 
 	void OnDrawGizmosSelected() {

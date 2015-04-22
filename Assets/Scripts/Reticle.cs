@@ -18,6 +18,9 @@ public class Reticle : MonoBehaviour {
 	public Collider targetCollider;
 	public Vector3 facingVector;
 	public Transform body;
+	public Transform[] bodies;
+	public Circle[] activeIndicators;
+
 
 	void Start () {
 		originalScale = transform.localScale;
@@ -27,6 +30,18 @@ public class Reticle : MonoBehaviour {
 	void Update() {
 		transform.position = Vector3.Lerp(transform.position, targetPosition, Time.deltaTime * 25f);
 		transform.localScale = Vector3.Lerp(transform.localScale, targetScale, Time.deltaTime * 25f);
+	}
+
+	public void SetBody(int index) {
+		activeFocus.completenes = 0;
+
+		foreach (Transform body in bodies) {
+			body.gameObject.SetActive(false);
+		}
+
+		var targetBody = bodies[index];
+		targetBody.gameObject.SetActive(true);
+		activeFocus = activeIndicators[index];
 	}
 
 	public void SetFocus(Vector3 position, Vector3 scale) {
@@ -42,6 +57,7 @@ public class Reticle : MonoBehaviour {
 	}
 
 	public void SetBodyScale(float value) {
+		//var v = (float) System.Math.Round((double)value, 2);
 		if (targetBodyScale == value)
 			return;
 
@@ -49,7 +65,6 @@ public class Reticle : MonoBehaviour {
 
 		var targetScale = new Vector3(bodyOriginalScale.x * value, bodyOriginalScale.y * value, bodyOriginalScale.z);
 		//body.localScale = targetScale;
-
 		LeanTween.cancel(body.gameObject);
 		LeanTween.scale(body.gameObject, targetScale, 0.15f);
 	}

@@ -24,6 +24,7 @@ public class Sight : MonoBehaviour {
 
 	void OnEnable() {
 		reticle.gameObject.SetActive(true);
+		reticle.SetBody(0);
 	}
 
 	void OnDisable() {
@@ -147,6 +148,17 @@ public class Sight : MonoBehaviour {
 		// Show a reticle only when a smallest angle to an object is less than x.
 		if (smallestAngle < minAngle) {
 			reticle.SetBodyScale(1);
+
+			/*
+			// Scale gradually.
+			var maxSize = 1f;
+			var minSize = 0.4f;
+			var margin = maxSize - minSize;
+			var alpha = 1 - smallestAngle / minAngle;
+			var targetSize = minSize + margin * alpha;
+			reticle.SetBodyScale(targetSize);
+			*/
+
 		} else {
 			reticle.SetBodyScale(0.4f);
 		}

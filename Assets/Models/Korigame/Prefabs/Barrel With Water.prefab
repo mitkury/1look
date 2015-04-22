@@ -26,6 +26,9 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 412660}
+  - 54: {fileID: 5440802}
+  - 114: {fileID: 11401990}
+  - 114: {fileID: 11421860}
   m_Layer: 0
   m_Name: Barrel With Water
   m_TagString: Untagged
@@ -153,6 +156,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 147124}
   m_Mesh: {fileID: 4300006, guid: d83b5fa58951846c988d3b6108025c04, type: 3}
+--- !u!54 &5440802
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 113850}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!65 &6543080
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -165,6 +183,34 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: .805499971, y: .805499852, z: .773115873}
   m_Center: {x: 0, y: 0, z: -.00449499441}
+--- !u!114 &11401990
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 113850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05fe8cc68baf24750a0b5bcac1afce44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  receiver: {fileID: 0}
+--- !u!114 &11421860
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 113850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11564784fee5d40cb8b0d69772b74ac9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hasItsOwnFocusTime: 0
+  focusTimeSec: 0
+  isAbleToInteract: 1
+  body: {fileID: 0}
+  isAbleToBeActivatedOnItsOwn: 1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
