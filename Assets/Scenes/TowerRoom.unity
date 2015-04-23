@@ -944,6 +944,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 36
       objectReference: {fileID: 0}
+    - target: {fileID: 11403990, guid: 5813899c4d599450e8f0e72ded6ad46a, type: 2}
+      propertyPath: itemCheckDelaySec
+      value: .5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5813899c4d599450e8f0e72ded6ad46a, type: 2}
   m_IsPrefabParent: 0

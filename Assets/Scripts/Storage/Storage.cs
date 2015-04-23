@@ -47,7 +47,7 @@ public class Storage : MonoBehaviour {
 
 		surface.isAbleToInteract = false;
 		
-		var targetPosition = surface.transform.position + Vector3.up * 1f;
+		var targetPosition = item.transform.position + Vector3.up * 1f;
 
 		var itemRigidbody = item.GetComponent<Rigidbody>();
 		itemRigidbody.useGravity = false;
@@ -80,8 +80,7 @@ public class Storage : MonoBehaviour {
 					Physics.Raycast(item.transform.position, Vector3.down, out hitInfo);
 
 					if (hitInfo.collider != null) {
-						var targetSurface = hitInfo.collider.GetComponent<SurfaceForItems>();
-						if (targetSurface == surface) {
+						if (hitInfo.collider.GetComponent<SurfaceForItems>() != null || hitInfo.collider.GetComponent<ObtainableItem>() != null) {
 							itemIsOnSurface = true;
 						}
 					}
