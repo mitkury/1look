@@ -5,8 +5,9 @@ using System.Collections.Generic;
 public class Sight : MonoBehaviour {
 
 	InteractiveThing _target;
-	RaycastHit hitInfo;
 
+	[HideInInspector]
+	public RaycastHit hitInfo;
 	[HideInInspector]
 	public Transform anchor;
 	public Reticle reticle;

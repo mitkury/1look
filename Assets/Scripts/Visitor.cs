@@ -134,9 +134,11 @@ public class Visitor : MonoBehaviour {
 
 		var target = sight.target;
 		var targetPosition = Vector3.zero;
+		var targetRotation = itemInHand.transform.rotation;
 		var targetEulerAngle = Vector3.zero;
 		var itemRigidobdy = itemInHand.GetComponent<Rigidbody>();
 		var highestPointOnTarget = Vector3.zero;
+		var distanceToItem = Vector3.Distance(itemInHand.transform.position, sight.anchor.position);
 
 		if (itemRigidobdy != null) {
 			highestPointOnTarget = itemRigidobdy.ClosestPointOnBounds(itemInHand.transform.position + Vector3.up * 10);
@@ -153,7 +155,9 @@ public class Visitor : MonoBehaviour {
 				targetPosition = waistAnchor.transform.position - (highestPointOnTarget - itemInHand.transform.position);
 			}
 		
-		
+			if (distanceToItem < 2f) {
+				targetRotation = Quaternion.identity;
+			}
 		} else {
 			// Hover the object in front, following a visitor's head.
 
@@ -170,15 +174,14 @@ public class Visitor : MonoBehaviour {
 				// It makes the same distance between the reticle and a highest point on target for objects of any size.
 				targetPosition = belowFocusPoint - (highestPointOnTarget - itemInHand.transform.position);
 			}
+
+			if (distanceToItem < 2f) {
+				targetRotation = Quaternion.LookRotation(sight.anchor.forward);
+			}
 		}
 
 		itemInHand.transform.position = Vector3.Lerp(itemInHand.transform.position, targetPosition, Time.deltaTime * 3);
-		//itemInHand.transform.eulerAngles = targetEulerAngle;
-
-		if (Vector3.Distance(itemInHand.transform.position, sight.anchor.position) < 2f) {
-			//itemInHand.transform.rotation = Quaternion.Lerp(itemInHand.transform.rotation, Quaternion.identity, Time.deltaTime * 3);
-			itemInHand.transform.rotation = Quaternion.Lerp(itemInHand.transform.rotation, Quaternion.LookRotation(sight.anchor.forward), Time.deltaTime * 3);
-		}
+		itemInHand.transform.rotation = Quaternion.Lerp(itemInHand.transform.rotation, targetRotation, Time.deltaTime * 3);
 	}
 
 	void UpdateInteractions() {

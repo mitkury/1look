@@ -10,6 +10,9 @@ public class ObtainableItem : InteractiveThing {
 		if (GetComponent<CauldronUser>() == null) {
 			gameObject.AddComponent<CauldronUser>();
 		}
+		if (GetComponent<SurfaceUser>() == null) {
+			gameObject.AddComponent<SurfaceUser>();
+		}
 
 		base.Init();
 	}
@@ -35,7 +38,7 @@ public class ObtainableItem : InteractiveThing {
 		}
 
 		if (transform.parent != null) {
-			transform.parent.SendMessage("OnItemTakeByVisitor", SendMessageOptions.DontRequireReceiver);
+			transform.parent.SendMessage("OnItemTakeByVisitor", this, SendMessageOptions.DontRequireReceiver);
 		}
 
 		if (GetComponent<Animation>()) {
