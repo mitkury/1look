@@ -140,6 +140,7 @@ public class Visitor : MonoBehaviour {
 
 		if (itemRigidobdy != null) {
 			highestPointOnTarget = itemRigidobdy.ClosestPointOnBounds(itemInHand.transform.position + Vector3.up * 10);
+			//Debug.DrawLine(highestPointOnTarget, highestPointOnTarget + Vector3.up, Color.red, Time.deltaTime);
 		}
 
 		if (isLookingBelow) {
@@ -158,7 +159,7 @@ public class Visitor : MonoBehaviour {
 
 			var centerOfFocusPoint = sight.anchor.position + sight.facingVector * defaultDistanceToFloatingObject;
 			// Finding a perpendicular vector to a facing vector (http://docs.unity3d.com/Manual/ComputingNormalPerpendicularVector.html)
-			var orthoToFacingVector = Vector3.Cross(sight.facingVector, Vector3.left);
+			var orthoToFacingVector = Vector3.Cross(sight.facingVector, -sight.anchor.right);
 			var distanceBelowFocusPoint = 0.1f;
 			var belowFocusPoint = centerOfFocusPoint + orthoToFacingVector * distanceBelowFocusPoint;
 
@@ -175,7 +176,8 @@ public class Visitor : MonoBehaviour {
 		//itemInHand.transform.eulerAngles = targetEulerAngle;
 
 		if (Vector3.Distance(itemInHand.transform.position, sight.anchor.position) < 2f) {
-		itemInHand.transform.rotation = Quaternion.Lerp(itemInHand.transform.rotation, Quaternion.identity, Time.deltaTime * 3);
+			//itemInHand.transform.rotation = Quaternion.Lerp(itemInHand.transform.rotation, Quaternion.identity, Time.deltaTime * 3);
+			itemInHand.transform.rotation = Quaternion.Lerp(itemInHand.transform.rotation, Quaternion.LookRotation(sight.anchor.forward), Time.deltaTime * 3);
 		}
 	}
 
