@@ -8,6 +8,9 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 465758}
+  - 54: {fileID: 5494642}
+  - 114: {fileID: 11403992}
+  - 114: {fileID: 11472436}
   m_Layer: 0
   m_Name: Corn
   m_TagString: Untagged
@@ -25,6 +28,7 @@ GameObject:
   - 4: {fileID: 458364}
   - 33: {fileID: 3365498}
   - 23: {fileID: 2343544}
+  - 136: {fileID: 13694476}
   m_Layer: 0
   m_Name: Corn
   m_TagString: Untagged
@@ -38,7 +42,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 173088}
-  m_LocalRotation: {x: -.707106829, y: 0, z: -0, w: .707106709}
+  m_LocalRotation: {x: -1, y: 0, z: 0, w: 1.10268581e-06}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -51,7 +55,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 123410}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.09385872, y: .490134031, z: .827954948}
+  m_LocalPosition: {x: -.0860000029, y: .372999996, z: 2.77699995}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 458364}
@@ -90,6 +94,61 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 173088}
   m_Mesh: {fileID: 4300116, guid: d83b5fa58951846c988d3b6108025c04, type: 3}
+--- !u!54 &5494642
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 123410}
+  serializedVersion: 2
+  m_Mass: .100000001
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &11403992
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 123410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b5c6fe6c53e94490ade18dcbea80887, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hasItsOwnFocusTime: 0
+  focusTimeSec: 0
+  isAbleToInteract: 1
+  body: {fileID: 0}
+--- !u!114 &11472436
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 123410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 492751a0bc6e848d4bd26cede46190ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  popcorn: {fileID: 0}
+--- !u!136 &13694476
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 173088}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .140000001
+  m_Height: .5
+  m_Direction: 2
+  m_Center: {x: 0, y: .00273149437, z: -.0171724986}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

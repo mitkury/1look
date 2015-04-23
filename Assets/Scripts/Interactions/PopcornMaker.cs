@@ -12,6 +12,8 @@ public class PopcornMaker : Interaction {
 		
 		popcorn.gameObject.SetActive(true);
 
+		popcorn.GetComponent<Rigidbody>().useGravity = true;
+		popcorn.GetComponent<Rigidbody>().isKinematic = false;
 		popcorn.GetComponent<Rigidbody>().AddForce(Vector3.back * 0.25f, ForceMode.Impulse);
 
 		gameObject.SetActive(false);
