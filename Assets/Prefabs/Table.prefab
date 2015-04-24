@@ -427,7 +427,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   surface: {fileID: 11412822}
-  itemCheckDelaySec: .330000013
+  itemCheckDelaySec: .5
 --- !u!114 &11412822
 MonoBehaviour:
   m_ObjectHideFlags: 1

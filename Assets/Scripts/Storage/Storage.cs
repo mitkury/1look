@@ -30,16 +30,19 @@ public class Storage : MonoBehaviour {
 		LeanTween.cancel(item.gameObject);
 		LeanTween.move(item.gameObject, point + Vector3.up * 1f, 1f).setEase(LeanTweenType.easeOutCubic);
 		LeanTween.rotate(item.gameObject, surface.transform.rotation.eulerAngles, 1f).setEase(LeanTweenType.easeInCubic);
-		
+
 		yield return new WaitForSeconds(1f);
 
 		itemRigidbody.useGravity = true;
 		itemRigidbody.isKinematic = false;
 
-		yield return new WaitForSeconds(1f);
+		yield return new WaitForSeconds(2f);
 
 		items.Add(item);
 		item.isAbleToInteract = true;
+
+		//itemRigidbody.useGravity = false;
+		//itemRigidbody.isKinematic = true;
 	}
 	
 	IEnumerator RemoveItemCo(ObtainableItem item) {
@@ -79,8 +82,8 @@ public class Storage : MonoBehaviour {
 					RaycastHit hitInfo;
 					Physics.Raycast(item.transform.position, Vector3.down, out hitInfo);
 
-					if (hitInfo.collider != null) {
-						if (hitInfo.collider.GetComponent<SurfaceForItems>() != null || hitInfo.collider.GetComponent<ObtainableItem>() != null) {
+					if (hitInfo.rigidbody != null) {
+						if (hitInfo.rigidbody.GetComponent<SurfaceForItems>() != null || hitInfo.rigidbody.GetComponent<ObtainableItem>() != null) {
 							itemIsOnSurface = true;
 						}
 					}

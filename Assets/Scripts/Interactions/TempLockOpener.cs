@@ -41,6 +41,7 @@ public class TempLockOpener : Interaction {
 
 		GetComponent<Rigidbody>().detectCollisions = false;
 		tempLock.GetComponent<Rigidbody>().isKinematic = false;
+		tempLock.GetComponent<InteractiveThing>().isAbleToInteract = false;
 
 	}
 
