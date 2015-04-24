@@ -68,6 +68,8 @@ ModelImporter:
     100120: Tree_Segment
     100122: Web_Segment
     100124: Stool_Small
+    100126: Bar
+    100128: Table
     400000: Apple
     400002: Bookcase
     400004: Bubbling_Acid
@@ -131,6 +133,8 @@ ModelImporter:
     400120: Tree_Segment
     400122: Web_Segment
     400124: Stool_Small
+    400126: Bar
+    400128: Table
     2300000: Apple
     2300002: Bookcase
     2300004: Bubbling_Acid
@@ -193,6 +197,8 @@ ModelImporter:
     2300118: Tree_Segment
     2300120: Web_Segment
     2300122: Stool_Small
+    2300124: Bar
+    2300126: Table
     3300000: Apple
     3300002: Bookcase
     3300004: Bubbling_Acid
@@ -255,6 +261,8 @@ ModelImporter:
     3300118: Tree_Segment
     3300120: Web_Segment
     3300122: Stool_Small
+    3300124: Bar
+    3300126: Table
     4300000: Apple
     4300002: Bookcase
     4300004: Cauldron
@@ -317,6 +325,8 @@ ModelImporter:
     4300118: Web_Segment
     4300120: Tree_Segment
     4300122: Stool_Small
+    4300124: Bar
+    4300126: Table
     7400000: Default Take
     9500000: //RootNode
   materials:
