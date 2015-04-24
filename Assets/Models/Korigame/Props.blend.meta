@@ -70,6 +70,8 @@ ModelImporter:
     100124: Stool_Small
     100126: Bar
     100128: Table
+    100130: Dome
+    100132: Beam
     400000: Apple
     400002: Bookcase
     400004: Bubbling_Acid
@@ -135,6 +137,8 @@ ModelImporter:
     400124: Stool_Small
     400126: Bar
     400128: Table
+    400130: Dome
+    400132: Beam
     2300000: Apple
     2300002: Bookcase
     2300004: Bubbling_Acid
@@ -199,6 +203,8 @@ ModelImporter:
     2300122: Stool_Small
     2300124: Bar
     2300126: Table
+    2300128: Dome
+    2300130: Beam
     3300000: Apple
     3300002: Bookcase
     3300004: Bubbling_Acid
@@ -263,6 +269,8 @@ ModelImporter:
     3300122: Stool_Small
     3300124: Bar
     3300126: Table
+    3300128: Dome
+    3300130: Beam
     4300000: Apple
     4300002: Bookcase
     4300004: Cauldron
@@ -327,6 +335,8 @@ ModelImporter:
     4300122: Stool_Small
     4300124: Bar
     4300126: Table
+    4300128: Dome
+    4300130: Beam
     7400000: Default Take
     9500000: //RootNode
   materials:
