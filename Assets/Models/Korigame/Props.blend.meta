@@ -72,6 +72,16 @@ ModelImporter:
     100128: Table
     100130: Dome
     100132: Beam
+    100134: Blue_Cylinder
+    100136: Cabinet
+    100138: Cabinet_Door
+    100140: Cabinet_Door_Blue
+    100142: Cabinet_Door_Green
+    100144: Cabinet_Door_Red
+    100146: Cabinet_Small
+    100148: Green_Triangle
+    100150: Red_Cube
+    100152: Plant_Small
     400000: Apple
     400002: Bookcase
     400004: Bubbling_Acid
@@ -139,6 +149,16 @@ ModelImporter:
     400128: Table
     400130: Dome
     400132: Beam
+    400134: Blue_Cylinder
+    400136: Cabinet
+    400138: Cabinet_Door
+    400140: Cabinet_Door_Blue
+    400142: Cabinet_Door_Green
+    400144: Cabinet_Door_Red
+    400146: Cabinet_Small
+    400148: Green_Triangle
+    400150: Red_Cube
+    400152: Plant_Small
     2300000: Apple
     2300002: Bookcase
     2300004: Bubbling_Acid
@@ -205,6 +225,16 @@ ModelImporter:
     2300126: Table
     2300128: Dome
     2300130: Beam
+    2300132: Blue_Cylinder
+    2300134: Cabinet
+    2300136: Cabinet_Door
+    2300138: Cabinet_Door_Blue
+    2300140: Cabinet_Door_Green
+    2300142: Cabinet_Door_Red
+    2300144: Cabinet_Small
+    2300146: Green_Triangle
+    2300148: Red_Cube
+    2300150: Plant_Small
     3300000: Apple
     3300002: Bookcase
     3300004: Bubbling_Acid
@@ -271,6 +301,16 @@ ModelImporter:
     3300126: Table
     3300128: Dome
     3300130: Beam
+    3300132: Blue_Cylinder
+    3300134: Cabinet
+    3300136: Cabinet_Door
+    3300138: Cabinet_Door_Blue
+    3300140: Cabinet_Door_Green
+    3300142: Cabinet_Door_Red
+    3300144: Cabinet_Small
+    3300146: Green_Triangle
+    3300148: Red_Cube
+    3300150: Plant_Small
     4300000: Apple
     4300002: Bookcase
     4300004: Cauldron
@@ -337,6 +377,16 @@ ModelImporter:
     4300126: Table
     4300128: Dome
     4300130: Beam
+    4300132: Cabinet_Small
+    4300134: Red_Cube
+    4300136: Green_Triangle
+    4300138: Blue_Cylinder
+    4300140: Cabinet_Door_Blue
+    4300142: Cabinet_Door_Green
+    4300144: Cabinet_Door_Red
+    4300146: Cabinet
+    4300148: Cabinet_Door
+    4300150: Plant_Small
     7400000: Default Take
     9500000: //RootNode
   materials:
