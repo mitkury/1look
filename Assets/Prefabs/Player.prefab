@@ -64,6 +64,7 @@ GameObject:
   - 4: {fileID: 497814}
   - 33: {fileID: 3343554}
   - 23: {fileID: 2390052}
+  - 114: {fileID: 11444808}
   m_Layer: 0
   m_Name: Bubbling_Acid
   m_TagString: Untagged
@@ -2247,6 +2248,22 @@ MonoBehaviour:
   segments: 32
   radius: .5
   border: .25
+--- !u!114 &11444808
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 110500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc7e38f7d12e94b7fb097fcb685578ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  windSpeed: 10
+  windScale: .0199999996
+  windRoughness: 20
+  affectedVertices: {x: 1, y: 1, z: 0}
+  useAlternativeMethod: 1
 --- !u!114 &11447034
 MonoBehaviour:
   m_ObjectHideFlags: 1
