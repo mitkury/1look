@@ -101,7 +101,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 8decc28b0e7ba41dbb5cfaef86659261, type: 2}
+  - {fileID: 2100000, guid: 095953f177c3a48b09b618eb139c8e90, type: 2}
   - {fileID: 2100000, guid: 095953f177c3a48b09b618eb139c8e90, type: 2}
   - {fileID: 2100000, guid: 3d99ed8cc8b6c40ffaa08a7a15c5d531, type: 2}
   - {fileID: 2100000, guid: 468d7118ef34b410580907ca69728573, type: 2}
@@ -194,6 +194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05fe8cc68baf24750a0b5bcac1afce44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isAbleToInteractAfterAnimation: 0
   receiver: {fileID: 0}
 --- !u!114 &11421860
 MonoBehaviour:
