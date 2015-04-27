@@ -277,6 +277,22 @@ Prefab:
       propertyPath: m_Name
       value: Visitor
       objectReference: {fileID: 0}
+    - target: {fileID: 2379678, guid: a61c239de142e4a1c9608709d67cf216, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7d1847daffa5b40ca8a0f3abd3504ebc, type: 2}
+    - target: {fileID: 11469088, guid: a61c239de142e4a1c9608709d67cf216, type: 2}
+      propertyPath: mouseLook.smoothTime
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11469088, guid: a61c239de142e4a1c9608709d67cf216, type: 2}
+      propertyPath: mouseLook.XSensitivity
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11469088, guid: a61c239de142e4a1c9608709d67cf216, type: 2}
+      propertyPath: mouseLook.YSensitivity
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a61c239de142e4a1c9608709d67cf216, type: 2}
   m_IsPrefabParent: 0

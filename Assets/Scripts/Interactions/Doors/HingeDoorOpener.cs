@@ -18,7 +18,7 @@ public class HingeDoorOpener : Interaction {
 
 	IEnumerator OpenCo() {
 		//LeanTween.rotateLocal(gameObject, targetLocalRotation, 1f).setEase(LeanTweenType.easeOutSine);
-		LeanTween.rotateAround(gameObject, axis, add, time);
+		LeanTween.rotateAroundLocal(gameObject, axis, add, time).setEase(LeanTweenType.easeInOutSine);
 
 		yield return new WaitForSeconds(time);
 
