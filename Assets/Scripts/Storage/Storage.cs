@@ -8,10 +8,6 @@ public class Storage : MonoBehaviour {
 	public float itemCheckDelaySec = 0.5f;
 	public List<ObtainableItem> items { get; private set; }
 
-	void Start() {
-
-	}
-
 	void OnEnable() {
 		if (items == null)
 			items = new List<ObtainableItem>();
@@ -65,7 +61,7 @@ public class Storage : MonoBehaviour {
 		item = null;
 		
 		yield return new WaitForSeconds(1.5f);
-		// Activate the spot with delay after removing an item,
+		// Activate the surface with delay after removing an item,
 		// so the item wont get back to inventory if Player continues to point at the spot after getting the item in hand.
 		surface.isAbleToInteract = true;
 	}
@@ -88,7 +84,7 @@ public class Storage : MonoBehaviour {
 						}
 					}
 
-					// If the doesn't remain on the surface put it back on it.
+					// If the item doesn't remain on the surface put it back on it.
 					if (!itemIsOnSurface) {
 						items.Remove(item);
 						StartCoroutine(AddItemCo(item, surface.transform.position));

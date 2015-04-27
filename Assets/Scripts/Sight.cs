@@ -26,6 +26,15 @@ public class Sight : MonoBehaviour {
 	void OnEnable() {
 		reticle.gameObject.SetActive(true);
 		reticle.SetBody(0);
+
+		OVRTouchpad.TouchHandler += HandleTouchHandler;
+	}
+
+	void HandleTouchHandler (object sender, System.EventArgs e) {
+		OVRTouchpad.TouchArgs touchArgs = (OVRTouchpad.TouchArgs)e;
+		if(touchArgs.TouchType == OVRTouchpad.TouchEvent.SingleTap) {
+			focusOnTargetWithoutInterruptionSec = 999f;
+		}
 	}
 
 	void OnDisable() {

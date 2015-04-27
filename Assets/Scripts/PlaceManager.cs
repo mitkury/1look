@@ -6,6 +6,7 @@ using System.Collections.Generic;
 public class PlaceManager : MonoBehaviour {
 
 	AsyncOperation async;
+	List<Place> places = new List<Place>();
 
 	public Place currentPlace { get; private set; }
 	public bool placeIsLoading { get; private set; }
@@ -65,7 +66,7 @@ public class PlaceManager : MonoBehaviour {
 		// It makes a transition from place to place seamless.
 		player.transform.position = currentPlace.enterLobby.TransformPoint(player.localPositionAtPrevLobby);
 		
-		player.MoveTo(currentPlace.vantagePoint.transform.position);
+		//player.MoveTo(currentPlace.vantagePoint.transform.position);
 	}
 
 	public void NextPlace(bool manualActivation = false) {
@@ -89,5 +90,7 @@ public class PlaceManager : MonoBehaviour {
 
 	public void AddPlace(Place place) {
 		currentPlace = place;
+		// TODO: managing places
+		places.Add(place);
 	}
 }

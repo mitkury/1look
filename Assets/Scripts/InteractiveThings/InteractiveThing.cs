@@ -32,14 +32,26 @@ public abstract class InteractiveThing : MonoBehaviour {
 		if (King.placeManager == null)
 			yield break;
 
-		if (transform.parent != null && transform.parent != King.placeManager.currentPlace) {
+		if (transform.root != null) {
+			transform.root.SendMessage("Add", this, SendMessageOptions.DontRequireReceiver);
+		}
+
+		if (transform.parent != null && transform.parent != transform.root) {
 			transform.parent.SendMessage("Add", this, SendMessageOptions.DontRequireReceiver);
 		}
 
+		yield break;
+
+		/*
+		if (transform.parent != null && transform.parent != King.placeManager.currentPlace) {
+			transform.parent.SendMessage("Add", this, SendMessageOptions.DontRequireReceiver);
+		}
+	
 		while (King.placeManager.currentPlace == null)
 			yield return null;
 
 		King.placeManager.currentPlace.Add(this);
+		*/
 	}
 
 }

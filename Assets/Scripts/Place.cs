@@ -4,7 +4,8 @@ using System.Collections.Generic;
 
 [RequireComponent(typeof(GameInstantiator))]
 public class Place : MonoBehaviour {
-	
+
+	public Color background;
 	public Waypoint enterPoint;
 	public Waypoint vantagePoint;
 	public Waypoint exitPoint;

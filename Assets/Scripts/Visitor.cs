@@ -6,7 +6,9 @@ using System.Collections.Generic;
 
 [RequireComponent(typeof(Sight))]
 public class Visitor : MonoBehaviour {
-	
+
+	List<Camera> cameras = new List<Camera>();
+
 	public Transform vrCameraRig;
 	public Transform vrCenterOfView;
 	public Transform regularCameraRig;
@@ -21,67 +23,80 @@ public class Visitor : MonoBehaviour {
 	public Vector3 localPositionAtPrevLobby;
 	public Inventory inventory { get; private set; }
 	public ObtainableItem itemInHand { get; private set; }
-	public Transform book;
-	public Transform bookReadPoint;
-	public Transform bookHidePoint;
+	public ScreenFader screenFader;
 
 	void Awake() {
 		DontDestroyOnLoad(gameObject);
-		prevPosition = transform.position;
+		//prevPosition = transform.position;
 	}
 	
 	void Start () {
 		sight = GetComponent<Sight>();
 		inventory = GetComponentInChildren<Inventory>();
 
-		// Regular mode.
-		if (Application.platform == RuntimePlatform.OSXEditor ||
-		    Application.platform == RuntimePlatform.WindowsEditor || 
-		    Application.platform == RuntimePlatform.WindowsPlayer || 
-		    Application.platform == RuntimePlatform.OSXPlayer) {
-			
-			regularCameraRig.gameObject.SetActive(true);
-			vrCameraRig.gameObject.SetActive(false);
+		regularCameraRig.gameObject.SetActive(false);
+		vrCameraRig.gameObject.SetActive(false);
 
-			sight.anchor = regularCenterOfView;
 		// VR mode.
-		} else {
+		if (King.isInVRMode) {
 			regularCameraRig.gameObject.SetActive(false);
 			vrCameraRig.gameObject.SetActive(true);
-
+			
 			sight.anchor = vrCenterOfView;
+			cameras.Add(vrCameraRig.GetComponent<OVRCameraRig>().leftEyeCamera);
+			cameras.Add(vrCameraRig.GetComponent<OVRCameraRig>().rightEyeCamera);
+		} 
+		// Regular mode.
+		else {
+			regularCameraRig.gameObject.SetActive(true);
+			vrCameraRig.gameObject.SetActive(false);
+			
+			sight.anchor = regularCenterOfView;
+			cameras.Add(regularCameraRig.GetComponentInChildren<Camera>());
 		}
+
+		OVRTouchpad.Create();
+		OVRTouchpad.TouchHandler += HandleTouchHandler;
+
+		// Prepare an object for fading main camera in/out.
+		var blinkTextureGO = iTween.CameraFadeAdd();
+		blinkTextureGO.transform.parent = transform;
+
+		screenFader.anchor = sight.anchor;
 	}
 
 	void Update() {
 		UpdateItemInHand();
 		UpdateInteractions();
 		UpdateFocusIndicator();
-		UpdateBook();
 		CheckObjects();
-
-		currentSpeedPerUnit = Vector3.Distance(transform.position, prevPosition) / Time.deltaTime;
-		prevPosition = transform.position;
+		//prevPosition = transform.position;
 	}
 
-	bool isLookingBelow {
-		get {
-			if (sight.anchor == null)
-				return false;
+	void HandleTouchHandler (object sender, System.EventArgs e) {
+		OVRTouchpad.TouchArgs touchArgs = (OVRTouchpad.TouchArgs)e;
+		if(touchArgs.TouchType == OVRTouchpad.TouchEvent.SingleTap) {
+			/*
+			if (isFaded) {
+				FadeIn();
+			} else {
+				FadeOut();
+			}
 			
-			var eulerAnhorAngle = sight.anchor.eulerAngles;
-			return eulerAnhorAngle.x >= 22 && eulerAnhorAngle.x <= 120 ? true : false;
+			isFaded = !isFaded;
+			*/
 		}
 	}
 
-	bool isLookingAtBookReadPosition {
-		get {
-			if (sight.anchor == null)
-				return false;
-			
-			var eulerAnhorAngle = sight.anchor.eulerAngles;
-			return eulerAnhorAngle.x >= 22 && eulerAnhorAngle.x <= 120 && eulerAnhorAngle.y >= 265 && eulerAnhorAngle.y <= 355 ? true : false;
-		}
+	void FadeIn()
+	{
+		//iTween.CameraFadeFrom(1.0f, 1.0f);
+		//iTween.CameraFadeTo(0f, 1.0f);
+	}
+
+	void FadeOut()
+	{
+		//iTween.CameraFadeTo(1f, 1.0f);
 	}
 
 	void UpdateFocusIndicator() {
@@ -113,19 +128,6 @@ public class Visitor : MonoBehaviour {
 		} else {
 			sight.focusOnTargetAlpha = 0;
 		}
-	}
-
-	void UpdateBook() {
-		var targetPosition = bookHidePoint.position;
-		var targetRotation = bookHidePoint.rotation;
-
-		if (isLookingAtBookReadPosition) {
-			targetPosition = bookReadPoint.position;
-			targetRotation = bookReadPoint.rotation;
-		}
-
-		book.position = Vector3.Lerp(book.position, targetPosition, Time.deltaTime * 3);
-		book.rotation = Quaternion.Lerp(book.rotation, targetRotation, Time.deltaTime * 3);
 	}
 
 	void UpdateItemInHand() {
@@ -224,7 +226,7 @@ public class Visitor : MonoBehaviour {
 	}
 
 	void CheckObjects() {
-		if (King.placeManager.currentPlace == null)
+		if (King.placeManager.currentPlace == null || !King.placeManager.currentPlace.gameObject.activeSelf)
 			return;
 			
 		var components = new List<Component>();
@@ -262,9 +264,10 @@ public class Visitor : MonoBehaviour {
 	}
 	*/
 
-	Vector3 prevPosition;
-	float currentSpeedPerUnit;
+	//Vector3 prevPosition;
+	//float currentSpeedPerUnit;
 
+	/*
 	IEnumerator MoveToCo(Vector3 targetPosition) {
 		sight.enabled = false;
 
@@ -275,36 +278,34 @@ public class Visitor : MonoBehaviour {
 			sight.enabled = true;
 		});
 
-		yield return null;
-
-		/*
-		LeanTween.cancel(gameObject);
-
-		var startPosition = transform.position;
-		var totalDistance = Vector3.Distance(transform.position, targetPosition);
-		var accelerationDistance = 2f;
-		var inbetweenDistance = totalDistance - accelerationDistance * 2;
-		var time = inbetweenDistance / movementSpeedUnitsPerSec;
-		var aTime = accelerationDistance / movementSpeedUnitsPerSec;
-		var pointA = (startPosition + targetPosition) * (accelerationDistance / totalDistance);
-		var pointB = (startPosition + targetPosition) * (accelerationDistance / totalDistance + 1);
-
-		// Accelerating to pointA.
-		LeanTween.move(gameObject, pointA, aTime).setEase(LeanTweenType.easeInSine).setOnComplete(delegate() {
-			Debug.Log("1!");
-			// Moving to pointB linearly.
-			LeanTween.move(gameObject, pointB, time).setOnComplete(delegate() {
-				Debug.Log("2!");
-				// De-accelerating to targetPosition.
-				LeanTween.move(gameObject, targetPosition, aTime).setEase(LeanTweenType.easeOutSine).setOnComplete(delegate() {
-					Debug.Log("3!");
-					sight.enabled = true;
-				});			 
-			});
-		});
-		*/
-
 		yield break;
+	}
+	*/
+
+	public bool isLookingBelow {
+		get {
+			if (sight.anchor == null)
+				return false;
+			
+			var eulerAnhorAngle = sight.anchor.eulerAngles;
+			return eulerAnhorAngle.x >= 22 && eulerAnhorAngle.x <= 120 ? true : false;
+		}
+	}
+	
+	public bool isLookingAtBookReadPosition {
+		get {
+			if (sight.anchor == null)
+				return false;
+			
+			var eulerAnhorAngle = sight.anchor.eulerAngles;
+			return eulerAnhorAngle.x >= 22 && eulerAnhorAngle.x <= 120 && eulerAnhorAngle.y >= 265 && eulerAnhorAngle.y <= 355 ? true : false;
+		}
+	}
+
+	public void SetBackground(Color color) {
+		foreach (Camera camera in cameras) {
+			camera.backgroundColor = color;
+		}
 	}
 
 	public void Take(ObtainableItem item) {
@@ -321,6 +322,7 @@ public class Visitor : MonoBehaviour {
 		sight.reticle.SetBody(0);
 	}
 
+	/*
 	public void MoveTo(Vector3 position) {
 		StartCoroutine(MoveToCo(position));
 	}
@@ -329,8 +331,5 @@ public class Visitor : MonoBehaviour {
 		var targetPosition = King.placeManager.currentPlace.exitPoint.transform.position;
 		MoveTo(targetPosition);
 	}
-
-	public void SetOnPlace(Place place) {
-		
-	}
+	*/
 }
