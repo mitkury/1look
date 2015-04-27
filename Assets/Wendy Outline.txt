@@ -1,0 +1,44 @@
+(This might all sound somewhat grand, but I think I'm making it sound more complicated than it is - what I've written below is technically not that hard to do, but structurally I think it is very strong for a 10 minute experience. Enjoy)
+
+Game boots up.
+
+Fade in from black, revealing the apartment.
+The player is immediately in control.
+
+The word wendy is spelled out on the coffee table (that's our integrated title, no splash screen or title screen) or on top of the tv with little mesh letters that you can knock over. A glass of wine, some candy corn (it's halloween), and some books. Maybe a little cat sitting on your lap.
+(Cute, simple, environmental storytelling) 
+
+Kitchen in the background, little bits of props about the room - nothing too much, but mostly a cozy little space in front of the tv. Clock on wall is ticking, and for 30 seconds the player can just look around and play with stuff. Then comes a knock at the door, and you hear "Trick or Treat!" from some kids in the hall. Ten seconds later, it fades to black with maybe a yawn sound effect.
+(Here we surmise that Wendy is a bit of an outcast - maybe the kids who don't get candy think of her as a witch, just not in the literal sense that we will see later)
+
+Wait 2 seconds and then super fast fade in, like you have woken up from falling asleep after you ignored the trick or treaters. The hand on the clock on the wall is spinning out of control, static on the tv, and then after 10 seconds or so the screen fades quickly to black.
+(This sequence is pretty easy to do, mostly triggering the sound at the door, and then fade to black after a delay - then switching out the clock for a fast version, and switching out a couple props like the tv, or a bowl of apples knocked over)
+
+Before the screen fades back in to reveal the tower room, there's a short interlude in total darkness. Just a couple of sounds that move around the room, whipping past the players head, like the sound of flapping wings and pouring liquids, just for like a trippy 10-15 seconds. (Really easy to do, just attach 3D sounds to an empty game object and move them around the player, slingshoting them in and out, and around - the 3d sound object will provide the depth and source direction etc, but it will sound really cool. I've done something similar, and it is powerful with headphones on)
+
+Black slowly fades out to reveal the tower room, where the player is immediately in control again. 
+
+Player spends 10 seconds or so looking around (there is no cursor yet, and the player cannot interact with things), there is a knock from below, and a voice calls out "Hurry up Wendy! I need that potion now!" or "I need that potion Wendy! A customer is waiting!" like he's banging on the ceiling below with a broom. (Again, simple 3D audio working its magic - I think, given that this is a dream, dreams sort of tend to start right in the middle of things, so all this makes sense so far). The cursor then grows in the center of the screen and the cauldron, which was empty, suddenly has bubbling purple acid in it, the bubbles appear (a poof of smoke disguises it becoming visible). The book "pop" appears also. Maybe the candles in the room also turn on like an epic start to the gameplay.
+
+The book shows all the ingredients for the potion as little items, laid out on both pages. (I will make a tutorial diagram that shows the cauldron icon and all the items with an arrow towards the cauldron icon, insinuating that the player needs to add them) Here are all the items, for our one, and only, potion we are tasked with making: An Apple (on the tree), a skull (under the hat), a Fish (in the barrel), cheese (on the shelf), purple or red liquid (wine?) in bottle (in the floating cabinet, it falls out and onto the floor), a spider (look up, the spider's just hanging above you), salt (on bookcase), magic boot (it's floating around, slightly high near the floating stool and moving slowly so you have to track it), and a purple mushroom (on the floor). When you combine all the ingredients in the cauldron it makes a cool looking potion with lots of colors in it, like a jar of colored sand. It just floats above the cauldron for 5 seconds or so, then the voice is heard again from below "Have you made it?!" or "Made it have you!?" or "You done yet?!". (The idea here is that the game is interuptted and the player might be surprised by the voice, and it's a good chance to super fast fade to dark here, like 0.1 seconds. 
+
+We can have other interactions in the game that are not even part of the potion, like the corn to popcorn for instance, or the magic floating painting interaction, etc...these sort of things will be noticed by the player, and judges, and nice additions that add to the experience if you're looking for them.
+
+(I think, given the density of the game, the props, the experience, combining all the ingredients into 1 stage instead of 3, lets us play with the story more - the game not only makes more sense as a whole, but is constantly engaging. It won't be dragged on any longer than necessary, and I think people are much more impressed with a game that is just fantastic, no matter the length. We want people to put the game down and still remember it - like a burst of magic.)
+
+Black for 3 seconds or so.
+
+Really slowly fades back in to apartment. And that's the end of the game. Credits 3D text of our names, and any attributions we need to make are in the space, like the 3D floating text in Phobophobia which I think is pretty cool) And I can find some public domain music like a really old hawaiian tune that plays on a radio that might add to the atmosphere.
+
+THIS, is an experience that the judges and other people will talk about - really dense, that's the magic here. I doubt any of the other games will be this dense with content. People talk about the shortest, simplest things, so let's wow them.
+
+
+
+
+
+End of Miles's brain pouring into textedit.
+
+Fuck you devil plant.
+
+:)
+
