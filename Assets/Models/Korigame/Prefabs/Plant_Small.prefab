@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 401528}
   - 33: {fileID: 3363938}
   - 23: {fileID: 2362500}
+  - 65: {fileID: 6522214}
   m_Layer: 0
   m_Name: Plant_Small
   m_TagString: Untagged
@@ -25,6 +26,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 498212}
+  - 114: {fileID: 11429234}
   m_Layer: 0
   m_Name: Plant_Small
   m_TagString: Untagged
@@ -50,8 +52,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 185658}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.61087346, y: 4.21977329, z: 4.17681026}
+  m_LocalRotation: {x: -.198515475, y: -.28265506, z: .0599135049, w: .936540544}
+  m_LocalPosition: {x: -.400000006, y: 2.11400008, z: 5.03000021}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 401528}
@@ -67,9 +69,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 7780606ff1a784dde8c299ed6b8efe66, type: 2}
-  - {fileID: 2100000, guid: 375decbef99ab4d6bb7b7d261e0d749e, type: 2}
-  - {fileID: 2100000, guid: 8decc28b0e7ba41dbb5cfaef86659261, type: 2}
+  - {fileID: 2100000, guid: 77fb871d0fe7b4eb488b3492aee45caf, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -90,6 +90,34 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 114796}
   m_Mesh: {fileID: 4300150, guid: d83b5fa58951846c988d3b6108025c04, type: 3}
+--- !u!65 &6522214
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 114796}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: .37086308, y: .446606964, z: .388756961}
+  m_Center: {x: -.00433949567, y: -.0593369752, z: -.0511274077}
+--- !u!114 &11429234
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 185658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da65c8c8862574cb0bead688e3024ada, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data:
+    duration: 8
+    elevation: .5
+    isRotating: 1
+  anchor: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

@@ -27,7 +27,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 440076}
   - 114: {fileID: 11475584}
-  - 114: {fileID: 11412252}
   - 54: {fileID: 5477804}
   m_Layer: 0
   m_Name: Cheese
@@ -71,8 +70,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 167340a2d32ba457081feae1783c835d, type: 2}
-  - {fileID: 2100000, guid: 468d7118ef34b410580907ca69728573, type: 2}
+  - {fileID: 2100000, guid: 77fb871d0fe7b4eb488b3492aee45caf, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -120,17 +118,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: .421953022, y: .313698083, z: .22552909}
   m_Center: {x: -.00426045852, y: 3.1200792e-11, z: -.00487043848}
---- !u!114 &11412252
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 198194}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bda08ae1ca36c47a48d4fa575dec3d57, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &11475584
 MonoBehaviour:
   m_ObjectHideFlags: 1

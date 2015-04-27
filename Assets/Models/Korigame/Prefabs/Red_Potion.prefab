@@ -27,6 +27,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 446864}
   - 54: {fileID: 5472340}
+  - 114: {fileID: 11462022}
   m_Layer: 0
   m_Name: Red_Potion
   m_TagString: Untagged
@@ -69,9 +70,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 8ba957fd16b67487990c1f30f1ecd8a8, type: 2}
-  - {fileID: 2100000, guid: 095953f177c3a48b09b618eb139c8e90, type: 2}
-  - {fileID: 2100000, guid: 468d7118ef34b410580907ca69728573, type: 2}
+  - {fileID: 2100000, guid: 77fb871d0fe7b4eb488b3492aee45caf, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -119,6 +118,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: .179130003, y: .206841975, z: .269288987}
   m_Center: {x: 0, y: 0, z: -.0115715032}
+--- !u!114 &11462022
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 111906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b5c6fe6c53e94490ade18dcbea80887, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hasItsOwnFocusTime: 0
+  focusTimeSec: 0
+  isAbleToInteract: 1
+  body: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

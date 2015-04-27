@@ -57,7 +57,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 161854}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.97099996, y: 2.43799996, z: 4.72300005}
+  m_LocalPosition: {x: -1.96500003, y: .522000015, z: 4.48400021}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 469016}
@@ -73,9 +73,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 355e909750fba4383b3573a81683bdbc, type: 2}
-  - {fileID: 2100000, guid: 095953f177c3a48b09b618eb139c8e90, type: 2}
-  - {fileID: 2100000, guid: 468d7118ef34b410580907ca69728573, type: 2}
+  - {fileID: 2100000, guid: 77fb871d0fe7b4eb488b3492aee45caf, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -150,7 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40f283574dc5849f4968fe12a0a78dc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: {x: .200000003, y: 0, z: -.100000001}
+  force: {x: .100000001, y: 0, z: -.100000001}
 --- !u!135 &13558138
 SphereCollider:
   m_ObjectHideFlags: 1

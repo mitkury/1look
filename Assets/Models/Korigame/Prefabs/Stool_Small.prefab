@@ -27,6 +27,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 434812}
   - 54: {fileID: 5425874}
+  - 114: {fileID: 11424176}
   m_Layer: 0
   m_Name: Stool_Small
   m_TagString: Untagged
@@ -40,8 +41,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 197750}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.3829999, y: .223000005, z: 4.18100023}
+  m_LocalRotation: {x: 0, y: 0, z: .984366298, w: .176133364}
+  m_LocalPosition: {x: -1.54999995, y: 4.40999985, z: 1.37}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 456596}
@@ -69,7 +70,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 8decc28b0e7ba41dbb5cfaef86659261, type: 2}
+  - {fileID: 2100000, guid: 77fb871d0fe7b4eb488b3492aee45caf, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -117,6 +118,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: .473527014, y: .473263025, z: .359407067}
   m_Center: {x: -.00895949453, y: -.00212849653, z: -.00295247161}
+--- !u!114 &11424176
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 197750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da65c8c8862574cb0bead688e3024ada, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data:
+    duration: 8
+    elevation: 1
+    isRotating: 1
+  anchor: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

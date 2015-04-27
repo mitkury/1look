@@ -25,8 +25,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 467040}
-  - 136: {fileID: 13644294}
   - 114: {fileID: 11401354}
+  - 135: {fileID: 13596678}
   m_Layer: 0
   m_Name: CauldronMagic
   m_TagString: Untagged
@@ -132,7 +132,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 168278}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: -.0520000011}
+  m_LocalPosition: {x: 0, y: -0, z: .0799999982}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 435598}
@@ -159,7 +159,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 32e86d235a96a4257bcc2d354a717c13, type: 2}
+  - {fileID: 2100000, guid: 77fb871d0fe7b4eb488b3492aee45caf, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -183,7 +183,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 8500aa390092a4bef947adf5d4c47aa9, type: 2}
+  - {fileID: 2100000, guid: 77fb871d0fe7b4eb488b3492aee45caf, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -274,18 +274,17 @@ MonoBehaviour:
   windRoughness: 20
   affectedVertices: {x: 1, y: 1, z: 0}
   useAlternativeMethod: 1
---- !u!136 &13644294
-CapsuleCollider:
+--- !u!135 &13596678
+SphereCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 168278}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: .423000008
-  m_Height: .200000003
-  m_Direction: 2
+  serializedVersion: 2
+  m_Radius: .430000007
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!198 &19844690
 ParticleSystem:
@@ -1325,7 +1324,7 @@ ParticleSystemRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 8500aa390092a4bef947adf5d4c47aa9, type: 2}
+  - {fileID: 2100000, guid: 77fb871d0fe7b4eb488b3492aee45caf, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
