@@ -1,8 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-
-
 public class PlaysSoundOnImpact : Interaction {
 	
 	AudioSource _audioSource;
