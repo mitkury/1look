@@ -4722,11 +4722,11 @@ Prefab:
     - target: {fileID: 11476080, guid: cae9e06a3c5a845958ce0513dbb8a829, type: 2}
       propertyPath: soundOnOpen
       value: 
-      objectReference: {fileID: 8300000, guid: 2420484ce4e9f426ead74ea4fed53b63, type: 3}
+      objectReference: {fileID: 8300000, guid: 47f3c4bbc48d74f75b718da969d3efc1, type: 3}
     - target: {fileID: 11446204, guid: cae9e06a3c5a845958ce0513dbb8a829, type: 2}
       propertyPath: soundOnOpen
       value: 
-      objectReference: {fileID: 8300000, guid: 2420484ce4e9f426ead74ea4fed53b63, type: 3}
+      objectReference: {fileID: 8300000, guid: 47f3c4bbc48d74f75b718da969d3efc1, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cae9e06a3c5a845958ce0513dbb8a829, type: 2}
   m_IsPrefabParent: 0
