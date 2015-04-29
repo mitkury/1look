@@ -10,9 +10,11 @@ public class ObtainableItem : InteractiveThing {
 		if (GetComponent<CauldronUser>() == null) {
 			gameObject.AddComponent<CauldronUser>();
 		}
+		/*
 		if (GetComponent<SurfaceUser>() == null) {
 			gameObject.AddComponent<SurfaceUser>();
 		}
+		*/
 
 		base.Init();
 	}

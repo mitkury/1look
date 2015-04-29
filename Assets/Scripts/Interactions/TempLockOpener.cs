@@ -3,7 +3,17 @@ using System.Collections;
 
 public class TempLockOpener : Interaction {
 
+	AudioSource _audioSource;
+
 	public int lockID = 1;
+	public AudioClip soundOnOpen;
+
+	void Start() {
+		if (soundOnOpen != null) {
+			_audioSource = GetComponent<AudioSource>() != null ? GetComponent<AudioSource>() : gameObject.AddComponent<AudioSource>();
+			_audioSource.clip = soundOnOpen;
+		}
+	}
 
 	IEnumerator OpenLockCo(InteractiveThing thing) {
 
@@ -23,6 +33,9 @@ public class TempLockOpener : Interaction {
 
 		// Move the key inside the lock.
 		LeanTween.move(gameObject, tempLock.keyInsidePoint.position, 0.25f).setEase(LeanTweenType.easeOutSine);
+
+		if (_audioSource != null)
+			_audioSource.Play();
 
 		yield return new WaitForSeconds(0.25f);
 
