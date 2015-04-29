@@ -15,11 +15,11 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 6
   m_Fog: 1
-  m_FogColor: {r: .5, g: .5, b: .5, a: 1}
-  m_FogMode: 3
+  m_FogColor: {r: 1, g: 1, b: 1, a: 1}
+  m_FogMode: 1
   m_FogDensity: .00999999978
-  m_LinearFogStart: 0
-  m_LinearFogEnd: 300
+  m_LinearFogStart: 4
+  m_LinearFogEnd: 15
   m_AmbientSkyColor: {r: .250760674, g: .197610289, b: .316176474, a: 1}
   m_AmbientEquatorColor: {r: .114, g: .125, b: .133000001, a: 1}
   m_AmbientGroundColor: {r: .0469999984, g: .0430000015, b: .0350000001, a: 1}
@@ -4729,7 +4729,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3b65d4f11efcc411f8d251bb4987a346, type: 3}
+  m_audioClip: {fileID: 8300000, guid: f0bf90aa31b024b9893fa7407b884230, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

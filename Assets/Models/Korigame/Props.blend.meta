@@ -103,6 +103,9 @@ ModelImporter:
     100190: TV
     100192: VCR
     100194: Glass_Of_Wine
+    100196: Apartment_Door_001
+    100198: Apartment_Window
+    100200: Glow_Star
     400000: Apple
     400002: Bookcase
     400004: Bubbling_Acid
@@ -201,6 +204,9 @@ ModelImporter:
     400190: TV
     400192: VCR
     400194: Glass_Of_Wine
+    400196: Apartment_Door_001
+    400198: Apartment_Window
+    400200: Glow_Star
     2300000: Apple
     2300002: Bookcase
     2300004: Bubbling_Acid
@@ -297,6 +303,9 @@ ModelImporter:
     2300186: TV
     2300188: VCR
     2300190: Glass_Of_Wine
+    2300192: Apartment_Door_001
+    2300194: Apartment_Window
+    2300196: Glow_Star
     3300000: Apple
     3300002: Bookcase
     3300004: Bubbling_Acid
@@ -393,6 +402,9 @@ ModelImporter:
     3300186: TV
     3300188: VCR
     3300190: Glass_Of_Wine
+    3300192: Apartment_Door_001
+    3300194: Apartment_Window
+    3300196: Glow_Star
     4300000: Apple
     4300002: Bookcase
     4300004: Cauldron
@@ -490,6 +502,9 @@ ModelImporter:
     4300188: Fruit_Bowl
     4300190: TV
     4300192: Glass_Of_Wine
+    4300194: Glow_Star
+    4300196: Apartment_Window
+    4300198: Apartment_Door_001
     7400000: Default Take
     9500000: //RootNode
     13700000: Magic_Book_001
