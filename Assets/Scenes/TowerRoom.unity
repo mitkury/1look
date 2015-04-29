@@ -612,6 +612,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 11459968, guid: 83ecf9a7eec2c4384be9b66e89557b01, type: 2}
+      propertyPath: audioClipData.volume
+      value: .300000012
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 83ecf9a7eec2c4384be9b66e89557b01, type: 2}
   m_IsPrefabParent: 0
@@ -1413,6 +1417,7 @@ MonoBehaviour:
     volume: .200000003
     lowPitchRange: 1
     highPitchRange: 1
+    spatialBlend: 1
 --- !u!1001 &567956637
 Prefab:
   m_ObjectHideFlags: 0
@@ -1807,9 +1812,9 @@ Transform:
   - {fileID: 1122640695}
   - {fileID: 2022980746}
   - {fileID: 736517740}
-  - {fileID: 1158086413}
   - {fileID: 2042701859}
   - {fileID: 2129398845}
+  - {fileID: 1158086413}
   m_Father: {fileID: 1958922944}
   m_RootOrder: 9
 --- !u!1001 &646627522
@@ -1862,6 +1867,10 @@ Prefab:
     - target: {fileID: 195426, guid: 83ecf9a7eec2c4384be9b66e89557b01, type: 2}
       propertyPath: m_StaticEditorFlags
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11459968, guid: 83ecf9a7eec2c4384be9b66e89557b01, type: 2}
+      propertyPath: audioClipData.volume
+      value: .300000012
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 83ecf9a7eec2c4384be9b66e89557b01, type: 2}
@@ -2157,7 +2166,7 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -3103,7 +3112,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 408676, guid: 5ecde64c10d484e3f9911941b38141db, type: 2}
       propertyPath: m_RootOrder
-      value: 40
+      value: 42
       objectReference: {fileID: 0}
     - target: {fileID: 147542, guid: 5ecde64c10d484e3f9911941b38141db, type: 2}
       propertyPath: m_Name
@@ -3223,7 +3232,7 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -3287,6 +3296,10 @@ Prefab:
     - target: {fileID: 483424, guid: 6f772c1cc8e7044a1a71fdbd99122218, type: 2}
       propertyPath: m_RootOrder
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11464412, guid: 6f772c1cc8e7044a1a71fdbd99122218, type: 2}
+      propertyPath: audioClipData.volume
+      value: .300000012
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6f772c1cc8e7044a1a71fdbd99122218, type: 2}
@@ -3384,7 +3397,7 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -3682,10 +3695,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   force: {x: -.25, y: 0, z: .25}
   audioClipData:
-    audioClip: {fileID: 0}
-    volume: 1
-    lowPitchRange: 1
-    highPitchRange: 1
+    audioClip: {fileID: 8300000, guid: f9fb28451e2804bea83394d9bc7b0ca0, type: 3}
+    volume: .300000012
+    lowPitchRange: .300000012
+    highPitchRange: .300000012
+    spatialBlend: 1
 --- !u!114 &1354490208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3891,6 +3905,10 @@ Prefab:
     - target: {fileID: 195426, guid: 83ecf9a7eec2c4384be9b66e89557b01, type: 2}
       propertyPath: m_Name
       value: Bottle_Narrow 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11459968, guid: 83ecf9a7eec2c4384be9b66e89557b01, type: 2}
+      propertyPath: audioClipData.volume
+      value: .400000006
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 83ecf9a7eec2c4384be9b66e89557b01, type: 2}
@@ -4355,7 +4373,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 481726, guid: 1fe4cfa8b98f44d71a5e84134e595b7b, type: 2}
       propertyPath: m_RootOrder
-      value: 41
+      value: 40
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1fe4cfa8b98f44d71a5e84134e595b7b, type: 2}
@@ -4457,6 +4475,10 @@ Prefab:
       propertyPath: m_Name
       value: Bottle 2
       objectReference: {fileID: 0}
+    - target: {fileID: 11464412, guid: 6f772c1cc8e7044a1a71fdbd99122218, type: 2}
+      propertyPath: audioClipData.volume
+      value: .300000012
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6f772c1cc8e7044a1a71fdbd99122218, type: 2}
   m_IsPrefabParent: 0
@@ -4497,7 +4519,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 446864, guid: ed1bfd40213724447b1e1ef45716aa46, type: 2}
       propertyPath: m_RootOrder
-      value: 42
+      value: 41
       objectReference: {fileID: 0}
     - target: {fileID: 111906, guid: ed1bfd40213724447b1e1ef45716aa46, type: 2}
       propertyPath: m_Name
@@ -4673,7 +4695,7 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -4767,6 +4789,14 @@ Prefab:
     - target: {fileID: 454722, guid: cae9e06a3c5a845958ce0513dbb8a829, type: 2}
       propertyPath: m_RootOrder
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 8218478, guid: cae9e06a3c5a845958ce0513dbb8a829, type: 2}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8245322, guid: cae9e06a3c5a845958ce0513dbb8a829, type: 2}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cae9e06a3c5a845958ce0513dbb8a829, type: 2}

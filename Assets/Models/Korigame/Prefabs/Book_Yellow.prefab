@@ -133,9 +133,10 @@ MonoBehaviour:
   force: {x: 1.5, y: 0, z: -.5}
   audioClipData:
     audioClip: {fileID: 8300000, guid: f9fb28451e2804bea83394d9bc7b0ca0, type: 3}
-    volume: .200000003
+    volume: .300000012
     lowPitchRange: .699999988
     highPitchRange: 1.5
+    spatialBlend: 1
 --- !u!114 &11491820
 MonoBehaviour:
   m_ObjectHideFlags: 1

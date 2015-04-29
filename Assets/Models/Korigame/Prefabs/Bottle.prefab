@@ -56,8 +56,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 161854}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.97099996, y: 2.43799996, z: 4.72300005}
+  m_LocalRotation: {x: -.107266501, y: -.108014539, z: .701289892, w: .696433246}
+  m_LocalPosition: {x: -2.69899988, y: 2.38100004, z: 4.18400002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 469016}
@@ -151,9 +151,10 @@ MonoBehaviour:
   force: {x: -.0500000007, y: 0, z: -.200000003}
   audioClipData:
     audioClip: {fileID: 8300000, guid: 9487340848b39472483a189dd778b253, type: 3}
-    volume: .200000003
+    volume: .400000006
     lowPitchRange: .699999988
     highPitchRange: 1.5
+    spatialBlend: 1
 --- !u!135 &13558138
 SphereCollider:
   m_ObjectHideFlags: 1

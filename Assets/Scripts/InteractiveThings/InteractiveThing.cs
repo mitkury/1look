@@ -18,7 +18,9 @@ public abstract class InteractiveThing : MonoBehaviour {
 	}
 
 	protected virtual void Init() {
-		interactions = GetComponents<Interaction>().ToList();
+		//interactions = GetComponents<Interaction>().ToList();
+		if (interactions == null)
+			interactions = new List<Interaction>();
 		
 		/*
 		if (transform.root != null) {
@@ -52,6 +54,18 @@ public abstract class InteractiveThing : MonoBehaviour {
 
 		King.placeManager.currentPlace.Add(this);
 		*/
+	}
+
+	public void AddInteraction(Interaction interaction) {
+		if (interactions == null)
+			interactions = new List<Interaction>();
+
+		Debug.Log(interaction);
+
+		if (interactions.Find(i => i == interaction) == null)
+			interactions.Add(interaction);
+		else
+			Debug.LogWarning("Trying to add an interaction "+interaction+" that is already added");
 	}
 
 }

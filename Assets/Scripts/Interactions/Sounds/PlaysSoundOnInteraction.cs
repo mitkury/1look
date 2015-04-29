@@ -7,34 +7,41 @@ public class AudioClipData {
 	public float volume = 1f;
 	public float lowPitchRange = 1f;
 	public float highPitchRange = 1f;
+	public float spatialBlend = 1f;
 }
 
 public class PlaysSoundOnInteraction : Interaction {
 
+	bool isSetup;
 	AudioSource _audioSource;
 
 	public AudioClipData audioClipData;
 
 	void Start() {
-		Setup(audioClipData);
+		if (!isSetup) {
+			Setup(audioClipData);
+		}
 	}
 
 	public void Setup(AudioClipData data) {
+		isSetup = true;
+		
 		audioClipData = data;
-
 		if (audioClipData.audioClip != null) {
 			_audioSource = GetComponent<AudioSource>() != null ? GetComponent<AudioSource>() : gameObject.AddComponent<AudioSource>();
-			Debug.Log(_audioSource);
 			_audioSource.clip = audioClipData.audioClip;
 			_audioSource.volume = audioClipData.volume;
+			_audioSource.spatialBlend = audioClipData.spatialBlend;
 		}
 	}
 
 	public override void Interact ()
 	{
+		Debug.Log(_audioSource);
 		if (_audioSource != null) {
 			_audioSource.pitch = Random.Range(audioClipData.lowPitchRange, audioClipData.highPitchRange);
-			_audioSource.Play();
+			//_audioSource.Play();
+			_audioSource.PlayOneShot(audioClipData.audioClip, audioClipData.volume);
 		}
 	}
 }

@@ -131,6 +131,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: {x: 1, y: 0, z: -1}
+  audioClipData:
+    audioClip: {fileID: 8300000, guid: f9fb28451e2804bea83394d9bc7b0ca0, type: 3}
+    volume: .400000006
+    lowPitchRange: .600000024
+    highPitchRange: .600000024
+    spatialBlend: 1
 --- !u!114 &11488034
 MonoBehaviour:
   m_ObjectHideFlags: 1

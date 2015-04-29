@@ -10,6 +10,10 @@ using System.Collections;
 
 public abstract class Interaction : MonoBehaviour {
 
+	void Awake() {
+		transform.SendMessage("AddInteraction", this, SendMessageOptions.DontRequireReceiver);
+	}
+
 	public virtual bool IsAbleToInteractWith(InteractiveThing thing) {
 		return false;
 	}
