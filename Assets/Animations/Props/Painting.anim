@@ -18368,4 +18368,11 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_GenerateMotionCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0
+    functionName: SetAudioParameter
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: .600000024
+    intParameter: 0
+    messageOptions: 0
