@@ -161,6 +161,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSourceReceiver: {fileID: 0}
+  max: 1
+  min: .899999976
 --- !u!114 &11462614
 MonoBehaviour:
   m_ObjectHideFlags: 1

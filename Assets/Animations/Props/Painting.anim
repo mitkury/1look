@@ -18370,9 +18370,16 @@ AnimationClip:
   m_GenerateMotionCurves: 0
   m_Events:
   - time: 0
-    functionName: SetAudioParameter
+    functionName: FadeOut
     data: 
     objectReferenceParameter: {fileID: 0}
-    floatParameter: .600000024
+    floatParameter: 2
+    intParameter: 0
+    messageOptions: 0
+  - time: 3.45000005
+    functionName: FadeIn
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 1.5
     intParameter: 0
     messageOptions: 0
