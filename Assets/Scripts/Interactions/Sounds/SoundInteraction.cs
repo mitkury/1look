@@ -16,6 +16,9 @@ public class SoundInteraction : Interaction {
 	AudioSource _audioSource;
 
 	public void SetupAudioSource(AudioClipData data) {
+		if (data == null)
+			return;
+
 		isSetup = true;
 		
 		if (data.audioClip != null) {
@@ -26,7 +29,7 @@ public class SoundInteraction : Interaction {
 		}
 	}
 
-	public void PlayOneShot(AudioClipData data) {
+	public virtual void PlayOneShot(AudioClipData data) {
 		SetupAudioSource(data);
 		if (_audioSource != null) {
 			_audioSource.pitch = Random.Range(data.lowPitchRange, data.highPitchRange);

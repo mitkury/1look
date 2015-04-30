@@ -131,12 +131,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: {x: 1.5, y: 0, z: -.5}
-  audioClipData:
+  audioOnPoke:
     audioClip: {fileID: 8300000, guid: f9fb28451e2804bea83394d9bc7b0ca0, type: 3}
     volume: .300000012
     lowPitchRange: .699999988
     highPitchRange: 1.5
     spatialBlend: 1
+  audioOnImpact:
+  - audioClip: {fileID: 8300000, guid: f9fb28451e2804bea83394d9bc7b0ca0, type: 3}
+    volume: 0
+    lowPitchRange: .300000012
+    highPitchRange: .5
+    spatialBlend: 1
+    velocityToVolume: .0500000007
+    requiredMinVelocity: 1
 --- !u!114 &11491820
 MonoBehaviour:
   m_ObjectHideFlags: 1

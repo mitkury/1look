@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System;
 
 [System.Serializable]
 public class AudioClipDataOnImpact : AudioClipData {
@@ -11,26 +12,29 @@ public class AudioClipDataOnImpact : AudioClipData {
 
 public class PlaysSoundOnImpact : SoundInteraction {
 
-	public List<AudioClipDataOnImpact> data;
+	public List<AudioClipDataOnImpact> audioClipsData;
 	Rigidbody _rigidbody;
-	
-	float lowPitchRange = 0.75f;
-	float highPitchRange = 1.5f;
-	float velocityToVolume = 0.2f;
-	float velocityClipSplit = 10f;
 
 	void Start () {
 		_rigidbody = GetComponent<Rigidbody>();
 	}
 
-
 	void OnCollisionEnter(Collision collision) {
-		Debug.Log(collision.relativeVelocity.magnitude);
-		/*
-		if (collision.relativeVelocity.magnitude > 2) {
-			_audioSource.Play();
-		}
-		*/
+		if (audioClipsData.Count == 0)
+			return;
+
+		var magnitude = collision.relativeVelocity.magnitude;
+		var result = audioClipsData.Where(d => magnitude >= d.requiredMinVelocity).ToArray();
+
+		if (result.Length == 0)
+			return;
+
+		// Get an audio with a max 'requiredMinVelocity'.
+		var audioClipData = result[result.Length - 1];
+		var hitVolume = audioClipData.velocityToVolume * magnitude;
+
+		audioClipData.volume = hitVolume;
+		PlayOneShot(audioClipData);
 	}
 
 }

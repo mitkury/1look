@@ -27,7 +27,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 134004}
-  m_LocalRotation: {x: -.624702632, y: -.33128038, z: -.331280321, w: .624702513}
+  m_LocalRotation: {x: -.624702692, y: -.33128041, z: -.331280351, w: .624702573}
   m_LocalPosition: {x: 3.34299994, y: 1.64600003, z: 4.38000011}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -125,6 +125,14 @@ MonoBehaviour:
     lowPitchRange: .5
     highPitchRange: .5
     spatialBlend: 1
+  audioOnImpact:
+  - audioClip: {fileID: 8300000, guid: 9487340848b39472483a189dd778b253, type: 3}
+    volume: 0
+    lowPitchRange: .200000003
+    highPitchRange: .200000003
+    spatialBlend: 1
+    velocityToVolume: .150000006
+    requiredMinVelocity: 1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
