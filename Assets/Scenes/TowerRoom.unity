@@ -1360,7 +1360,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioClipData:
     audioClip: {fileID: 8300000, guid: e73c06a14a26640918aedbf8ca1ad2ab, type: 3}
-    volume: .200000003
+    volume: .600000024
     lowPitchRange: 1
     highPitchRange: 1
     spatialBlend: 1
@@ -3127,7 +3127,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: ba1d095891a8f49fbabaa36f044e54f9, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: .0500000007
+  m_Volume: .100000001
   m_Pitch: 1
   Loop: 1
   Mute: 0
