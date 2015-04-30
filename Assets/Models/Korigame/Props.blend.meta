@@ -112,6 +112,9 @@ ModelImporter:
     100208: Kettle
     100210: Clock
     100212: Clock_Hand
+    100214: Cat
+    100216: Armature
+    100218: Bone
     400000: Apple
     400002: Bookcase
     400004: Bubbling_Acid
@@ -219,6 +222,9 @@ ModelImporter:
     400208: Kettle
     400210: Clock
     400212: Clock_Hand
+    400214: Cat
+    400216: Armature
+    400218: Bone
     2300000: Apple
     2300002: Bookcase
     2300004: Bubbling_Acid
@@ -324,6 +330,7 @@ ModelImporter:
     2300204: Kettle
     2300206: Clock
     2300208: Clock_Hand
+    2300210: Cat
     3300000: Apple
     3300002: Bookcase
     3300004: Bubbling_Acid
@@ -429,6 +436,7 @@ ModelImporter:
     3300204: Kettle
     3300206: Clock
     3300208: Clock_Hand
+    3300210: Cat
     4300000: Apple
     4300002: Bookcase
     4300004: Cauldron
@@ -535,6 +543,7 @@ ModelImporter:
     4300206: Kettle
     4300208: Clock
     4300210: Clock_Hand
+    4300212: Cat
     7400000: Default Take
     9500000: //RootNode
     13700000: Magic_Book_001
