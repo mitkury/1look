@@ -1,15 +1,17 @@
 ﻿using UnityEngine;
+using UnityEngine.Serialization;
 using System.Collections;
 
 [RequireComponent(typeof(Rigidbody))]
 public class PokesBySight : Interaction {
 
 	public Vector3 force = Vector3.zero;
-	public AudioClipData audioClipData;
+	[FormerlySerializedAs("audioClipData")]
+	public AudioClipData audioOnPoke;
 
 	void Start() {
 		var player = gameObject.AddComponent<PlaysSoundOnInteraction>();
-		player.Setup(audioClipData);
+		player.audioClipData = audioOnPoke;
 	}
 
 	IEnumerator ActivateInSecCo(float time) {

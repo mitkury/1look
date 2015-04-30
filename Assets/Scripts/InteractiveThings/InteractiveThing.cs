@@ -60,8 +60,6 @@ public abstract class InteractiveThing : MonoBehaviour {
 		if (interactions == null)
 			interactions = new List<Interaction>();
 
-		Debug.Log(interaction);
-
 		if (interactions.Find(i => i == interaction) == null)
 			interactions.Add(interaction);
 		else

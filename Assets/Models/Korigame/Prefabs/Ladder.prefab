@@ -18,6 +18,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &169870
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 498994}
+  - 65: {fileID: 6548232}
+  - 114: {fileID: 11481142}
+  - 114: {fileID: 11444272}
+  m_Layer: 0
+  m_Name: SoundTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &192866
 GameObject:
   m_ObjectHideFlags: 0
@@ -59,8 +77,21 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 406520}
+  - {fileID: 498994}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!4 &498994
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 169870}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .0599999987, y: 1, z: -0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 458304}
+  m_RootOrder: 1
 --- !u!23 &2376528
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -119,6 +150,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: .135804027, y: .595453918, z: 2.38341165}
   m_Center: {x: 3.67809116e-10, y: -2.98268418e-07, z: -.0329107605}
+--- !u!65 &6548232
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 169870}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: .135804027, y: .595453918, z: .595453918}
+  m_Center: {x: 3.67809116e-10, y: -2.98268418e-07, z: -.0329107605}
 --- !u!114 &11400898
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -131,12 +174,51 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: {x: 1, y: 0, z: -1}
-  audioClipData:
+  audioOnPoke:
     audioClip: {fileID: 8300000, guid: f9fb28451e2804bea83394d9bc7b0ca0, type: 3}
     volume: .400000006
     lowPitchRange: .600000024
     highPitchRange: .600000024
     spatialBlend: 1
+--- !u!114 &11444272
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 169870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 760ddd6bb0ab0400eb9cf43e0d2584e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioOnEnter:
+    audioClip: {fileID: 8300000, guid: 1020b9cc03cf14a689ac7421f84df513, type: 3}
+    volume: .300000012
+    lowPitchRange: 1
+    highPitchRange: 1
+    spatialBlend: 1
+  audioOnExit:
+    audioClip: {fileID: 0}
+    volume: 1
+    lowPitchRange: 1
+    highPitchRange: 1
+    spatialBlend: 1
+--- !u!114 &11481142
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 169870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 584e027a5245b4eb0a3456414ceac120, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  registerNamesOrTags:
+  - Floor
+  triggersEnter: 1
+  triggersExit: 0
+  receivers: []
 --- !u!114 &11488034
 MonoBehaviour:
   m_ObjectHideFlags: 1

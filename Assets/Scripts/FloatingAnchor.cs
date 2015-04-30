@@ -21,18 +21,6 @@ public class FloatingAnchor : MonoBehaviour {
 			Init();
 	}
 
-	public void Init() {
-		animator = GetComponent<Animator>();
-		initPosition = transform.position;
-		elevatedPosition = initPosition + Vector3.up * data.elevation;
-		
-		if (animator == null) {
-			StartCoroutine(AnimateManuallyCo());
-			if (data.isRotating)
-				StartCoroutine(AnimateRotationManuallyCo());
-		}
-	}
-
 	IEnumerator AnimateManuallyCo() {
 		while(true) {
 			LeanTween.move(gameObject, elevatedPosition, data.duration * 0.4f).setEase(LeanTweenType.easeInOutSine);
@@ -48,5 +36,18 @@ public class FloatingAnchor : MonoBehaviour {
 			yield return new WaitForSeconds(data.duration * 2);
 		}
 	}
+
+	public void Init() {
+		animator = GetComponent<Animator>();
+		initPosition = transform.position;
+		elevatedPosition = initPosition + Vector3.up * data.elevation;
+		
+		if (animator == null) {
+			StartCoroutine(AnimateManuallyCo());
+			if (data.isRotating)
+				StartCoroutine(AnimateRotationManuallyCo());
+		}
+	}
+
 
 }
