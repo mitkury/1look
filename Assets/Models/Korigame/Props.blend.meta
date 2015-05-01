@@ -116,6 +116,18 @@ ModelImporter:
     100216: Armature
     100218: Bone
     100220: Brick_Wall
+    100222: Text
+    100224: Text_001
+    100226: Text_002
+    100228: Text_003
+    100230: Text_004
+    100232: Spider
+    100234: Bottom
+    100236: Leaf_L
+    100238: Leaf_R
+    100240: Middle_Bottom
+    100242: Middle_Top
+    100244: Top
     400000: Apple
     400002: Bookcase
     400004: Bubbling_Acid
@@ -227,6 +239,18 @@ ModelImporter:
     400216: Armature
     400218: Bone
     400220: Brick_Wall
+    400222: Text
+    400224: Text_001
+    400226: Text_002
+    400228: Text_003
+    400230: Text_004
+    400232: Spider
+    400234: Bottom
+    400236: Leaf_L
+    400238: Leaf_R
+    400240: Middle_Bottom
+    400242: Middle_Top
+    400244: Top
     2300000: Apple
     2300002: Bookcase
     2300004: Bubbling_Acid
@@ -334,6 +358,12 @@ ModelImporter:
     2300208: Clock_Hand
     2300210: Cat
     2300212: Brick_Wall
+    2300214: Text
+    2300216: Text_001
+    2300218: Text_002
+    2300220: Text_003
+    2300222: Text_004
+    2300224: Spider
     3300000: Apple
     3300002: Bookcase
     3300004: Bubbling_Acid
@@ -441,6 +471,12 @@ ModelImporter:
     3300208: Clock_Hand
     3300210: Cat
     3300212: Brick_Wall
+    3300214: Text
+    3300216: Text_001
+    3300218: Text_002
+    3300220: Text_003
+    3300222: Text_004
+    3300224: Spider
     4300000: Apple
     4300002: Bookcase
     4300004: Cauldron
@@ -549,9 +585,16 @@ ModelImporter:
     4300210: Clock_Hand
     4300212: Cat
     4300214: Brick_Wall
+    4300216: Text_004
+    4300218: Text_003
+    4300220: Text_002
+    4300222: Text_001
+    4300224: Text
+    4300226: Spider
     7400000: Default Take
     9500000: //RootNode
     13700000: Magic_Book_001
+    13700002: Plant
   materials:
     importMaterials: 1
     materialName: 0
