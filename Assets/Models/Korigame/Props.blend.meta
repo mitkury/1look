@@ -128,6 +128,18 @@ ModelImporter:
     100240: Middle_Bottom
     100242: Middle_Top
     100244: Top
+    100246: Apple_Bite_Phase_1
+    100248: Apple_Bite_Phase_2
+    100250: Apple_Bite_Phase_3_Core
+    100252: Candy_Corn
+    100254: Ceiling_Light
+    100256: Human_Heart
+    100258: Kitchen_Light
+    100260: Plant_Small_001
+    100262: Pumpkin
+    100264: VHS_Tape
+    100266: Wood_Chair
+    100268: Plant_Cactus
     400000: Apple
     400002: Bookcase
     400004: Bubbling_Acid
@@ -251,6 +263,18 @@ ModelImporter:
     400240: Middle_Bottom
     400242: Middle_Top
     400244: Top
+    400246: Apple_Bite_Phase_1
+    400248: Apple_Bite_Phase_2
+    400250: Apple_Bite_Phase_3_Core
+    400252: Candy_Corn
+    400254: Ceiling_Light
+    400256: Human_Heart
+    400258: Kitchen_Light
+    400260: Plant_Small_001
+    400262: Pumpkin
+    400264: VHS_Tape
+    400266: Wood_Chair
+    400268: Plant_Cactus
     2300000: Apple
     2300002: Bookcase
     2300004: Bubbling_Acid
@@ -364,6 +388,18 @@ ModelImporter:
     2300220: Text_003
     2300222: Text_004
     2300224: Spider
+    2300226: Apple_Bite_Phase_1
+    2300228: Apple_Bite_Phase_2
+    2300230: Apple_Bite_Phase_3_Core
+    2300232: Candy_Corn
+    2300234: Ceiling_Light
+    2300236: Human_Heart
+    2300238: Kitchen_Light
+    2300240: Plant_Small_001
+    2300242: Pumpkin
+    2300244: VHS_Tape
+    2300246: Wood_Chair
+    2300248: Plant_Cactus
     3300000: Apple
     3300002: Bookcase
     3300004: Bubbling_Acid
@@ -477,6 +513,18 @@ ModelImporter:
     3300220: Text_003
     3300222: Text_004
     3300224: Spider
+    3300226: Apple_Bite_Phase_1
+    3300228: Apple_Bite_Phase_2
+    3300230: Apple_Bite_Phase_3_Core
+    3300232: Candy_Corn
+    3300234: Ceiling_Light
+    3300236: Human_Heart
+    3300238: Kitchen_Light
+    3300240: Plant_Small_001
+    3300242: Pumpkin
+    3300244: VHS_Tape
+    3300246: Wood_Chair
+    3300248: Plant_Cactus
     4300000: Apple
     4300002: Bookcase
     4300004: Cauldron
@@ -591,6 +639,18 @@ ModelImporter:
     4300222: Text_001
     4300224: Text
     4300226: Spider
+    4300228: Apple_Bite_Phase_3_Core
+    4300230: Apple_Bite_Phase_2
+    4300232: Apple_Bite_Phase_1
+    4300234: Wood_Chair
+    4300236: Pumpkin
+    4300238: Plant_Small_001
+    4300240: Kitchen_Light
+    4300242: Ceiling_Light
+    4300244: Human_Heart
+    4300246: Candy_Corn
+    4300248: VHS_Tape
+    4300250: Plant_Cactus
     7400000: Default Take
     9500000: //RootNode
     13700000: Magic_Book_001
