@@ -134,7 +134,7 @@ MonoBehaviour:
   force: {x: -.100000001, y: 0, z: -.0500000007}
   audioOnPoke:
     audioClip: {fileID: 8300000, guid: 9487340848b39472483a189dd778b253, type: 3}
-    volume: .300000012
+    volume: .400000006
     lowPitchRange: .699999988
     highPitchRange: 1.5
     spatialBlend: 1
@@ -144,7 +144,7 @@ MonoBehaviour:
     lowPitchRange: .25
     highPitchRange: .400000006
     spatialBlend: 1
-    velocityToVolume: .100000001
+    velocityToVolume: .129999995
     requiredMinVelocity: 1
 --- !u!114 &11496758
 MonoBehaviour:

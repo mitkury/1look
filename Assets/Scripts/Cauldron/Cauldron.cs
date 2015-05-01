@@ -5,9 +5,18 @@ using System.Text.RegularExpressions;
 
 public class Cauldron : InteractiveObject {
 
+	PlaysSoundOnRequest audioPlayer;
+
 	public Transform pointInside;
 	public Recipe recipe;
 	public ObtainableItem potion;
+
+	protected override void Init ()
+	{
+		base.Init ();
+
+		audioPlayer = GetComponent<PlaysSoundOnRequest>();
+	}
 
 	IEnumerator AddItemCo(ObtainableItem item, RecipeItem recipeItem) {
 		Debug.Log(item+" has been added to the cauldron.");
@@ -26,6 +35,8 @@ public class Cauldron : InteractiveObject {
 		
 		LeanTween.move(item.gameObject, targetPosition, 0.5f);
 
+		audioPlayer.PlayOneShot(0, 0.25f);
+
 		yield return new WaitForSeconds(0.5f);
 
 		item.gameObject.SetActive(false);
@@ -34,8 +45,8 @@ public class Cauldron : InteractiveObject {
 		CheckIfPoitionIsReady();
 	}
 
-	IEnumerator DeclineItemCo(ObtainableItem item) {
-		Debug.Log(item+" has been declined by the cauldron.");
+	IEnumerator RejectItemCo(ObtainableItem item) {
+		Debug.Log(item+" has been rejected by the cauldron.");
 
 		var itemRigidbody = item.GetComponent<Rigidbody>();
 		if (itemRigidbody != null) {
@@ -104,7 +115,7 @@ public class Cauldron : InteractiveObject {
 		if (recipeItem != null) {
 			StartCoroutine(AddItemCo(item, recipeItem));
 		} else {
-			StartCoroutine(DeclineItemCo(item));
+			StartCoroutine(RejectItemCo(item));
 		}
 	}
 
