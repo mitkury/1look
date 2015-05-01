@@ -689,6 +689,7 @@ GameObject:
   - 54: {fileID: 5420772}
   - 114: {fileID: 11435622}
   - 114: {fileID: 11407142}
+  - 114: {fileID: 11497728}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1260,7 +1261,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 156568}
   m_LocalRotation: {x: -.211739108, y: -.161755204, z: -.13501142, w: .95434463}
-  m_LocalPosition: {x: -.20963791, y: 1.39971962e-05, z: 7.23451376e-06}
+  m_LocalPosition: {x: -.216000006, y: -.0529999994, z: -.0299999993}
   m_LocalScale: {x: .999999881, y: 1, z: .999999881}
   m_Children: []
   m_Father: {fileID: 403082}
@@ -2429,6 +2430,23 @@ MonoBehaviour:
   segments: 32
   radius: .5
   border: .25
+--- !u!114 &11497728
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 169100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce65bc63fe6ee40738580c3411094e93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - audioClip: {fileID: 8300000, guid: 81e7550956e504561a0cffc6219e97c4, type: 3}
+    volume: .300000012
+    lowPitchRange: 1
+    highPitchRange: 1
+    spatialBlend: 1
 --- !u!124 &12469086
 Behaviour:
   m_ObjectHideFlags: 1

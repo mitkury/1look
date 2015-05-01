@@ -8,6 +8,7 @@ using System.Collections.Generic;
 public class Visitor : MonoBehaviour {
 
 	List<Camera> cameras = new List<Camera>();
+	PlaysSoundOnRequest soundPlayer;
 
 	public Transform vrCameraRig;
 	public Transform vrCenterOfView;
@@ -24,6 +25,7 @@ public class Visitor : MonoBehaviour {
 	public Inventory inventory { get; private set; }
 	public ObtainableItem itemInHand { get; private set; }
 	public ScreenFader screenFader;
+
 
 	void Awake() {
 		DontDestroyOnLoad(gameObject);
@@ -54,6 +56,8 @@ public class Visitor : MonoBehaviour {
 			sight.anchor = regularCenterOfView;
 			cameras.Add(regularCameraRig.GetComponentInChildren<Camera>());
 		}
+
+		soundPlayer = GetComponent<PlaysSoundOnRequest>();
 
 		OVRTouchpad.Create();
 		OVRTouchpad.TouchHandler += HandleTouchHandler;
@@ -314,6 +318,10 @@ public class Visitor : MonoBehaviour {
 		item.Obtains();
 		sight.ResetTarget();
 		sight.reticle.SetBody(1);
+
+		if (soundPlayer != null) {
+			soundPlayer.PlayOneShot(0);
+		}
 	}
 
 	public void Drop(ObtainableItem item) {
