@@ -1,5 +1,20 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &154320
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 401292}
+  m_Layer: 0
+  m_Name: PointInsideCauldron
+  m_TagString: Untagged
+  m_Icon: {fileID: -5082302936091411984, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &167502
 GameObject:
   m_ObjectHideFlags: 0
@@ -27,6 +42,7 @@ GameObject:
   - 4: {fileID: 467040}
   - 114: {fileID: 11401354}
   - 135: {fileID: 13596678}
+  - 114: {fileID: 11475052}
   m_Layer: 0
   m_Name: CauldronMagic
   m_TagString: Untagged
@@ -62,9 +78,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 408232}
   m_Layer: 0
-  m_Name: PointInsideCauldron
+  m_Name: PointOnSurfaceOfAcid
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5082302936091411984, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -86,6 +102,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &401292
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 154320}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0, z: -.395000011}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 435598}
+  m_RootOrder: 2
 --- !u!4 &408232
 Transform:
   m_ObjectHideFlags: 1
@@ -93,11 +121,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 186628}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0, z: -.395000011}
+  m_LocalPosition: {x: -0, y: 0, z: .00499999989}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 435598}
-  m_RootOrder: 2
+  m_RootOrder: 4
 --- !u!4 &435598
 Transform:
   m_ObjectHideFlags: 1
@@ -110,8 +138,9 @@ Transform:
   m_Children:
   - {fileID: 463454}
   - {fileID: 495762}
-  - {fileID: 408232}
+  - {fileID: 401292}
   - {fileID: 467040}
+  - {fileID: 408232}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &463454
@@ -133,7 +162,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 168278}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0, z: .0799999982}
+  m_LocalPosition: {x: -0, y: 0, z: -.0759999976}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 435598}
@@ -233,13 +262,13 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 9923da59a347546628101d3a7946e4b6, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 03c47c326b87347099d1a5c0e6ba26b5, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: .00999999978
+  m_Volume: .0500000007
   m_Pitch: 1
   Loop: 1
   Mute: 0
-  Priority: 256
+  Priority: 200
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -309,7 +338,8 @@ MonoBehaviour:
   isAbleToInteract: 1
   body: {fileID: 0}
   isAbleToBeActivatedOnItsOwn: 0
-  pointInside: {fileID: 408232}
+  pointInside: {fileID: 401292}
+  pointOnSurface: {fileID: 408232}
   recipe:
     items:
     - itemName: Apple
@@ -327,7 +357,32 @@ MonoBehaviour:
     - itemName: Popcorn
       amount: 1
       collected: 0
+    - itemName: Spider
+      amount: 1
+      collected: 0
   potion: {fileID: 0}
+--- !u!114 &11475052
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 168278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce65bc63fe6ee40738580c3411094e93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - audioClip: {fileID: 8300000, guid: ce497bf1749df41d0a92245dc33dc5e8, type: 3}
+    volume: .600000024
+    lowPitchRange: .800000012
+    highPitchRange: .899999976
+    spatialBlend: 1
+  - audioClip: {fileID: 8300000, guid: c813725f8585d4acf9b18d6c500fe9ac, type: 3}
+    volume: .600000024
+    lowPitchRange: 1
+    highPitchRange: 1
+    spatialBlend: 1
 --- !u!114 &11499398
 MonoBehaviour:
   m_ObjectHideFlags: 1

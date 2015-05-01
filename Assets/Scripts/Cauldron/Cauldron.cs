@@ -8,6 +8,7 @@ public class Cauldron : InteractiveObject {
 	PlaysSoundOnRequest audioPlayer;
 
 	public Transform pointInside;
+	public Transform pointOnSurface;
 	public Recipe recipe;
 	public ObtainableItem potion;
 
@@ -58,11 +59,13 @@ public class Cauldron : InteractiveObject {
 		
 		yield return new WaitForSeconds(1f);
 		
-		var targetPosition = pointInside.position;
+		var targetPosition = pointOnSurface.position;
 		
 		LeanTween.move(item.gameObject, targetPosition, 0.5f);
 		
 		yield return new WaitForSeconds(0.5f);
+
+		audioPlayer.PlayOneShot(1);
 
 		LeanTween.move(item.gameObject, transform.position + Vector3.up * 1f, 1f).setEase(LeanTweenType.easeOutCubic);
 

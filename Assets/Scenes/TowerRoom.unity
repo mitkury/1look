@@ -772,7 +772,7 @@ Transform:
   - {fileID: 1659471879}
   - {fileID: 49350342}
   m_Father: {fileID: 620849038}
-  m_RootOrder: 8
+  m_RootOrder: 7
 --- !u!1 &257277941
 GameObject:
   m_ObjectHideFlags: 0
@@ -1458,15 +1458,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 483424, guid: 6f772c1cc8e7044a1a71fdbd99122218, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -2.69899988
+      value: -2.71399999
       objectReference: {fileID: 0}
     - target: {fileID: 483424, guid: 6f772c1cc8e7044a1a71fdbd99122218, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 2.38100004
+      value: 2.33500004
       objectReference: {fileID: 0}
     - target: {fileID: 483424, guid: 6f772c1cc8e7044a1a71fdbd99122218, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 4.18400002
+      value: 4.23099995
       objectReference: {fileID: 0}
     - target: {fileID: 483424, guid: 6f772c1cc8e7044a1a71fdbd99122218, type: 2}
       propertyPath: m_LocalRotation.x
@@ -1697,8 +1697,8 @@ Transform:
   - {fileID: 560151392}
   - {fileID: 1644367372}
   - {fileID: 1553135410}
-  - {fileID: 950378096}
   - {fileID: 244686688}
+  - {fileID: 950378096}
   - {fileID: 932103897}
   - {fileID: 391402704}
   - {fileID: 117537081}
@@ -2373,32 +2373,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fd34f26d518f9461f9d7f87f135ffed5, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &928074805 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 168278, guid: 66a99f5ba73314881a8997449bc999c2, type: 2}
-  m_PrefabInternal: {fileID: 1122640694}
---- !u!114 &928074809
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 928074805}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce65bc63fe6ee40738580c3411094e93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sounds:
-  - audioClip: {fileID: 8300000, guid: ce497bf1749df41d0a92245dc33dc5e8, type: 3}
-    volume: .600000024
-    lowPitchRange: .800000012
-    highPitchRange: .899999976
-    spatialBlend: 1
-  - audioClip: {fileID: 8300000, guid: c813725f8585d4acf9b18d6c500fe9ac, type: 3}
-    volume: 1
-    lowPitchRange: 1
-    highPitchRange: 1
-    spatialBlend: 1
 --- !u!1001 &932103896
 Prefab:
   m_ObjectHideFlags: 0
@@ -2492,7 +2466,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 419444, guid: b410bcb0cd31641f59d19755c363e283, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 127964, guid: b410bcb0cd31641f59d19755c363e283, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -2962,10 +2936,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 632332800}
     m_Modifications:
-    - target: {fileID: 11401354, guid: 66a99f5ba73314881a8997449bc999c2, type: 2}
-      propertyPath: recipe.items.Array.size
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 435598, guid: 66a99f5ba73314881a8997449bc999c2, type: 2}
       propertyPath: m_LocalPosition.x
       value: .915000021
@@ -3002,26 +2972,6 @@ Prefab:
       propertyPath: potion
       value: 
       objectReference: {fileID: 2129398846}
-    - target: {fileID: 11401354, guid: 66a99f5ba73314881a8997449bc999c2, type: 2}
-      propertyPath: recipe.items.Array.data[5].itemName
-      value: Spider
-      objectReference: {fileID: 0}
-    - target: {fileID: 11401354, guid: 66a99f5ba73314881a8997449bc999c2, type: 2}
-      propertyPath: recipe.items.Array.data[5].amount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8263198, guid: 66a99f5ba73314881a8997449bc999c2, type: 2}
-      propertyPath: m_Volume
-      value: .0500000007
-      objectReference: {fileID: 0}
-    - target: {fileID: 8263198, guid: 66a99f5ba73314881a8997449bc999c2, type: 2}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 03c47c326b87347099d1a5c0e6ba26b5, type: 3}
-    - target: {fileID: 8263198, guid: 66a99f5ba73314881a8997449bc999c2, type: 2}
-      propertyPath: Priority
-      value: 200
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 66a99f5ba73314881a8997449bc999c2, type: 2}
   m_IsPrefabParent: 0
@@ -4371,6 +4321,10 @@ Prefab:
     - target: {fileID: 161854, guid: 6f772c1cc8e7044a1a71fdbd99122218, type: 2}
       propertyPath: m_Name
       value: Bottle 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11464412, guid: 6f772c1cc8e7044a1a71fdbd99122218, type: 2}
+      propertyPath: force.z
+      value: -.300000012
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6f772c1cc8e7044a1a71fdbd99122218, type: 2}
