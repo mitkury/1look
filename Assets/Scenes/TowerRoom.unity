@@ -410,18 +410,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 16
       objectReference: {fileID: 0}
-    - target: {fileID: 465758, guid: 160ddd8c09ad74694802f7d717a376c9, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 2.84723639
-      objectReference: {fileID: 0}
-    - target: {fileID: 465758, guid: 160ddd8c09ad74694802f7d717a376c9, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 2.84723783
-      objectReference: {fileID: 0}
-    - target: {fileID: 465758, guid: 160ddd8c09ad74694802f7d717a376c9, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 2.84723783
-      objectReference: {fileID: 0}
     - target: {fileID: 165518, guid: 160ddd8c09ad74694802f7d717a376c9, type: 2}
       propertyPath: m_Name
       value: Light Blur 1
@@ -4814,19 +4802,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 436198, guid: 1ddada9ebe66441ecb77a09c1dabe27e, type: 2}
       propertyPath: m_LocalRotation.x
-      value: -.394384921
+      value: -.39438495
       objectReference: {fileID: 0}
     - target: {fileID: 436198, guid: 1ddada9ebe66441ecb77a09c1dabe27e, type: 2}
       propertyPath: m_LocalRotation.y
-      value: .894714236
+      value: .894714296
       objectReference: {fileID: 0}
     - target: {fileID: 436198, guid: 1ddada9ebe66441ecb77a09c1dabe27e, type: 2}
       propertyPath: m_LocalRotation.z
-      value: -.0370599851
+      value: -.0370599888
       objectReference: {fileID: 0}
     - target: {fileID: 436198, guid: 1ddada9ebe66441ecb77a09c1dabe27e, type: 2}
       propertyPath: m_LocalRotation.w
-      value: .206333235
+      value: .20633325
       objectReference: {fileID: 0}
     - target: {fileID: 436198, guid: 1ddada9ebe66441ecb77a09c1dabe27e, type: 2}
       propertyPath: m_RootOrder

@@ -24,7 +24,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 400236}
   - 33: {fileID: 3346708}
-  - 64: {fileID: 6434712}
   - 23: {fileID: 2364684}
   m_Layer: 0
   m_Name: Light Blur
@@ -90,9 +89,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 110496}
-  m_LocalRotation: {x: 0, y: -.646842241, z: 0, w: .762623906}
-  m_LocalPosition: {x: .152128145, y: .121000051, z: -.0312733352}
-  m_LocalScale: {x: 1.24238932, y: 1.2423898, z: 1.24238944}
+  m_LocalRotation: {x: .0169412214, y: -.747678101, z: .0173304323, w: .663618922}
+  m_LocalPosition: {x: .101999998, y: .120999999, z: -.0179999992}
+  m_LocalScale: {x: .839678645, y: .839678943, z: .839678705}
   m_Children: []
   m_Father: {fileID: 436198}
   m_RootOrder: 3
@@ -183,7 +182,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: c7ad02c0cd8104633ac5f0f61571a77b, type: 2}
+  - {fileID: 2100000, guid: b7113f8d1c5854fa582888054815dc21, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -210,18 +209,6 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 110496}
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!64 &6434712
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 110496}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Convex: 0
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!65 &6598856
 BoxCollider:
