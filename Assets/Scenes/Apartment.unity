@@ -14,7 +14,7 @@ SceneSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 6
-  m_Fog: 1
+  m_Fog: 0
   m_FogColor: {r: 1, g: 1, b: 1, a: 1}
   m_FogMode: 3
   m_FogDensity: .0199999996
@@ -564,6 +564,10 @@ Prefab:
       propertyPath: m_Name
       value: Ceiling_Light 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2379888, guid: 47cb91620cda04bc2b723f43502abbcd, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b7113f8d1c5854fa582888054815dc21, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 47cb91620cda04bc2b723f43502abbcd, type: 2}
   m_IsPrefabParent: 0
@@ -1494,6 +1498,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 23
       objectReference: {fileID: 0}
+    - target: {fileID: 2364684, guid: 1ddada9ebe66441ecb77a09c1dabe27e, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b7113f8d1c5854fa582888054815dc21, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1ddada9ebe66441ecb77a09c1dabe27e, type: 2}
   m_IsPrefabParent: 0
@@ -5025,6 +5033,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 2309208, guid: b9ab6d9c532c445aa913f4d727ce3bd9, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b7113f8d1c5854fa582888054815dc21, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9ab6d9c532c445aa913f4d727ce3bd9, type: 2}
   m_IsPrefabParent: 0

@@ -7,7 +7,7 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 0
     path: Assets/Scenes/Game.unity
-  - enabled: 1
-    path: Assets/Scenes/Apartment.unity
   - enabled: 0
+    path: Assets/Scenes/Apartment.unity
+  - enabled: 1
     path: Assets/Scenes/TowerRoom.unity
