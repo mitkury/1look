@@ -27,7 +27,6 @@ GameObject:
   - 4: {fileID: 451298}
   - 33: {fileID: 3334310}
   - 23: {fileID: 2356214}
-  - 65: {fileID: 6511658}
   m_Layer: 0
   m_Name: Ceiling_Light
   m_TagString: Untagged
@@ -42,7 +41,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 157198}
   m_LocalRotation: {x: -.707106829, y: 0, z: 0, w: .707106709}
-  m_LocalPosition: {x: -.189999998, y: 3.6400001, z: 1.22000003}
+  m_LocalPosition: {x: -8.47000027, y: 3.6400001, z: -.379999995}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 496306}
@@ -123,18 +122,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 152424}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!65 &6511658
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 157198}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: .503141999, y: .50314194, z: .141329989}
-  m_Center: {x: 0, y: 0, z: .0167549998}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

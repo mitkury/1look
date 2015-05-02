@@ -10,7 +10,6 @@ GameObject:
   - 4: {fileID: 400808}
   - 33: {fileID: 3319330}
   - 23: {fileID: 2323062}
-  - 65: {fileID: 6562888}
   m_Layer: 0
   m_Name: Kitchen_Light
   m_TagString: Untagged
@@ -123,18 +122,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 140120}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!65 &6562888
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 110958}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.58660102, y: 1.58659971, z: .275721967}
-  m_Center: {x: -5.06639481e-07, y: 0, z: .0710190013}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
