@@ -143,6 +143,10 @@ ModelImporter:
     100270: Cube_005
     100272: Walls_With_Balcony
     100274: Dome_With_Balcony
+    100276: Dome_Light_Rays
+    100278: Telescope
+    100280: Telescope_Stand
+    100282: Plant_Bush
     400000: Apple
     400002: Bookcase
     400004: Bubbling_Acid
@@ -281,6 +285,10 @@ ModelImporter:
     400270: Cube_005
     400272: Walls_With_Balcony
     400274: Dome_With_Balcony
+    400276: Dome_Light_Rays
+    400278: Telescope
+    400280: Telescope_Stand
+    400282: Plant_Bush
     2300000: Apple
     2300002: Bookcase
     2300004: Bubbling_Acid
@@ -409,6 +417,10 @@ ModelImporter:
     2300250: Cube_005
     2300252: Walls_With_Balcony
     2300254: Dome_With_Balcony
+    2300256: Dome_Light_Rays
+    2300258: Telescope
+    2300260: Telescope_Stand
+    2300262: Plant_Bush
     3300000: Apple
     3300002: Bookcase
     3300004: Bubbling_Acid
@@ -537,6 +549,10 @@ ModelImporter:
     3300250: Cube_005
     3300252: Walls_With_Balcony
     3300254: Dome_With_Balcony
+    3300256: Dome_Light_Rays
+    3300258: Telescope
+    3300260: Telescope_Stand
+    3300262: Plant_Bush
     4300000: Apple
     4300002: Bookcase
     4300004: Cauldron
@@ -666,6 +682,10 @@ ModelImporter:
     4300252: Cube_005
     4300254: Walls_With_Balcony
     4300256: Dome_With_Balcony
+    4300258: Dome_Light_Rays
+    4300260: Telescope_Stand
+    4300262: Telescope
+    4300264: Plant_Bush
     7400000: Default Take
     9500000: //RootNode
     13700000: Magic_Book_001
