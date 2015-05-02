@@ -28,7 +28,7 @@ GameObject:
   - 4: {fileID: 411564}
   - 33: {fileID: 3380086}
   - 23: {fileID: 2353828}
-  - 64: {fileID: 6406166}
+  - 64: {fileID: 6449182}
   m_Layer: 0
   m_Name: Walls
   m_TagString: Untagged
@@ -115,7 +115,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 153900}
-  m_Mesh: {fileID: 4300066, guid: d83b5fa58951846c988d3b6108025c04, type: 3}
+  m_Mesh: {fileID: 4300254, guid: d83b5fa58951846c988d3b6108025c04, type: 3}
 --- !u!33 &3382892
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -123,7 +123,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 139450}
   m_Mesh: {fileID: 4300110, guid: d83b5fa58951846c988d3b6108025c04, type: 3}
---- !u!64 &6406166
+--- !u!64 &6449182
 MeshCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -134,7 +134,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Convex: 0
-  m_Mesh: {fileID: 4300066, guid: d83b5fa58951846c988d3b6108025c04, type: 3}
+  m_Mesh: {fileID: 4300254, guid: d83b5fa58951846c988d3b6108025c04, type: 3}
 --- !u!64 &6465882
 MeshCollider:
   m_ObjectHideFlags: 1

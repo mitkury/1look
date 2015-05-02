@@ -142,6 +142,7 @@ ModelImporter:
     100268: Plant_Cactus
     100270: Cube_005
     100272: Walls_With_Balcony
+    100274: Dome_With_Balcony
     400000: Apple
     400002: Bookcase
     400004: Bubbling_Acid
@@ -279,6 +280,7 @@ ModelImporter:
     400268: Plant_Cactus
     400270: Cube_005
     400272: Walls_With_Balcony
+    400274: Dome_With_Balcony
     2300000: Apple
     2300002: Bookcase
     2300004: Bubbling_Acid
@@ -406,6 +408,7 @@ ModelImporter:
     2300248: Plant_Cactus
     2300250: Cube_005
     2300252: Walls_With_Balcony
+    2300254: Dome_With_Balcony
     3300000: Apple
     3300002: Bookcase
     3300004: Bubbling_Acid
@@ -533,6 +536,7 @@ ModelImporter:
     3300248: Plant_Cactus
     3300250: Cube_005
     3300252: Walls_With_Balcony
+    3300254: Dome_With_Balcony
     4300000: Apple
     4300002: Bookcase
     4300004: Cauldron
@@ -661,6 +665,7 @@ ModelImporter:
     4300250: Plant_Cactus
     4300252: Cube_005
     4300254: Walls_With_Balcony
+    4300256: Dome_With_Balcony
     7400000: Default Take
     9500000: //RootNode
     13700000: Magic_Book_001
