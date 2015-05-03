@@ -152,6 +152,8 @@ ModelImporter:
     100288: Straw
     100290: Boot
     100292: Potion_Final
+    100294: Basketball
+    100296: PaintingAndHoop
     400000: Apple
     400002: Bookcase
     400004: Bubbling_Acid
@@ -299,6 +301,8 @@ ModelImporter:
     400288: Straw
     400290: Boot
     400292: Potion_Final
+    400294: Basketball
+    400296: PaintingAndHoop
     2300000: Apple
     2300002: Bookcase
     2300004: Bubbling_Acid
@@ -436,6 +440,8 @@ ModelImporter:
     2300268: Straw
     2300270: Boot
     2300272: Potion_Final
+    2300274: Basketball
+    2300276: PaintingAndHoop
     3300000: Apple
     3300002: Bookcase
     3300004: Bubbling_Acid
@@ -573,6 +579,8 @@ ModelImporter:
     3300268: Straw
     3300270: Boot
     3300272: Potion_Final
+    3300274: Basketball
+    3300276: PaintingAndHoop
     4300000: Apple
     4300002: Bookcase
     4300004: Cauldron
@@ -711,6 +719,8 @@ ModelImporter:
     4300270: Straw
     4300272: Boot
     4300274: Potion_Final
+    4300276: Basketball
+    4300278: PaintingAndHoop
     7400000: Default Take
     9500000: //RootNode
     13700000: Magic_Book_001
