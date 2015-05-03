@@ -4,16 +4,24 @@ using System.Collections;
 public class PlaysAnimationOnSight : Interaction {
 
 	public bool isAbleToInteractAfterAnimation;
+	public string stateName = "Start";
+	public int stateLayer = 0;
 	public GameObject receiver;
 
 	IEnumerator PlayAnimation() {
 		if (receiver == null) 
 			receiver = gameObject;
 		
-		var animation = receiver.GetComponent<Animation>();
-		animation.Play();
+		var animator = receiver.GetComponent<Animator>();
+		var idleStateNameHash = animator.GetCurrentAnimatorStateInfo(0).shortNameHash;
+		var stateHash = Animator.StringToHash(stateName);
 
-		while(animation.isPlaying)
+		animator.Play(stateName, stateLayer);
+
+		// Wait a frame for a new state to setup.
+		yield return null;
+
+		while(stateHash == animator.GetCurrentAnimatorStateInfo(stateLayer).shortNameHash)
 			yield return null;
 
 		if (isAbleToInteractAfterAnimation) {

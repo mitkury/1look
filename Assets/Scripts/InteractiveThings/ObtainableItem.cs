@@ -43,8 +43,8 @@ public class ObtainableItem : InteractiveThing {
 			transform.parent.SendMessage("OnItemTakeByVisitor", this, SendMessageOptions.DontRequireReceiver);
 		}
 
-		if (GetComponent<Animation>()) {
-			GetComponent<Animation>().enabled = false;
+		if (GetComponent<Animator>()) {
+			GetComponent<Animator>().enabled = false;
 		}
 	}
 

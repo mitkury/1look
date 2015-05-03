@@ -10,8 +10,9 @@ GameObject:
   - 4: {fileID: 449358}
   - 54: {fileID: 5476646}
   - 114: {fileID: 11465882}
-  - 111: {fileID: 11141414}
   - 114: {fileID: 11484622}
+  - 95: {fileID: 9547676}
+  - 114: {fileID: 11400318}
   m_Layer: 0
   m_Name: Hat
   m_TagString: Untagged
@@ -134,21 +135,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: .300000012, y: .300000012, z: .596857965}
   m_Center: {x: .0436274968, y: -.0011354984, z: .054469116}
---- !u!111 &11141414
-Animation:
+--- !u!95 &9547676
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 117194}
   m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 6eeae5516f5e948b8b25758b18bb6354, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: 6eeae5516f5e948b8b25758b18bb6354, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 0
-  m_AnimatePhysics: 0
-  m_CullingType: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d3ce974af236e46a1a42be9f878b8fb2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!111 &11145244
 Animation:
   m_ObjectHideFlags: 1
@@ -163,6 +166,23 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &11400318
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 117194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7eecc1612c15945adbecb031be87c70b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClipData:
+    audioClip: {fileID: 8300000, guid: e73c06a14a26640918aedbf8ca1ad2ab, type: 3}
+    volume: .800000012
+    lowPitchRange: 1
+    highPitchRange: 1
+    spatialBlend: 1
 --- !u!114 &11465882
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -191,6 +211,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isAbleToInteractAfterAnimation: 0
+  stateName: Start
+  stateLayer: 0
   receiver: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:

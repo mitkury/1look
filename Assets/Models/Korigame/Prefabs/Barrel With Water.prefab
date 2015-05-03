@@ -191,7 +191,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05fe8cc68baf24750a0b5bcac1afce44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isAbleToInteractAfterAnimation: 0
+  isAbleToInteractAfterAnimation: 1
+  stateName: Start
+  stateLayer: 0
   receiver: {fileID: 0}
 --- !u!114 &11421860
 MonoBehaviour:

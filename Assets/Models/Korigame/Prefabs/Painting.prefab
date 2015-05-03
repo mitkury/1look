@@ -26,11 +26,11 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 421462}
-  - 111: {fileID: 11104312}
   - 114: {fileID: 11462614}
   - 114: {fileID: 11407516}
   - 114: {fileID: 11438052}
   - 54: {fileID: 5495608}
+  - 95: {fileID: 9503000}
   m_Layer: 0
   m_Name: Painting
   m_TagString: Untagged
@@ -121,21 +121,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: .0689290762, y: .752592206, z: .881963968}
   m_Center: {x: .00834397878, y: 1.19706598e-07, z: 2.38294248e-07}
---- !u!111 &11104312
-Animation:
+--- !u!95 &9503000
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 162290}
   m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 6d74b7f65059d4918a95e0d062d95514, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: 6d74b7f65059d4918a95e0d062d95514, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 0
-  m_AnimatePhysics: 0
-  m_CullingType: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 43ac0bc763a104150b3edcae337f1024, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11407516
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -148,6 +150,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isAbleToInteractAfterAnimation: 1
+  stateName: Start
+  stateLayer: 0
   receiver: {fileID: 0}
 --- !u!114 &11438052
 MonoBehaviour:
