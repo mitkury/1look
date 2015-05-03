@@ -27,7 +27,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 449770}
   - 54: {fileID: 5488342}
-  - 114: {fileID: 11417020}
+  - 114: {fileID: 11478004}
+  - 114: {fileID: 11438098}
   m_Layer: 0
   m_Name: Saw
   m_TagString: Untagged
@@ -41,8 +42,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 126842}
-  m_LocalRotation: {x: .438907951, y: .539589047, z: -.55917114, w: .451144367}
-  m_LocalPosition: {x: -5.95300007, y: 1.74600005, z: .428000003}
+  m_LocalRotation: {x: .538527787, y: .440209419, z: -.456928015, w: .554454982}
+  m_LocalPosition: {x: -5.95200014, y: 1.53799999, z: -1.30499995}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 459860}
@@ -118,7 +119,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: .28366816, y: .733608067, z: .0740321949}
   m_Center: {x: -.013932988, y: -.0738469958, z: -9.83134328e-07}
---- !u!114 &11417020
+--- !u!114 &11438098
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -126,13 +127,40 @@ MonoBehaviour:
   m_GameObject: {fileID: 126842}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b5c6fe6c53e94490ade18dcbea80887, type: 3}
+  m_Script: {fileID: 11500000, guid: 11564784fee5d40cb8b0d69772b74ac9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasItsOwnFocusTime: 0
+  hasItsOwnFocusTime: 1
   focusTimeSec: 0
   isAbleToInteract: 1
   body: {fileID: 0}
+  isAbleToBeActivatedOnItsOwn: 1
+--- !u!114 &11478004
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 126842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40f283574dc5849f4968fe12a0a78dc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: {x: 1, y: 0, z: 0}
+  audioOnPoke:
+    audioClip: {fileID: 8300000, guid: 4dfbba22bb32f4f248a3bbc9800cf562, type: 3}
+    volume: .5
+    lowPitchRange: 1.5
+    highPitchRange: 1.5
+    spatialBlend: 1
+  audioOnImpact:
+  - audioClip: {fileID: 8300000, guid: 4dfbba22bb32f4f248a3bbc9800cf562, type: 3}
+    volume: 0
+    lowPitchRange: .800000012
+    highPitchRange: 1
+    spatialBlend: 1
+    velocityToVolume: .129999995
+    requiredMinVelocity: 1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

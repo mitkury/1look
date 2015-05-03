@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 489532}
   - 33: {fileID: 3301568}
   - 23: {fileID: 2318746}
+  - 65: {fileID: 6580652}
   m_Layer: 0
   m_Name: Pallet
   m_TagString: Untagged
@@ -60,6 +61,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 179510}
   m_Mesh: {fileID: 4300046, guid: d83b5fa58951846c988d3b6108025c04, type: 3}
+--- !u!65 &6580652
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 179510}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.14396834, y: .94716543, z: .220827386}
+  m_Center: {x: -.00121900148, y: .000516506727, z: -.0182575062}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
