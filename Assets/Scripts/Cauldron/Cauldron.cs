@@ -36,7 +36,7 @@ public class Cauldron : InteractiveObject {
 		
 		LeanTween.move(item.gameObject, targetPosition, 0.5f);
 
-		audioPlayer.PlayOneShot(0, 0.25f);
+		audioPlayer.PlayOneShotAfterSec(0, 0.25f);
 
 		yield return new WaitForSeconds(0.5f);
 

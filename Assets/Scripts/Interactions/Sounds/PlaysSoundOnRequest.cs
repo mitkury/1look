@@ -5,18 +5,18 @@ public class PlaysSoundOnRequest : SoundInteraction {
 
 	public AudioClipData[] sounds;
 
-	IEnumerator PlayOneShotCo(int index, float afterSec) {
-		yield return new WaitForSeconds(afterSec);
+	IEnumerator PlayOneShotAfterSecCo(int index, float seconds) {
+		yield return new WaitForSeconds(seconds);
 		PlayOneShot(index);
 	}
 
 	public void PlayOneShot(int index) {
 		var data = sounds[index];
-		base.PlayOneShot (data);
+		base.PlayOneShot(data);
 	}
-
-	public void  PlayOneShot(int index, float afterSec) {
-		StartCoroutine(PlayOneShotCo(index, afterSec));
+	
+	public void  PlayOneShotAfterSec(int index, float seconds) {
+		StartCoroutine(PlayOneShotAfterSecCo(index, seconds));
 	}
 
 }
