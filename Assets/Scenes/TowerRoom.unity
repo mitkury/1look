@@ -5692,6 +5692,122 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 440506, guid: a45eb8c5a9dec4422b0e25423bfecac2, type: 2}
   m_PrefabInternal: {fileID: 1570040895}
+--- !u!1 &1598406503
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1598406504}
+  - 114: {fileID: 1598406505}
+  - 82: {fileID: 1598406506}
+  m_Layer: 0
+  m_Name: Music (Make it fade in after voice narration is over)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1598406504
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1598406503}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2042701859}
+  m_RootOrder: 1
+--- !u!114 &1598406505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1598406503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22935b8b7783648e289ca662ad6c7149, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 75
+  sound:
+    audioClip: {fileID: 8300000, guid: e744d02ef8be8441fa2184f1eb36fc84, type: 3}
+    volume: 1
+    lowPitchRange: 1
+    highPitchRange: 1
+    spatialBlend: 1
+--- !u!82 &1598406506
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1598406503}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: e744d02ef8be8441fa2184f1eb36fc84, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: .699999988
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: .899999976
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &1604621348
 GameObject:
   m_ObjectHideFlags: 0
@@ -5889,10 +6005,19 @@ Prefab:
     - target: {fileID: 8261988, guid: 1fe4cfa8b98f44d71a5e84134e595b7b, type: 2}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: b0eadb3723ade41c79c166b30cf009e7, type: 3}
+      objectReference: {fileID: 8300000, guid: ff27a35b41d8d437f89087f4ef5b7750, type: 3}
     - target: {fileID: 8261988, guid: 1fe4cfa8b98f44d71a5e84134e595b7b, type: 2}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8261988, guid: 1fe4cfa8b98f44d71a5e84134e595b7b, type: 2}
+      propertyPath: Loop
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 115350, guid: 1fe4cfa8b98f44d71a5e84134e595b7b, type: 2}
+      propertyPath: m_Name
+      value: Radio (Maybe it could fly up to your face after it says hello, and then
+        back in place)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1fe4cfa8b98f44d71a5e84134e595b7b, type: 2}

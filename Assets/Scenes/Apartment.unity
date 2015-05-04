@@ -672,7 +672,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
 --- !u!82 &257465049
 AudioSource:
   m_ObjectHideFlags: 0
@@ -888,8 +888,9 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 307386135}
+  - 114: {fileID: 307386136}
   m_Layer: 0
-  m_Name: Knock at door "Trick Or Treat!"
+  m_Name: Knock 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -902,11 +903,29 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 307386134}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.5600004, y: 1.34000003, z: -.460000008}
+  m_LocalPosition: {x: -.311720848, y: -.056152463, z: .280866265}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_Father: {fileID: 338123788}
+  m_RootOrder: 0
+--- !u!114 &307386136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 307386134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22935b8b7783648e289ca662ad6c7149, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 15
+  sound:
+    audioClip: {fileID: 8300000, guid: d7ea1477e2e5b4c8f9ddb553fd481df5, type: 3}
+    volume: 1
+    lowPitchRange: 1
+    highPitchRange: 1
+    spatialBlend: 1
 --- !u!1001 &321823542
 Prefab:
   m_ObjectHideFlags: 0
@@ -965,6 +984,35 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 415252, guid: 1fddac1fe40c34ec5a9b878e32706648, type: 2}
   m_PrefabInternal: {fileID: 321823542}
+--- !u!1 &338123787
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 338123788}
+  m_Layer: 0
+  m_Name: Door Sequence
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &338123788
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 338123787}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -10.2482796, y: 1.3961525, z: -.558866262}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 307386135}
+  - {fileID: 1111065176}
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
 --- !u!1 &348486288
 GameObject:
   m_ObjectHideFlags: 0
@@ -1961,7 +2009,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
 --- !u!82 &969616743
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2271,6 +2319,52 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1606cf0211d4c4c8e8993e27ad277408, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1111065174
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1111065176}
+  - 114: {fileID: 1111065175}
+  m_Layer: 0
+  m_Name: Knock 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1111065175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1111065174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22935b8b7783648e289ca662ad6c7149, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 20
+  sound:
+    audioClip: {fileID: 8300000, guid: 0adadd0a05a084e96a9695defc13527e, type: 3}
+    volume: 1
+    lowPitchRange: 1
+    highPitchRange: 1
+    spatialBlend: 1
+--- !u!4 &1111065176
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1111065174}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -.311720848, y: -.056152463, z: .280866265}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 338123788}
+  m_RootOrder: 1
 --- !u!1001 &1128346920
 Prefab:
   m_ObjectHideFlags: 0
@@ -2359,7 +2453,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
 --- !u!1 &1154685686
 GameObject:
   m_ObjectHideFlags: 0
@@ -5004,7 +5098,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
 --- !u!1 &1359652479
 GameObject:
   m_ObjectHideFlags: 0
@@ -5170,7 +5264,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
 --- !u!1 &1475628891
 GameObject:
   m_ObjectHideFlags: 0
@@ -5197,7 +5291,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
 --- !u!1001 &1479516181
 Prefab:
   m_ObjectHideFlags: 0
@@ -6026,7 +6120,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
 --- !u!1001 &1811103240
 Prefab:
   m_ObjectHideFlags: 0
