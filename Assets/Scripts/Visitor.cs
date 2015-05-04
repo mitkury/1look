@@ -20,6 +20,7 @@ public class Visitor : MonoBehaviour {
 	public float defaultDistanceToFloatingObject = 1f;
 	public float defaultFocusTimeSec = 1f;
 	public Transform waistAnchor;
+	public Transform faceAnchor;
 	[HideInInspector]
 	public Vector3 localPositionAtPrevLobby;
 	public Inventory inventory { get; private set; }
@@ -75,6 +76,21 @@ public class Visitor : MonoBehaviour {
 		UpdateFocusIndicator();
 		CheckObjects();
 		//prevPosition = transform.position;
+
+		/*
+		if (Input.GetKeyDown(KeyCode.Escape)) {
+			StartCoroutine(RunDemoClosingCo());
+		}
+		*/
+	}
+
+	IEnumerator RunDemoClosingCo() {
+		screenFader.FadeIn(2f);
+		yield return new WaitForSeconds(2f);
+
+		LeanTween.value(gameObject, delegate(float value) { 
+			AudioListener.volume = value;
+		}, 1f, 0f, 3f);
 	}
 
 	void HandleTouchHandler (object sender, System.EventArgs e) {

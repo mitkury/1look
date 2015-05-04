@@ -10,6 +10,7 @@ public class FloatingAnimationData {
 
 public class FloatingAnchor : MonoBehaviour {
 
+	bool isInitialized;
 	Animator animator;
 	Vector3 initPosition;
 	Vector3 elevatedPosition;
@@ -17,8 +18,30 @@ public class FloatingAnchor : MonoBehaviour {
 	public FloatingAnimationData data;
 
 	void Start() {
-		if (data != null)
+		Init();
+		StartAnimation();
+	}
+
+	void OnEnable() {
+		if (data == null)
+			return;
+
+		if (!isInitialized)
 			Init();
+
+		StartAnimation();
+	}
+
+	void OnDisable() {
+		LeanTween.cancel(gameObject);
+	}
+
+	void StartAnimation() {
+		if (animator == null) {
+			StartCoroutine(AnimateManuallyCo());
+			if (data.isRotating)
+				StartCoroutine(AnimateRotationManuallyCo());
+		}
 	}
 
 	IEnumerator AnimateManuallyCo() {
@@ -41,12 +64,7 @@ public class FloatingAnchor : MonoBehaviour {
 		animator = GetComponent<Animator>();
 		initPosition = transform.position;
 		elevatedPosition = initPosition + Vector3.up * data.elevation;
-		
-		if (animator == null) {
-			StartCoroutine(AnimateManuallyCo());
-			if (data.isRotating)
-				StartCoroutine(AnimateRotationManuallyCo());
-		}
+		isInitialized = true;
 	}
 
 

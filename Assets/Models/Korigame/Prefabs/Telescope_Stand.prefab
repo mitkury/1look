@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 467022}
   - 33: {fileID: 3388070}
   - 23: {fileID: 2374642}
+  - 65: {fileID: 6569384}
   m_Layer: 0
   m_Name: Telescope_Stand
   m_TagString: Untagged
@@ -27,6 +28,7 @@ GameObject:
   - 4: {fileID: 470766}
   - 33: {fileID: 3306956}
   - 23: {fileID: 2342002}
+  - 136: {fileID: 13680008}
   m_Layer: 0
   m_Name: Telescope
   m_TagString: Untagged
@@ -40,9 +42,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 110042}
-  m_LocalRotation: {x: .110033885, y: .698493123, z: .698493004, w: -.110033892}
-  m_LocalPosition: {x: -.79097265, y: -.217524394, z: 11.7888184}
-  m_LocalScale: {x: .999999762, y: .999999762, z: 1}
+  m_LocalRotation: {x: -.705964983, y: .0401686355, z: .0401686355, w: .705964983}
+  m_LocalPosition: {x: 7.62595367, y: 1.12, z: .151841089}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 470766}
   m_Father: {fileID: 0}
@@ -69,7 +71,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 468d7118ef34b410580907ca69728573, type: 2}
+  - {fileID: 2100000, guid: 7d511fdbd196f4d659494bf416f1b7ec, type: 2}
   - {fileID: 2100000, guid: 095953f177c3a48b09b618eb139c8e90, type: 2}
   - {fileID: 2100000, guid: 355e909750fba4383b3573a81683bdbc, type: 2}
   m_SubsetIndices: 
@@ -95,8 +97,8 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 8decc28b0e7ba41dbb5cfaef86659261, type: 2}
-  - {fileID: 2100000, guid: 468d7118ef34b410580907ca69728573, type: 2}
+  - {fileID: 2100000, guid: 095953f177c3a48b09b618eb139c8e90, type: 2}
+  - {fileID: 2100000, guid: 7d511fdbd196f4d659494bf416f1b7ec, type: 2}
   - {fileID: 2100000, guid: 1f607940bf3974a07bae1bae79ba6df1, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
@@ -125,6 +127,31 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 110042}
   m_Mesh: {fileID: 4300260, guid: d83b5fa58951846c988d3b6108025c04, type: 3}
+--- !u!65 &6569384
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 110042}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: .788808107, y: .906371295, z: 1.40206635}
+  m_Center: {x: -.107692018, y: -.000667514279, z: .0292069968}
+--- !u!136 &13680008
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 167548}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .163896069
+  m_Height: 1.58948839
+  m_Direction: 1
+  m_Center: {x: -.0146515276, y: -.0469260029, z: .141136244}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

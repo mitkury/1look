@@ -27,7 +27,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 446864}
   - 54: {fileID: 5472340}
-  - 114: {fileID: 11462022}
+  - 114: {fileID: 11431276}
+  - 114: {fileID: 11470496}
   m_Layer: 0
   m_Name: Red_Potion
   m_TagString: Untagged
@@ -54,7 +55,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 111906}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.63500023, y: 1.08099997, z: 2.28800011}
+  m_LocalPosition: {x: -4.53100014, y: 1.73500001, z: 2.60500002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 426382}
@@ -98,7 +99,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 111906}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: .100000001
   m_Drag: 0
   m_AngularDrag: .0500000007
   m_UseGravity: 1
@@ -118,7 +119,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: .179130003, y: .206841975, z: .269288987}
   m_Center: {x: 0, y: 0, z: -.0115715032}
---- !u!114 &11462022
+--- !u!114 &11431276
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -126,13 +127,40 @@ MonoBehaviour:
   m_GameObject: {fileID: 111906}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b5c6fe6c53e94490ade18dcbea80887, type: 3}
+  m_Script: {fileID: 11500000, guid: 40f283574dc5849f4968fe12a0a78dc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasItsOwnFocusTime: 0
+  force: {x: .200000003, y: 0, z: -.200000003}
+  audioOnPoke:
+    audioClip: {fileID: 8300000, guid: 9487340848b39472483a189dd778b253, type: 3}
+    volume: .5
+    lowPitchRange: 1
+    highPitchRange: 1.20000005
+    spatialBlend: 1
+  audioOnImpact:
+  - audioClip: {fileID: 8300000, guid: 9487340848b39472483a189dd778b253, type: 3}
+    volume: 1
+    lowPitchRange: 1.29999995
+    highPitchRange: 1.29999995
+    spatialBlend: 1
+    velocityToVolume: .129999995
+    requiredMinVelocity: 1
+--- !u!114 &11470496
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 111906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11564784fee5d40cb8b0d69772b74ac9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hasItsOwnFocusTime: 1
   focusTimeSec: 0
   isAbleToInteract: 1
   body: {fileID: 0}
+  isAbleToBeActivatedOnItsOwn: 1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

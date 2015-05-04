@@ -13,7 +13,7 @@ public class PlaysAnimationOnSight : Interaction {
 			receiver = gameObject;
 		
 		var animator = receiver.GetComponent<Animator>();
-		var idleStateNameHash = animator.GetCurrentAnimatorStateInfo(0).shortNameHash;
+		var idleStateNameHash = animator.GetCurrentAnimatorStateInfo(stateLayer).shortNameHash;
 		var stateHash = Animator.StringToHash(stateName);
 
 		animator.Play(stateName, stateLayer);
@@ -21,6 +21,7 @@ public class PlaysAnimationOnSight : Interaction {
 		// Wait a frame for a new state to setup.
 		yield return null;
 
+		// While state is playing.
 		while(stateHash == animator.GetCurrentAnimatorStateInfo(stateLayer).shortNameHash)
 			yield return null;
 
