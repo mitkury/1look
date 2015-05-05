@@ -2441,7 +2441,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 389ff2f4d368a4d4d9d69e00b3a0b5f9, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 0125280c4b99a40f083e8c6dc044b876, type: 3}
   m_PlayOnAwake: 1
   m_Volume: .101000004
   m_Pitch: 1
@@ -2579,7 +2579,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasItsOwnFocusTime: 1
-  focusTimeSec: 2
+  focusTimeSec: 1.5
   isAbleToInteract: 1
   body: {fileID: 441982}
   isAbleToBeActivatedOnItsOwn: 1
@@ -2655,19 +2655,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - audioClip: {fileID: 8300000, guid: 28f8b9eed837144b28d5a96f888585c4, type: 3}
-    volume: .300000012
-    lowPitchRange: .800000012
-    highPitchRange: 1.10000002
+    volume: .25
+    lowPitchRange: .899999976
+    highPitchRange: 1
     spatialBlend: 1
   - audioClip: {fileID: 8300000, guid: d2754b9a9bec14fa49469fa19c7b4124, type: 3}
-    volume: .300000012
-    lowPitchRange: .800000012
-    highPitchRange: 1.10000002
+    volume: .25
+    lowPitchRange: .899999976
+    highPitchRange: 1
     spatialBlend: 1
   - audioClip: {fileID: 8300000, guid: 5b8f98b65696843f9adbe489ab3d10ba, type: 3}
-    volume: .300000012
-    lowPitchRange: .800000012
-    highPitchRange: 1.10000002
+    volume: .25
+    lowPitchRange: .899999976
+    highPitchRange: 1
     spatialBlend: 1
 --- !u!114 &11469086
 MonoBehaviour:
