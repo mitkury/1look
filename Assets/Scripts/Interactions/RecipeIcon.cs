@@ -7,12 +7,14 @@ public class RecipeIcon : Interaction {
 
 	Vector3 initLocalPosition;
 	Quaternion initLocalRotation;
+	float initFocusTimeSec;
 	bool isHoverd;
 	float startedHoveredTime;
 
 	void Start() {
 		initLocalPosition = transform.localPosition;
 		initLocalRotation = transform.localRotation;
+		initFocusTimeSec = GetComponent<InteractiveObject>().focusTimeSec;
 	}
 
 	void Update() {
@@ -36,7 +38,7 @@ public class RecipeIcon : Interaction {
 	IEnumerator HoverDownCo() {
 		GetComponent<InteractiveObject>().isAbleToInteract = true;
 		GetComponent<InteractiveObject>().hasItsOwnFocusTime = true;
-		GetComponent<InteractiveObject>().focusTimeSec = 0.5f;
+		GetComponent<InteractiveObject>().focusTimeSec = initFocusTimeSec;
 		isHoverd = false;
 		LeanTween.moveLocal(gameObject, initLocalPosition, 0.25f).setEase(LeanTweenType.easeInOutCubic);
 		LeanTween.rotateLocal(gameObject, initLocalRotation.eulerAngles, 0.25f).setEase(LeanTweenType.easeInOutCubic);
