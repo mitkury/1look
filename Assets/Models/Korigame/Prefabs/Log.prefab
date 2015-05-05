@@ -162,12 +162,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   force: {x: 2, y: 0, z: -3}
   audioOnPoke:
-    audioClip: {fileID: 0}
-    volume: 1
-    lowPitchRange: 1
+    audioClip: {fileID: 8300000, guid: 2d514e390cbc349c2950be173b76043c, type: 3}
+    volume: .300000012
+    lowPitchRange: .800000012
+    highPitchRange: 1.20000005
+    spatialBlend: 1
+  audioOnImpact:
+  - audioClip: {fileID: 8300000, guid: 2d514e390cbc349c2950be173b76043c, type: 3}
+    volume: 0
+    lowPitchRange: .5
     highPitchRange: 1
     spatialBlend: 1
-  audioOnImpact: []
+    velocityToVolume: .129999995
+    requiredMinVelocity: 1
 --- !u!136 &13624864
 CapsuleCollider:
   m_ObjectHideFlags: 1
