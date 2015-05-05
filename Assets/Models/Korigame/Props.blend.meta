@@ -822,8 +822,8 @@ ModelImporter:
     weldVertices: 1
     secondaryUVAngleDistortion: 1
     secondaryUVAreaDistortion: 1
-    secondaryUVHardAngle: 120
-    secondaryUVPackMargin: 2
+    secondaryUVHardAngle: 70
+    secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
     normalSmoothAngle: 60
