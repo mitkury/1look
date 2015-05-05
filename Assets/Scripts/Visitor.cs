@@ -246,7 +246,7 @@ public class Visitor : MonoBehaviour {
 	}
 
 	void CheckObjects() {
-		if (King.placeManager.currentPlace == null || !King.placeManager.currentPlace.gameObject.activeSelf)
+		if (King.Instance == null || King.placeManager.currentPlace == null || !King.placeManager.currentPlace.gameObject.activeSelf)
 			return;
 			
 		var components = new List<Component>();
