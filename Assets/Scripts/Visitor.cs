@@ -133,9 +133,13 @@ public class Visitor : MonoBehaviour {
 				if (sight.target is ObtainableItem) {
 					increaseFocusProgress = true;
 				} else if (sight.target is InteractiveObject) {
+					var iob = sight.target as InteractiveObject;
 					// If an InteractiveObject is able to interact on its own.
-					if ((sight.target as InteractiveObject).isAbleToBeActivatedOnItsOwn) {
+					if (iob.isAbleToBeActivatedOnItsOwn) {
 						increaseFocusProgress = true;
+						// Don't increase if focus time = 0;
+						if (iob.hasItsOwnFocusTime && iob.focusTimeSec == 0)
+							increaseFocusProgress = false;
 					}
 				}
 			}
