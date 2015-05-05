@@ -703,7 +703,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 137368}
   m_LocalRotation: {x: .540996373, y: .431685954, z: .450187117, w: .564182341}
-  m_LocalPosition: {x: -.0849999785, y: -.231000006, z: -.455000013}
+  m_LocalPosition: {x: -.0850000009, y: -.231000006, z: -.185000002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 460458}
@@ -1554,6 +1554,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5cd5176aecb642de99f0364ec977347, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  showBookAfterSec: .5
+  hideBookAfterSec: 2
+  showAnimationDuration: 1.20000005
+  hideAnimationDuration: 2
   bookReadPoint: {fileID: 483530}
   bookHidePoint: {fileID: 407296}
 --- !u!137 &13771986
