@@ -318,7 +318,7 @@ public class Visitor : MonoBehaviour {
 				return false;
 			
 			var eulerAnhorAngle = sight.anchor.eulerAngles;
-			return eulerAnhorAngle.x >= 22 && eulerAnhorAngle.x <= 120 && eulerAnhorAngle.y >= 265 && eulerAnhorAngle.y <= 355 ? true : false;
+			return eulerAnhorAngle.x >= 22 && eulerAnhorAngle.x <= 120 && eulerAnhorAngle.y >= 288 && eulerAnhorAngle.y <= 340 ? true : false;
 		}
 	}
 

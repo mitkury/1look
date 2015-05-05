@@ -4,7 +4,10 @@ using System.Collections;
 public class PotionBook : MonoBehaviour {
 
 	Visitor user;
+	bool bookIsShown;
 
+	public float showBookAfterSec = 1f;
+	public float hideBookAfterSec = 2f;
 	public Transform bookReadPoint;
 	public Transform bookHidePoint;
 
