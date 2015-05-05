@@ -1,0 +1,113 @@
+fileFormatVersion: 2
+guid: 11fb4fb8d1b78426c90dc9184e93e0b7
+timeCreated: 1430785365
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Armature
+    100002: Cover_L
+    100004: Cover_R
+    100006: Magic_Book_001
+    100008: Pages_Base_2_L
+    100010: Pages_Base_2_R
+    100012: Pages_Base_3_L
+    100014: Pages_Base_3_R
+    100016: Pages_Base_L
+    100018: Pages_Base_R
+    100020: Pages_End_L
+    100022: Pages_End_R
+    100024: Pages_Full_L
+    100026: Pages_Full_R
+    100028: Spine
+    100030: Spine_Bend_L
+    100032: Spine_Bend_R
+    100034: //RootNode
+    100036: Magic_Tome
+    400000: Armature
+    400002: Cover_L
+    400004: Cover_R
+    400006: Magic_Book_001
+    400008: Pages_Base_2_L
+    400010: Pages_Base_2_R
+    400012: Pages_Base_3_L
+    400014: Pages_Base_3_R
+    400016: Pages_Base_L
+    400018: Pages_Base_R
+    400020: Pages_End_L
+    400022: Pages_End_R
+    400024: Pages_Full_L
+    400026: Pages_Full_R
+    400028: Spine
+    400030: Spine_Bend_L
+    400032: Spine_Bend_R
+    400034: //RootNode
+    400036: Magic_Tome
+    4300000: Magic_Book_001
+    4300002: Magic_Tome
+    7400000: Default Take
+    7400002: ArmatureAction
+    7400004: Open_Tome
+    7400006: Idle_Tome
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: Magic_Book_001
+    13700002: Magic_Tome
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 2
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
