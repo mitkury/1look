@@ -49,7 +49,7 @@ public class RadioPrototype : MonoBehaviour {
 	}
 
 	IEnumerator StartIntroCo() {
-		float totalSec = 70f;
+		float totalSec = 60f;
 		float sub = 0;
 
 		sub += 3f;
