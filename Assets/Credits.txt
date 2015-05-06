@@ -6,7 +6,7 @@ Developed By Dmitry Kurilchenko and Miles Russo.
 Most of the sounds of Wendy are either Public Domain or licensed as Attributed.
 The odd sound was created by the developers.
 
-Sound FX
+Sound FX (http://www.freesound.org/)
 
 Shakaharu
 Electroviolence
@@ -32,6 +32,7 @@ tagirov
 OTBTechno
 jorickhoofd
 Glaneur de sons
+Barrygusey
 
 http://creativecommons.org/licenses/by/3.0/
 http://creativecommons.org/licenses/by/3.0/legalcode

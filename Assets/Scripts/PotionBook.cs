@@ -6,6 +6,7 @@ public class PotionBook : MonoBehaviour {
 
 	Visitor visitor;
 	bool bookIsShown;
+	PlaysSoundOnRequest audioPlayer;
 	bool isInitiatedShowing;
 	bool isInitiatedHiding;
 	int forcedShowNum = 0;
@@ -18,12 +19,8 @@ public class PotionBook : MonoBehaviour {
 	public Transform bookReadPoint;
 	public Transform bookHidePoint;
 
-	public void OnAddToCauldron(RecipeItem item) {
-		var matchingIcon = recipeIcons.Find(i => i.itemName == item.itemName);
-
-		if (matchingIcon != null) {
-			StartCoroutine(ShowOnRecipeCo(matchingIcon));
-		}
+	void Start() {
+		audioPlayer = GetComponent<PlaysSoundOnRequest>();
 	}
 
 	void OnEnable() {
@@ -102,11 +99,21 @@ public class PotionBook : MonoBehaviour {
 			Hide();
 	}
 
+	IEnumerator FindVisitorCo() {
+		if (King.visitor == null)
+			yield return null;
+		
+		visitor = King.visitor;
+	}
+
 	void Show() {
 		bookIsShown = true;
 		LeanTween.cancel(gameObject);
 		LeanTween.move(gameObject, bookReadPoint.position, showAnimationDuration).setEase(LeanTweenType.easeInOutCubic);
 		LeanTween.rotate(gameObject, bookReadPoint.rotation.eulerAngles, showAnimationDuration).setEase(LeanTweenType.easeInOutCubic);
+
+		if (audioPlayer != null)
+			audioPlayer.PlayOneShot(0);
 	}
 
 	void Hide() {
@@ -114,13 +121,17 @@ public class PotionBook : MonoBehaviour {
 		LeanTween.cancel(gameObject);
 		LeanTween.move(gameObject, bookHidePoint.position, hideAnimationDuration).setEase(LeanTweenType.easeInOutCubic);
 		LeanTween.rotate(gameObject, bookHidePoint.rotation.eulerAngles, hideAnimationDuration).setEase(LeanTweenType.easeInOutCubic);
+
+		if (audioPlayer != null)
+			audioPlayer.PlayOneShot(1);
 	}
 
-	IEnumerator FindVisitorCo() {
-		if (King.visitor == null)
-			yield return null;
-
-		visitor = King.visitor;
+	public void OnAddToCauldron(RecipeItem item) {
+		var matchingIcon = recipeIcons.Find(i => i.itemName == item.itemName);
+		
+		if (matchingIcon != null) {
+			StartCoroutine(ShowOnRecipeCo(matchingIcon));
+		}
 	}
 
 }

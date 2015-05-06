@@ -77,11 +77,11 @@ public class Visitor : MonoBehaviour {
 		CheckObjects();
 		//prevPosition = transform.position;
 
-		/*
+		#if UNITY_STANDALONE
 		if (Input.GetKeyDown(KeyCode.Escape)) {
 			StartCoroutine(RunDemoClosingCo());
 		}
-		*/
+		#endif
 	}
 
 	IEnumerator RunDemoClosingCo() {
