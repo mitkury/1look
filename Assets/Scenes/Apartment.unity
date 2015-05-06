@@ -20,7 +20,7 @@ RenderSettings:
   m_FogDensity: .0199999996
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: .361651361, g: .320934236, b: .411764681, a: 1}
+  m_AmbientSkyColor: {r: .44320488, g: .397058815, b: .5, a: 1}
   m_AmbientEquatorColor: {r: .114, g: .125, b: .133000001, a: 1}
   m_AmbientGroundColor: {r: .0469999984, g: .0430000015, b: .0350000001, a: 1}
   m_AmbientIntensity: 1
@@ -58,15 +58,15 @@ LightmapSettings:
   m_LightmapEditorSettings:
     serializedVersion: 3
     m_Resolution: 2
-    m_BakeResolution: 140
+    m_BakeResolution: 160
     m_TextureWidth: 1024
     m_TextureHeight: 1024
     m_AOMaxDistance: .75
-    m_Padding: 2
+    m_Padding: 6
     m_CompAOExponent: 1.20000005
     m_LightmapParameters: {fileID: 0}
     m_TextureCompression: 0
-    m_FinalGather: 1
+    m_FinalGather: 0
     m_FinalGatherRayCount: 512
   m_LightmapSnapshot: {fileID: 112000000, guid: 0a3b1ea4338df4c279d5cc4cb0881e45,
     type: 2}
