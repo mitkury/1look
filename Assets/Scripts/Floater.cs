@@ -46,4 +46,8 @@ public class Floater : MonoBehaviour {
 				isFlyingToAnchor = false;
 		}
 	}
+
+	public void OnItemTakeByVisitor(ObtainableItem item) {
+		enabled = false;
+	}
 }

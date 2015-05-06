@@ -8,8 +8,9 @@ public class PotionBook : MonoBehaviour {
 	bool bookIsShown;
 	bool isInitiatedShowing;
 	bool isInitiatedHiding;
-	public List<RecipeIcon> recipeIcons = new List<RecipeIcon>();
+	int forcedShowNum = 0;
 
+	public List<RecipeIcon> recipeIcons = new List<RecipeIcon>();
 	public float showBookAfterSec = 1f;
 	public float hideBookAfterSec = 2f;
 	public float showAnimationDuration = 2f;
@@ -18,11 +19,11 @@ public class PotionBook : MonoBehaviour {
 	public Transform bookHidePoint;
 
 	public void OnAddToCauldron(RecipeItem item) {
-		Debug.Log(item.itemName);
 		var matchingIcon = recipeIcons.Find(i => i.itemName == item.itemName);
 
-		if (matchingIcon != null)
-			matchingIcon.Hide();
+		if (matchingIcon != null) {
+			StartCoroutine(ShowOnRecipeCo(matchingIcon));
+		}
 	}
 
 	void OnEnable() {
@@ -36,18 +37,8 @@ public class PotionBook : MonoBehaviour {
 		if (visitor == null)
 			return;
 
-		/*
-		var targetPosition = bookHidePoint.position;
-		var targetRotation = bookHidePoint.rotation;
-		
-		if (user.isLookingAtBookReadPosition) {
-			targetPosition = bookReadPoint.position;
-			targetRotation = bookReadPoint.rotation;
-		}
-		
-		transform.position = Vector3.Lerp(transform.position, targetPosition, Time.deltaTime * 3);
-		transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, Time.deltaTime * 3);
-		*/
+		if (forcedShowNum > 0)
+			return;
 
 		if (visitor.isLookingAtBookReadPosition) {
 			// Initiate showing the book if it's not yet shown.
@@ -82,6 +73,33 @@ public class PotionBook : MonoBehaviour {
 			Hide();
 		}
 		isInitiatedHiding = false;
+	}
+
+	IEnumerator ShowOnRecipeCo(RecipeIcon icon) {
+		forcedShowNum += 1;
+		Show();
+
+		yield return new WaitForSeconds(showAnimationDuration);
+
+		icon.Hide();
+
+		var duration = 4f;
+
+		while(duration > 0) {
+			yield return null;
+			duration -= Time.deltaTime;
+
+			// If there is another, more recent coroutines—remove the current one.
+			if (forcedShowNum > 1) {
+				forcedShowNum -= 1;
+				yield break;
+			}
+		}
+
+		forcedShowNum -= 1;
+
+		if (!visitor.isLookingAtBookReadPosition)
+			Hide();
 	}
 
 	void Show() {

@@ -2732,7 +2732,7 @@ MonoBehaviour:
   nativeTextureScale: 1
   virtualTextureScale: 1
   eyeTextureFormat: 7
-  eyeTextureAntiAliasing: 4
+  eyeTextureAntiAliasing: 2
   eyeTextureDepth: 24
   usePositionTracking: 1
   timeWarp: 1

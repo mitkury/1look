@@ -39,6 +39,8 @@ public class ObtainableItem : InteractiveThing {
 			rigidbody.useGravity = false;
 		}
 
+		gameObject.SendMessage("OnItemTakeByVisitor", this, SendMessageOptions.DontRequireReceiver);
+
 		if (transform.parent != null) {
 			transform.parent.SendMessage("OnItemTakeByVisitor", this, SendMessageOptions.DontRequireReceiver);
 		}
