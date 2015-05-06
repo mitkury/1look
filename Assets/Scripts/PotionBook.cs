@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class PotionBook : MonoBehaviour {
 
@@ -7,6 +8,7 @@ public class PotionBook : MonoBehaviour {
 	bool bookIsShown;
 	bool isInitiatedShowing;
 	bool isInitiatedHiding;
+	public List<RecipeIcon> recipeIcons = new List<RecipeIcon>();
 
 	public float showBookAfterSec = 1f;
 	public float hideBookAfterSec = 2f;
@@ -14,6 +16,14 @@ public class PotionBook : MonoBehaviour {
 	public float hideAnimationDuration = 2f;
 	public Transform bookReadPoint;
 	public Transform bookHidePoint;
+
+	public void OnAddToCauldron(RecipeItem item) {
+		Debug.Log(item.itemName);
+		var matchingIcon = recipeIcons.Find(i => i.itemName == item.itemName);
+
+		if (matchingIcon != null)
+			matchingIcon.Hide();
+	}
 
 	void OnEnable() {
 		transform.position = bookHidePoint.position;

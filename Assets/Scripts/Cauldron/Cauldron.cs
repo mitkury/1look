@@ -11,6 +11,7 @@ public class Cauldron : InteractiveObject {
 	public Transform pointOnSurface;
 	public Recipe recipe;
 	public ObtainableItem potion;
+	public List<GameObject> subscribers = new List<GameObject>();
 
 	protected override void Init ()
 	{
@@ -40,6 +41,10 @@ public class Cauldron : InteractiveObject {
 
 		yield return new WaitForSeconds(0.5f);
 
+		foreach (GameObject subscriber in subscribers) {
+			subscriber.SendMessage("OnAddToCauldron", recipeItem, SendMessageOptions.DontRequireReceiver);
+		}
+
 		item.gameObject.SetActive(false);
 		isAbleToInteract = true;
 		recipeItem.collected += 1;
@@ -66,6 +71,10 @@ public class Cauldron : InteractiveObject {
 		yield return new WaitForSeconds(0.5f);
 
 		audioPlayer.PlayOneShot(1);
+
+		foreach (GameObject subscriber in subscribers) {
+			subscriber.SendMessage("OnRejectFromCauldron", item, SendMessageOptions.DontRequireReceiver);
+		}
 
 		LeanTween.move(item.gameObject, transform.position + Vector3.up * 1f, 1f).setEase(LeanTweenType.easeOutCubic);
 

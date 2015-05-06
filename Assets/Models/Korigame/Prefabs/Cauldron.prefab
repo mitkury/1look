@@ -360,7 +360,18 @@ MonoBehaviour:
     - itemName: Spider
       amount: 1
       collected: 0
+    - itemName: Heart
+      amount: 1
+      collected: 0
+    - itemName: Salt
+      amount: 1
+      collected: 0
+    - itemName: Boot
+      amount: 1
+      collected: 0
   potion: {fileID: 0}
+  subscribers:
+  - {fileID: 0}
 --- !u!114 &11475052
 MonoBehaviour:
   m_ObjectHideFlags: 1

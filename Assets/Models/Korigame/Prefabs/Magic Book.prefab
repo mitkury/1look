@@ -1858,7 +1858,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecea57e34d9c743a4aa9b0caed3489c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverForSec: 1
 --- !u!114 &11406934
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1870,7 +1869,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecea57e34d9c743a4aa9b0caed3489c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverForSec: 1
 --- !u!114 &11416888
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1882,7 +1880,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecea57e34d9c743a4aa9b0caed3489c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverForSec: 1
 --- !u!114 &11417252
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1894,7 +1891,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecea57e34d9c743a4aa9b0caed3489c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverForSec: 1
 --- !u!114 &11422542
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1954,6 +1950,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5cd5176aecb642de99f0364ec977347, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  recipeIcons:
+  - {fileID: 11458928}
+  - {fileID: 11470300}
+  - {fileID: 11403100}
+  - {fileID: 11416888}
+  - {fileID: 11406934}
+  - {fileID: 11451248}
+  - {fileID: 11463926}
+  - {fileID: 11417252}
+  - {fileID: 11470962}
   showBookAfterSec: .5
   hideBookAfterSec: 2
   showAnimationDuration: 1.20000005
@@ -1971,7 +1977,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecea57e34d9c743a4aa9b0caed3489c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverForSec: 1
 --- !u!114 &11458928
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1983,7 +1988,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecea57e34d9c743a4aa9b0caed3489c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverForSec: 1
 --- !u!114 &11463926
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1995,7 +1999,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecea57e34d9c743a4aa9b0caed3489c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverForSec: 1
 --- !u!114 &11470300
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2007,7 +2010,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecea57e34d9c743a4aa9b0caed3489c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverForSec: 1
 --- !u!114 &11470962
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2019,7 +2021,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecea57e34d9c743a4aa9b0caed3489c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverForSec: 1
 --- !u!114 &11477202
 MonoBehaviour:
   m_ObjectHideFlags: 1
