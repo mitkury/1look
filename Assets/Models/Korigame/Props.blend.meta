@@ -168,6 +168,8 @@ ModelImporter:
     100320: Magic_Book_000
     100322: Magic_Book_002
     100324: Ash
+    100326: Hoop
+    100328: PaintingAndBackboard
     400000: Apple
     400002: Bookcase
     400004: Bubbling_Acid
@@ -331,6 +333,8 @@ ModelImporter:
     400320: Magic_Book_000
     400322: Magic_Book_002
     400324: Ash
+    400326: Hoop
+    400328: PaintingAndBackboard
     2300000: Apple
     2300002: Bookcase
     2300004: Bubbling_Acid
@@ -484,6 +488,8 @@ ModelImporter:
     2300300: Magic_Book_001
     2300302: Magic_Book_002
     2300304: Ash
+    2300306: Hoop
+    2300308: PaintingAndBackboard
     3300000: Apple
     3300002: Bookcase
     3300004: Bubbling_Acid
@@ -637,6 +643,8 @@ ModelImporter:
     3300300: Magic_Book_001
     3300302: Magic_Book_002
     3300304: Ash
+    3300306: Hoop
+    3300308: PaintingAndBackboard
     4300000: Apple
     4300002: Bookcase
     4300004: Cauldron
@@ -791,6 +799,8 @@ ModelImporter:
     4300302: Magic_Book_002
     4300304: Magic_Book_000
     4300306: Ash
+    4300308: PaintingAndBackboard
+    4300310: Hoop
     7400000: Default Take
     9500000: //RootNode
     13700000: Magic_Book_001
