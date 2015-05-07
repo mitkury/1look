@@ -13,6 +13,11 @@ public class King : SingletonComponent<King> {
 		Cursor.lockState = CursorLockMode.Locked;
 		#endif
 
+		#if UNITY_EDITOR
+		QualitySettings.antiAliasing = 4;
+		QualitySettings.vSyncCount = 1;
+		#endif
+
 		DontDestroyOnLoad(gameObject);
 		visitor = (Visitor) FindObjectOfType<Visitor>();
 		placeManager = GetComponent<PlaceManager>();
@@ -37,6 +42,8 @@ public class King : SingletonComponent<King> {
 		} else {
 			visitor.SetBackground(placeManager.currentPlace.background);
 		}
+
+
 	}
 
 

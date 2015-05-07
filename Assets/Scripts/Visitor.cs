@@ -122,6 +122,9 @@ public class Visitor : MonoBehaviour {
 	void UpdateFocusIndicator() {
 		var increaseFocusProgress = false;
 
+		if (!sight.enabled)
+			return;
+
 		if (sight.target != null && sight.target.isAbleToInteract) {
 			if (itemInHand != null) {
 				if (itemInHand.IsAbleToInteractWith(sight.target)) {
@@ -211,7 +214,7 @@ public class Visitor : MonoBehaviour {
 	}
 
 	void UpdateInteractions() {
-		if (sight.target == null || !sight.target.isAbleToInteract)
+		if (!sight.enabled || sight.target == null || !sight.target.isAbleToInteract)
 			return;
 
 		InteractiveThing target = sight.target;
@@ -250,6 +253,9 @@ public class Visitor : MonoBehaviour {
 	}
 
 	void CheckObjects() {
+		if (!sight.enabled)
+			return;
+
 		if (King.Instance == null || King.placeManager.currentPlace == null || !King.placeManager.currentPlace.gameObject.activeSelf)
 			return;
 			
@@ -308,6 +314,9 @@ public class Visitor : MonoBehaviour {
 
 	public bool isLookingBelow {
 		get {
+			if (!sight.enabled)
+				return false;
+
 			if (sight.anchor == null)
 				return false;
 			
@@ -318,6 +327,9 @@ public class Visitor : MonoBehaviour {
 	
 	public bool isLookingAtBookReadPosition {
 		get {
+			if (!sight.enabled)
+				return false;
+
 			if (sight.anchor == null)
 				return false;
 			

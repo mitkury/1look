@@ -17,7 +17,7 @@ public class Basketball : Interaction {
 		rigidbody.isKinematic = false;
 		rigidbody.useGravity = true;
 
-		rigidbody.AddForce(King.visitor.sight.facingVector * throwForce, ForceMode.Impulse);
+		rigidbody.AddForce((King.visitor.sight.facingVector + Vector3.up * 1.5f) * throwForce, ForceMode.Impulse);
 
 		StartCoroutine(UnblockCo());
 	}
@@ -34,7 +34,5 @@ public class Basketball : Interaction {
 		} else { 
 			King.visitor.Take(obtainableItem);
 		}
-
-
 	}
 }

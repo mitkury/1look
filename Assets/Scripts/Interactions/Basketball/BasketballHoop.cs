@@ -20,7 +20,7 @@ public class BasketballHoop : Interaction {
 	}
 
 	IEnumerator PreThroughHitCo() {
-		float checkForSec = 1f;
+		float checkForSec = 2.5f;
 		float timePass = 0;
 
 		while(timePass < checkForSec) {
@@ -45,5 +45,7 @@ public class BasketballHoop : Interaction {
 		if (hiddenObject != null) {
 			hiddenObject.SetActive(true);
 		}
+
+		gameObject.SendMessage("OnGoal");
 	}
 }

@@ -13,7 +13,7 @@ public class FullGameStarter : MonoBehaviour {
 		if (King.visitor.sight == null)
 			yield return null;
 
-		King.visitor.sight.reticle.gameObject.SetActive(false);
+		King.visitor.sight.enabled = false;
 	}
 
 	IEnumerator ActivatePlaceCo() {
@@ -34,7 +34,7 @@ public class FullGameStarter : MonoBehaviour {
 		King.visitor.screenFader.FadeOut(blinkInSec);
 
 		yield return new WaitForSeconds(blinkInSec + 0.5f);
-		King.visitor.sight.reticle.gameObject.SetActive(true);
+		King.visitor.sight.enabled = true;
 
 		Destroy(logo);
 		Destroy(gameObject);

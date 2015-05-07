@@ -53,18 +53,11 @@ public class PlaceManager : MonoBehaviour {
 	void OnLoadCompleteBeforeSceneActivation() {
 		var player = King.visitor;
 		
-		// Get a local position in the exit lobby.
-		player.localPositionAtPrevLobby = currentPlace.exitLobby.InverseTransformPoint(player.transform.position);
-		
 		LeanTween.cancel(player.gameObject);
 	}
 
 	void OnLoadCompleteAfterSceneActivation() {
 		var player = King.visitor;
-
-		// Put the player on the same local position in the new lobby as it was in the previous lobby.
-		// It makes a transition from place to place seamless.
-		player.transform.position = currentPlace.enterLobby.TransformPoint(player.localPositionAtPrevLobby);
 		
 		//player.MoveTo(currentPlace.vantagePoint.transform.position);
 	}

@@ -62,9 +62,9 @@ public class RadioPrototype : MonoBehaviour {
 
 	IEnumerator HideReticleForSec(float time) {
 		yield return null;
-		King.visitor.sight.reticle.gameObject.SetActive(false);
+		King.visitor.sight.enabled = false;
 		yield return new WaitForSeconds(time);
-		King.visitor.sight.reticle.gameObject.SetActive(true);
+		King.visitor.sight.enabled = true;
 	}
 
 }

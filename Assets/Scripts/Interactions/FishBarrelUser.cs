@@ -2,14 +2,11 @@
 using System.Collections;
 
 public class FishBarrelUser : Interaction {
-
+	
 	public InteractiveObject barrel;
 
-	public override void Interact () {
-		barrel.isAbleToInteract = true;
+	public void OnItemTakeByVisitor(ObtainableItem item) {
+		barrel.GetComponent<PlaysAnimationOnSight>().isAbleToInteractAfterAnimation = false;
 	}
 
-	public void ReActivateBarrel() {
-		Interact();
-	}
 }

@@ -429,6 +429,12 @@ public class OVRManager : MonoBehaviour
 
 	public static VrApiEventDelegate OnVrApiEvent = null;
 
+	private static Int32 MaxDataSize = 4096;
+	private static StringBuilder EventData = new StringBuilder( MaxDataSize );
+
+	// Define and set an event delegate if to handle System Activities events (for instance,
+	// an app might handle the "reorient" event if it needs to reposition menus when the 
+	// user selects Reorient in Activities. The eventData will be a JSON string.
 	public static void SetVrApiEventDelegate( VrApiEventDelegate d )
 	{
 		OnVrApiEvent = d;
@@ -563,6 +569,9 @@ public class OVRManager : MonoBehaviour
 		OVRTouchpad.Create();
 
 		InitVolumeController();
+
+		// set an event delegate like this if you wish to handle events like "reorient".
+		//SetVrApiEventDelegate( VrApiEventDefaultDelegate );
 #else
 		SetEditorPlay(Application.isEditor);
 #endif
@@ -791,25 +800,19 @@ public class OVRManager : MonoBehaviour
 
 		// Service VrApi events
 		// If this code is not called, internal VrApi events will never be pushed to the internal event queue.
-		{
-			Int32 maxDataSize = 4096;
-			StringBuilder sb = new StringBuilder( maxDataSize );
-			VrApiEventStatus pendingResult = (VrApiEventStatus)OVR_GetNextPendingEvent( sb, (uint)maxDataSize );
-			while ( pendingResult >= VrApiEventStatus.PENDING )
+		VrApiEventStatus pendingResult = (VrApiEventStatus)OVR_GetNextPendingEvent( EventData, (uint)MaxDataSize );
+		while( pendingResult == VrApiEventStatus.PENDING ) {
+			if ( OnVrApiEvent != null )
 			{
-				if ( pendingResult == VrApiEventStatus.PENDING )
-				{
-					if ( OnVrApiEvent != null )
-					{
-						OnVrApiEvent( sb.ToString() );
-					}
-					else
-					{
-						Debug.Log( "No OnVrApiEvent delegate set!" );
-					}
-				}
-				pendingResult = (VrApiEventStatus)OVR_GetNextPendingEvent( sb, (uint)maxDataSize );
+				OnVrApiEvent( EventData.ToString() );
 			}
+			else
+			{
+				Debug.Log( "No OnVrApiEvent delegate set!" );
+			}
+
+			EventData.Length = 0;
+			pendingResult = (VrApiEventStatus)OVR_GetNextPendingEvent( EventData, (uint)MaxDataSize );
 		}
 #endif
 	}

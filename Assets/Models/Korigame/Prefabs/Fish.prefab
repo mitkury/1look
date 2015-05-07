@@ -29,8 +29,8 @@ GameObject:
   - 54: {fileID: 5460410}
   - 114: {fileID: 11451722}
   - 114: {fileID: 11472136}
-  - 111: {fileID: 11125370}
   - 114: {fileID: 11433604}
+  - 95: {fileID: 9566258}
   m_Layer: 0
   m_Name: Fish
   m_TagString: Untagged
@@ -44,7 +44,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 120902}
-  m_LocalRotation: {x: .270598292, y: .653281331, z: .65328151, w: -.270598412}
+  m_LocalRotation: {x: 1.14552677e-07, y: .707106709, z: .707106829, w: -1.15018338e-07}
   m_LocalPosition: {x: -5.11299992, y: .453000009, z: .797999978}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -109,21 +109,23 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!111 &11125370
-Animation:
+--- !u!95 &9566258
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 120902}
   m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 0}
-  m_Animations:
-  - {fileID: 0}
-  m_WrapMode: 0
-  m_PlayAutomatically: 0
-  m_AnimatePhysics: 0
-  m_CullingType: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c43e605be45c74595a78a09abd45b42f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11433604
 MonoBehaviour:
   m_ObjectHideFlags: 1
