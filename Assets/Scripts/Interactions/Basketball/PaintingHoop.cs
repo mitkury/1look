@@ -10,7 +10,6 @@ public class PaintingHoop : Interaction {
 	public Vector3 hoopScale = new Vector3(1f, 2.38f, 1.14f);
 	public GameObject shield;
 	public GameObject[] objectsForActivation;
-	public GameObject prize;
 
 	void Start() {
 		_animator = GetComponent<Animator>();
@@ -38,9 +37,23 @@ public class PaintingHoop : Interaction {
 		}
 	}
 
-
 	public override void Interact () {
+		_animator.SetTrigger("Intro");
+	}
 
+	public void EnableInteractivity() {
+		GetComponent<InteractiveObject>().isAbleToInteract = true;
+	}
+
+	bool shieldIsExpanded;
+
+	public void SwitchShield() {
+		if (shieldIsExpanded)
+			StartCoroutine(SrinkShieldCo());
+		else
+			StartCoroutine(ExpandShieldCo());
+
+		shieldIsExpanded = !shieldIsExpanded;
 	}
 
 	public void ShowHoop() {
@@ -56,6 +69,9 @@ public class PaintingHoop : Interaction {
 		var soundPlayer = GetComponent<PlaysSoundOnRequest>();
 		if (soundPlayer != null)
 			soundPlayer.PlayOneShot(0);
+
+		_animator.SetTrigger("GoBack");
+		GetComponent<InteractiveObject>().isAbleToInteract = false;
 	}
 
 }

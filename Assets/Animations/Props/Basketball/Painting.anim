@@ -18388,10 +18388,31 @@ AnimationClip:
     floatParameter: 2
     intParameter: 0
     messageOptions: 0
+  - time: 0
+    functionName: 
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0
+    functionName: 
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
   - time: 3.45000005
     functionName: FadeIn
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 1.5
+    intParameter: 0
+    messageOptions: 0
+  - time: 5.95833349
+    functionName: EnableInteractivity
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
     intParameter: 0
     messageOptions: 0

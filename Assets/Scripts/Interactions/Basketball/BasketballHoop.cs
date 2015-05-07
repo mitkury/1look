@@ -44,6 +44,7 @@ public class BasketballHoop : Interaction {
 
 		if (hiddenObject != null) {
 			hiddenObject.SetActive(true);
+			hiddenObject.transform.parent = transform.parent;
 		}
 
 		gameObject.SendMessage("OnGoal");

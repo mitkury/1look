@@ -12,11 +12,17 @@ public class ChangesSoundPitchOnRequest : Interaction {
 	}
 	
 	public void FadeIn(float time) {
+		if (audioSourceReceiver == null)
+			return;
+
 		LeanTween.cancel(gameObject);
 		LeanTween.value(gameObject, UpdateAudioValue, audioSourceReceiver.pitch, max, time);
 	}
 
 	public void FadeOut(float time) {
+		if (audioSourceReceiver == null)
+			return;
+
 		LeanTween.cancel(gameObject);
 		LeanTween.value(gameObject, UpdateAudioValue, audioSourceReceiver.pitch, min, time);
 	}
