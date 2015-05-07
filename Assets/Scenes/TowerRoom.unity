@@ -6356,6 +6356,27 @@ Prefab:
 GameObject:
   m_PrefabParentObject: {fileID: 152740, guid: 6049e8d0222614d9e9005aa5867a256b, type: 2}
   m_PrefabInternal: {fileID: 1494221780}
+--- !u!1 &1449314495 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 162724, guid: 60633ab5ea7cc4190975385ed4d875b0, type: 2}
+  m_PrefabInternal: {fileID: 1177465240}
+--- !u!114 &1449314501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1449314495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce65bc63fe6ee40738580c3411094e93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - audioClip: {fileID: 8300000, guid: 36ce1a43f60c6448b8f66fce01031cff, type: 3}
+    volume: .699999988
+    lowPitchRange: 1
+    highPitchRange: 1
+    spatialBlend: 1
 --- !u!1001 &1453210455
 Prefab:
   m_ObjectHideFlags: 0
@@ -6821,7 +6842,19 @@ Prefab:
     - target: {fileID: 11444272, guid: a74a54e169c954d6a845492af2127c59, type: 2}
       propertyPath: audioOnEnter.audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: e8a94b97b52114f36ac1038076525cb1, type: 3}
+      objectReference: {fileID: 8300000, guid: 0e380ae6198cd4de1ad15a3c91e8e7ee, type: 3}
+    - target: {fileID: 11444272, guid: a74a54e169c954d6a845492af2127c59, type: 2}
+      propertyPath: audioOnEnter.volume
+      value: .600000024
+      objectReference: {fileID: 0}
+    - target: {fileID: 11444272, guid: a74a54e169c954d6a845492af2127c59, type: 2}
+      propertyPath: audioOnEnter.lowPitchRange
+      value: 1.20000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 11444272, guid: a74a54e169c954d6a845492af2127c59, type: 2}
+      propertyPath: audioOnEnter.highPitchRange
+      value: 1.20000005
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a74a54e169c954d6a845492af2127c59, type: 2}
   m_IsPrefabParent: 0
