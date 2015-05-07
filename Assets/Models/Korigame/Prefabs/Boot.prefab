@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 426888}
   - 54: {fileID: 5436870}
   - 114: {fileID: 11498910}
+  - 114: {fileID: 11401296}
   m_Layer: 0
   m_Name: Boot
   m_TagString: Untagged
@@ -53,8 +54,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 117354}
-  m_LocalRotation: {x: 0, y: .875360489, z: 0, w: .483470917}
-  m_LocalPosition: {x: 4.94719982, y: .488000005, z: 1.24549997}
+  m_LocalRotation: {x: -.22625947, y: .762037218, z: -.346129477, w: .498297483}
+  m_LocalPosition: {x: 1.05200005, y: 6.15999985, z: 1.01999998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 422614}
@@ -70,10 +71,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 90bf3ad3927624411b3e6618a5aa2c50, type: 2}
-  - {fileID: 2100000, guid: 8decc28b0e7ba41dbb5cfaef86659261, type: 2}
-  - {fileID: 2100000, guid: 7780606ff1a784dde8c299ed6b8efe66, type: 2}
-  - {fileID: 2100000, guid: 095953f177c3a48b09b618eb139c8e90, type: 2}
+  - {fileID: 2100000, guid: 77fb871d0fe7b4eb488b3492aee45caf, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -105,7 +103,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: .0500000007
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -121,6 +119,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: .183022112, y: .346363217, z: .387697101}
   m_Center: {x: -.000804004259, y: -.00576714659, z: -.00515950564}
+--- !u!114 &11401296
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 117354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da65c8c8862574cb0bead688e3024ada, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data:
+    duration: 8
+    elevation: 1
+    isRotating: 1
+  anchor: {fileID: 0}
 --- !u!114 &11498910
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -8,6 +8,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 410428}
+  - 54: {fileID: 5430682}
+  - 114: {fileID: 11439492}
   m_Layer: 0
   m_Name: Human Heart
   m_TagString: Untagged
@@ -25,6 +27,7 @@ GameObject:
   - 4: {fileID: 440504}
   - 33: {fileID: 3300542}
   - 23: {fileID: 2306236}
+  - 65: {fileID: 6529788}
   m_Layer: 0
   m_Name: Human_Heart
   m_TagString: Untagged
@@ -38,8 +41,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 161142}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.76139021, y: .247940049, z: 3.77264071}
+  m_LocalRotation: {x: 0, y: .279191732, z: 0, w: .960235476}
+  m_LocalPosition: {x: .0397000313, y: .0221000165, z: .104799986}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 440504}
@@ -67,8 +70,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 8ba957fd16b67487990c1f30f1ecd8a8, type: 2}
-  - {fileID: 2100000, guid: f1421f056bebc46f9ab7ecb0c9066920, type: 2}
+  - {fileID: 2100000, guid: 77fb871d0fe7b4eb488b3492aee45caf, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -89,6 +91,48 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 194434}
   m_Mesh: {fileID: 4300244, guid: d83b5fa58951846c988d3b6108025c04, type: 3}
+--- !u!54 &5430682
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 161142}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &6529788
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 194434}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: .200335979, y: .229865, z: .330432922}
+  m_Center: {x: 2.47298543e-10, y: -.00486501958, z: .00664854515}
+--- !u!114 &11439492
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 161142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b5c6fe6c53e94490ade18dcbea80887, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hasItsOwnFocusTime: 0
+  focusTimeSec: 0
+  isAbleToInteract: 1
+  body: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

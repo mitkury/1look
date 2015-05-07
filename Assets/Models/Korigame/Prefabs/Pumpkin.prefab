@@ -9,6 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 476810}
   - 114: {fileID: 11465070}
+  - 54: {fileID: 5491326}
   m_Layer: 0
   m_Name: Pumpkin
   m_TagString: Untagged
@@ -69,9 +70,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 8decc28b0e7ba41dbb5cfaef86659261, type: 2}
-  - {fileID: 2100000, guid: 3965dd91fd106499c9b9db664b3b7755, type: 2}
-  - {fileID: 2100000, guid: cd12742fa2d7f41fbae7c3283f54891d, type: 2}
+  - {fileID: 2100000, guid: 77fb871d0fe7b4eb488b3492aee45caf, type: 2}
   - {fileID: 2100000, guid: 2efd9d60d5b58422d988ef45ff0627bb, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
@@ -93,6 +92,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 135238}
   m_Mesh: {fileID: 4300236, guid: d83b5fa58951846c988d3b6108025c04, type: 3}
+--- !u!54 &5491326
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 125030}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!114 &11465070
 MonoBehaviour:
   m_ObjectHideFlags: 1
