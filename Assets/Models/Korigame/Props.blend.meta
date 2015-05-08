@@ -175,6 +175,9 @@ ModelImporter:
     100334: Book_Group_1
     100336: Book_Group_2
     100338: Glass_Decoration
+    100340: Sword
+    100342: Sword_Mount
+    100344: NES
     400000: Apple
     400002: Bookcase
     400004: Bubbling_Acid
@@ -345,6 +348,9 @@ ModelImporter:
     400334: Book_Group_1
     400336: Book_Group_2
     400338: Glass_Decoration
+    400340: Sword
+    400342: Sword_Mount
+    400344: NES
     2300000: Apple
     2300002: Bookcase
     2300004: Bubbling_Acid
@@ -505,6 +511,9 @@ ModelImporter:
     2300314: Book_Group_1
     2300316: Book_Group_2
     2300318: Glass_Decoration
+    2300320: Sword
+    2300322: Sword_Mount
+    2300324: NES
     3300000: Apple
     3300002: Bookcase
     3300004: Bubbling_Acid
@@ -665,6 +674,9 @@ ModelImporter:
     3300314: Book_Group_1
     3300316: Book_Group_2
     3300318: Glass_Decoration
+    3300320: Sword
+    3300322: Sword_Mount
+    3300324: NES
     4300000: Apple
     4300002: Bookcase
     4300004: Cauldron
@@ -826,6 +838,9 @@ ModelImporter:
     4300316: Glass_Decoration
     4300318: Book_Group_1
     4300320: Book_Group_2
+    4300322: Sword
+    4300324: Sword_Mount
+    4300326: NES
     7400000: Default Take
     9500000: //RootNode
     13700000: Magic_Book_001
