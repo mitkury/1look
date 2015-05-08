@@ -47,6 +47,16 @@ public class PaintingHoop : Interaction {
 
 	public override void Interact () {
 		_animator.SetTrigger("Intro");
+
+
+	}
+
+	public void DisableInteractivity() {
+		GetComponent<InteractiveObject>().isAbleToInteract = false;
+	}
+
+	public void EnableInteractivity() {
+		GetComponent<InteractiveObject>().isAbleToInteract = true;
 	}
 
 	public void SwitchShield() {
@@ -68,9 +78,10 @@ public class PaintingHoop : Interaction {
 		if (soundPlayer != null)
 			soundPlayer.PlayOneShot(0);
 		
-		if (hoopsGoal <= hoopIndex + 1 && prize != null) {
+		if (prize != null && hoopsGoal <= hoopIndex + 1) {
 			prize.SetActive(true);
 			prize.transform.parent = transform.parent;
+			prize = null;
 		}
 
 		NextHoop();

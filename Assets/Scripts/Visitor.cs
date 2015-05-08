@@ -174,6 +174,14 @@ public class Visitor : MonoBehaviour {
 			//Debug.DrawLine(highestPointOnTarget, highestPointOnTarget + Vector3.up, Color.red, Time.deltaTime);
 		}
 
+		var positionChangeRate = 1.5f;
+		var rotationChangeRate = 1.5f;
+
+		if (distanceToItem < 2f) {
+			positionChangeRate = 3f;
+			//rotationChangeRate = 3f;
+		}
+
 		if (isLookingBelow) {
 			// Hover the object in a fixed point.
 
@@ -209,8 +217,8 @@ public class Visitor : MonoBehaviour {
 			}
 		}
 
-		itemInHand.transform.position = Vector3.Lerp(itemInHand.transform.position, targetPosition, Time.deltaTime * 3);
-		itemInHand.transform.rotation = Quaternion.Lerp(itemInHand.transform.rotation, targetRotation, Time.deltaTime * 3);
+		itemInHand.transform.position = Vector3.Lerp(itemInHand.transform.position, targetPosition, Time.deltaTime * positionChangeRate);
+		itemInHand.transform.rotation = Quaternion.Lerp(itemInHand.transform.rotation, targetRotation, Time.deltaTime * rotationChangeRate);
 	}
 
 	void UpdateInteractions() {

@@ -578,7 +578,7 @@ Animator:
   m_GameObject: {fileID: 162724}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 43ac0bc763a104150b3edcae337f1024, type: 2}
+  m_Controller: {fileID: 9100000, guid: d3850f14740fe41eaac3d5d18bd75b25, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -658,9 +658,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hoopScale: {x: 1, y: 2.38000011, z: 1.13999999}
   shield: {fileID: 105002}
-  prize: {fileID: 0}
+  prize: {fileID: 139326}
   objectsForActivation:
   - {fileID: 154604}
+  hoopsGoal: 1
   hoopForces:
   - 1.70000005
   - 1.85000002
