@@ -6,7 +6,8 @@ public class SummonsBasketballHoop : Interaction {
 	public PaintingHoop paintingHoop;
 
 	public void OnItemTakeByVisitor (ObtainableItem item) {
-		paintingHoop.ShowHoop();
+		if (paintingHoop.hoopIndex == -1)
+			paintingHoop.NextHoop();
 	}
 
 }

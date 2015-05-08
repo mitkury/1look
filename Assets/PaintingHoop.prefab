@@ -127,13 +127,14 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 473996}
-  - 114: {fileID: 11484242}
   - 114: {fileID: 11419472}
   - 54: {fileID: 5443386}
   - 95: {fileID: 9582176}
   - 114: {fileID: 11430502}
   - 114: {fileID: 11487988}
   - 114: {fileID: 11496012}
+  - 114: {fileID: 11485920}
+  - 114: {fileID: 11486276}
   m_Layer: 0
   m_Name: PaintingHoop
   m_TagString: Untagged
@@ -657,8 +658,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hoopScale: {x: 1, y: 2.38000011, z: 1.13999999}
   shield: {fileID: 105002}
+  prize: {fileID: 0}
   objectsForActivation:
   - {fileID: 154604}
+  hoopForces:
+  - 1.70000005
+  - 1.85000002
+  - 1.87
 --- !u!114 &11454314
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -676,7 +682,19 @@ MonoBehaviour:
   triggersExit: 0
   receivers:
   - {fileID: 162724}
---- !u!114 &11484242
+--- !u!114 &11485920
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 162724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03d9e4349915d4c778d3ff4c2fd2cb65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newForce: 3
+--- !u!114 &11486276
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -703,7 +721,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34b996e321d124000938a76d42a61841, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hiddenObject: {fileID: 139326}
 --- !u!114 &11496012
 MonoBehaviour:
   m_ObjectHideFlags: 1

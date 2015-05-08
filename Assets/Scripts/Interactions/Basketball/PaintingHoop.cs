@@ -6,15 +6,23 @@ public class PaintingHoop : Interaction {
 	Animator _animator;
 	string initName;
 	Vector3 initScale;
-
+	bool shieldIsExpanded;
+	ForceOverrider forceOverrider;
+	
 	public Vector3 hoopScale = new Vector3(1f, 2.38f, 1.14f);
 	public GameObject shield;
+	public GameObject prize;
 	public GameObject[] objectsForActivation;
+	public float hoopsGoal = 3;
+	public float[] hoopForces;
+	public int hoopIndex { get; private set; }
 
 	void Start() {
 		_animator = GetComponent<Animator>();
 		initName = gameObject.name;
 		initScale = shield.transform.localScale;
+		forceOverrider = GetComponent<ForceOverrider>();
+		hoopIndex = -1;
 	}
 
 	IEnumerator ExpandShieldCo() {
@@ -41,24 +49,14 @@ public class PaintingHoop : Interaction {
 		_animator.SetTrigger("Intro");
 	}
 
-	public void EnableInteractivity() {
-		GetComponent<InteractiveObject>().isAbleToInteract = true;
-	}
-
-	bool shieldIsExpanded;
-
 	public void SwitchShield() {
-		if (shieldIsExpanded)
+		if (shieldIsExpanded) {
 			StartCoroutine(SrinkShieldCo());
-		else
+		} else {
 			StartCoroutine(ExpandShieldCo());
+		}
 
 		shieldIsExpanded = !shieldIsExpanded;
-	}
-
-	public void ShowHoop() {
-		GetComponent<InteractiveObject>().isAbleToBeActivatedOnItsOwn = false;
-		_animator.SetTrigger("GoToHoop1");
 	}
 
 	public void ExpandShield() {
@@ -69,9 +67,28 @@ public class PaintingHoop : Interaction {
 		var soundPlayer = GetComponent<PlaysSoundOnRequest>();
 		if (soundPlayer != null)
 			soundPlayer.PlayOneShot(0);
+		
+		if (hoopsGoal <= hoopIndex + 1 && prize != null) {
+			prize.SetActive(true);
+			prize.transform.parent = transform.parent;
+		}
 
-		_animator.SetTrigger("GoBack");
-		GetComponent<InteractiveObject>().isAbleToInteract = false;
+		NextHoop();
+	}
+
+	public void NextHoop() {
+		_animator.SetTrigger("Next");
+		hoopIndex += 1;
+
+		if (hoopForces.Length > hoopIndex)
+			forceOverrider.newForce = hoopForces[hoopIndex];
+
+		GetComponent<InteractiveObject>().isAbleToBeActivatedOnItsOwn = false;
+	}
+
+	public void ResetHoopIndex() {
+		hoopIndex = -1;
+		GetComponent<InteractiveObject>().isAbleToBeActivatedOnItsOwn = true;
 	}
 
 }

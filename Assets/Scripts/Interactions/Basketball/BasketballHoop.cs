@@ -5,8 +5,6 @@ public class BasketballHoop : Interaction {
 	
 	bool ballWentThroughFirstSensor;
 	bool ballWentThroughSecondSensor;
-
-	public GameObject hiddenObject;
 	
 	void OnSensorEnter() {
 		if (!ballWentThroughFirstSensor) {
@@ -40,13 +38,6 @@ public class BasketballHoop : Interaction {
 	}
 
 	void Goal() {
-		Debug.Log("Goal!");
-
-		if (hiddenObject != null) {
-			hiddenObject.SetActive(true);
-			hiddenObject.transform.parent = transform.parent;
-		}
-
 		gameObject.SendMessage("OnGoal");
 	}
 }
