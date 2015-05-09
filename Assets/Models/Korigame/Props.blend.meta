@@ -178,6 +178,27 @@ ModelImporter:
     100340: Sword
     100342: Sword_Mount
     100344: NES
+    100346: Armature_001
+    100348: Armature_002
+    100350: Bone_0
+    100352: Bone_001
+    100354: Bone_002
+    100356: Bone_003
+    100358: Bone_004
+    100360: Bone_005
+    100362: Bone_006
+    100364: Bone_007
+    100366: Bone_008
+    100368: Bone_009
+    100370: Bone_010
+    100372: Bone_011
+    100374: Bone_012
+    100376: Bone_013
+    100378: Bone_014
+    100380: Bone_015
+    100382: Bone_016
+    100384: Bone_2
+    100386: Bone_3
     400000: Apple
     400002: Bookcase
     400004: Bubbling_Acid
@@ -351,6 +372,27 @@ ModelImporter:
     400340: Sword
     400342: Sword_Mount
     400344: NES
+    400346: Armature_001
+    400348: Armature_002
+    400350: Bone_0
+    400352: Bone_001
+    400354: Bone_002
+    400356: Bone_003
+    400358: Bone_004
+    400360: Bone_005
+    400362: Bone_006
+    400364: Bone_007
+    400366: Bone_008
+    400368: Bone_009
+    400370: Bone_010
+    400372: Bone_011
+    400374: Bone_012
+    400376: Bone_013
+    400378: Bone_014
+    400380: Bone_015
+    400382: Bone_016
+    400384: Bone_2
+    400386: Bone_3
     2300000: Apple
     2300002: Bookcase
     2300004: Bubbling_Acid
@@ -842,10 +884,14 @@ ModelImporter:
     4300324: Sword_Mount
     4300326: NES
     7400000: Default Take
+    7400002: Armature_001Action
+    7400004: Armature_002Action
     9500000: //RootNode
     13700000: Magic_Book_001
     13700002: Plant
     13700004: Magic_Book
+    13700006: Fish
+    13700008: Spider
   materials:
     importMaterials: 1
     materialName: 0
