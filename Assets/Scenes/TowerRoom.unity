@@ -7712,6 +7712,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 632332800}
     m_Modifications:
+    - target: {fileID: 11459968, guid: 83ecf9a7eec2c4384be9b66e89557b01, type: 2}
+      propertyPath: audioOnImpact.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 416672, guid: 83ecf9a7eec2c4384be9b66e89557b01, type: 2}
       propertyPath: m_LocalPosition.x
       value: -6.54400015
@@ -7751,6 +7755,30 @@ Prefab:
     - target: {fileID: 11459968, guid: 83ecf9a7eec2c4384be9b66e89557b01, type: 2}
       propertyPath: audioClipData.volume
       value: .400000006
+      objectReference: {fileID: 0}
+    - target: {fileID: 11459968, guid: 83ecf9a7eec2c4384be9b66e89557b01, type: 2}
+      propertyPath: audioOnImpact.Array.data[1].audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: c34810b3921434f74a36017b34388683, type: 3}
+    - target: {fileID: 11459968, guid: 83ecf9a7eec2c4384be9b66e89557b01, type: 2}
+      propertyPath: audioOnImpact.Array.data[1].lowPitchRange
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11459968, guid: 83ecf9a7eec2c4384be9b66e89557b01, type: 2}
+      propertyPath: audioOnImpact.Array.data[1].highPitchRange
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11459968, guid: 83ecf9a7eec2c4384be9b66e89557b01, type: 2}
+      propertyPath: audioOnImpact.Array.data[1].spatialBlend
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11459968, guid: 83ecf9a7eec2c4384be9b66e89557b01, type: 2}
+      propertyPath: audioOnImpact.Array.data[1].velocityToVolume
+      value: .129999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 11459968, guid: 83ecf9a7eec2c4384be9b66e89557b01, type: 2}
+      propertyPath: audioOnImpact.Array.data[1].requiredMinVelocity
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 83ecf9a7eec2c4384be9b66e89557b01, type: 2}
@@ -9539,7 +9567,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - audioClip: {fileID: 8300000, guid: d6a0d043c74bf450abab3cdfdb9819e7, type: 3}
-    volume: .150000006
+    volume: .300000012
     lowPitchRange: 1
     highPitchRange: 1
     spatialBlend: 1
