@@ -656,6 +656,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2aa078dcde714480acb648812fc913a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetBall: {fileID: 0}
+  visiblePointForBall: {fileID: 0}
   hoopScale: {x: 1, y: 2.38000011, z: 1.13999999}
   shield: {fileID: 105002}
   prize: {fileID: 139326}

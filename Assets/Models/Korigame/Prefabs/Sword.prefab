@@ -10,6 +10,8 @@ GameObject:
   - 4: {fileID: 419162}
   - 33: {fileID: 3362430}
   - 23: {fileID: 2324864}
+  - 65: {fileID: 6522122}
+  - 65: {fileID: 6500502}
   m_Layer: 0
   m_Name: Sword
   m_TagString: Untagged
@@ -25,6 +27,10 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 472642}
+  - 114: {fileID: 11465366}
+  - 114: {fileID: 11413408}
+  - 54: {fileID: 5446690}
+  - 114: {fileID: 11497218}
   m_Layer: 0
   m_Name: Sword
   m_TagString: Untagged
@@ -50,8 +56,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 191884}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.59800005, y: .493448496, z: 4.17000008}
+  m_LocalRotation: {x: .67455399, y: .67455399, z: .212077752, w: .212077633}
+  m_LocalPosition: {x: 4.82299995, y: 1.99899995, z: 3.01399994}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 419162}
@@ -64,8 +70,8 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100434}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_Materials:
   - {fileID: 2100000, guid: 77fb871d0fe7b4eb488b3492aee45caf, type: 2}
   m_SubsetIndices: 
@@ -88,6 +94,103 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100434}
   m_Mesh: {fileID: 4300322, guid: d83b5fa58951846c988d3b6108025c04, type: 3}
+--- !u!54 &5446690
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 191884}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &6500502
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100434}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: .193031967, y: 1.01568687, z: .0761319846}
+  m_Center: {x: 0, y: -.222339466, z: 4.76837158e-07}
+--- !u!65 &6522122
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100434}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: .193031967, y: 1.01568687, z: .0761319846}
+  m_Center: {x: 0, y: -.222339466, z: 4.76837158e-07}
+--- !u!114 &11413408
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 191884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40f283574dc5849f4968fe12a0a78dc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: {x: -.400000006, y: 0, z: 0}
+  audioOnPoke:
+    audioClip: {fileID: 8300000, guid: 4dfbba22bb32f4f248a3bbc9800cf562, type: 3}
+    volume: .5
+    lowPitchRange: 1.5
+    highPitchRange: 1.5
+    spatialBlend: 1
+  audioOnImpact:
+  - audioClip: {fileID: 8300000, guid: 4dfbba22bb32f4f248a3bbc9800cf562, type: 3}
+    volume: 0
+    lowPitchRange: .800000012
+    highPitchRange: 1
+    spatialBlend: 1
+    velocityToVolume: .129999995
+    requiredMinVelocity: 1
+--- !u!114 &11465366
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 191884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11564784fee5d40cb8b0d69772b74ac9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hasItsOwnFocusTime: 1
+  focusTimeSec: 0
+  isAbleToInteract: 1
+  body: {fileID: 0}
+  isAbleToBeActivatedOnItsOwn: 1
+--- !u!114 &11497218
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 191884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11564784fee5d40cb8b0d69772b74ac9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hasItsOwnFocusTime: 1
+  focusTimeSec: 0
+  isAbleToInteract: 1
+  body: {fileID: 0}
+  isAbleToBeActivatedOnItsOwn: 1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

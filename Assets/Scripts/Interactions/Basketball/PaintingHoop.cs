@@ -8,6 +8,10 @@ public class PaintingHoop : Interaction {
 	Vector3 initScale;
 	bool shieldIsExpanded;
 	ForceOverrider forceOverrider;
+	[HideInInspector]
+	public Basketball targetBall;
+	public MeshRenderer hoopRenderer;
+	public Transform visiblePointForBall;
 	
 	public Vector3 hoopScale = new Vector3(1f, 2.38f, 1.14f);
 	public GameObject shield;
@@ -82,6 +86,9 @@ public class PaintingHoop : Interaction {
 			prize.SetActive(true);
 			prize.transform.parent = transform.parent;
 			prize = null;
+
+			if (targetBall != null)
+				targetBall.Drop(visiblePointForBall.position);
 		}
 
 		NextHoop();
@@ -95,11 +102,17 @@ public class PaintingHoop : Interaction {
 			forceOverrider.newForce = hoopForces[hoopIndex];
 
 		GetComponent<InteractiveObject>().isAbleToBeActivatedOnItsOwn = false;
+		hoopRenderer.gameObject.SetActive(true);
 	}
 
 	public void ResetHoopIndex() {
 		hoopIndex = -1;
 		GetComponent<InteractiveObject>().isAbleToBeActivatedOnItsOwn = true;
+
+		if (targetBall != null)
+			targetBall.Drop(visiblePointForBall.position);
+
+		hoopRenderer.gameObject.SetActive(false);
 	}
 
 }

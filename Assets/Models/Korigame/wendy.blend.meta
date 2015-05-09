@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: c4855bc0334f84ab2978439b8d18a0b9
-timeCreated: 1430348425
+timeCreated: 1431152718
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
@@ -8,57 +8,47 @@ ModelImporter:
     100000: Ankle_L
     100002: Ankle_R
     100004: Armature
-    100006: Chest
-    100008: Cube_004
-    100010: Foot_L
-    100012: Foot_R
-    100014: Hand_L
-    100016: Hand_R
-    100018: Lower_Arm_L
-    100020: Lower_Arm_R
+    100006: Cube_004
+    100008: Foot_L
+    100010: Foot_R
+    100012: Hand_L_001
+    100014: Hand_L_002
+    100016: Lower_Arm_L
+    100018: Lower_Arm_L_001
+    100020: Lower_Chest
     100022: LowerLeg_L
     100024: LowerLeg_R
     100026: Stomach
     100028: Upper_Arm_L
-    100030: Upper_Arm_R
-    100032: Upper_Leg_L
-    100034: Upper_Leg_R
-    100036: //RootNode
-    100038: Hand_L_001
-    100040: Lower_Chest
-    100042: Upper_Chest
-    100044: Wrist_L
-    100046: Hand_L_002
-    100048: Lower_Arm_L_001
-    100050: Upper_Arm_L_001
-    100052: Wrist_L_001
+    100030: Upper_Arm_L_001
+    100032: Upper_Chest
+    100034: Upper_Leg_L
+    100036: Upper_Leg_R
+    100038: //RootNode
+    100040: Wrist_L
+    100042: Wrist_L_001
     400000: Ankle_L
     400002: Ankle_R
     400004: Armature
-    400006: Chest
-    400008: Cube_004
-    400010: Foot_L
-    400012: Foot_R
-    400014: Hand_L
-    400016: Hand_R
-    400018: Lower_Arm_L
-    400020: Lower_Arm_R
+    400006: Cube_004
+    400008: Foot_L
+    400010: Foot_R
+    400012: Hand_L_001
+    400014: Hand_L_002
+    400016: Lower_Arm_L
+    400018: Lower_Arm_L_001
+    400020: Lower_Chest
     400022: LowerLeg_L
     400024: LowerLeg_R
     400026: Stomach
     400028: Upper_Arm_L
-    400030: Upper_Arm_R
-    400032: Upper_Leg_L
-    400034: Upper_Leg_R
-    400036: //RootNode
-    400038: Hand_L_001
-    400040: Lower_Chest
-    400042: Upper_Chest
-    400044: Wrist_L
-    400046: Hand_L_002
-    400048: Lower_Arm_L_001
-    400050: Upper_Arm_L_001
-    400052: Wrist_L_001
+    400030: Upper_Arm_L_001
+    400032: Upper_Chest
+    400034: Upper_Leg_L
+    400036: Upper_Leg_R
+    400038: //RootNode
+    400040: Wrist_L
+    400042: Wrist_L_001
     4300000: Cube_004
     7400000: Default Take
     9500000: //RootNode

@@ -8,6 +8,7 @@ public class RecipeIcon : Interaction {
 	Quaternion initLocalRotation;
 	float initFocusTimeSec;
 	bool isHoverd;
+	bool isUsed;
 	float startedHoveredTime;
 
 	public string itemName { get; private set; }
@@ -51,6 +52,11 @@ public class RecipeIcon : Interaction {
 	}
 
 	IEnumerator HideCo() {
+		if (isUsed)
+			yield break;
+
+		isUsed = true;
+
 		GetComponent<InteractiveObject>().isAbleToInteract = false;
 		isHoverd = false;
 		LeanTween.cancel(gameObject);

@@ -13,7 +13,7 @@ GameObject:
   - 65: {fileID: 6595276}
   - 136: {fileID: 13624864}
   - 65: {fileID: 6571572}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Log
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31,7 +31,7 @@ GameObject:
   - 54: {fileID: 5452402}
   - 114: {fileID: 11421290}
   - 114: {fileID: 11437600}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Log
   m_TagString: Untagged
   m_Icon: {fileID: 0}

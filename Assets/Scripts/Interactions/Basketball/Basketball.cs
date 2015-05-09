@@ -3,19 +3,106 @@ using System.Collections;
 
 public class Basketball : Interaction {
 
+	bool dropIsInitiated;
+	float maxDist = 0.25f;
+	float maxVelocity = 1f;
+	Vector3 targetPosition = Vector3.zero;
+
 	public float throwForce = 5;
 	public float unblockAfterThrowInSec = 3f;
+
+	IEnumerator UnblockCo() {
+		yield return new WaitForSeconds(unblockAfterThrowInSec);
+
+		var obtainableItem = GetComponent<ObtainableItem>();
+		obtainableItem.isAbleToInteract = true;
+
+		if (dropIsInitiated)
+			yield break;
+		
+		if (King.visitor.itemInHand != null) {
+			King.visitor.inventory.AddItem(obtainableItem);
+		} else { 
+			King.visitor.Take(obtainableItem);
+		}
+	}
+
+	IEnumerator DropCo(Vector3 visiblePoint) {
+		if (King.visitor.itemInHand == GetComponent<ObtainableItem>())
+			King.visitor.Drop(GetComponent<ObtainableItem>());
+		
+		var _rigidbody = GetComponent<Rigidbody>();
+		_rigidbody.isKinematic = false;
+		_rigidbody.useGravity = true;
+		dropIsInitiated = true;
+
+		yield return new WaitForSeconds(2f);
+
+		// Animation
+		if (dropIsInitiated) {
+			_rigidbody.isKinematic = true;
+
+			LeanTween.move(gameObject, visiblePoint, 3f).setEase(LeanTweenType.easeInOutSine).setOnComplete(delegate() {
+				_rigidbody.isKinematic = false;
+			});
+		}
+
+		// Physically based.
+		/*
+		if (dropIsInitiated) {
+			targetPosition = visiblePoint;
+		}
+
+		var timeCount = 8f;
+		while (timeCount > 0f) {
+			yield return null;
+			timeCount -= Time.deltaTime;
+			if (!dropIsInitiated) {
+				yield break;
+			}
+
+		}
+
+		// If after that time the ball is not in that place—teleport it.
+		if (Vector3.Distance(transform.position, visiblePoint) > maxDist)
+			transform.position = visiblePoint;
+		*/
+	}
+	
+	void FixedUpdate () {
+		var _rigidbody = GetComponent<Rigidbody>();
+
+		if (targetPosition == Vector3.zero)
+			return;
+
+		if (Vector3.Distance(targetPosition, transform.position) > maxDist)
+			_rigidbody.AddForce((targetPosition - transform.position).normalized * (Time.fixedTime * 0.1f));
+		else {
+			_rigidbody.velocity = _rigidbody.velocity * 0.5f;
+			//targetPosition = Vector3.zero;
+		}
+	}
+
+	public void OnItemTakeByVisitor(ObtainableItem item) {
+		dropIsInitiated = false;
+		targetPosition = Vector3.zero;
+	}
 
 	public override bool IsAbleToInteractWith (InteractiveThing thing) {
 		return thing.name == "ThrowingSurface";
 	}
 
+	public override void Interact () {
+		// Gosh, so many dependencies.
+		Drop(GetComponent<SummonsBasketballHoop>().paintingHoop.visiblePointForBall.position);
+	}
+
 	public override void InteractWith(InteractiveThing thing) {
 
-		var rigidbody = GetComponent<Rigidbody>();
+		var _rigidbody = GetComponent<Rigidbody>();
 
-		rigidbody.isKinematic = false;
-		rigidbody.useGravity = true;
+		_rigidbody.isKinematic = false;
+		_rigidbody.useGravity = true;
 
 		var force = throwForce;
 		
@@ -23,22 +110,13 @@ public class Basketball : Interaction {
 			force = thing.GetComponent<ForceOverrider>().newForce;
 		}
 
-		rigidbody.AddForce((King.visitor.sight.facingVector + Vector3.up * 1.5f) * force, ForceMode.Impulse);
+		_rigidbody.AddForce((King.visitor.sight.facingVector + Vector3.up * 1.5f) * force, ForceMode.Impulse);
 
 		StartCoroutine(UnblockCo());
 	}
 
-	IEnumerator UnblockCo() {
-		yield return new WaitForSeconds(unblockAfterThrowInSec);
-
-		var obtainableItem = GetComponent<ObtainableItem>();
-
-		obtainableItem.isAbleToInteract = true;
-
-		if (King.visitor.itemInHand != null) {
-			King.visitor.inventory.AddItem(obtainableItem);
-		} else { 
-			King.visitor.Take(obtainableItem);
-		}
+	public void Drop(Vector3 visiblePoint) {
+		StartCoroutine(DropCo(visiblePoint));
 	}
+
 }

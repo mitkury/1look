@@ -11,7 +11,7 @@ GameObject:
   - 33: {fileID: 3370820}
   - 23: {fileID: 2376528}
   - 65: {fileID: 6505762}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Ladder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29,7 +29,7 @@ GameObject:
   - 65: {fileID: 6548232}
   - 114: {fileID: 11481142}
   - 114: {fileID: 11444272}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SoundTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47,7 +47,7 @@ GameObject:
   - 54: {fileID: 5497764}
   - 114: {fileID: 11400898}
   - 114: {fileID: 11488034}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Ladder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -180,6 +180,7 @@ MonoBehaviour:
     lowPitchRange: .600000024
     highPitchRange: .600000024
     spatialBlend: 1
+  audioOnImpact: []
 --- !u!114 &11444272
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -192,10 +193,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioOnEnter:
-    audioClip: {fileID: 8300000, guid: 1020b9cc03cf14a689ac7421f84df513, type: 3}
-    volume: .300000012
-    lowPitchRange: 1
-    highPitchRange: 1
+    audioClip: {fileID: 8300000, guid: 0e380ae6198cd4de1ad15a3c91e8e7ee, type: 3}
+    volume: .600000024
+    lowPitchRange: 1.20000005
+    highPitchRange: 1.20000005
     spatialBlend: 1
   audioOnExit:
     audioClip: {fileID: 0}

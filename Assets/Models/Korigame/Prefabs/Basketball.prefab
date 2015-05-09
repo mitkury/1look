@@ -15,8 +15,8 @@ GameObject:
   - 114: {fileID: 11417258}
   - 114: {fileID: 11432998}
   - 114: {fileID: 11409548}
-  - 114: {fileID: 11450582}
-  m_Layer: 0
+  - 114: {fileID: 11419246}
+  m_Layer: 10
   m_Name: Basketball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30,7 +30,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 102852}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: .397000015, z: 1.97000003}
+  m_LocalPosition: {x: 2.48000002, y: 3.82730007, z: 3.47000003}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -113,6 +113,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   throwForce: 1.70000005
   unblockAfterThrowInSec: 3
+--- !u!114 &11419246
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 102852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b33d674d949b430792fcd86fcb6a948, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paintingHoop: {fileID: 0}
 --- !u!114 &11432998
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -128,18 +140,6 @@ MonoBehaviour:
   focusTimeSec: 0
   isAbleToInteract: 1
   body: {fileID: 0}
---- !u!114 &11450582
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 102852}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b33d674d949b430792fcd86fcb6a948, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintingHoop: {fileID: 0}
 --- !u!135 &13506160
 SphereCollider:
   m_ObjectHideFlags: 1
