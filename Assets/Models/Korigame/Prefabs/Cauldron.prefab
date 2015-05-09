@@ -343,7 +343,7 @@ MonoBehaviour:
   recipe:
     items:
     - itemName: Apple
-      amount: 2
+      amount: 1
       collected: 0
     - itemName: Cheese
       amount: 1
@@ -1114,7 +1114,7 @@ ParticleSystem:
     inWorldSpace: 0
     randomizePerFrame: 0
   ExternalForcesModule:
-    enabled: 0
+    enabled: 1
     multiplier: 1
   ClampVelocityModule:
     enabled: 0
