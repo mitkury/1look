@@ -199,6 +199,8 @@ ModelImporter:
     100382: Bone_016
     100384: Bone_2
     100386: Bone_3
+    100388: Building_Facade
+    100390: Cube_003
     400000: Apple
     400002: Bookcase
     400004: Bubbling_Acid
@@ -393,6 +395,8 @@ ModelImporter:
     400382: Bone_016
     400384: Bone_2
     400386: Bone_3
+    400388: Building_Facade
+    400390: Cube_003
     2300000: Apple
     2300002: Bookcase
     2300004: Bubbling_Acid
@@ -556,6 +560,8 @@ ModelImporter:
     2300320: Sword
     2300322: Sword_Mount
     2300324: NES
+    2300326: Building_Facade
+    2300328: Cube_003
     3300000: Apple
     3300002: Bookcase
     3300004: Bubbling_Acid
@@ -719,6 +725,8 @@ ModelImporter:
     3300320: Sword
     3300322: Sword_Mount
     3300324: NES
+    3300326: Building_Facade
+    3300328: Cube_003
     4300000: Apple
     4300002: Bookcase
     4300004: Cauldron
@@ -883,6 +891,8 @@ ModelImporter:
     4300322: Sword
     4300324: Sword_Mount
     4300326: NES
+    4300328: Building_Facade
+    4300330: Cube_003
     7400000: Default Take
     7400002: Armature_001Action
     7400004: Armature_002Action
