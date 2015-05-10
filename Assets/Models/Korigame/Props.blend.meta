@@ -201,6 +201,8 @@ ModelImporter:
     100386: Bone_3
     100388: Building_Facade
     100390: Cube_003
+    100392: Mat
+    100394: Mat_Warped
     400000: Apple
     400002: Bookcase
     400004: Bubbling_Acid
@@ -397,6 +399,8 @@ ModelImporter:
     400386: Bone_3
     400388: Building_Facade
     400390: Cube_003
+    400392: Mat
+    400394: Mat_Warped
     2300000: Apple
     2300002: Bookcase
     2300004: Bubbling_Acid
@@ -562,6 +566,8 @@ ModelImporter:
     2300324: NES
     2300326: Building_Facade
     2300328: Cube_003
+    2300330: Mat
+    2300332: Mat_Warped
     3300000: Apple
     3300002: Bookcase
     3300004: Bubbling_Acid
@@ -727,6 +733,8 @@ ModelImporter:
     3300324: NES
     3300326: Building_Facade
     3300328: Cube_003
+    3300330: Mat
+    3300332: Mat_Warped
     4300000: Apple
     4300002: Bookcase
     4300004: Cauldron
@@ -893,6 +901,8 @@ ModelImporter:
     4300326: NES
     4300328: Building_Facade
     4300330: Cube_003
+    4300332: Mat
+    4300334: Mat_Warped
     7400000: Default Take
     7400002: Armature_001Action
     7400004: Armature_002Action
