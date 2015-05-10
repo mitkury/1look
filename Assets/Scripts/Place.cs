@@ -5,14 +5,21 @@ using System.Collections.Generic;
 [RequireComponent(typeof(GameInstantiator))]
 public class Place : MonoBehaviour {
 
-	public Color background;
+	public Color background = Color.blue;
+	public Color ambientColor = Color.grey;
+	public Color fogColor = Color.grey;
+	public float fogDensity = 0f;
 	public Waypoint vantagePoint;
 
 	public List<InteractiveThing> interactiveThings { get; private set; }
 
 	void Awake() {
-		GetComponent<GameInstantiator>().Init();
+		if (King.Instance != null)
+			gameObject.SetActive(false);
 
+		interactiveThings = new List<InteractiveThing>();
+
+		GetComponent<GameInstantiator>().Init();
 		King.placeManager.AddPlace(this);
 	}
 

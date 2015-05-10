@@ -56,6 +56,14 @@ public abstract class InteractiveThing : MonoBehaviour {
 		*/
 	}
 
+	void OnEnable() {
+		//StartCoroutine(AddToPlaceCo());
+	}
+
+	void OnDisable() {
+		// TODO: remove from things;
+	}
+
 	public void AddInteraction(Interaction interaction) {
 		if (interactions == null)
 			interactions = new List<Interaction>();

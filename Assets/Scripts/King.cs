@@ -37,18 +37,43 @@ public class King : SingletonComponent<King> {
 		}
 		*/
 
+		/*
 		if (placeManager.currentPlace == null) {
 			LoadPlace(1);
 		} else {
 			visitor.SetBackground(placeManager.currentPlace.background);
 		}
+		*/
 
+		StartCoroutine(BeginJourneyCo());
+	}
 
+	IEnumerator BeginJourneyCo() {
+		AudioListener.volume = 0;
+		King.visitor.sight.enabled = false;
+
+		if (FindObjectOfType<Place>() == null) {
+			placeManager.PreloadPlaces();
+		}
+
+		while(placeManager.placesAreLoading)
+			yield return null;
+
+		placeManager.ActivatePlace("Apartment");
+
+		LeanTween.value(gameObject, delegate(float value) { 
+			AudioListener.volume = value;
+		}, 0f, 1f, 1f);
+
+		yield return new WaitForSeconds(35f);
+
+		King.visitor.sight.enabled = true;
 	}
 
 
 	// TODO: move into a separate class.
 
+	/*
 	AsyncOperation async;
 	public bool placeIsLoading { get; private set; }
 
@@ -100,6 +125,7 @@ public class King : SingletonComponent<King> {
 	void OnLoadCompleteAfterSceneActivation() {
 		King.placeManager.currentPlace.gameObject.SetActive(false);
 	}
+	*/
 
 	#if UNITY_EDITOR
 	void Update() {

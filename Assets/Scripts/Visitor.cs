@@ -66,8 +66,8 @@ public class Visitor : MonoBehaviour {
 		OVRTouchpad.TouchHandler += HandleTouchHandler;
 
 		// Prepare an object for fading main camera in/out.
-		var blinkTextureGO = iTween.CameraFadeAdd();
-		blinkTextureGO.transform.parent = transform;
+		//var blinkTextureGO = iTween.CameraFadeAdd();
+		//blinkTextureGO.transform.parent = transform;
 
 		screenFader.anchor = sight.anchor;
 	}
