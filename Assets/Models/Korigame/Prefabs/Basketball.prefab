@@ -195,7 +195,7 @@ ParticleSystem:
   looping: 1
   prewarm: 1
   playOnAwake: 1
-  moveWithTransform: 1
+  moveWithTransform: 0
   InitialModule:
     enabled: 1
     startLifetime:
