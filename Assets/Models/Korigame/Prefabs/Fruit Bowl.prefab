@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 417324}
   - 33: {fileID: 3325440}
   - 23: {fileID: 2369154}
+  - 65: {fileID: 6523690}
   m_Layer: 0
   m_Name: Fruit_Bowl
   m_TagString: Untagged
@@ -67,7 +68,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 0ba892408b19346b4b6223810cc623a7, type: 2}
+  - {fileID: 2100000, guid: 77fb871d0fe7b4eb488b3492aee45caf, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -88,6 +89,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 113314}
   m_Mesh: {fileID: 4300188, guid: d83b5fa58951846c988d3b6108025c04, type: 3}
+--- !u!65 &6523690
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 113314}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: .523419976, y: .523419917, z: .236573994}
+  m_Center: {x: -1.02721836e-17, y: -4.30703195e-10, z: -.00722600054}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

@@ -25,6 +25,7 @@ GameObject:
   - 4: {fileID: 430258}
   - 33: {fileID: 3386082}
   - 23: {fileID: 2330144}
+  - 65: {fileID: 6549030}
   m_Layer: 0
   m_Name: Frying_Pan
   m_TagString: Untagged
@@ -88,6 +89,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 176074}
   m_Mesh: {fileID: 4300186, guid: d83b5fa58951846c988d3b6108025c04, type: 3}
+--- !u!65 &6549030
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 176074}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: .422646075, y: .556019127, z: .0872860923}
+  m_Center: {x: -3.97482491e-09, y: -.0666865185, z: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

@@ -43,7 +43,9 @@ public class Visitor : MonoBehaviour {
 		// VR mode.
 		if (King.isInVRMode) {
 			regularCameraRig.gameObject.SetActive(false);
-			vrCameraRig.gameObject.SetActive(true);
+
+			if (!vrCameraRig.gameObject.activeSelf)
+				vrCameraRig.gameObject.SetActive(true);
 			
 			sight.anchor = vrCenterOfView;
 			cameras.Add(vrCameraRig.GetComponent<OVRCameraRig>().leftEyeCamera);

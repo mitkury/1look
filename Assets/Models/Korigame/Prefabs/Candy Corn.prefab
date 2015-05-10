@@ -8,6 +8,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 465126}
+  - 54: {fileID: 5419122}
+  - 114: {fileID: 11433626}
   m_Layer: 0
   m_Name: Candy Corn
   m_TagString: Untagged
@@ -25,6 +27,7 @@ GameObject:
   - 4: {fileID: 482760}
   - 33: {fileID: 3318140}
   - 23: {fileID: 2319706}
+  - 65: {fileID: 6505704}
   m_Layer: 0
   m_Name: Candy_Corn
   m_TagString: Untagged
@@ -88,6 +91,48 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 196098}
   m_Mesh: {fileID: 4300246, guid: d83b5fa58951846c988d3b6108025c04, type: 3}
+--- !u!54 &5419122
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 156282}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &6505704
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 196098}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: .106180012, y: .10618002, z: .147248015}
+  m_Center: {x: -1.19014118e-07, y: -1.1862376e-07, z: .00654900074}
+--- !u!114 &11433626
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 156282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b5c6fe6c53e94490ade18dcbea80887, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hasItsOwnFocusTime: 0
+  focusTimeSec: 0
+  isAbleToInteract: 1
+  body: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

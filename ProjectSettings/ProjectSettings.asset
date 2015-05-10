@@ -11,7 +11,7 @@ PlayerSettings:
   targetIOSGraphics: -1
   targetResolution: 0
   accelerometerFrequency: 60
-  companyName: Wendy team
+  companyName: WendyTeam
   productName: Wendy
   cloudProjectId: 
   defaultCursor: {fileID: 0}
@@ -31,7 +31,7 @@ PlayerSettings:
   iosShowActivityIndicatorOnLoading: -1
   androidShowActivityIndicatorOnLoading: -1
   iosAppInBackgroundBehavior: 0
-  displayResolutionDialog: 1
+  displayResolutionDialog: 2
   allowedAutorotateToPortrait: 1
   allowedAutorotateToPortraitUpsideDown: 1
   allowedAutorotateToLandscapeRight: 1
@@ -39,7 +39,7 @@ PlayerSettings:
   useOSAutorotation: 1
   use32BitDisplayBuffer: 1
   disableDepthAndStencilBuffers: 0
-  defaultIsFullScreen: 1
+  defaultIsFullScreen: 0
   defaultIsNativeResolution: 1
   runInBackground: 1
   captureSingleScreen: 0
@@ -60,7 +60,7 @@ PlayerSettings:
   visibleInBackground: 1
   macFullscreenMode: 2
   d3d9FullscreenMode: 0
-  d3d11FullscreenMode: 0
+  d3d11FullscreenMode: 1
   xboxSpeechDB: 0
   xboxEnableHeadOrientation: 0
   xboxEnableGuest: 0
@@ -84,7 +84,7 @@ PlayerSettings:
   productGUID: 1e0f517e732798d45bc1455680f5dc67
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 19
-  AndroidPreferredInstallLocation: 1
+  AndroidPreferredInstallLocation: 2
   aotOptions: 
   apiCompatibilityLevel: 2
   iPhoneStrippingLevel: 0
@@ -92,7 +92,7 @@ PlayerSettings:
   ForceInternetPermission: 0
   ForceSDCardPermission: 0
   CreateWallpaper: 0
-  APKExpansionFiles: 1
+  APKExpansionFiles: 0
   preloadShaders: 0
   StripUnusedMeshComponents: 0
   iPhoneSdkVersion: 988
@@ -123,7 +123,7 @@ PlayerSettings:
   iOSLaunchScreenCustomXibPath: 
   AndroidTargetDevice: 0
   AndroidSplashScreenScale: 2
-  AndroidKeystoreName: Keystores/wendykey.keystore
+  AndroidKeystoreName: 
   AndroidKeyaliasName: 
   AndroidTVCompatibility: 1
   AndroidIsGame: 1
@@ -208,7 +208,7 @@ PlayerSettings:
   ps4ApplicationParam2: 0
   ps4ApplicationParam3: 0
   ps4ApplicationParam4: 0
-  ps4Passcode: 46GFqGGoWjcs1JeaNwQVNu96OWvtBuJU
+  ps4Passcode: 1YeHrDXuOrfxmHXh1GjciP0ScxA9YdjE
   ps4pnSessions: 1
   ps4pnPresence: 1
   ps4pnFriends: 1
@@ -389,7 +389,7 @@ PlayerSettings:
   WebGL::audioCompressionFormat: 4
   WebGL::exceptionSupport: 0
   WebGL::memorySize: 256
-  iOS::Architecture: 0
+  iOS::Architecture: 2
   iOS::ScriptingBackend: 0
   boolPropertyNames:
   - WebGL::dataCaching

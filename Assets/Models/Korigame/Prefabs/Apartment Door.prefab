@@ -25,6 +25,7 @@ GameObject:
   - 4: {fileID: 419336}
   - 33: {fileID: 3362528}
   - 23: {fileID: 2351830}
+  - 65: {fileID: 6596996}
   m_Layer: 0
   m_Name: Apartment_Door
   m_TagString: Untagged
@@ -38,8 +39,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100748}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.25299978, y: 1.25799978, z: -2.0529995}
+  m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106709}
+  m_LocalPosition: {x: -10.1899996, y: 1.25800002, z: -.941999972}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 419336}
@@ -88,6 +89,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 181242}
   m_Mesh: {fileID: 4300156, guid: d83b5fa58951846c988d3b6108025c04, type: 3}
+--- !u!65 &6596996
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 181242}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.20391285, y: .258199096, z: 2.6074369}
+  m_Center: {x: .601956427, y: .129098535, z: .142326534}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
