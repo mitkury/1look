@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 440738}
   - 33: {fileID: 3347084}
   - 23: {fileID: 2315114}
+  - 65: {fileID: 6572724}
   m_Layer: 0
   m_Name: Apartment_Window
   m_TagString: Untagged
@@ -62,6 +63,7 @@ GameObject:
   - 4: {fileID: 414364}
   - 33: {fileID: 3396922}
   - 23: {fileID: 2343748}
+  - 65: {fileID: 6516090}
   m_Layer: 0
   m_Name: Fridge
   m_TagString: Untagged
@@ -114,6 +116,7 @@ GameObject:
   - 4: {fileID: 424740}
   - 33: {fileID: 3338640}
   - 23: {fileID: 2387926}
+  - 65: {fileID: 6518824}
   m_Layer: 0
   m_Name: Stove
   m_TagString: Untagged
@@ -270,7 +273,6 @@ MeshRenderer:
   m_ReceiveShadows: 1
   m_Materials:
   - {fileID: 2100000, guid: 664ccb4d96c93423195bf2d9bc6de4cd, type: 2}
-  - {fileID: 2100000, guid: 3d99ed8cc8b6c40ffaa08a7a15c5d531, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -441,6 +443,42 @@ MeshCollider:
   serializedVersion: 2
   m_Convex: 0
   m_Mesh: {fileID: 4300178, guid: d83b5fa58951846c988d3b6108025c04, type: 3}
+--- !u!65 &6516090
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 152266}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.190503, y: .973173022, z: 2.26196671}
+  m_Center: {x: .00278300047, y: .154387027, z: .472581655}
+--- !u!65 &6518824
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 168814}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.26080596, y: 1.12763703, z: 1.69901586}
+  m_Center: {x: -6.03445923e-15, y: .208362982, z: -.0790768638}
+--- !u!65 &6572724
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100244}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: .266606003, y: 5.26515436, z: 4.89371538}
+  m_Center: {x: -3.48932885e-14, y: 1.15533161, z: -1.44685817}
 --- !u!65 &6590414
 BoxCollider:
   m_ObjectHideFlags: 1
