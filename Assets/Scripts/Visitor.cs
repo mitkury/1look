@@ -37,8 +37,8 @@ public class Visitor : MonoBehaviour {
 		sight = GetComponent<Sight>();
 		inventory = GetComponentInChildren<Inventory>();
 
-		regularCameraRig.gameObject.SetActive(false);
-		vrCameraRig.gameObject.SetActive(false);
+		//regularCameraRig.gameObject.SetActive(false);
+		//vrCameraRig.gameObject.SetActive(false);
 
 		// VR mode.
 		if (King.isInVRMode) {

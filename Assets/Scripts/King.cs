@@ -111,10 +111,11 @@ public class King : SingletonComponent<King> {
 
 	public static bool isInVRMode {
 		get {
-			return (Application.platform != RuntimePlatform.OSXEditor &&
-			    	Application.platform != RuntimePlatform.WindowsEditor && 
-			    	Application.platform != RuntimePlatform.WindowsPlayer &&
-			        Application.platform != RuntimePlatform.OSXPlayer);
+			#if UNITY_EDITOR || UNITY_STANDALONE
+			return false;
+			#endif
+
+			return true;
 		}
 	}
 

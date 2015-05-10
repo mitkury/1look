@@ -38,7 +38,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 172998}
-  m_LocalRotation: {x: -.707106829, y: 0, z: -0, w: .707106709}
+  m_LocalRotation: {x: -.701732516, y: .0870148987, z: .0870148912, w: .701732397}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -50,8 +50,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 134024}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .0119690597, y: .833918571, z: .796549797}
+  m_LocalRotation: {x: 0, y: -.974309862, z: 0, w: .225211754}
+  m_LocalPosition: {x: -5.83799982, y: 1.47899997, z: 4.54899979}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 457984}
@@ -67,8 +67,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 25b2754d76c674f3caf2c330a09bf95c, type: 2}
-  - {fileID: 2100000, guid: 1f607940bf3974a07bae1bae79ba6df1, type: 2}
+  - {fileID: 2100000, guid: 77fb871d0fe7b4eb488b3492aee45caf, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
