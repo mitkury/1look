@@ -50,11 +50,17 @@ public class King : SingletonComponent<King> {
 
 	IEnumerator BeginJourneyCo() {
 		AudioListener.volume = 0;
+
+		while (King.visitor.sight == null)
+			yield return null;
+
 		King.visitor.sight.enabled = false;
 
 		if (FindObjectOfType<Place>() == null) {
 			placeManager.PreloadPlaces();
 		}
+
+
 
 		while(placeManager.placesAreLoading)
 			yield return null;
