@@ -3786,6 +3786,7 @@ Transform:
   - {fileID: 1319777575}
   - {fileID: 1296203846}
   - {fileID: 168802395}
+  - {fileID: 736517740}
   - {fileID: 1412057118}
   - {fileID: 900153183}
   - {fileID: 2035517070}
@@ -3799,7 +3800,6 @@ Transform:
   - {fileID: 1361448117}
   - {fileID: 703307697}
   - {fileID: 1570040896}
-  - {fileID: 736517740}
   - {fileID: 4489500}
   - {fileID: 688595997}
   - {fileID: 1376576391}
@@ -4581,7 +4581,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 632332800}
-  m_RootOrder: 18
+  m_RootOrder: 5
 --- !u!167 &736517741
 AudioReverbZone:
   m_ObjectHideFlags: 0
