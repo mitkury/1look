@@ -143,7 +143,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 453012}
-  - 111: {fileID: 11197410}
   m_Layer: 0
   m_Name: SpiderRigged
   m_TagString: Untagged
@@ -208,6 +207,9 @@ GameObject:
   - 4: {fileID: 482040}
   - 54: {fileID: 5454470}
   - 114: {fileID: 11472970}
+  - 95: {fileID: 9510732}
+  - 114: {fileID: 11485780}
+  - 114: {fileID: 11445078}
   m_Layer: 0
   m_Name: Spider
   m_TagString: Untagged
@@ -547,8 +549,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 169106}
-  m_LocalRotation: {x: .876039028, y: -.102214314, z: -.126261383, w: .454055011}
-  m_LocalPosition: {x: 5.7329998, y: 2.96600008, z: -1.55999994}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.3499999, y: 1.60000002, z: -1.46000004}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 453012}
@@ -619,22 +621,45 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: .259018779, y: .145493522, z: .296816945}
   m_Center: {x: .00918230414, y: .000167293474, z: .00258775102}
---- !u!111 &11197410
-Animation:
+--- !u!95 &9510732
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 160638}
+  m_GameObject: {fileID: 169106}
   m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400002, guid: 8c106f4e7c5e64224b2492b9db490845, type: 3}
-  m_Animations:
-  - {fileID: 7400000, guid: 8c106f4e7c5e64224b2492b9db490845, type: 3}
-  - {fileID: 7400002, guid: 8c106f4e7c5e64224b2492b9db490845, type: 3}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b159ba886f6f444f1a2ea91621c9dd16, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11445078
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 169106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce65bc63fe6ee40738580c3411094e93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - audioClip: {fileID: 8300000, guid: b050daad139d24d74a4928c824d5c2dd, type: 3}
+    volume: .600000024
+    lowPitchRange: 1
+    highPitchRange: 1
+    spatialBlend: 1
+  - audioClip: {fileID: 8300000, guid: e0dee91a7e0be488385804c3925d3f8e, type: 3}
+    volume: .5
+    lowPitchRange: 1
+    highPitchRange: 1
+    spatialBlend: 1
 --- !u!114 &11472970
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -650,6 +675,17 @@ MonoBehaviour:
   focusTimeSec: 0
   isAbleToInteract: 1
   body: {fileID: 0}
+--- !u!114 &11485780
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 169106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ff0f23568fce4d45918ce1fd29c6d25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!137 &13723656
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

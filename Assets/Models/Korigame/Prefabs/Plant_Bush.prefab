@@ -12,6 +12,8 @@ GameObject:
   - 23: {fileID: 2378320}
   - 135: {fileID: 13502884}
   - 65: {fileID: 6574454}
+  - 114: {fileID: 11414450}
+  - 114: {fileID: 11461346}
   m_Layer: 0
   m_Name: Plant_Bush
   m_TagString: Untagged
@@ -25,7 +27,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 144866}
-  m_LocalRotation: {x: -.707106829, y: 0, z: -0, w: .707106709}
+  m_LocalRotation: {x: -.707106829, y: 0, z: 0, w: .707106709}
   m_LocalPosition: {x: 7.45599985, y: .879999995, z: -1.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -74,6 +76,37 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: .449999988, y: .479999989, z: .649999976}
   m_Center: {x: -4.91738319e-07, y: 0, z: -.0799999982}
+--- !u!114 &11414450
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 144866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05fe8cc68baf24750a0b5bcac1afce44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isAbleToInteractAfterAnimation: 0
+  stateName: Start
+  stateLayer: 0
+  receiver: {fileID: 0}
+--- !u!114 &11461346
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 144866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11564784fee5d40cb8b0d69772b74ac9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hasItsOwnFocusTime: 0
+  focusTimeSec: 0
+  isAbleToInteract: 1
+  body: {fileID: 0}
+  isAbleToBeActivatedOnItsOwn: 1
 --- !u!135 &13502884
 SphereCollider:
   m_ObjectHideFlags: 1

@@ -2391,56 +2391,6 @@ Transform:
 GameObject:
   m_PrefabParentObject: {fileID: 169106, guid: c08a6b351005b498ca3d3ae5516df8e8, type: 2}
   m_PrefabInternal: {fileID: 1481398770}
---- !u!114 &179394370
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 179394369}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ff0f23568fce4d45918ce1fd29c6d25, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &179394371
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 179394369}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce65bc63fe6ee40738580c3411094e93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sounds:
-  - audioClip: {fileID: 8300000, guid: b050daad139d24d74a4928c824d5c2dd, type: 3}
-    volume: .300000012
-    lowPitchRange: 1
-    highPitchRange: 1
-    spatialBlend: 1
-  - audioClip: {fileID: 8300000, guid: e0dee91a7e0be488385804c3925d3f8e, type: 3}
-    volume: .300000012
-    lowPitchRange: 1
-    highPitchRange: 1
-    spatialBlend: 1
---- !u!95 &179394372
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 179394369}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b159ba886f6f444f1a2ea91621c9dd16, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1001 &210338471
 Prefab:
   m_ObjectHideFlags: 0
@@ -5711,10 +5661,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 48
       objectReference: {fileID: 0}
-    - target: {fileID: 144866, guid: 2a2e953b548c84ce3ab47a98aea93e18, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
+    - target: {fileID: 11414450, guid: 2a2e953b548c84ce3ab47a98aea93e18, type: 2}
+      propertyPath: receiver
+      value: 
+      objectReference: {fileID: 179394369}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2a2e953b548c84ce3ab47a98aea93e18, type: 2}
   m_IsPrefabParent: 0
@@ -7539,41 +7489,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1958922944}
   m_RootOrder: 14
---- !u!1 &1355208185 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 144866, guid: 2a2e953b548c84ce3ab47a98aea93e18, type: 2}
-  m_PrefabInternal: {fileID: 909559845}
---- !u!114 &1355208190
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1355208185}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05fe8cc68baf24750a0b5bcac1afce44, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isAbleToInteractAfterAnimation: 0
-  stateName: Start
-  stateLayer: 0
-  receiver: {fileID: 179394369}
---- !u!114 &1355208191
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1355208185}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11564784fee5d40cb8b0d69772b74ac9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hasItsOwnFocusTime: 0
-  focusTimeSec: 0
-  isAbleToInteract: 1
-  body: {fileID: 0}
-  isAbleToBeActivatedOnItsOwn: 1
 --- !u!1 &1359652479
 GameObject:
   m_ObjectHideFlags: 0
@@ -8046,20 +7961,7 @@ Prefab:
       propertyPath: m_RootOrder
       value: 50
       objectReference: {fileID: 0}
-    - target: {fileID: 169106, guid: c08a6b351005b498ca3d3ae5516df8e8, type: 2}
-      propertyPath: m_Name
-      value: Spider
-      objectReference: {fileID: 0}
-    - target: {fileID: 11197410, guid: c08a6b351005b498ca3d3ae5516df8e8, type: 2}
-      propertyPath: m_PlayAutomatically
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 11197410, guid: c08a6b351005b498ca3d3ae5516df8e8, type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 11197410, guid: c08a6b351005b498ca3d3ae5516df8e8, type: 2}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c08a6b351005b498ca3d3ae5516df8e8, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1482437654 stripped
