@@ -3302,7 +3302,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 674061691}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.6400001, y: -6.01000023, z: 2.25999999}
+  m_LocalPosition: {x: -2.6400001, y: -2.3499999, z: 2.25999999}
   m_LocalScale: {x: .0163853653, y: .0163853671, z: .0163853671}
   m_Children:
   - {fileID: 1353400677}
@@ -7440,7 +7440,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 4
+    m_Alignment: 1
     m_RichText: 0
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
@@ -7526,6 +7526,22 @@ MonoBehaviour:
     GLANEUR DE SONS
 
     BARRYGUSEY
+
+    SPOOKYMODEM
+
+    MICHORVATH
+
+    DTRACY10
+
+    RDNEUBAUER
+
+    KANGAROOVINDALOO
+
+    AGAXLY
+
+    JANKOEHL
+
+    FRANKYBOOMER
 
 
 
