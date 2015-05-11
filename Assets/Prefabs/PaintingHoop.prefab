@@ -135,6 +135,7 @@ GameObject:
   - 114: {fileID: 11496012}
   - 114: {fileID: 11485920}
   - 114: {fileID: 11486276}
+  - 114: {fileID: 11460690}
   m_Layer: 0
   m_Name: PaintingHoop
   m_TagString: Untagged
@@ -158,7 +159,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &198448
 GameObject:
   m_ObjectHideFlags: 1
@@ -657,7 +658,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetBall: {fileID: 0}
-  hoopRenderer: {fileID: 0}
+  hoopRenderer: {fileID: 2358504}
   visiblePointForBall: {fileID: 0}
   hoopScale: {x: 1, y: 2.38000011, z: 1.13999999}
   shield: {fileID: 105002}
@@ -686,6 +687,20 @@ MonoBehaviour:
   triggersExit: 0
   receivers:
   - {fileID: 162724}
+--- !u!114 &11460690
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 162724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a484576b6512b415e978c4cf1a81cc48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  remarks:
+  - audioClip: {fileID: 8300000, guid: 8295b06bcc26d4595a1637e7c60e4a0f, type: 3}
+    volume: 1
 --- !u!114 &11485920
 MonoBehaviour:
   m_ObjectHideFlags: 1

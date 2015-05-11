@@ -176,7 +176,7 @@ public class PlaceManager : MonoBehaviour {
 			}, 1f, 0f, 2f);
 
 			King.visitor.screenFader.FadeIn(2f);
-			yield return new WaitForSeconds(2f);
+			yield return new WaitForSeconds(2.5f);
 		} else {
 			King.visitor.screenFader.FadeIn(0f);
 		}

@@ -3,7 +3,7 @@ using System.Collections;
 
 [RequireComponent(typeof(Rigidbody))] 
 public class ObtainableItem : InteractiveThing {
-	
+
 	protected override void Init ()
 	{
 		// Add new interactions before initializing the base class.
