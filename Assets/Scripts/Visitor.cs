@@ -294,6 +294,15 @@ public class Visitor : MonoBehaviour {
 		
 		sight.SetReticleVisibility(components);
 	}
+	
+	IEnumerator SetBackgroundCo(Color color) {
+		while(cameras.Count == 0)
+			yield return null;
+
+		foreach (Camera camera in cameras) {
+			camera.backgroundColor = color;
+		}
+	}
 
 	/*
 	IEnumerator CheckObjectsCo() {
@@ -349,9 +358,7 @@ public class Visitor : MonoBehaviour {
 	}
 
 	public void SetBackground(Color color) {
-		foreach (Camera camera in cameras) {
-			camera.backgroundColor = color;
-		}
+		StartCoroutine(SetBackgroundCo(color));
 	}
 
 	public void Take(ObtainableItem item) {

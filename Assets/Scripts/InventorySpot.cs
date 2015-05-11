@@ -5,12 +5,12 @@ using System.Collections;
 public class InventorySpot : InteractiveThing {
 
 	Transform prevItemParent;
-	BoxCollider collider;
+	BoxCollider _collider;
 
 	public ObtainableItem item { get; private set; } 
 
 	void Start() {
-		collider = GetComponent<BoxCollider>();
+		_collider = GetComponent<BoxCollider>();
 	}
 
 	IEnumerator AddItemCo() {
@@ -72,7 +72,7 @@ public class InventorySpot : InteractiveThing {
 		item.transform.parent = transform;
 		transform.parent.SendMessage("RegisterItem", item);
 
-		collider.enabled = false;
+		_collider.enabled = false;
 
 		Debug.Log(this.item+" has been added to the inventory.");
 
@@ -87,7 +87,7 @@ public class InventorySpot : InteractiveThing {
 			item.transform.parent = King.placeManager.currentPlace.transform;
 		}
 
-		collider.enabled = true;
+		_collider.enabled = true;
 
 		Debug.Log(this.item+" has been removed from the inventory.");
 

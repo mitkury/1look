@@ -24,6 +24,6 @@ public class GameInstantiator : MonoBehaviour {
 		Instantiate(playerPrefab);
 		Instantiate(kingPrefab);
 
-		King.placeManager.ActivatePlace(name);
+		King.placeManager.SetPlaceManually(GetComponent<Place>());
 	}
 }

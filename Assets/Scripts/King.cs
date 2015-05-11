@@ -45,7 +45,9 @@ public class King : SingletonComponent<King> {
 		}
 		*/
 
-		StartCoroutine(BeginJourneyCo());
+		if (FindObjectOfType<Place>() == null) {
+			StartCoroutine(BeginJourneyCo());
+		}
 	}
 
 	IEnumerator BeginJourneyCo() {
@@ -56,11 +58,7 @@ public class King : SingletonComponent<King> {
 
 		King.visitor.sight.enabled = false;
 
-		if (FindObjectOfType<Place>() == null) {
-			placeManager.PreloadPlaces();
-		}
-
-
+		placeManager.PreloadPlaces();
 
 		while(placeManager.placesAreLoading)
 			yield return null;

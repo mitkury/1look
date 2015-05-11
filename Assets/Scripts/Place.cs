@@ -20,6 +20,7 @@ public class Place : MonoBehaviour {
 		interactiveThings = new List<InteractiveThing>();
 
 		GetComponent<GameInstantiator>().Init();
+
 		King.placeManager.AddPlace(this);
 	}
 

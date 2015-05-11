@@ -12148,6 +12148,7 @@ GameObject:
   - 114: {fileID: 1958922946}
   - 114: {fileID: 1958922947}
   - 114: {fileID: 1958922948}
+  - 114: {fileID: 1958922949}
   m_Layer: 0
   m_Name: Apartment
   m_TagString: Untagged
@@ -12232,6 +12233,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0313b6bd01c14efeb1aed8017ca1fa9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1958922949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1958922943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f71e85f309344aa8b4f2b15f7b68354, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  introStage: {fileID: 1536554826}
+  endStage: {fileID: 1653048890}
 --- !u!1001 &1962704757
 Prefab:
   m_ObjectHideFlags: 0

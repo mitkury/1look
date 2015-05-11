@@ -148,9 +148,19 @@ public class PlaceManager : MonoBehaviour {
 		}
 	}
 
+	void SetSettingsForPlace(Place targetPlace) {
+		King.visitor.SetBackground(targetPlace.background);
+		RenderSettings.ambientSkyColor = targetPlace.ambientColor;
+		if (targetPlace.fogDensity > 0f) {
+			RenderSettings.fog = true;
+			RenderSettings.fogMode = FogMode.Exponential;
+			RenderSettings.fogColor = targetPlace.fogColor;
+			RenderSettings.fogDensity = targetPlace.fogDensity;
+		} else
+			RenderSettings.fog = false;
+	}
 
 	IEnumerator ActivatePlaceCo(string placeName) {
-
 		if (currentPlace == null || currentPlace.name != placeName) {
 			King.visitor.screenFader.FadeIn(0.5f);
 			yield return new WaitForSeconds(0.6f);
@@ -172,15 +182,7 @@ public class PlaceManager : MonoBehaviour {
 		targetPlace.gameObject.SetActive(true);
 		currentPlace = targetPlace;
 
-		King.visitor.SetBackground(currentPlace.background);
-		RenderSettings.ambientSkyColor = currentPlace.ambientColor;
-		if (currentPlace.fogDensity > 0f) {
-			RenderSettings.fog = true;
-			RenderSettings.fogMode = FogMode.Exponential;
-			RenderSettings.fogColor = currentPlace.fogColor;
-			RenderSettings.fogDensity = currentPlace.fogDensity;
-		} else
-			RenderSettings.fog = false;
+		SetSettingsForPlace(currentPlace);
 
 		yield return new WaitForSeconds(1f);
 
@@ -193,6 +195,11 @@ public class PlaceManager : MonoBehaviour {
 
 	public void ActivatePlace(string placeName) {
 		StartCoroutine(ActivatePlaceCo(placeName));
+	}
+
+	public void SetPlaceManually(Place targetPlace) {
+		currentPlace = targetPlace;
+		SetSettingsForPlace(targetPlace);
 	}
 
 
