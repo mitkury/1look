@@ -2,7 +2,7 @@
 using System.Collections;
 
 // A crude, hacked version of the radio component.
-public class RadioPrototype : MonoBehaviour {
+public class RadioPrototype : SingletonComponent<RadioPrototype> {
 	
 	Animator _animator;
 	Floater floater;
@@ -18,7 +18,7 @@ public class RadioPrototype : MonoBehaviour {
 		floater = GetComponent<Floater>();
 		voicePlayer = GetComponent<PlaysSoundOnRequest>();
 
-		StartCoroutine(StartAfterCo(3f));
+		//StartCoroutine(StartAfterCo(3f));
 	}
 
 	IEnumerator StartAfterCo(float seconds) {
@@ -54,10 +54,11 @@ public class RadioPrototype : MonoBehaviour {
 
 		sub += 3f;
 		yield return new WaitForSeconds(3f);
+		FadeMusicTo(0.1f, 0.5f);
+		yield return new WaitForSeconds(0.5f);
 		voicePlayer.PlayOneShot(0);
-		music.volume = 0.1f;
 		yield return new WaitForSeconds(totalSec - sub);
-		music.volume = 1f;
+		FadeMusicTo(1f, 0.5f);
 	}
 
 	IEnumerator HideReticleForSec(float time) {
@@ -65,6 +66,24 @@ public class RadioPrototype : MonoBehaviour {
 		King.visitor.sight.enabled = false;
 		yield return new WaitForSeconds(time);
 		King.visitor.sight.enabled = true;
+	}
+
+	void FadeMusicTo(float volume, float time) {
+		LeanTween.value(gameObject, delegate(float value) { 
+			music.volume = value;
+		}, music.volume, volume, time);	
+	}
+
+	IEnumerator PlayRemarkCo(AudioClip clip, float volume = 1) {
+		FadeMusicTo(0.1f, 0.5f);
+		yield return new WaitForSeconds(0.5f);
+		Instance.voicePlayer.PlayOneShot(clip, volume);
+		yield return new WaitForSeconds(clip.length);
+		FadeMusicTo(1f, 0.5f);
+	}
+
+	public static void PlayRemark(AudioClip clip, float volume = 1) {
+		Instance.StartCoroutine(Instance.PlayRemarkCo(clip, volume));
 	}
 
 }

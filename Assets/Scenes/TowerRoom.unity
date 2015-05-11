@@ -2173,19 +2173,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 469750, guid: 7daca490bdfb04904a33371821309147, type: 2}
       propertyPath: m_LocalRotation.x
-      value: .500000179
+      value: .500000238
       objectReference: {fileID: 0}
     - target: {fileID: 469750, guid: 7daca490bdfb04904a33371821309147, type: 2}
       propertyPath: m_LocalRotation.y
-      value: .499999791
+      value: .499999821
       objectReference: {fileID: 0}
     - target: {fileID: 469750, guid: 7daca490bdfb04904a33371821309147, type: 2}
       propertyPath: m_LocalRotation.z
-      value: .499999881
+      value: .499999911
       objectReference: {fileID: 0}
     - target: {fileID: 469750, guid: 7daca490bdfb04904a33371821309147, type: 2}
       propertyPath: m_LocalRotation.w
-      value: -.50000006
+      value: -.500000119
       objectReference: {fileID: 0}
     - target: {fileID: 469750, guid: 7daca490bdfb04904a33371821309147, type: 2}
       propertyPath: m_RootOrder
@@ -2391,6 +2391,20 @@ Transform:
 GameObject:
   m_PrefabParentObject: {fileID: 169106, guid: c08a6b351005b498ca3d3ae5516df8e8, type: 2}
   m_PrefabInternal: {fileID: 1481398770}
+--- !u!114 &179394370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 179394369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a484576b6512b415e978c4cf1a81cc48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  remarks:
+  - audioClip: {fileID: 8300000, guid: 9e9d7f47a36204b9caecf8678df0cb33, type: 3}
+    volume: 1
 --- !u!1001 &210338471
 Prefab:
   m_ObjectHideFlags: 0
@@ -3264,6 +3278,24 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 267ab4b316eba4d88880218ccd97b798, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &362090292 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 162724, guid: 60633ab5ea7cc4190975385ed4d875b0, type: 2}
+  m_PrefabInternal: {fileID: 1605533227}
+--- !u!114 &362090300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 362090292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a484576b6512b415e978c4cf1a81cc48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  remarks:
+  - audioClip: {fileID: 8300000, guid: 8295b06bcc26d4595a1637e7c60e4a0f, type: 3}
+    volume: 1
 --- !u!1001 &373130118
 Prefab:
   m_ObjectHideFlags: 0

@@ -4,8 +4,9 @@ using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
 public class Cauldron : InteractiveObject {
-
+	
 	PlaysSoundOnRequest audioPlayer;
+	int ingredientsUsed;
 
 	public Transform pointInside;
 	public Transform pointOnSurface;
@@ -23,6 +24,8 @@ public class Cauldron : InteractiveObject {
 
 	IEnumerator AddItemCo(ObtainableItem item, RecipeItem recipeItem) {
 		Debug.Log(item+" has been added to the cauldron.");
+		ingredientsUsed += 1;
+		recipeItem.collected += 1;
 
 		var itemRigidbody = item.GetComponent<Rigidbody>();
 		if (itemRigidbody != null) {
@@ -40,6 +43,9 @@ public class Cauldron : InteractiveObject {
 
 		audioPlayer.PlayOneShotAfterSec(0, 0.25f);
 
+		if (ingredientsUsed == 1 && GetComponent<PlaysAudioRemarkOnRadio>() != null && !potionIsReady)
+			GetComponent<PlaysAudioRemarkOnRadio>().Play(0);
+
 		yield return new WaitForSeconds(0.5f);
 
 		foreach (GameObject subscriber in subscribers) {
@@ -48,8 +54,10 @@ public class Cauldron : InteractiveObject {
 
 		item.gameObject.SetActive(false);
 		isAbleToInteract = true;
-		recipeItem.collected += 1;
-		CheckIfPoitionIsReady();
+
+
+		if (potionIsReady) 
+			GivePotion();
 	}
 
 	IEnumerator RejectItemCo(ObtainableItem item) {
@@ -70,6 +78,11 @@ public class Cauldron : InteractiveObject {
 		LeanTween.move(item.gameObject, targetPosition, 0.5f);
 		
 		yield return new WaitForSeconds(0.5f);
+
+		if (GetComponent<PlaysAudioRemarkOnRadio>()) {
+			var maxIndex = GetComponent<PlaysAudioRemarkOnRadio>().remarks.Count;
+			GetComponent<PlaysAudioRemarkOnRadio>().Play(Random.Range(2, maxIndex));
+		}
 
 		audioPlayer.PlayOneShot(1);
 
@@ -97,23 +110,25 @@ public class Cauldron : InteractiveObject {
 		itemRigidbody.isKinematic = true;
 	}
 
-	void CheckIfPoitionIsReady() {
+	bool potionIsReady {
+		get {
+			var isReady = true;
 
-		var isReady = true;
-
-		foreach (RecipeItem recipeItem in recipe.items) {
-			if (recipeItem.collected < recipeItem.amount) {
-				isReady = false;
-				break;
+			foreach (RecipeItem recipeItem in recipe.items) {
+				if (recipeItem.collected < recipeItem.amount) {
+					isReady = false;
+					break;
+				}
 			}
-		}
 
-		if (isReady) {
-			GivePotion();
+			return isReady;
 		}
 	}
 
 	IEnumerator GivePotionCo() {
+		if (GetComponent<PlaysAudioRemarkOnRadio>() != null)
+			GetComponent<PlaysAudioRemarkOnRadio>().Play(1);
+
 		yield return new WaitForSeconds(1f);
 		potion.gameObject.SetActive(true);
 		potion.transform.position = pointInside.position;

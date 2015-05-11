@@ -58,6 +58,7 @@ GameObject:
   - 114: {fileID: 11401354}
   - 135: {fileID: 13596678}
   - 114: {fileID: 11475052}
+  - 114: {fileID: 11452354}
   m_Layer: 0
   m_Name: CauldronMagic
   m_TagString: Untagged
@@ -401,6 +402,30 @@ MonoBehaviour:
   potion: {fileID: 0}
   subscribers:
   - {fileID: 0}
+--- !u!114 &11452354
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 168278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a484576b6512b415e978c4cf1a81cc48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  remarks:
+  - audioClip: {fileID: 8300000, guid: 5fad295ba2c0c4860a8b0b8ce606f1e5, type: 3}
+    volume: 1
+  - audioClip: {fileID: 8300000, guid: 6d3d5a23f77954c2fb43c865321e4bef, type: 3}
+    volume: 1
+  - audioClip: {fileID: 8300000, guid: 7bb0bf3a5e26341fcb930d4edd656752, type: 3}
+    volume: 1
+  - audioClip: {fileID: 8300000, guid: 32c8d45bf1b2646e19b8a4e72dad82ac, type: 3}
+    volume: 1
+  - audioClip: {fileID: 8300000, guid: 7a1238c647d794d31a03fde5c5bf9936, type: 3}
+    volume: 1
+  - audioClip: {fileID: 8300000, guid: d7e5e39a3fb6a47e8b238a712fd5b7ef, type: 3}
+    volume: 1
 --- !u!114 &11475052
 MonoBehaviour:
   m_ObjectHideFlags: 1

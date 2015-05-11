@@ -39,6 +39,10 @@ GameObject:
   m_Component:
   - 4: {fileID: 499218}
   - 95: {fileID: 9583814}
+  - 54: {fileID: 5467794}
+  - 114: {fileID: 11461386}
+  - 114: {fileID: 11488074}
+  - 114: {fileID: 11401970}
   m_Layer: 0
   m_Name: Devil Plant Rigged
   m_TagString: Untagged
@@ -100,6 +104,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 430192}
   - 137: {fileID: 13737620}
+  - 65: {fileID: 6535398}
   m_Layer: 0
   m_Name: Plant
   m_TagString: Untagged
@@ -253,6 +258,33 @@ Transform:
   - {fileID: 423470}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!54 &5467794
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 143658}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &6535398
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 166434}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: .673388302, y: .962956965, z: .708041072}
+  m_Center: {x: -.00910808239, y: .202952847, z: -.00315962848}
 --- !u!95 &9583814
 Animator:
   serializedVersion: 3
@@ -270,6 +302,47 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11401970
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 143658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11564784fee5d40cb8b0d69772b74ac9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hasItsOwnFocusTime: 0
+  focusTimeSec: 0
+  isAbleToInteract: 1
+  body: {fileID: 0}
+  isAbleToBeActivatedOnItsOwn: 1
+--- !u!114 &11461386
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 143658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a484576b6512b415e978c4cf1a81cc48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  remarks:
+  - audioClip: {fileID: 8300000, guid: 566912bf0941d44c8819432649b61a15, type: 3}
+    volume: 1
+--- !u!114 &11488074
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 143658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70b7cfe67e41f4157b4925de0c7aa6c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!137 &13737620
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

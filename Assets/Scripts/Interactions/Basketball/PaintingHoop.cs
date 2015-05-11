@@ -89,6 +89,10 @@ public class PaintingHoop : Interaction {
 
 			if (targetBall != null)
 				targetBall.Drop(visiblePointForBall.position);
+
+			if (GetComponent<PlaysAudioRemarkOnRadio>() != null) {
+				GetComponent<PlaysAudioRemarkOnRadio>().Play(0);
+			}
 		}
 
 		NextHoop();

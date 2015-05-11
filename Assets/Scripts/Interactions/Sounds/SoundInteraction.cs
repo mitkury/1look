@@ -37,4 +37,12 @@ public class SoundInteraction : Interaction {
 		}
 	}
 
+	public virtual void PlayOneShot(AudioClip clip, float volume = 1f) {
+		if (_audioSource == null) {
+			_audioSource = GetComponent<AudioSource>() != null ? GetComponent<AudioSource>() : gameObject.AddComponent<AudioSource>();
+		}
+
+		_audioSource.PlayOneShot(clip, volume);
+	}
+
 }

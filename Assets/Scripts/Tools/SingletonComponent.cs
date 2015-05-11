@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 
 public class SingletonComponent<T> : MonoBehaviour where T : MonoBehaviour {
-	protected static T instance;
+	private static T instance;
 
 	public static T Instance {
 		get {
