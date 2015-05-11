@@ -8,6 +8,7 @@ public class Wine : Interaction {
 
 	public string targetPlaceName = "Darkness";
 	public float moveAfterSec = 3f;
+	public GameObject goForActivation;
 
 	void Start () {
 		interactiveThing = GetComponent<InteractiveThing>();
@@ -22,7 +23,8 @@ public class Wine : Interaction {
 	void ActivateParticles() {
 		particlesAreActivated = true;
 
-		Debug.Log("Ready to drink some wine!");
+		if (goForActivation != null)
+			goForActivation.SetActive(true);
 	}
 
 	IEnumerator GoToSleepInSecCo(float time) {

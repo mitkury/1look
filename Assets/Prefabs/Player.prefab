@@ -2598,7 +2598,7 @@ MonoBehaviour:
   reticle: {fileID: 11469086}
   layerMask:
     serializedVersion: 2
-    m_Bits: 4294967291
+    m_Bits: 4294965243
   focusTimeSec: 0
 --- !u!114 &11438028
 MonoBehaviour:

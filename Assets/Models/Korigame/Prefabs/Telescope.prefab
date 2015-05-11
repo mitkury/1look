@@ -31,7 +31,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &153072
 GameObject:
@@ -48,6 +48,7 @@ GameObject:
   - 95: {fileID: 9576184}
   - 114: {fileID: 11453834}
   - 114: {fileID: 11412182}
+  - 114: {fileID: 11498666}
   m_Layer: 0
   m_Name: Telescope_Tube
   m_TagString: Untagged
@@ -227,6 +228,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mountainsAnimator: {fileID: 0}
+  durationOfLooking: 10
+--- !u!114 &11498666
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 153072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce65bc63fe6ee40738580c3411094e93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - audioClip: {fileID: 8300000, guid: 9cfc0157828444ecbbd1fa193bc48a5e, type: 3}
+    volume: .600000024
+    lowPitchRange: 1
+    highPitchRange: 1
+    spatialBlend: 1
+  - audioClip: {fileID: 8300000, guid: 26ca0e6fd5b0e4e70acac8cf003f1629, type: 3}
+    volume: .600000024
+    lowPitchRange: 1
+    highPitchRange: 1
+    spatialBlend: 1
 --- !u!136 &13675226
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -236,7 +260,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: .163896069
+  m_Radius: .189999998
   m_Height: 1.58948839
   m_Direction: 1
   m_Center: {x: -.0146515276, y: -.0469260029, z: .141136244}

@@ -101,11 +101,13 @@ public class PlaceManager : MonoBehaviour {
 		placesAreLoading = true;
 
 		King.visitor.sight.enabled = false;
-		King.visitor.screenFader.FadeIn(0.1f);
-		yield return new WaitForSeconds(0.1f);;
+		King.visitor.SetBackground(Color.black);
+		yield return new WaitForSeconds(0.1f);
+
+		var spinningBottle = GameObject.Find("Title");
 
 		var prevLoadingPriority = Application.backgroundLoadingPriority;
-		Application.backgroundLoadingPriority = ThreadPriority.Normal;
+		Application.backgroundLoadingPriority = ThreadPriority.Low;
 
 		for(int i = 0; i < Application.levelCount; i++) {
 			if (i == Application.loadedLevel)
@@ -129,6 +131,12 @@ public class PlaceManager : MonoBehaviour {
 			while(newlyLoadedPlace == null)
 				yield return null;
 		}
+
+		King.visitor.screenFader.FadeIn(1);
+		yield return new WaitForSeconds(1f);
+
+		if (spinningBottle != null)
+			spinningBottle.SetActive(false);
 
 		placesAreLoading = false;
 
@@ -186,7 +194,7 @@ public class PlaceManager : MonoBehaviour {
 
 		yield return new WaitForSeconds(1f);
 
-		King.visitor.screenFader.FadeOut(0.25f);
+		King.visitor.screenFader.FadeOut(1f);
 	}
 
 	public void PreloadPlaces() {

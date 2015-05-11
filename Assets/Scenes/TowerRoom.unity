@@ -2402,6 +2402,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ff0f23568fce4d45918ce1fd29c6d25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &179394371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 179394369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce65bc63fe6ee40738580c3411094e93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - audioClip: {fileID: 8300000, guid: b050daad139d24d74a4928c824d5c2dd, type: 3}
+    volume: .300000012
+    lowPitchRange: 1
+    highPitchRange: 1
+    spatialBlend: 1
+  - audioClip: {fileID: 8300000, guid: e0dee91a7e0be488385804c3925d3f8e, type: 3}
+    volume: .300000012
+    lowPitchRange: 1
+    highPitchRange: 1
+    spatialBlend: 1
 --- !u!95 &179394372
 Animator:
   serializedVersion: 3
@@ -2836,26 +2858,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 47
       objectReference: {fileID: 0}
-    - target: {fileID: 110042, guid: 231386f843b6645ed9b1d5998fb1b85a, type: 2}
-      propertyPath: m_Name
-      value: Telescope
-      objectReference: {fileID: 0}
     - target: {fileID: 11453834, guid: 231386f843b6645ed9b1d5998fb1b85a, type: 2}
       propertyPath: mountainsAnimator
       value: 
       objectReference: {fileID: 1885391733}
-    - target: {fileID: 115738, guid: 231386f843b6645ed9b1d5998fb1b85a, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 153072, guid: 231386f843b6645ed9b1d5998fb1b85a, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 110042, guid: 231386f843b6645ed9b1d5998fb1b85a, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 231386f843b6645ed9b1d5998fb1b85a, type: 2}
   m_IsPrefabParent: 0
@@ -6235,7 +6241,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 8e577ca750c0346dfabf2a9b665aa270, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: .200000003
+  m_Volume: .100000001
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -8864,32 +8870,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c64b499668fb34d50b59ff80b37ff9c0, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1585405522 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 153072, guid: 231386f843b6645ed9b1d5998fb1b85a, type: 2}
-  m_PrefabInternal: {fileID: 274383398}
---- !u!114 &1585405531
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1585405522}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce65bc63fe6ee40738580c3411094e93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sounds:
-  - audioClip: {fileID: 8300000, guid: 9cfc0157828444ecbbd1fa193bc48a5e, type: 3}
-    volume: .600000024
-    lowPitchRange: 1
-    highPitchRange: 1
-    spatialBlend: 1
-  - audioClip: {fileID: 8300000, guid: 26ca0e6fd5b0e4e70acac8cf003f1629, type: 3}
-    volume: .600000024
-    lowPitchRange: 1
-    highPitchRange: 1
-    spatialBlend: 1
 --- !u!1 &1604621348
 GameObject:
   m_ObjectHideFlags: 0
@@ -9251,7 +9231,7 @@ Prefab:
       objectReference: {fileID: 729041605}
     - target: {fileID: 115350, guid: 1fe4cfa8b98f44d71a5e84134e595b7b, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11465074, guid: 1fe4cfa8b98f44d71a5e84134e595b7b, type: 2}
       propertyPath: sounds.Array.data[0].volume

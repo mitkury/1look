@@ -100,8 +100,8 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
 --- !u!4 &411796
 Transform:
   m_ObjectHideFlags: 1
@@ -310,6 +310,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78ef2e702256b4329aea487f05097ca5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetPlaceName: Darkness
+  moveAfterSec: 3
+  goForActivation: {fileID: 180856}
 --- !u!114 &11458672
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -338,7 +341,7 @@ ParticleSystem:
   looping: 1
   prewarm: 1
   playOnAwake: 1
-  moveWithTransform: 1
+  moveWithTransform: 0
   InitialModule:
     enabled: 1
     startLifetime:

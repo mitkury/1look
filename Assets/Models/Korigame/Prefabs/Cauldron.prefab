@@ -1,5 +1,20 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &106616
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 437104}
+  m_Layer: 0
+  m_Name: PointForRejected
+  m_TagString: Untagged
+  m_Icon: {fileID: 4142126959532110318, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &154320
 GameObject:
   m_ObjectHideFlags: 0
@@ -141,8 +156,21 @@ Transform:
   - {fileID: 401292}
   - {fileID: 467040}
   - {fileID: 408232}
+  - {fileID: 437104}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!4 &437104
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 106616}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -.720000029, y: -1.28100002, z: .569999993}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 435598}
+  m_RootOrder: 5
 --- !u!4 &463454
 Transform:
   m_ObjectHideFlags: 1
@@ -340,6 +368,7 @@ MonoBehaviour:
   isAbleToBeActivatedOnItsOwn: 0
   pointInside: {fileID: 401292}
   pointOnSurface: {fileID: 408232}
+  pointForRejected: {fileID: 437104}
   recipe:
     items:
     - itemName: Apple

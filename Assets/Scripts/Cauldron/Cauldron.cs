@@ -9,6 +9,7 @@ public class Cauldron : InteractiveObject {
 
 	public Transform pointInside;
 	public Transform pointOnSurface;
+	public Transform pointForRejected;
 	public Recipe recipe;
 	public ObtainableItem potion;
 	public List<GameObject> subscribers = new List<GameObject>();
@@ -80,7 +81,7 @@ public class Cauldron : InteractiveObject {
 
 		yield return new WaitForSeconds(1f);
 
-		LeanTween.move(item.gameObject, transform.position + Vector3.up * 1f + Vector3.forward + Vector3.left, 1f).setEase(LeanTweenType.easeOutCubic);
+		LeanTween.move(item.gameObject, pointForRejected.position, 1f).setEase(LeanTweenType.easeOutCubic);
 
 		yield return new WaitForSeconds(1f);
 
@@ -90,6 +91,10 @@ public class Cauldron : InteractiveObject {
 		}
 
 		item.isAbleToInteract = true;
+
+		yield return new WaitForSeconds(1.5f);
+
+		itemRigidbody.isKinematic = true;
 	}
 
 	void CheckIfPoitionIsReady() {

@@ -3078,6 +3078,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11433626, guid: 6a7e0d6ec5a7b460c9f505271c839ba1, type: 2}
+      propertyPath: isAbleToInteract
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6a7e0d6ec5a7b460c9f505271c839ba1, type: 2}
   m_IsPrefabParent: 0
@@ -4009,19 +4013,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 444754, guid: 66b9f58eb6a914e2fbe3844aa9330e35, type: 2}
       propertyPath: m_LocalRotation.x
-      value: -.0866536871
+      value: -.0866536796
       objectReference: {fileID: 0}
     - target: {fileID: 444754, guid: 66b9f58eb6a914e2fbe3844aa9330e35, type: 2}
       propertyPath: m_LocalRotation.y
-      value: .70177716
+      value: .701777101
       objectReference: {fileID: 0}
     - target: {fileID: 444754, guid: 66b9f58eb6a914e2fbe3844aa9330e35, type: 2}
       propertyPath: m_LocalRotation.z
-      value: .70177722
+      value: .70177716
       objectReference: {fileID: 0}
     - target: {fileID: 444754, guid: 66b9f58eb6a914e2fbe3844aa9330e35, type: 2}
       propertyPath: m_LocalRotation.w
-      value: -.086653538
+      value: -.0866535306
       objectReference: {fileID: 0}
     - target: {fileID: 444754, guid: 66b9f58eb6a914e2fbe3844aa9330e35, type: 2}
       propertyPath: m_RootOrder
@@ -7865,6 +7869,10 @@ Prefab:
       propertyPath: m_Name
       value: Candy Corn 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11433626, guid: 6a7e0d6ec5a7b460c9f505271c839ba1, type: 2}
+      propertyPath: isAbleToInteract
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6a7e0d6ec5a7b460c9f505271c839ba1, type: 2}
   m_IsPrefabParent: 0
@@ -11511,10 +11519,6 @@ Prefab:
     - target: {fileID: 118956, guid: 7950fe6354212495198537eff5a4046d, type: 2}
       propertyPath: m_Name
       value: Wine Glass
-      objectReference: {fileID: 0}
-    - target: {fileID: 19813708, guid: 7950fe6354212495198537eff5a4046d, type: 2}
-      propertyPath: moveWithTransform
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7950fe6354212495198537eff5a4046d, type: 2}
