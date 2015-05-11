@@ -58,6 +58,14 @@ public class King : SingletonComponent<King> {
 
 		King.visitor.sight.enabled = false;
 
+		var title = FindObjectOfType<Title>();
+		if (title != null) {
+			title.Activate();
+
+			while(title.isPlaying)
+				yield return null;
+		}
+
 		placeManager.PreloadPlaces();
 
 		while(placeManager.placesAreLoading)

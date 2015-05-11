@@ -132,8 +132,8 @@ public class PlaceManager : MonoBehaviour {
 				yield return null;
 		}
 
-		King.visitor.screenFader.FadeIn(1);
-		yield return new WaitForSeconds(1f);
+		King.visitor.screenFader.FadeIn(2);
+		yield return new WaitForSeconds(2.1f);
 
 		if (spinningBottle != null)
 			spinningBottle.SetActive(false);
@@ -170,11 +170,18 @@ public class PlaceManager : MonoBehaviour {
 
 	IEnumerator ActivatePlaceCo(string placeName) {
 		if (currentPlace == null || currentPlace.name != placeName) {
-			King.visitor.screenFader.FadeIn(0.5f);
-			yield return new WaitForSeconds(0.6f);
+
+			LeanTween.value(gameObject, delegate(float value) { 
+				AudioListener.volume = value;
+			}, 1f, 0f, 2f);
+
+			King.visitor.screenFader.FadeIn(2f);
+			yield return new WaitForSeconds(2f);
 		} else {
 			King.visitor.screenFader.FadeIn(0f);
 		}
+
+		yield return new WaitForSeconds(0.1f);
 
 		if (King.visitor.itemInHand != null) {
 			King.visitor.Drop(King.visitor.itemInHand);
@@ -194,7 +201,11 @@ public class PlaceManager : MonoBehaviour {
 
 		yield return new WaitForSeconds(1f);
 
-		King.visitor.screenFader.FadeOut(1f);
+		King.visitor.screenFader.FadeOut(2f);
+
+		LeanTween.value(gameObject, delegate(float value) { 
+			AudioListener.volume = value;
+		}, 0f, 1f, 2f);
 	}
 
 	public void PreloadPlaces() {

@@ -7,6 +7,11 @@ public class FinalPotion : Interaction {
 	public float moveAfterSec = 3f;
 
 	IEnumerator GoToPlaceInSec(float time) {
+		yield return new WaitForSeconds(1f);
+
+		if (GetComponent<PlaysAudioRemarkOnRadio>())
+			GetComponent<PlaysAudioRemarkOnRadio>().Play(0);
+
 		yield return new WaitForSeconds(time);
 		
 		King.placeManager.ActivatePlace(targetPlaceName);

@@ -657,6 +657,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetBall: {fileID: 0}
+  hoopRenderer: {fileID: 0}
   visiblePointForBall: {fileID: 0}
   hoopScale: {x: 1, y: 2.38000011, z: 1.13999999}
   shield: {fileID: 105002}

@@ -416,8 +416,8 @@ MonoBehaviour:
   remarks:
   - audioClip: {fileID: 8300000, guid: 5fad295ba2c0c4860a8b0b8ce606f1e5, type: 3}
     volume: 1
-  - audioClip: {fileID: 8300000, guid: 6d3d5a23f77954c2fb43c865321e4bef, type: 3}
-    volume: 1
+  - audioClip: {fileID: 8300000, guid: 21d55b1e17d1d4395a7a7f8599adec93, type: 3}
+    volume: .300000012
   - audioClip: {fileID: 8300000, guid: 7bb0bf3a5e26341fcb930d4edd656752, type: 3}
     volume: 1
   - audioClip: {fileID: 8300000, guid: 32c8d45bf1b2646e19b8a4e72dad82ac, type: 3}

@@ -8,6 +8,7 @@ public class RadioPrototype : SingletonComponent<RadioPrototype> {
 	Floater floater;
 	Visitor visitor;
 	PlaysSoundOnRequest voicePlayer;
+	bool narrativeIsPlaying;
 
 	public AudioSource music;
 
@@ -18,7 +19,7 @@ public class RadioPrototype : SingletonComponent<RadioPrototype> {
 		floater = GetComponent<Floater>();
 		voicePlayer = GetComponent<PlaysSoundOnRequest>();
 
-		//StartCoroutine(StartAfterCo(3f));
+		StartCoroutine(StartAfterCo(3f));
 	}
 
 	IEnumerator StartAfterCo(float seconds) {
@@ -52,6 +53,8 @@ public class RadioPrototype : SingletonComponent<RadioPrototype> {
 		float totalSec = 60f;
 		float sub = 0;
 
+		narrativeIsPlaying = true;
+
 		sub += 3f;
 		yield return new WaitForSeconds(3f);
 		FadeMusicTo(0.1f, 0.5f);
@@ -59,6 +62,8 @@ public class RadioPrototype : SingletonComponent<RadioPrototype> {
 		voicePlayer.PlayOneShot(0);
 		yield return new WaitForSeconds(totalSec - sub);
 		FadeMusicTo(1f, 0.5f);
+
+		narrativeIsPlaying = false;
 	}
 
 	IEnumerator HideReticleForSec(float time) {
@@ -75,6 +80,9 @@ public class RadioPrototype : SingletonComponent<RadioPrototype> {
 	}
 
 	IEnumerator PlayRemarkCo(AudioClip clip, float volume = 1) {
+		if (narrativeIsPlaying)
+			yield break;
+
 		FadeMusicTo(0.1f, 0.5f);
 		yield return new WaitForSeconds(0.5f);
 		Instance.voicePlayer.PlayOneShot(clip, volume);

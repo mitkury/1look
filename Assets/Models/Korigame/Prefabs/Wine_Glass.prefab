@@ -11,6 +11,7 @@ GameObject:
   - 54: {fileID: 5494590}
   - 114: {fileID: 11458672}
   - 114: {fileID: 11404848}
+  - 114: {fileID: 11497902}
   m_Layer: 0
   m_Name: Wine_Glass
   m_TagString: Untagged
@@ -109,8 +110,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 118956}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.02291155, y: .146692276, z: -3.84481335}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 5.02299976, y: .101999998, z: -3.84500003}
+  m_LocalScale: {x: .800000012, y: .800000012, z: .800000012}
   m_Children:
   - {fileID: 467024}
   - {fileID: 471370}
@@ -328,6 +329,23 @@ MonoBehaviour:
   focusTimeSec: 0
   isAbleToInteract: 1
   body: {fileID: 0}
+--- !u!114 &11497902
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 118956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce65bc63fe6ee40738580c3411094e93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - audioClip: {fileID: 8300000, guid: 4c906c2acdb9d4faa9b7adeea754b16a, type: 3}
+    volume: .5
+    lowPitchRange: 1
+    highPitchRange: 1
+    spatialBlend: 1
 --- !u!198 &19813708
 ParticleSystem:
   m_ObjectHideFlags: 1

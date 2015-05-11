@@ -28,6 +28,9 @@ public class Wine : Interaction {
 	}
 
 	IEnumerator GoToSleepInSecCo(float time) {
+		yield return new WaitForSeconds(1.5f);
+		GetComponent<PlaysSoundOnRequest>().PlayOneShot(0);
+
 		yield return new WaitForSeconds(time);
 
 		King.placeManager.ActivatePlace(targetPlaceName);
