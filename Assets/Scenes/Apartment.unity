@@ -515,7 +515,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 19621077e2416421799161ec461d4737, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 1948dceff0ab04c6a859cf9fad979089, type: 3}
   m_PlayOnAwake: 1
   m_Volume: .800000012
   m_Pitch: 1
@@ -1250,7 +1250,6 @@ GameObject:
   - 20: {fileID: 330641051}
   - 124: {fileID: 330641050}
   - 92: {fileID: 330641049}
-  - 81: {fileID: 330641048}
   m_Layer: 0
   m_Name: 'Credits Camera '
   m_TagString: Untagged
@@ -1272,13 +1271,6 @@ Transform:
   - {fileID: 674061692}
   m_Father: {fileID: 1653048891}
   m_RootOrder: 11
---- !u!81 &330641048
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 330641046}
-  m_Enabled: 1
 --- !u!92 &330641049
 Behaviour:
   m_ObjectHideFlags: 0

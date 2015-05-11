@@ -46,6 +46,7 @@ GameObject:
   - 4: {fileID: 476250}
   - 33: {fileID: 3385696}
   - 23: {fileID: 2308380}
+  - 114: {fileID: 11449960}
   m_Layer: 0
   m_Name: Light Blur 1
   m_TagString: Untagged
@@ -216,6 +217,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11449960
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 162784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5e17f891c79d4a79b8a1bf16d098e99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rate: 2
+  targetScale: {x: 1, y: 1, z: 1}
 --- !u!114 &11487970
 MonoBehaviour:
   m_ObjectHideFlags: 1
