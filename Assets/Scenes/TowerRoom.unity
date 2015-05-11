@@ -4080,19 +4080,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 472004, guid: 0dbe313f262bb4d03abbc608139c6c7e, type: 2}
       propertyPath: m_LocalRotation.x
-      value: -.624702632
+      value: -.624702692
       objectReference: {fileID: 0}
     - target: {fileID: 472004, guid: 0dbe313f262bb4d03abbc608139c6c7e, type: 2}
       propertyPath: m_LocalRotation.y
-      value: -.33128038
+      value: -.33128041
       objectReference: {fileID: 0}
     - target: {fileID: 472004, guid: 0dbe313f262bb4d03abbc608139c6c7e, type: 2}
       propertyPath: m_LocalRotation.z
-      value: -.331280321
+      value: -.331280351
       objectReference: {fileID: 0}
     - target: {fileID: 472004, guid: 0dbe313f262bb4d03abbc608139c6c7e, type: 2}
       propertyPath: m_LocalRotation.w
-      value: .624702513
+      value: .624702573
       objectReference: {fileID: 0}
     - target: {fileID: 472004, guid: 0dbe313f262bb4d03abbc608139c6c7e, type: 2}
       propertyPath: m_RootOrder
@@ -6419,30 +6419,6 @@ Prefab:
       propertyPath: popcorn.Array.data[2]
       value: 
       objectReference: {fileID: 250703499}
-    - target: {fileID: 11484360, guid: 69b1011f8741f445d811338c5b784477, type: 2}
-      propertyPath: sounds.Array.data[0].audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 58991bfb9bea348c295e5d53dd9b24c0, type: 3}
-    - target: {fileID: 11484360, guid: 69b1011f8741f445d811338c5b784477, type: 2}
-      propertyPath: sounds.Array.data[1].audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: e10962e37058a4297a045f734a3527e8, type: 3}
-    - target: {fileID: 11484360, guid: 69b1011f8741f445d811338c5b784477, type: 2}
-      propertyPath: sounds.Array.data[2].audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 8847dc076ff61457d87627a5ee109dba, type: 3}
-    - target: {fileID: 11484360, guid: 69b1011f8741f445d811338c5b784477, type: 2}
-      propertyPath: sounds.Array.data[0].volume
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11484360, guid: 69b1011f8741f445d811338c5b784477, type: 2}
-      propertyPath: sounds.Array.data[1].volume
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11484360, guid: 69b1011f8741f445d811338c5b784477, type: 2}
-      propertyPath: sounds.Array.data[2].volume
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 69b1011f8741f445d811338c5b784477, type: 2}
   m_IsPrefabParent: 0

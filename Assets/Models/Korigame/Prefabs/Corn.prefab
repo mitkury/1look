@@ -179,18 +179,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - audioClip: {fileID: 8300000, guid: d12a1147a46524a5fa9f62dac32974f5, type: 3}
-    volume: .5
+  - audioClip: {fileID: 8300000, guid: 58991bfb9bea348c295e5d53dd9b24c0, type: 3}
+    volume: 1
     lowPitchRange: 1
     highPitchRange: 1
     spatialBlend: 1
-  - audioClip: {fileID: 8300000, guid: aca86ac34ab664651b31d260aba910a4, type: 3}
-    volume: .5
+  - audioClip: {fileID: 8300000, guid: e10962e37058a4297a045f734a3527e8, type: 3}
+    volume: 1
     lowPitchRange: 1
     highPitchRange: 1
     spatialBlend: 1
-  - audioClip: {fileID: 8300000, guid: cf078fed894074438b9e4e1d2ab4a844, type: 3}
-    volume: .5
+  - audioClip: {fileID: 8300000, guid: 8847dc076ff61457d87627a5ee109dba, type: 3}
+    volume: 1
     lowPitchRange: 1
     highPitchRange: 1
     spatialBlend: 1
