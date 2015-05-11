@@ -363,7 +363,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22935b8b7783648e289ca662ad6c7149, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 8
+  timer: 10
   sound:
     audioClip: {fileID: 8300000, guid: e73c06a14a26640918aedbf8ca1ad2ab, type: 3}
     volume: 1
@@ -461,6 +461,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 641868280}
   - 82: {fileID: 641868279}
+  - 114: {fileID: 641868281}
   m_Layer: 0
   m_Name: Laughing
   m_TagString: Untagged
@@ -479,7 +480,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 9a33ca43471244a28893a11be1941dc1, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: .750999987
   m_Pitch: 1
   Loop: 0
@@ -550,6 +551,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 854584925}
   m_RootOrder: 0
+--- !u!114 &641868281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 641868278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22935b8b7783648e289ca662ad6c7149, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 3
+  sound:
+    audioClip: {fileID: 8300000, guid: 9a33ca43471244a28893a11be1941dc1, type: 3}
+    volume: 1
+    lowPitchRange: 1
+    highPitchRange: 1
+    spatialBlend: 1
 --- !u!1 &854584922
 GameObject:
   m_ObjectHideFlags: 0
@@ -639,7 +658,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22935b8b7783648e289ca662ad6c7149, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 4
+  timer: 8
   sound:
     audioClip: {fileID: 8300000, guid: 02dd25e760e5040f89d447e773952881, type: 3}
     volume: 1
@@ -873,7 +892,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22935b8b7783648e289ca662ad6c7149, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 10
+  timer: 12
   sound:
     audioClip: {fileID: 8300000, guid: e73c06a14a26640918aedbf8ca1ad2ab, type: 3}
     volume: 1
@@ -1070,4 +1089,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetPlaceName: TowerRoom
-  moveAfterSec: 12
+  moveAfterSec: 16

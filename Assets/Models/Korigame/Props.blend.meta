@@ -203,6 +203,10 @@ ModelImporter:
     100390: Cube_003
     100392: Mat
     100394: Mat_Warped
+    100396: Floor_With_Hole
+    100398: Floor_With_Stairs
+    100400: Trap_Door
+    100402: Trap_Door_Mount
     400000: Apple
     400002: Bookcase
     400004: Bubbling_Acid
@@ -401,6 +405,10 @@ ModelImporter:
     400390: Cube_003
     400392: Mat
     400394: Mat_Warped
+    400396: Floor_With_Hole
+    400398: Floor_With_Stairs
+    400400: Trap_Door
+    400402: Trap_Door_Mount
     2300000: Apple
     2300002: Bookcase
     2300004: Bubbling_Acid
@@ -568,6 +576,10 @@ ModelImporter:
     2300328: Cube_003
     2300330: Mat
     2300332: Mat_Warped
+    2300334: Floor_With_Hole
+    2300336: Floor_With_Stairs
+    2300338: Trap_Door
+    2300340: Trap_Door_Mount
     3300000: Apple
     3300002: Bookcase
     3300004: Bubbling_Acid
@@ -735,6 +747,10 @@ ModelImporter:
     3300328: Cube_003
     3300330: Mat
     3300332: Mat_Warped
+    3300334: Floor_With_Hole
+    3300336: Floor_With_Stairs
+    3300338: Trap_Door
+    3300340: Trap_Door_Mount
     4300000: Apple
     4300002: Bookcase
     4300004: Cauldron
@@ -903,6 +919,10 @@ ModelImporter:
     4300330: Cube_003
     4300332: Mat
     4300334: Mat_Warped
+    4300336: Floor_With_Hole
+    4300338: Trap_Door_Mount
+    4300340: Trap_Door
+    4300342: Floor_With_Stairs
     7400000: Default Take
     7400002: Armature_001Action
     7400004: Armature_002Action

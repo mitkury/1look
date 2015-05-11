@@ -4899,6 +4899,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 450376, guid: 7950fe6354212495198537eff5a4046d, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 180856, guid: 7950fe6354212495198537eff5a4046d, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7950fe6354212495198537eff5a4046d, type: 2}
   m_IsPrefabParent: 0
@@ -11493,6 +11501,10 @@ Prefab:
     - target: {fileID: 118956, guid: 7950fe6354212495198537eff5a4046d, type: 2}
       propertyPath: m_Name
       value: Wine Glass
+      objectReference: {fileID: 0}
+    - target: {fileID: 19813708, guid: 7950fe6354212495198537eff5a4046d, type: 2}
+      propertyPath: moveWithTransform
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7950fe6354212495198537eff5a4046d, type: 2}

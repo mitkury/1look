@@ -193,7 +193,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioOnEnter:
-    audioClip: {fileID: 8300000, guid: 0e380ae6198cd4de1ad15a3c91e8e7ee, type: 3}
+    audioClip: {fileID: 8300000, guid: ef7094241b4a748e8bf9401e7f4fd70e, type: 3}
     volume: .600000024
     lowPitchRange: 1.20000005
     highPitchRange: 1.20000005
