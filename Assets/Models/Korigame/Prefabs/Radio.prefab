@@ -436,7 +436,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - audioClip: {fileID: 8300000, guid: fffddbcf33fdb41d6a0f0add0057274f, type: 3}
-    volume: .800000012
+    volume: .779999971
     lowPitchRange: 1
     highPitchRange: 1
     spatialBlend: 1
