@@ -19,7 +19,7 @@ public class RadioPrototype : SingletonComponent<RadioPrototype> {
 		floater = GetComponent<Floater>();
 		voicePlayer = GetComponent<PlaysSoundOnRequest>();
 
-		StartCoroutine(StartAfterCo(3f));
+		//StartCoroutine(StartAfterCo(3f));
 	}
 
 	IEnumerator StartAfterCo(float seconds) {

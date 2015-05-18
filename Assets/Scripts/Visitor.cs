@@ -375,6 +375,7 @@ public class Visitor : MonoBehaviour {
 
 	public void Drop(ObtainableItem item) {
 		Debug.Log("Visitor drops "+item);
+		itemInHand.Frees();
 		itemInHand = null;
 		sight.reticle.SetBody(0);
 	}

@@ -4,6 +4,8 @@ using System.Collections;
 [RequireComponent(typeof(Rigidbody))] 
 public class ObtainableItem : InteractiveThing {
 
+	public Animation onGrabLegacyAnimation;
+
 	protected override void Init ()
 	{
 		// Add new interactions before initializing the base class.
@@ -39,6 +41,7 @@ public class ObtainableItem : InteractiveThing {
 			rigidbody.useGravity = false;
 		}
 
+		// Stop any animations that may prevent the object from being obtained.
 		if (GetComponent<Animator>()) {
 			GetComponent<Animator>().enabled = false;
 		}
@@ -47,6 +50,18 @@ public class ObtainableItem : InteractiveThing {
 		
 		if (transform.parent != null) {
 			transform.parent.SendMessage("OnItemTakeByVisitor", this, SendMessageOptions.DontRequireReceiver);
+		}
+
+		if (onGrabLegacyAnimation != null) {
+			onGrabLegacyAnimation.enabled = true;
+			onGrabLegacyAnimation.Play();
+		}
+	}
+
+	public void Frees() {
+		if (onGrabLegacyAnimation != null) {
+			Debug.Log("stop!");
+			onGrabLegacyAnimation.enabled = false;
 		}
 	}
 
