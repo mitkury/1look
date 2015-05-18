@@ -21,6 +21,10 @@ public class PotionBook : MonoBehaviour {
 
 	void Start() {
 		audioPlayer = GetComponent<PlaysSoundOnRequest>();
+
+		foreach(RecipeIcon icon in recipeIcons) {
+			icon.GetComponent<InteractiveObject>().isAbleToInteract = false;
+		}
 	}
 
 	void OnEnable() {
@@ -106,14 +110,27 @@ public class PotionBook : MonoBehaviour {
 		visitor = King.visitor;
 	}
 
-	void Show() {
+	IEnumerator ShowCo() {
 		bookIsShown = true;
 		LeanTween.cancel(gameObject);
 		LeanTween.move(gameObject, bookReadPoint.position, showAnimationDuration).setEase(LeanTweenType.easeInOutCubic);
 		LeanTween.rotate(gameObject, bookReadPoint.rotation.eulerAngles, showAnimationDuration).setEase(LeanTweenType.easeInOutCubic);
-
+		
 		if (audioPlayer != null)
 			audioPlayer.PlayOneShot(0);
+
+		yield return new WaitForSeconds(showAnimationDuration);
+
+		if (!bookIsShown)
+			yield break;
+
+		foreach(RecipeIcon icon in recipeIcons) {
+			icon.GetComponent<InteractiveObject>().isAbleToInteract = true;
+		}
+	}
+
+	void Show() {
+		StartCoroutine(ShowCo());
 	}
 
 	void Hide() {
@@ -124,6 +141,10 @@ public class PotionBook : MonoBehaviour {
 
 		if (audioPlayer != null)
 			audioPlayer.PlayOneShot(1);
+
+		foreach(RecipeIcon icon in recipeIcons) {
+			icon.GetComponent<InteractiveObject>().isAbleToInteract = false;
+		}
 	}
 
 	public void OnAddToCauldron(RecipeItem item) {

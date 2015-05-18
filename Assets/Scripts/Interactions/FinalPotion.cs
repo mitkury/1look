@@ -4,7 +4,7 @@ using System.Collections;
 public class FinalPotion : Interaction {
 
 	public string targetPlaceName = "Apartment";
-	public float moveAfterSec = 3f;
+	public float moveAfterSec = 5f;
 
 	IEnumerator GoToPlaceInSec(float time) {
 		yield return new WaitForSeconds(1f);

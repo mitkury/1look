@@ -200,6 +200,10 @@ Prefab:
       propertyPath: letters.Array.data[4]
       value: 
       objectReference: {fileID: 892300624}
+    - target: {fileID: 11455724, guid: 4470b6c3afc5846fea463eb79cdb5f01, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4470b6c3afc5846fea463eb79cdb5f01, type: 2}
   m_IsPrefabParent: 0

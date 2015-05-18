@@ -27,6 +27,7 @@ GameObject:
   - 4: {fileID: 433004}
   - 33: {fileID: 3365856}
   - 23: {fileID: 2385776}
+  - 65: {fileID: 6529210}
   m_Layer: 0
   m_Name: Plant_Cactus
   m_TagString: Untagged
@@ -41,7 +42,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 172066}
   m_LocalRotation: {x: 0, y: .512492299, z: 0, w: .858691871}
-  m_LocalPosition: {x: 5.94999981, y: 1.83000004, z: -1.34000003}
+  m_LocalPosition: {x: 5.94991159, y: 1.61769235, z: -1.33981347}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 433004}
@@ -100,18 +101,30 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &6529210
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 195232}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: .242829055, y: .280395001, z: .423481941}
+  m_Center: {x: .000412974594, y: -.00773797929, z: -.0615272373}
 --- !u!114 &11483236
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 172066}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: da65c8c8862574cb0bead688e3024ada, type: 3}
   m_Name: 
