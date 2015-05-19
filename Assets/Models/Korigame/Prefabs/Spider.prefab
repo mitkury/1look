@@ -143,6 +143,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 453012}
+  - 111: {fileID: 11116550}
   m_Layer: 0
   m_Name: SpiderRigged
   m_TagString: Untagged
@@ -210,6 +211,7 @@ GameObject:
   - 95: {fileID: 9510732}
   - 114: {fileID: 11485780}
   - 114: {fileID: 11445078}
+  - 114: {fileID: 11460532}
   m_Layer: 0
   m_Name: Spider
   m_TagString: Untagged
@@ -638,6 +640,21 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!111 &11116550
+Animation:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 160638}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400002, guid: 8c106f4e7c5e64224b2492b9db490845, type: 3}
+  m_Animations:
+  - {fileID: 7400002, guid: 8c106f4e7c5e64224b2492b9db490845, type: 3}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!114 &11445078
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -660,6 +677,20 @@ MonoBehaviour:
     lowPitchRange: 1
     highPitchRange: 1
     spatialBlend: 1
+--- !u!114 &11460532
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 169106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a484576b6512b415e978c4cf1a81cc48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  remarks:
+  - audioClip: {fileID: 8300000, guid: 9e9d7f47a36204b9caecf8678df0cb33, type: 3}
+    volume: 1
 --- !u!114 &11472970
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -675,6 +706,8 @@ MonoBehaviour:
   focusTimeSec: 0
   isAbleToInteract: 1
   body: {fileID: 0}
+  customOnGrabRotation: {x: 351.005615, y: 309.640808, z: 28.6364403}
+  onGrabLegacyAnimation: {fileID: 11116550}
 --- !u!114 &11485780
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -4,6 +4,7 @@ using System.Collections;
 [RequireComponent(typeof(Rigidbody))] 
 public class ObtainableItem : InteractiveThing {
 
+	public Vector3 customOnGrabRotation;
 	public Animation onGrabLegacyAnimation;
 
 	protected override void Init ()

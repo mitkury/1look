@@ -195,7 +195,11 @@ public class Visitor : MonoBehaviour {
 			}
 		
 			if (distanceToItem < 2f) {
-				targetRotation = Quaternion.identity;
+				if (itemInHand.customOnGrabRotation != Vector3.zero) {
+					targetRotation = Quaternion.Euler(itemInHand.customOnGrabRotation);
+				} else {
+					targetRotation = Quaternion.identity;
+				}
 			}
 		} else {
 			// Hover the object in front, following a visitor's head.
@@ -215,7 +219,11 @@ public class Visitor : MonoBehaviour {
 			}
 
 			if (distanceToItem < 2f) {
-				targetRotation = Quaternion.LookRotation(sight.anchor.forward);
+				if (itemInHand.customOnGrabRotation != Vector3.zero) {
+					targetRotation = Quaternion.Euler(itemInHand.customOnGrabRotation) * Quaternion.LookRotation(sight.anchor.forward);
+				} else {
+					targetRotation = Quaternion.LookRotation(sight.anchor.forward);
+				}
 			}
 		}
 

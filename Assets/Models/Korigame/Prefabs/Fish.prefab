@@ -44,6 +44,7 @@ GameObject:
   - 114: {fileID: 11422378}
   - 114: {fileID: 11469110}
   - 114: {fileID: 11423690}
+  - 114: {fileID: 11413794}
   m_Layer: 0
   m_Name: Fish
   m_TagString: Untagged
@@ -282,6 +283,17 @@ Animation:
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 1
+--- !u!114 &11413794
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 147678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ff0f23568fce4d45918ce1fd29c6d25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11422378
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -297,6 +309,8 @@ MonoBehaviour:
   focusTimeSec: .25
   isAbleToInteract: 1
   body: {fileID: 0}
+  customOnGrabRotation: {x: 342.575287, y: 118.987701, z: 5}
+  onGrabLegacyAnimation: {fileID: 11161662}
 --- !u!114 &11423690
 MonoBehaviour:
   m_ObjectHideFlags: 1

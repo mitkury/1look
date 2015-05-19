@@ -677,6 +677,8 @@ MonoBehaviour:
   focusTimeSec: 0
   isAbleToInteract: 1
   body: {fileID: 0}
+  customOnGrabRotation: {x: 0, y: 0, z: 0}
+  onGrabLegacyAnimation: {fileID: 0}
 --- !u!1001 &92093963
 Prefab:
   m_ObjectHideFlags: 0
@@ -2340,20 +2342,6 @@ Transform:
 GameObject:
   m_PrefabParentObject: {fileID: 169106, guid: c08a6b351005b498ca3d3ae5516df8e8, type: 2}
   m_PrefabInternal: {fileID: 1481398770}
---- !u!114 &179394370
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 179394369}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a484576b6512b415e978c4cf1a81cc48, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  remarks:
-  - audioClip: {fileID: 8300000, guid: 9e9d7f47a36204b9caecf8678df0cb33, type: 3}
-    volume: 1
 --- !u!1001 &210338471
 Prefab:
   m_ObjectHideFlags: 0
@@ -3643,19 +3631,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 472004, guid: 0dbe313f262bb4d03abbc608139c6c7e, type: 2}
       propertyPath: m_LocalRotation.x
-      value: -.624702692
+      value: -.624702632
       objectReference: {fileID: 0}
     - target: {fileID: 472004, guid: 0dbe313f262bb4d03abbc608139c6c7e, type: 2}
       propertyPath: m_LocalRotation.y
-      value: -.33128041
+      value: -.33128038
       objectReference: {fileID: 0}
     - target: {fileID: 472004, guid: 0dbe313f262bb4d03abbc608139c6c7e, type: 2}
       propertyPath: m_LocalRotation.z
-      value: -.331280351
+      value: -.331280321
       objectReference: {fileID: 0}
     - target: {fileID: 472004, guid: 0dbe313f262bb4d03abbc608139c6c7e, type: 2}
       propertyPath: m_LocalRotation.w
-      value: .624702573
+      value: .624702513
       objectReference: {fileID: 0}
     - target: {fileID: 472004, guid: 0dbe313f262bb4d03abbc608139c6c7e, type: 2}
       propertyPath: m_RootOrder
@@ -8638,10 +8626,6 @@ Prefab:
       propertyPath: barrel
       value: 
       objectReference: {fileID: 482586158}
-    - target: {fileID: 147678, guid: 2f60006be705040d68a7cd5406eda05f, type: 2}
-      propertyPath: m_Name
-      value: Fish
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2f60006be705040d68a7cd5406eda05f, type: 2}
   m_IsPrefabParent: 0
@@ -9523,17 +9507,6 @@ GameObject:
 Transform:
   m_PrefabParentObject: {fileID: 410660, guid: 2f60006be705040d68a7cd5406eda05f, type: 2}
   m_PrefabInternal: {fileID: 1808599906}
---- !u!114 &1988640778
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1988640771}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ff0f23568fce4d45918ce1fd29c6d25, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1988655810
 Prefab:
   m_ObjectHideFlags: 0
