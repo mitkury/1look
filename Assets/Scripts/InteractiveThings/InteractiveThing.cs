@@ -11,7 +11,6 @@ public abstract class InteractiveThing : MonoBehaviour {
 	public bool hasItsOwnFocusTime;
 	public float focusTimeSec;
 	public bool isAbleToInteract = true;
-	public Transform body;
 
 	void Start () {
 		Init();

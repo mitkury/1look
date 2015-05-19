@@ -4,6 +4,8 @@ using System.Collections;
 [RequireComponent(typeof(Rigidbody))] 
 public class ObtainableItem : InteractiveThing {
 
+	public bool hasItsOwnOnGrabDistance;
+	public float onGrabDistance;
 	public Vector3 customOnGrabRotation;
 	public Animation onGrabLegacyAnimation;
 
@@ -61,7 +63,6 @@ public class ObtainableItem : InteractiveThing {
 
 	public void Frees() {
 		if (onGrabLegacyAnimation != null) {
-			Debug.Log("stop!");
 			onGrabLegacyAnimation.enabled = false;
 		}
 	}

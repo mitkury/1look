@@ -21,6 +21,7 @@ public class Visitor : MonoBehaviour {
 	public float defaultFocusTimeSec = 1f;
 	public Transform waistAnchor;
 	public Transform faceAnchor;
+	public Transform earsAnchor;
 	[HideInInspector]
 	public Vector3 localPositionAtPrevLobby;
 	public Inventory inventory { get; private set; }
@@ -204,7 +205,8 @@ public class Visitor : MonoBehaviour {
 		} else {
 			// Hover the object in front, following a visitor's head.
 
-			var centerOfFocusPoint = sight.anchor.position + sight.facingVector * defaultDistanceToFloatingObject;
+			var distanceToFloatingObject = itemInHand.hasItsOwnOnGrabDistance ? itemInHand.onGrabDistance : defaultDistanceToFloatingObject;
+			var centerOfFocusPoint = sight.anchor.position + sight.facingVector * distanceToFloatingObject;
 			// Finding a perpendicular vector to a facing vector (http://docs.unity3d.com/Manual/ComputingNormalPerpendicularVector.html)
 			var orthoToFacingVector = Vector3.Cross(sight.facingVector, -sight.anchor.right);
 			var distanceBelowFocusPoint = 0.1f;

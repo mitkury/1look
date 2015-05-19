@@ -676,7 +676,8 @@ MonoBehaviour:
   hasItsOwnFocusTime: 0
   focusTimeSec: 0
   isAbleToInteract: 1
-  body: {fileID: 0}
+  hasItsOwnOnGrabDistance: 0
+  onGrabDistance: 0
   customOnGrabRotation: {x: 0, y: 0, z: 0}
   onGrabLegacyAnimation: {fileID: 0}
 --- !u!1001 &92093963

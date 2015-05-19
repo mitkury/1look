@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 465126}
   - 54: {fileID: 5419122}
   - 114: {fileID: 11433626}
+  - 114: {fileID: 11459026}
   m_Layer: 0
   m_Name: Candy Corn
   m_TagString: Untagged
@@ -41,9 +42,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 156282}
-  m_LocalRotation: {x: -.703186214, y: -.270397604, z: -.324379623, w: .572007179}
-  m_LocalPosition: {x: .491540015, y: .728330016, z: .882870018}
-  m_LocalScale: {x: .483655989, y: .483656108, z: .4836559}
+  m_LocalRotation: {x: -.31365937, y: -.639473855, z: -.628965437, w: .311598271}
+  m_LocalPosition: {x: -.217737436, y: .720038772, z: .781177759}
+  m_LocalScale: {x: .483656168, y: .483656079, z: .483656198}
   m_Children:
   - {fileID: 482760}
   m_Father: {fileID: 0}
@@ -132,7 +133,34 @@ MonoBehaviour:
   hasItsOwnFocusTime: 0
   focusTimeSec: 0
   isAbleToInteract: 1
-  body: {fileID: 0}
+  hasItsOwnOnGrabDistance: 1
+  onGrabDistance: .349999994
+  customOnGrabRotation: {x: 346.803406, y: 2.35827494, z: 340.115509}
+  onGrabLegacyAnimation: {fileID: 0}
+--- !u!114 &11459026
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 156282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39096861b750f4eaea9b9a0ef9c47fd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eatAfterSec: 2
+  eatingAudio:
+    audioClip: {fileID: 8300000, guid: 6f998730b40064f1fbe2ff9eaf3300bc, type: 3}
+    volume: 1
+    lowPitchRange: 1
+    highPitchRange: 1
+    spatialBlend: 1
+  mmmAudio:
+  - audioClip: {fileID: 8300000, guid: c173cfb8c1163435cbb6205228347af8, type: 3}
+    volume: .699999988
+    lowPitchRange: 1
+    highPitchRange: 1
+    spatialBlend: 1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

@@ -937,6 +937,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!1 &182690
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 420342}
+  - 114: {fileID: 11483566}
+  m_Layer: 0
+  m_Name: Ears
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &184776
 GameObject:
   m_ObjectHideFlags: 1
@@ -1189,6 +1205,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 495070}
   m_RootOrder: 1
+--- !u!4 &420342
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 182690}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.53799999, z: -.503000021}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 469100}
+  m_RootOrder: 2
 --- !u!4 &420436
 Transform:
   m_ObjectHideFlags: 1
@@ -1252,7 +1280,7 @@ Transform:
   - {fileID: 415848}
   - {fileID: 483374}
   m_Father: {fileID: 469100}
-  m_RootOrder: 5
+  m_RootOrder: 6
 --- !u!4 &429346
 Transform:
   m_ObjectHideFlags: 1
@@ -1332,7 +1360,7 @@ Transform:
   - {fileID: 495494}
   - {fileID: 441982}
   m_Father: {fileID: 469100}
-  m_RootOrder: 8
+  m_RootOrder: 9
 --- !u!4 &439284
 Transform:
   m_ObjectHideFlags: 1
@@ -1446,7 +1474,7 @@ Transform:
   m_Children:
   - {fileID: 486816}
   m_Father: {fileID: 469100}
-  m_RootOrder: 6
+  m_RootOrder: 7
 --- !u!4 &451104
 Transform:
   m_ObjectHideFlags: 1
@@ -1612,7 +1640,7 @@ Transform:
   - {fileID: 414838}
   - {fileID: 434822}
   m_Father: {fileID: 469100}
-  m_RootOrder: 4
+  m_RootOrder: 5
 --- !u!4 &469092
 Transform:
   m_ObjectHideFlags: 1
@@ -1625,7 +1653,7 @@ Transform:
   m_Children:
   - {fileID: 469086}
   m_Father: {fileID: 469100}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!4 &469100
 Transform:
   m_ObjectHideFlags: 1
@@ -1638,6 +1666,7 @@ Transform:
   m_Children:
   - {fileID: 462764}
   - {fileID: 486836}
+  - {fileID: 420342}
   - {fileID: 480892}
   - {fileID: 469092}
   - {fileID: 469090}
@@ -1736,7 +1765,7 @@ Transform:
   m_Children:
   - {fileID: 495070}
   m_Father: {fileID: 469100}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!4 &481042
 Transform:
   m_ObjectHideFlags: 1
@@ -1822,7 +1851,7 @@ Transform:
   m_Children:
   - {fileID: 454764}
   m_Father: {fileID: 469100}
-  m_RootOrder: 7
+  m_RootOrder: 8
 --- !u!4 &488312
 Transform:
   m_ObjectHideFlags: 1
@@ -2581,7 +2610,6 @@ MonoBehaviour:
   hasItsOwnFocusTime: 1
   focusTimeSec: 1.5
   isAbleToInteract: 1
-  body: {fileID: 441982}
   isAbleToBeActivatedOnItsOwn: 1
 --- !u!114 &11435622
 MonoBehaviour:
@@ -2739,6 +2767,7 @@ MonoBehaviour:
   defaultFocusTimeSec: .800000012
   waistAnchor: {fileID: 486836}
   faceAnchor: {fileID: 0}
+  earsAnchor: {fileID: 420342}
   localPositionAtPrevLobby: {x: 0, y: 0, z: 0}
   screenFader: {fileID: 11414980}
 --- !u!114 &11475522
@@ -2755,7 +2784,8 @@ MonoBehaviour:
   hasItsOwnFocusTime: 0
   focusTimeSec: 0
   isAbleToInteract: 1
-  body: {fileID: 0}
+  customOnGrabRotation: {x: 0, y: 0, z: 0}
+  onGrabLegacyAnimation: {fileID: 0}
 --- !u!114 &11481278
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2770,6 +2800,18 @@ MonoBehaviour:
   segments: 32
   radius: .5
   border: .25
+--- !u!114 &11483566
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 182690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce65bc63fe6ee40738580c3411094e93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
 --- !u!114 &11489902
 MonoBehaviour:
   m_ObjectHideFlags: 1
