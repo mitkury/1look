@@ -6465,6 +6465,24 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 457560, guid: cc9120422347e4e76b8dad3f867c8c13, type: 2}
   m_PrefabInternal: {fileID: 1212133448}
+--- !u!1 &1224352358 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 102852, guid: 0940a1225f78144d8829e8f8d6e7b803, type: 2}
+  m_PrefabInternal: {fileID: 1131411148}
+--- !u!114 &1224352359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1224352358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbbfe59e320be4a858ff7316d6394505, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSourceReceiver: {fileID: 512019403}
+  max: 1.10000002
+  min: 1
 --- !u!4 &1225110239 stripped
 Transform:
   m_PrefabParentObject: {fileID: 434812, guid: 267ab4b316eba4d88880218ccd97b798, type: 2}
@@ -8245,6 +8263,10 @@ Prefab:
     - target: {fileID: 11465074, guid: 1fe4cfa8b98f44d71a5e84134e595b7b, type: 2}
       propertyPath: sounds.Array.data[0].volume
       value: .800000012
+      objectReference: {fileID: 0}
+    - target: {fileID: 11427916, guid: 1fe4cfa8b98f44d71a5e84134e595b7b, type: 2}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1fe4cfa8b98f44d71a5e84134e595b7b, type: 2}

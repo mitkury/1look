@@ -21,7 +21,7 @@ public class Basketball : Interaction {
 			yield break;
 		
 		if (King.visitor.itemInHand != null) {
-			King.visitor.inventory.AddItem(obtainableItem);
+			Drop();
 		} else { 
 			King.visitor.Take(obtainableItem);
 		}
@@ -83,9 +83,26 @@ public class Basketball : Interaction {
 		}
 	}
 
+	IEnumerator FadeOutMusicAfterFreeingCo() {
+		yield return new WaitForSeconds(unblockAfterThrowInSec + 0.5f);
+		if (King.visitor.itemInHand != GetComponent<ObtainableItem>()) {
+			if (GetComponent<ChangesSoundPitchOnRequest>() != null) {
+				GetComponent<ChangesSoundPitchOnRequest>().FadeOut(1.5f);
+			}
+		}
+	}
+
 	public void OnItemTakeByVisitor(ObtainableItem item) {
 		dropIsInitiated = false;
 		targetPosition = Vector3.zero;
+
+		if (GetComponent<ChangesSoundPitchOnRequest>() != null) {
+			GetComponent<ChangesSoundPitchOnRequest>().FadeIn(1.5f);
+		}
+	}
+
+	public void OnItemFreeByVisitor(ObtainableItem item) {
+		StartCoroutine(FadeOutMusicAfterFreeingCo());
 	}
 
 	public override bool IsAbleToInteractWith (InteractiveThing thing) {
@@ -93,8 +110,7 @@ public class Basketball : Interaction {
 	}
 
 	public override void Interact () {
-		// Gosh, so many dependencies.
-		Drop(GetComponent<SummonsBasketballHoop>().paintingHoop.visiblePointForBall.position);
+		Drop();
 	}
 
 	public override void InteractWith(InteractiveThing thing) {
@@ -117,6 +133,11 @@ public class Basketball : Interaction {
 
 	public void Drop(Vector3 visiblePoint) {
 		StartCoroutine(DropCo(visiblePoint));
+	}
+
+	public void Drop() {
+		// Gosh, so many dependencies.
+		Drop(GetComponent<SummonsBasketballHoop>().paintingHoop.visiblePointForBall.position);
 	}
 
 }

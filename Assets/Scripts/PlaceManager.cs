@@ -187,6 +187,8 @@ public class PlaceManager : MonoBehaviour {
 			King.visitor.Drop(King.visitor.itemInHand);
 		}
 
+		King.visitor.sight.enabled = false;
+
 		var targetPlace = places.Find(p => p.name == placeName);
 
 		foreach (Place place in places) {
@@ -198,6 +200,8 @@ public class PlaceManager : MonoBehaviour {
 		currentPlace = targetPlace;
 
 		SetSettingsForPlace(currentPlace);
+
+		King.visitor.sight.enabled = true;
 
 		yield return new WaitForSeconds(1f);
 

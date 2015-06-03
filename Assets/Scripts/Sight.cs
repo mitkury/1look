@@ -39,6 +39,8 @@ public class Sight : MonoBehaviour {
 
 	void OnDisable() {
 		reticle.gameObject.SetActive(false);
+		hitInfo = new RaycastHit();
+		focusOnTargetWithoutInterruptionSec = 0;
 	}
 
 	void UpdateReticle() {
@@ -188,6 +190,7 @@ public class Sight : MonoBehaviour {
 
 	public void ResetTarget() {
 		target = null;
+		focusOnTargetWithoutInterruptionSec = 0;
 	}
 
 	public float focusOnTargetAlpha {

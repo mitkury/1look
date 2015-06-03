@@ -25,6 +25,8 @@ public class Wine : Interaction {
 
 		if (goForActivation != null)
 			goForActivation.SetActive(true);
+
+		King.visitor.sight.enabled = true;
 	}
 
 	IEnumerator GoToSleepInSecCo(float time) {

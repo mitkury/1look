@@ -62,9 +62,13 @@ public class ObtainableItem : InteractiveThing {
 	}
 
 	public void Frees() {
+		/*
 		if (onGrabLegacyAnimation != null) {
 			onGrabLegacyAnimation.enabled = false;
 		}
+		*/
+
+		gameObject.SendMessage("OnItemFreeByVisitor", this, SendMessageOptions.DontRequireReceiver);
 	}
 
 	public bool Interact(InteractiveThing thing) {

@@ -134,6 +134,14 @@ public class Cauldron : InteractiveObject {
 		potion.transform.position = pointInside.position;
 		LeanTween.move(potion.gameObject, transform.position + Vector3.up * 1f, 1f).setEase(LeanTweenType.easeOutCubic);
 		yield return new WaitForSeconds(1f);
+
+		if (King.visitor.itemInHand != null) {
+			var item = King.visitor.itemInHand;
+			King.visitor.Drop(item);
+			item.GetComponent<Rigidbody>().isKinematic = false;
+			item.GetComponent<Rigidbody>().useGravity = true;
+		}
+
 		King.visitor.Take(potion);
 	}
 

@@ -244,16 +244,24 @@ public class Visitor : MonoBehaviour {
 			if (target != null && target != itemInHand && sight.focusOnTargetWithoutInterruptionSec > focusTimeSec) {
 				if (itemInHand.IsAbleToInteractWith(target)) {
 					itemInHand.Interact(target);
+					/*
 					itemInHand = null;
 					sight.reticle.SetBody(0);
+					sight.ResetTarget();
+					*/
+					Drop(itemInHand);
 				}
 				
 				if (target is InventorySpot) {
 					var inventorySpot = target as InventorySpot;
 					if (inventorySpot.item == null) {
 						inventorySpot.Add(itemInHand);
+						/*
 						itemInHand = null;
 						sight.reticle.SetBody(0);
+						sight.ResetTarget();
+						*/
+						Drop(itemInHand);
 					}
 				}
 			}
@@ -387,6 +395,7 @@ public class Visitor : MonoBehaviour {
 		Debug.Log("Visitor drops "+item);
 		itemInHand.Frees();
 		itemInHand = null;
+		sight.ResetTarget();
 		sight.reticle.SetBody(0);
 	}
 

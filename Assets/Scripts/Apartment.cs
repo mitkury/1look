@@ -12,9 +12,21 @@ public class Apartment : MonoBehaviour {
 	void OnEnable() {
 		numberOfEnables +=1;
 
-		if (numberOfEnables == enablesToWin) {
+		switch(numberOfEnables) {
+		case 1:
+			StartCoroutine(StartIntroCo());
+			break;
+		case 2:
 			introStage.SetActive(false);
 			endStage.SetActive(true);
+			break;
 		}
 	}
+
+	IEnumerator StartIntroCo() {
+		yield return null;
+		King.visitor.sight.enabled = false;
+	}
+
+
 }
