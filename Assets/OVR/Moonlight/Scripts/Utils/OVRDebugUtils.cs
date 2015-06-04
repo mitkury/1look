@@ -50,7 +50,7 @@ public static class OVRDebugUtils
 	/// the stack for the calling function.
 	/// </summary>
     [Conditional("DEBUG")]
-    public static void Assert(bool condition, string exprTag = "<UNKNOWN>")
+    public static void Assert(bool condition, string exprTag)
     {
         if (!condition)
 		{
@@ -60,6 +60,18 @@ public static class OVRDebugUtils
 			throw new Exception();
 		}
     }
+
+	[Conditional("DEBUG")]
+	public static void Assert(bool condition)
+	{
+		if (!condition)
+		{
+			StackTrace st = new StackTrace(new StackFrame(true));
+			StackFrame sf = st.GetFrame(1);
+			Print("Assertion( " + sf.ToString() + " ): File '" + sf.GetFileName() + "', Line " + sf.GetFileLineNumber() + ".");
+			throw new Exception();
+		}
+	}
 
 	/// <summary>
 	/// Prints a message to the Unity console, or to the debug log on Android.

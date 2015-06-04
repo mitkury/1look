@@ -50,7 +50,7 @@ public class OVRPlatformMenu : MonoBehaviour
 		}
 		if ((cursorTimer != null) && (instantiatedCursorTimer == null)) 
 		{
-			Debug.Log("Instantiating CursorTimer");
+			//Debug.Log("Instantiating CursorTimer");
 			instantiatedCursorTimer = Instantiate(cursorTimer) as GameObject;
 			if (instantiatedCursorTimer != null)
 			{
@@ -191,10 +191,11 @@ public class OVRPlatformMenu : MonoBehaviour
 			cursorTimerMaterial.SetFloat ( "_Cutoff", alphaAmount );
 
 			// Draw timer at fixed distance in front of camera
-			OVRPose pose = OVRManager.display.GetHeadPose();
+			OVRPose pose = OVRManager.display.GetHeadPose(0f);
 			// cursor positions itself based on camera forward and draws at a fixed depth
-			Vector3 cameraForward = pose.orientation * Vector3.forward;
-			instantiatedCursorTimer.transform.position = pose.position + (cameraForward * fixedDepth);
+			Vector3 cameraForward = Camera.main.transform.forward;
+			Vector3 cameraPos = Camera.main.transform.position;
+			instantiatedCursorTimer.transform.position = cameraPos + (cameraForward * fixedDepth);
 			instantiatedCursorTimer.transform.forward = cameraForward;
 		}
 	}

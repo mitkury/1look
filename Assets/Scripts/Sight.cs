@@ -160,7 +160,6 @@ public class Sight : MonoBehaviour {
 		// Show a reticle only when a smallest angle to an object is less than x.
 		if (smallestAngle < minAngle) {
 			reticle.SetBodyScale(1);
-
 			/*
 			// Scale gradually.
 			var maxSize = 1f;
@@ -190,6 +189,8 @@ public class Sight : MonoBehaviour {
 
 	public void ResetTarget() {
 		target = null;
+		hitInfo = new RaycastHit();
+		reticle.ResetTargetBodyScale();
 		focusOnTargetWithoutInterruptionSec = 0;
 	}
 

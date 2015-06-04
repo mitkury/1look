@@ -63,7 +63,7 @@ public class OVRCameraRig : MonoBehaviour
 	/// </summary>
 	public event System.Action<OVRCameraRig> UpdatedAnchors;
 
-	private bool needsCameraConfigure;
+	private bool needsCameraConfigure = true;
 	private readonly string trackingSpaceName = "TrackingSpace";
 	private readonly string trackerAnchorName = "TrackerAnchor";
 	private readonly string eyeAnchorName = "EyeAnchor";
@@ -76,9 +76,8 @@ public class OVRCameraRig : MonoBehaviour
 		
 		if (!Application.isPlaying)
 			return;
-
-		needsCameraConfigure = true;
-
+		
+		OVRManager.Created += () => { needsCameraConfigure = true; };
 		OVRManager.NativeTextureScaleModified += (prev, current) => { needsCameraConfigure = true; };
 		OVRManager.VirtualTextureScaleModified += (prev, current) => { needsCameraConfigure = true; };
 		OVRManager.EyeTextureAntiAliasingModified += (prev, current) => { needsCameraConfigure = true; };
@@ -120,7 +119,7 @@ public class OVRCameraRig : MonoBehaviour
 	{
 		bool monoscopic = OVRManager.instance.monoscopic;
 
-		OVRPose tracker = OVRManager.tracker.GetPose();
+		OVRPose tracker = OVRManager.tracker.GetPose(0f);
 		OVRPose hmdLeftEye = OVRManager.display.GetEyePose(OVREye.Left);
 		OVRPose hmdRightEye = OVRManager.display.GetEyePose(OVREye.Right);
 
@@ -142,6 +141,9 @@ public class OVRCameraRig : MonoBehaviour
 
 	private void UpdateCameras()
 	{
+		if (!OVRManager.instance.isVRPresent)
+			return;
+
 		if (needsCameraConfigure)
 		{
 			leftEyeCamera = ConfigureCamera(OVREye.Left);
@@ -275,7 +277,6 @@ public class OVRCameraRig : MonoBehaviour
 
 		cam.fieldOfView = eyeDesc.fov.y;
 		cam.aspect = eyeDesc.resolution.x / eyeDesc.resolution.y;
-		cam.rect = new Rect(0f, 0f, OVRManager.instance.virtualTextureScale, OVRManager.instance.virtualTextureScale);
 		cam.targetTexture = OVRManager.display.GetEyeTexture(eye);
 		cam.hdr = OVRManager.instance.hdr;
 
@@ -296,6 +297,8 @@ public class OVRCameraRig : MonoBehaviour
 		bool hasSkybox = ((cam.clearFlags == CameraClearFlags.Skybox) &&
 		                 ((cam.gameObject.GetComponent<Skybox>() != null) || (RenderSettings.skybox != null)));
 		cam.clearFlags = (hasSkybox) ? CameraClearFlags.Skybox : CameraClearFlags.SolidColor;
+#else
+		cam.rect = new Rect(0f, 0f, OVRManager.instance.virtualTextureScale, OVRManager.instance.virtualTextureScale);
 #endif
 
 		// When rendering monoscopic, we will use the left camera render for both eyes.
@@ -306,7 +309,7 @@ public class OVRCameraRig : MonoBehaviour
 
 		// AA is documented to have no effect in deferred, but it causes black screens.
 		if (cam.actualRenderingPath == RenderingPath.DeferredLighting)
-			QualitySettings.antiAliasing = 0;
+			OVRManager.instance.eyeTextureAntiAliasing = OVRManager.RenderTextureAntiAliasing._1;
 
 		return cam;
 	}

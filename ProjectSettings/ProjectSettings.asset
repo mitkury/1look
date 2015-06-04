@@ -11,7 +11,7 @@ PlayerSettings:
   targetIOSGraphics: -1
   targetResolution: 0
   accelerometerFrequency: 60
-  companyName: WendyTeam
+  companyName: Wendy Team
   productName: Wendy
   cloudProjectId: 
   defaultCursor: {fileID: 0}
@@ -60,7 +60,7 @@ PlayerSettings:
   visibleInBackground: 1
   macFullscreenMode: 2
   d3d9FullscreenMode: 0
-  d3d11FullscreenMode: 1
+  d3d11FullscreenMode: 0
   xboxSpeechDB: 0
   xboxEnableHeadOrientation: 0
   xboxEnableGuest: 0
@@ -140,22 +140,6 @@ PlayerSettings:
     m_Icons:
     - m_Icon: {fileID: 2800000, guid: dfc413918b650418d993868cf88e711e, type: 3}
       m_Size: 128
-  - m_BuildTarget: Standalone
-    m_Icons:
-    - m_Icon: {fileID: 0}
-      m_Size: 1024
-    - m_Icon: {fileID: 2800000, guid: dfc413918b650418d993868cf88e711e, type: 3}
-      m_Size: 512
-    - m_Icon: {fileID: 0}
-      m_Size: 256
-    - m_Icon: {fileID: 0}
-      m_Size: 128
-    - m_Icon: {fileID: 0}
-      m_Size: 48
-    - m_Icon: {fileID: 0}
-      m_Size: 32
-    - m_Icon: {fileID: 0}
-      m_Size: 16
   - m_BuildTarget: Android
     m_Icons:
     - m_Icon: {fileID: 2800000, guid: dfc413918b650418d993868cf88e711e, type: 3}
@@ -238,7 +222,7 @@ PlayerSettings:
   ps4ApplicationParam2: 0
   ps4ApplicationParam3: 0
   ps4ApplicationParam4: 0
-  ps4Passcode: 1YeHrDXuOrfxmHXh1GjciP0ScxA9YdjE
+  ps4Passcode: frAQBc8Wsa1xVPfvJcrgRYwTiizs2trQ
   ps4pnSessions: 1
   ps4pnPresence: 1
   ps4pnFriends: 1
@@ -249,6 +233,7 @@ PlayerSettings:
   psp2NPTrophyPackPath: 
   psp2NPSupportGBMorGJP: 0
   psp2NPAgeRating: 12
+  psp2NPTitleDatPath: 
   psp2NPCommsID: 
   psp2NPCommunicationsID: 
   psp2NPCommsPassphrase: 
@@ -263,6 +248,7 @@ PlayerSettings:
   psp2PatchOriginalPackage: 
   psp2PackagePassword: 
   psp2KeystoneFile: 
+  psp2MemoryExpansionMode: 0
   psp2DRMType: 0
   psp2StorageType: 0
   psp2MediaCapacity: 0
@@ -401,6 +387,7 @@ PlayerSettings:
   XboxOnePackagingOverridePath: 
   XboxOneAppManifestOverridePath: 
   XboxOnePackageEncryption: 0
+  XboxOnePackageUpdateGranularity: 2
   XboxOneDescription: 
   XboxOneIsContentPackage: 0
   XboxOneEnableGPUVariability: 0
@@ -409,12 +396,16 @@ PlayerSettings:
   XboxOneAllowedProductIds: []
   XboxOnePersistentLocalStorageSize: 0
   intPropertyNames:
+  - Metro::ScriptingBackend
+  - WP8::ScriptingBackend
   - WebGL::ScriptingBackend
   - WebGL::audioCompressionFormat
   - WebGL::exceptionSupport
   - WebGL::memorySize
   - iOS::Architecture
   - iOS::ScriptingBackend
+  Metro::ScriptingBackend: 2
+  WP8::ScriptingBackend: 2
   WebGL::ScriptingBackend: 1
   WebGL::audioCompressionFormat: 4
   WebGL::exceptionSupport: 0

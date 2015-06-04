@@ -44,7 +44,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 469922}
-  - 114: {fileID: 11467308}
   - 114: {fileID: 11440992}
   - 54: {fileID: 5484472}
   - 114: {fileID: 11475148}
@@ -56,7 +55,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &160176
 GameObject:
   m_ObjectHideFlags: 0
@@ -105,7 +104,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 152346}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .74000001, y: .448000014, z: .568000019}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 452658}
@@ -119,8 +118,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 129764}
-  m_LocalRotation: {x: .021402847, y: .425971627, z: -.0113695767, w: .904411852}
-  m_LocalPosition: {x: .156000003, y: .075000003, z: .187999994}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: .200000003}
   m_LocalScale: {x: 1.46793735, y: 1.46793759, z: 1.46793699}
   m_Children: []
   m_Father: {fileID: 469922}
@@ -228,21 +227,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPlaceName: Apartment
   moveAfterSec: 5
---- !u!114 &11467308
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 152346}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b5c6fe6c53e94490ade18dcbea80887, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hasItsOwnFocusTime: 0
-  focusTimeSec: 0
-  isAbleToInteract: 1
-  body: {fileID: 0}
 --- !u!114 &11475148
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -257,7 +241,10 @@ MonoBehaviour:
   hasItsOwnFocusTime: 0
   focusTimeSec: 0
   isAbleToInteract: 1
-  body: {fileID: 0}
+  hasItsOwnOnGrabDistance: 0
+  onGrabDistance: 0
+  customOnGrabRotation: {x: 0, y: 0, z: 0}
+  onGrabLegacyAnimation: {fileID: 0}
 --- !u!114 &11488394
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -69,6 +69,11 @@ public class Reticle : MonoBehaviour {
 		LeanTween.scale(body.gameObject, targetScale, 0.15f);
 	}
 
+	// Temp hack.
+	public void ResetTargetBodyScale() {
+		targetBodyScale = 0.999f;
+	}
+
 	public void SetBodyOpacity(float alpha) {
 		if (targetBodyOpacity == alpha)
 			return;

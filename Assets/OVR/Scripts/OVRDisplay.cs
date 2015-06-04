@@ -76,7 +76,9 @@ public class OVRDisplay
 	{
 		get {
 #if !UNITY_ANDROID || UNITY_EDITOR
-			return (OVRManager.capiHmd.GetTrackingState().StatusFlags & (uint)StatusBits.HmdConnected) != 0;
+			if (!OVRManager.instance.isVRPresent)
+				return false;
+			return (OVRManager.capiHmd.GetTrackingState(0f).StatusFlags & (uint)StatusBits.HmdConnected) != 0;
 #else
 			return OVR_IsHMDPresent();
 #endif
@@ -86,8 +88,8 @@ public class OVRDisplay
 	private int prevAntiAliasing;
 	private int prevScreenWidth;
 	private int prevScreenHeight;
-	private bool needsConfigureTexture;
-	private bool needsSetTexture;
+	private bool needsConfigureTexture = true;
+	private bool needsSetTexture = true;
 	private bool needsSetDistortionCaps;
 	private bool prevFullScreen;
 	private OVRPose[] eyePoses = new OVRPose[(int)OVREye.Count];
@@ -98,7 +100,7 @@ public class OVRDisplay
 	private static int frameCount = 0;
 
 #if !UNITY_ANDROID && !UNITY_EDITOR
-	private bool needsSetViewport;
+	private bool needsSetViewport = true;
 #endif
 
 #if UNITY_ANDROID && !UNITY_EDITOR
@@ -117,23 +119,11 @@ public class OVRDisplay
 	public OVRDisplay()
 	{
 #if !UNITY_ANDROID || UNITY_EDITOR
-		needsConfigureTexture = false;
-		needsSetTexture = true;
-		needsSetDistortionCaps = true;
         prevFullScreen = Screen.fullScreen;
-#elif !UNITY_ANDROID && !UNITY_EDITOR
-		needsSetViewport = true;
 #endif
+		ConfigureEyeTextures();
 
-		ConfigureEyeDesc(OVREye.Left);
-		ConfigureEyeDesc(OVREye.Right);
-
-		for (int i = 0; i < eyeTextureCount; i += 2)
-		{
-			ConfigureEyeTexture(i, OVREye.Left);
-			ConfigureEyeTexture(i, OVREye.Right);
-		}
-
+		OVRManager.Created += () => { needsConfigureTexture = true; };
 		OVRManager.NativeTextureScaleModified += (prev, current) => { needsConfigureTexture = true; };
 		OVRManager.EyeTextureAntiAliasingModified += (prev, current) => { needsConfigureTexture = true; };
 		OVRManager.EyeTextureDepthModified += (prev, current) => { needsConfigureTexture = true; };
@@ -180,14 +170,23 @@ public class OVRDisplay
 	/// <summary>
 	/// Gets the head pose at the current time or predicted at the given time.
 	/// </summary>
-	public OVRPose GetHeadPose(double predictionTime = 0d)
+	public OVRPose GetHeadPose(double predictionTime)
 	{
 #if !UNITY_ANDROID || UNITY_EDITOR
+		if (!OVRManager.instance.isVRPresent)
+		{
+			return new OVRPose
+			{
+				position = Vector3.zero,
+				orientation = Quaternion.identity,
+			};
+		}
+
 		double abs_time_plus_pred = Hmd.GetTimeInSeconds() + predictionTime;
 
 		TrackingState state = OVRManager.capiHmd.GetTrackingState(abs_time_plus_pred);
 
-		return state.HeadPose.ThePose.ToPose();
+		return state.HeadPose.ThePose.ToPose(true);
 #else
 		float px = 0.0f, py = 0.0f, pz = 0.0f, ow = 0.0f, ox = 0.0f, oy = 0.0f, oz = 0.0f;
 
@@ -210,13 +209,23 @@ public class OVRDisplay
 	/// <summary>
 	/// Gets the pose of the given eye, predicted for the time when the current frame will scan out.
 	/// </summary>
+	/// <description>NOTE: This is safe to call in an Update function, but not in LateUpdate or subsequent callbacks.</description>
 	public OVRPose GetEyePose(OVREye eye)
 	{
 #if !UNITY_ANDROID || UNITY_EDITOR
+        if (!OVRManager.instance.isVRPresent)
+		{
+			return new OVRPose
+			{
+				position = Vector3.zero,
+				orientation = Quaternion.identity,
+			};
+		}
+
 		bool updateEyePose = !(OVRManager.instance.timeWarp && OVRManager.instance.freezeTimeWarp);
 		if (updateEyePose)
 		{
-			eyePoses[(int)eye] = OVR_GetRenderPose(frameCount, (int)eye).ToPose();
+			eyePoses[(int)eye] = OVR_GetRenderPose(frameCount, (int)eye).ToPose(true);
 		}
 
 		return eyePoses[(int)eye];
@@ -260,6 +269,9 @@ public class OVRDisplay
 	public Matrix4x4 GetProjection(int eyeId, float nearClip, float farClip)
 	{
 #if !UNITY_ANDROID || UNITY_EDITOR
+        if (!OVRManager.instance.isVRPresent)
+			return new Matrix4x4();
+
 		FovPort fov = OVRManager.capiHmd.GetDesc().DefaultEyeFov[eyeId];
 
 		uint projectionModFlags = (uint)Hmd.ProjectionModifier.RightHanded;
@@ -281,6 +293,9 @@ public class OVRDisplay
 	public void RecenterPose()
 	{
 #if !UNITY_ANDROID || UNITY_EDITOR
+        if (!OVRManager.instance.isVRPresent)
+			return;
+
 		OVRManager.capiHmd.RecenterPose();
 #else
 		OVR_ResetSensorOrientation();
@@ -299,7 +314,10 @@ public class OVRDisplay
 	{
 		get {
 #if !UNITY_ANDROID || UNITY_EDITOR
-			return OVRManager.capiHmd.GetTrackingState().HeadPose.LinearAcceleration.ToVector3();
+	        if (!OVRManager.instance.isVRPresent)
+				return Vector3.zero;
+
+			return OVRManager.capiHmd.GetTrackingState(0f).HeadPose.LinearAcceleration.ToVector3(true);
 #else
 			float x = 0.0f, y = 0.0f, z = 0.0f;
 			OVR_GetAcceleration(ref x, ref y, ref z);
@@ -315,7 +333,10 @@ public class OVRDisplay
 	{
 		get {
 #if !UNITY_ANDROID || UNITY_EDITOR
-			return OVRManager.capiHmd.GetTrackingState().HeadPose.AngularVelocity.ToVector3();
+	        if (!OVRManager.instance.isVRPresent)
+				return Vector3.zero;
+
+			return OVRManager.capiHmd.GetTrackingState(0f).HeadPose.AngularVelocity.ToVector3(true);
 #else
 			float x = 0.0f, y = 0.0f, z = 0.0f;
 			OVR_GetAngularVelocity(ref x, ref y, ref z);
@@ -356,6 +377,9 @@ public class OVRDisplay
 		get
 		{
 #if !UNITY_ANDROID || UNITY_EDITOR
+	        if (!OVRManager.instance.isVRPresent)
+				return false;
+
 			uint caps = OVRManager.capiHmd.GetDesc().HmdCaps;
 			uint mask = caps & (uint)HmdCaps.ExtendDesktop;
 			return mask == 0;
@@ -373,6 +397,9 @@ public class OVRDisplay
 		get
 		{
 #if !UNITY_ANDROID || UNITY_EDITOR
+	        if (!OVRManager.instance.isVRPresent)
+				return false;
+
 			uint caps = OVRManager.capiHmd.GetEnabledCaps();
 			return (caps & (uint)HmdCaps.NoMirrorToWindow) == 0;
 #else
@@ -383,6 +410,9 @@ public class OVRDisplay
 		set
 		{
 #if !UNITY_ANDROID || UNITY_EDITOR
+	        if (!OVRManager.instance.isVRPresent)
+				return;
+
 			uint caps = OVRManager.capiHmd.GetEnabledCaps();
 
 			if (((caps & (uint)HmdCaps.NoMirrorToWindow) == 0) == value)
@@ -441,6 +471,9 @@ public class OVRDisplay
 
 			_distortionCaps = value;
 #if !UNITY_ANDROID || UNITY_EDITOR
+	        if (!OVRManager.instance.isVRPresent)
+				return;
+
 			OVR_SetDistortionCaps(value);
 #endif
 		}
@@ -460,6 +493,8 @@ public class OVRDisplay
 	{
 		get {
 #if !UNITY_ANDROID || UNITY_EDITOR
+	        if (OVRManager.instance.isVRPresent)
+	        {
 			float[] values = { 0.0f, 0.0f, 0.0f, 0.0f, 0.0f };
 			float[] latencies = OVRManager.capiHmd.GetFloatArray("DK2Latency", values);
 
@@ -471,7 +506,8 @@ public class OVRDisplay
 				renderError = latencies[3] * 1000.0f,
 				timeWarpError = latencies[4] * 1000.0f,
 			};
-#else
+	        }
+#endif
 			return new LatencyData
 			{
 				render = 0.0f,
@@ -480,7 +516,6 @@ public class OVRDisplay
 				renderError = 0.0f,
 				timeWarpError = 0.0f,
 			};
-#endif
 		}
 	}
 
@@ -501,13 +536,13 @@ public class OVRDisplay
 				distortionCaps &= ~(uint)Ovr.DistortionCaps.HqDistortion;
 			}
 	
-			if (OVRManager.instance.hdr)
+			if (QualitySettings.activeColorSpace == ColorSpace.Linear && !OVRManager.instance.hdr)
 			{
-				distortionCaps &= ~(uint)Ovr.DistortionCaps.SRGB;
+				distortionCaps |= (uint)Ovr.DistortionCaps.SRGB;
 			}
 			else
 			{
-				distortionCaps |= (uint)Ovr.DistortionCaps.SRGB;
+				distortionCaps &= ~(uint)Ovr.DistortionCaps.SRGB;
 			}
 
 			prevAntiAliasing = QualitySettings.antiAliasing;
@@ -540,22 +575,10 @@ public class OVRDisplay
 	private void UpdateTextures()
 	{
 #if !UNITY_ANDROID || UNITY_EDITOR
-        if (needsConfigureTexture)
-		{
-			ConfigureEyeDesc(OVREye.Left);
-			ConfigureEyeDesc(OVREye.Right);
+        if (!OVRManager.instance.isVRPresent)
+        	return;
 
-			for (int i = 0; i < eyeTextureCount; i += 2)
-			{
-				ConfigureEyeTexture(i, OVREye.Left);
-				ConfigureEyeTexture(i, OVREye.Right);
-			}
-
-			OVR_UnitySetModeChange(true);
-
-			needsConfigureTexture = false;
-			needsSetTexture = true;
-		}
+		ConfigureEyeTextures();
 #endif
 
 		for (int i = 0; i < eyeTextureCount; i++)
@@ -613,6 +636,9 @@ public class OVRDisplay
         Vector2 fovSize = Vector2.zero;
 
 #if !UNITY_ANDROID || UNITY_EDITOR
+        if (!OVRManager.instance.isVRPresent)
+        	return;
+
 		FovPort fovPort = OVRManager.capiHmd.GetDesc().DefaultEyeFov[(int)eye];
 		fovPort.LeftTan = fovPort.RightTan = Mathf.Max(fovPort.LeftTan, fovPort.RightTan);
 		fovPort.UpTan = fovPort.DownTan = Mathf.Max(fovPort.UpTan, fovPort.DownTan);
@@ -631,26 +657,51 @@ public class OVRDisplay
 		};
 	}
 
-	private void ConfigureEyeTexture(int eyeBufferIndex, OVREye eye)
+	private void ConfigureEyeTextures()
 	{
-		int eyeIndex = eyeBufferIndex + (int)eye;
-		EyeRenderDesc eyeDesc = eyeDescs[(int)eye];
+		if (!OVRManager.instance.isVRPresent)
+			return;
 
-		eyeTextures[eyeIndex] = new RenderTexture(
-			(int)eyeDesc.resolution.x,
-			(int)eyeDesc.resolution.y,
-			(int)OVRManager.instance.eyeTextureDepth,
-			OVRManager.instance.eyeTextureFormat);
+		ConfigureEyeDesc(OVREye.Left);
+		ConfigureEyeDesc(OVREye.Right);
 
-		eyeTextures[eyeIndex].antiAliasing = (int)OVRManager.instance.eyeTextureAntiAliasing;
+		if (!needsConfigureTexture)
+			return;
 
-		eyeTextures[eyeIndex].Create();
-		eyeTextureIds[eyeIndex] = eyeTextures[eyeIndex].GetNativeTextureID();
+		for (int eyeBufferIndex = 0; eyeBufferIndex < eyeTextureCount; eyeBufferIndex += 2)
+		{
+			foreach (var eye in new OVREye[] { OVREye.Left, OVREye.Right })
+			{
+				int eyeIndex = eyeBufferIndex + (int)eye;
+				EyeRenderDesc eyeDesc = eyeDescs[(int)eye];
+				
+				eyeTextures[eyeIndex] = new RenderTexture(
+					(int)eyeDesc.resolution.x,
+					(int)eyeDesc.resolution.y,
+					(int)OVRManager.instance.eyeTextureDepth,
+					OVRManager.instance.eyeTextureFormat);
+				
+				eyeTextures[eyeIndex].antiAliasing = (int)OVRManager.instance.eyeTextureAntiAliasing;
+				
+				eyeTextures[eyeIndex].Create();
+				eyeTextureIds[eyeIndex] = eyeTextures[eyeIndex].GetNativeTextureID();
+			}
+		}
+
+#if !UNITY_ANDROID || UNITY_EDITOR
+		OVR_UnitySetModeChange(true);
+#endif
+		needsSetTexture = true;
+
+		needsConfigureTexture = false;
 	}
 
     public void SetViewport(int x, int y, int w, int h)
     {
 #if !UNITY_ANDROID || UNITY_EDITOR
+        if (!OVRManager.instance.isVRPresent)
+        	return;
+
         OVR_SetViewport(x, y, w, h);
 #endif
     }
@@ -695,7 +746,7 @@ public class OVRDisplay
     [DllImport(LibOVR, CallingConvention = CallingConvention.Cdecl)]
     private static extern Posef OVR_GetRenderPose(int frameIndex, int eyeId);
     [DllImport(LibOVR, CallingConvention = CallingConvention.Cdecl)]
-    private static extern bool OVR_SetTexture(int id, System.IntPtr texture, float scale = 1);
+    private static extern bool OVR_SetTexture(int id, System.IntPtr texture, float scale);
     [DllImport(LibOVR, CallingConvention = CallingConvention.Cdecl)]
     private static extern bool OVR_UnityGetModeChange();
     [DllImport(LibOVR, CallingConvention = CallingConvention.Cdecl)]

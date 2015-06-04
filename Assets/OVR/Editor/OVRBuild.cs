@@ -83,7 +83,7 @@ partial class OculusBuildApp
 {
     static void SetAndroidTarget()
     {
-#if UNITY_5_0
+#if UNITY_5_0 || UNITY_5_1
 		EditorUserBuildSettings.androidBuildSubtarget = MobileTextureSubtarget.ETC2;
 #else
 		EditorUserBuildSettings.androidBuildSubtarget = AndroidBuildSubtarget.ETC2;

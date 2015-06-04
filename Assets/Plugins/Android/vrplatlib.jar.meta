@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 4cbc5c3526054134f8c045506d7b1350
-timeCreated: 1429759408
+guid: eac0d6cededa1c1419fed8b28f34419c
+timeCreated: 1426114508
 licenseType: Pro
 PluginImporter:
   serializedVersion: 1
@@ -8,9 +8,17 @@ PluginImporter:
   executionOrder: {}
   isPreloaded: 0
   platformData:
-    Any:
+    Android:
       enabled: 1
+      settings:
+        CPU: ARMv7
+    Any:
+      enabled: 0
       settings: {}
+    Editor:
+      enabled: 0
+      settings:
+        DefaultValueInitialized: true
   userData: 
   assetBundleName: 
   assetBundleVariant: 

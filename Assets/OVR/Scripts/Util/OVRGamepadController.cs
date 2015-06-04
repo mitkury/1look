@@ -38,6 +38,8 @@ public class OVRGamepadController : MonoBehaviour
 	   	RightYAxis,
 	   	LeftTrigger,
 	   	RightTrigger,
+        DPad_X_Axis,
+        DPad_Y_Axis,
 		Max,
 	};
 
@@ -73,6 +75,8 @@ public class OVRGamepadController : MonoBehaviour
 		"Right_Y_Axis",
 		"LeftTrigger",
 		"RightTrigger",
+        "DPad_X_Axis",
+        "DPad_Y_Axis",
 	};
 
 	/// <summary>
@@ -107,6 +111,8 @@ public class OVRGamepadController : MonoBehaviour
 		"Desktop_Right_Y_Axis",
 		"Desktop_LeftTrigger",
 		"Desktop_RightTrigger",
+        "Desktop_DPad_X_Axis",
+        "Desktop_DPad_Y_Axis",
 	};
 	
 	/// <summary>
@@ -135,6 +141,8 @@ public class OVRGamepadController : MonoBehaviour
 		0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13
 	};
 
+    private static bool[] ButtonDownLastFrame = new bool[(int)Button.Max]; 
+
 	/// <summary>
 	/// The current Unity input names for all gamepad axes.
 	/// </summary>
@@ -144,6 +152,8 @@ public class OVRGamepadController : MonoBehaviour
 	/// The current Unity input names for all gamepad buttons.
 	/// </summary>
     public static string[] ButtonNames = null;
+
+    private static int lastGPCRefresh = 0;
 
     static OVRGamepadController()
     {
@@ -219,11 +229,21 @@ public class OVRGamepadController : MonoBehaviour
 	/// <returns><c>true</c>, if c_ update was GPed, <c>false</c> otherwise.</returns>
 	public static bool GPC_Update()
     {
+        lastGPCRefresh = Time.frameCount;
         if (!OVRManager.instance.isSupportedPlatform)
             return false;
 		return OVR_GamepadController_Update();
 	}
 #endif
+	static void GPC_LateUpdate()
+    {
+        if (!OVRManager.instance.isSupportedPlatform)
+            return;
+        for (int i = 0; i < (int)Button.Max; i++)
+        {
+            ButtonDownLastFrame[i] = GPC_GetButton((Button)i);
+        }
+	}
 
 	/// <summary>
 	/// GPC_GetAxis
@@ -236,7 +256,9 @@ public class OVRGamepadController : MonoBehaviour
 #if UNITY_ANDROID && !UNITY_EDITOR
 		return Input.GetAxis(AxisNames[(int)axis]);
 #else
-		return OVR_GamepadController_GetAxis((int)axis);
+        float xinputValue = OVR_GamepadController_GetAxis((int)axis);
+        float unityValue = Input.GetAxis(AxisNames[(int)axis]);
+        return Mathf.Abs(xinputValue) > Mathf.Abs(unityValue) ? xinputValue : unityValue;
 #endif
 	}
 	
@@ -263,7 +285,11 @@ public class OVRGamepadController : MonoBehaviour
 #if UNITY_ANDROID && !UNITY_EDITOR
 		return Input.GetButton(ButtonNames[(int)button]);
 #else
-		return OVR_GamepadController_GetButton((int)button);
+        if (Time.frameCount != lastGPCRefresh)
+        {
+            GPC_Update();
+        }
+		return OVR_GamepadController_GetButton((int)button) || Input.GetButton(ButtonNames[(int)button]);
 #endif
 	}
 
@@ -276,6 +302,24 @@ public class OVRGamepadController : MonoBehaviour
 			return false;
 		return ReadButton(button);
 	}
+    /// <summary>
+	/// Returns true if the given Button was pressed this frame.
+	/// </summary>
+    public static bool GPC_GetButtonDown(Button button)
+    {
+        if (ReadButton == null)
+            return false;
+        return ReadButton(button) && !ButtonDownLastFrame[(int)button];
+    }
+    /// <summary>
+	/// Returns true if the given Button was released this frame.
+	/// </summary>
+    public static bool GPC_GetButtonUp(Button button)
+    {
+        if (ReadButton == null)
+            return false;
+        return !ReadButton(button) && ButtonDownLastFrame[(int)button];
+    }
 
 	public static void SetReadButtonDelegate(ReadButtonDelegate del)
 	{
@@ -321,7 +365,10 @@ public class OVRGamepadController : MonoBehaviour
 
     void Update()
     {
-		GPC_Available = GPC_Update();
+        if (lastGPCRefresh < Time.frameCount)
+        {
+            GPC_Available = GPC_Update();
+        }
     }
 
 	void OnDestroy()
@@ -343,4 +390,8 @@ public class OVRGamepadController : MonoBehaviour
 	[DllImport(LibOVR, CallingConvention = CallingConvention.Cdecl)]
 	public static extern bool OVR_GamepadController_GetButton(int button);
 #endif
+    void LateUpdate()
+    {
+        GPC_LateUpdate();
+    }
 }
