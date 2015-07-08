@@ -41,6 +41,7 @@ public class Visitor : MonoBehaviour {
 		//regularCameraRig.gameObject.SetActive(false);
 		//vrCameraRig.gameObject.SetActive(false);
 
+		/*
 		// VR mode.
 		if (King.isInVRMode) {
 			regularCameraRig.gameObject.SetActive(false);
@@ -60,11 +61,26 @@ public class Visitor : MonoBehaviour {
 			sight.anchor = regularCenterOfView;
 			cameras.Add(regularCameraRig.GetComponentInChildren<Camera>());
 		}
+		*/
+
+
+
+		// Using Unity's native VR.
+		regularCameraRig.gameObject.SetActive(true);
+		vrCameraRig.gameObject.SetActive(false);
+		
+		sight.anchor = regularCenterOfView;
+		cameras.Add(regularCameraRig.GetComponentInChildren<Camera>());
+
+
+		if (King.isInVRMode)
+			regularCameraRig.GetComponent<MouseCameraControl>().enabled = false;
+		else
+			regularCameraRig.GetComponent<MouseCameraControl>().enabled = true;
+
+
 
 		soundPlayer = GetComponent<PlaysSoundOnRequest>();
-
-		OVRTouchpad.Create();
-		OVRTouchpad.TouchHandler += HandleTouchHandler;
 
 		// Prepare an object for fading main camera in/out.
 		//var blinkTextureGO = iTween.CameraFadeAdd();
@@ -94,21 +110,6 @@ public class Visitor : MonoBehaviour {
 		LeanTween.value(gameObject, delegate(float value) { 
 			AudioListener.volume = value;
 		}, 1f, 0f, 3f);
-	}
-
-	void HandleTouchHandler (object sender, System.EventArgs e) {
-		OVRTouchpad.TouchArgs touchArgs = (OVRTouchpad.TouchArgs)e;
-		if(touchArgs.TouchType == OVRTouchpad.TouchEvent.SingleTap) {
-			/*
-			if (isFaded) {
-				FadeIn();
-			} else {
-				FadeOut();
-			}
-			
-			isFaded = !isFaded;
-			*/
-		}
 	}
 
 	void FadeIn()

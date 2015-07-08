@@ -354,7 +354,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &139444
 GameObject:
   m_ObjectHideFlags: 1
@@ -741,7 +741,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &169100
 GameObject:
   m_ObjectHideFlags: 0
@@ -1952,6 +1952,7 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: .0219999999
+  m_StereoMirrorMode: 0
 --- !u!20 &2069086
 Camera:
   m_ObjectHideFlags: 1
@@ -1984,6 +1985,7 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: .0219999999
+  m_StereoMirrorMode: 0
 --- !u!20 &2072132
 Camera:
   m_ObjectHideFlags: 1
@@ -2016,6 +2018,7 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: .0219999999
+  m_StereoMirrorMode: 0
 --- !u!23 &2302422
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -2732,7 +2735,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 169092}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c22f098f8fa5547f2a0b9f4b3ff9d112, type: 3}
   m_Name: 
@@ -2784,6 +2787,8 @@ MonoBehaviour:
   hasItsOwnFocusTime: 0
   focusTimeSec: 0
   isAbleToInteract: 1
+  hasItsOwnOnGrabDistance: 0
+  onGrabDistance: 0
   customOnGrabRotation: {x: 0, y: 0, z: 0}
   onGrabLegacyAnimation: {fileID: 0}
 --- !u!114 &11481278
@@ -2823,6 +2828,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df9f338034892c44ebb62d97894772f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  needsCameraConfigure: 1
+  <leftEyeCamera>k__BackingField: {fileID: 0}
+  <rightEyeCamera>k__BackingField: {fileID: 0}
+  <trackingSpace>k__BackingField: {fileID: 0}
+  <leftEyeAnchor>k__BackingField: {fileID: 0}
+  <centerEyeAnchor>k__BackingField: {fileID: 0}
+  <rightEyeAnchor>k__BackingField: {fileID: 0}
+  <trackerAnchor>k__BackingField: {fileID: 0}
 --- !u!114 &11493284
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2845,6 +2858,7 @@ MonoBehaviour:
   resetTrackerOnLoad: 1
   monoscopic: 0
   hdr: 0
+  <isSupportedPlatform>k__BackingField: 0
 --- !u!114 &11497728
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3194,7 +3208,15 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 169100}
