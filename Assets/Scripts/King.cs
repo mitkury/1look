@@ -59,6 +59,9 @@ public class King : SingletonComponent<King> {
 		King.visitor.sight.enabled = false;
 
 		var title = FindObjectOfType<Title>();
+
+		placeManager.PreloadPlaces();
+
 		if (title != null) {
 			title.Activate();
 
@@ -66,10 +69,13 @@ public class King : SingletonComponent<King> {
 				yield return null;
 		}
 
-		placeManager.PreloadPlaces();
-
 		while(placeManager.placesAreLoading)
 			yield return null;
+		
+		King.visitor.screenFader.FadeIn(2);
+		yield return new WaitForSeconds(2.1f);
+		
+		title.gameObject.SetActive(false);
 
 		placeManager.ActivatePlace("Apartment");
 

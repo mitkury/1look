@@ -27,22 +27,22 @@ public class Sight : MonoBehaviour {
 		reticle.gameObject.SetActive(true);
 		reticle.SetBody(0);
 
-		//OVRTouchpad.TouchHandler += HandleTouchHandler;
+		OVRTouchpad.TouchHandler += HandleTouchHandler;
 	}
-
-	/*
-	void HandleTouchHandler (object sender, System.EventArgs e) {
-		OVRTouchpad.TouchArgs touchArgs = (OVRTouchpad.TouchArgs)e;
-		if(touchArgs.TouchType == OVRTouchpad.TouchEvent.SingleTap) {
-			focusOnTargetWithoutInterruptionSec = 999f;
-		}
-	}
-	*/
 
 	void OnDisable() {
 		reticle.gameObject.SetActive(false);
 		hitInfo = new RaycastHit();
 		focusOnTargetWithoutInterruptionSec = 0;
+		
+		OVRTouchpad.TouchHandler -= HandleTouchHandler;
+	}
+	
+	void HandleTouchHandler (object sender, System.EventArgs e) {
+		OVRTouchpad.TouchArgs touchArgs = (OVRTouchpad.TouchArgs)e;
+		if(touchArgs.TouchType == OVRTouchpad.TouchEvent.SingleTap) {
+			focusOnTargetWithoutInterruptionSec = 999f;
+		}
 	}
 
 	void UpdateReticle() {
@@ -160,8 +160,10 @@ public class Sight : MonoBehaviour {
 		}
 
 		// Show a reticle only when a smallest angle to an object is less than x.
-		if (smallestAngle < minAngle) {
-			reticle.SetBodyScale(1);
+		if (smallestAngle == 0) {
+			reticle.SetBodyScale(1f);
+		} else if (smallestAngle < minAngle) {
+			reticle.SetBodyScale(0.7f);
 			/*
 			// Scale gradually.
 			var maxSize = 1f;
@@ -171,7 +173,6 @@ public class Sight : MonoBehaviour {
 			var targetSize = minSize + margin * alpha;
 			reticle.SetBodyScale(targetSize);
 			*/
-
 		} else {
 			reticle.SetBodyScale(0.4f);
 		}

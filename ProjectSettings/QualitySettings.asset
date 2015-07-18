@@ -44,11 +44,11 @@ QualitySettings:
     shadowCascades: 4
     shadowDistance: 150
     shadowCascade2Split: .333333343
-    shadowCascade4Split: {x: .0666666701, y: .199999988, z: .466666639}
+    shadowCascade4Split: {x: .0666666701, y: .200000003, z: .466666669}
     blendWeights: 4
     textureQuality: 0
     anisotropicTextures: 0
-    antiAliasing: 4
+    antiAliasing: 0
     softParticles: 0
     softVegetation: 1
     realtimeReflectionProbes: 0
@@ -72,7 +72,7 @@ QualitySettings:
     blendWeights: 4
     textureQuality: 0
     anisotropicTextures: 0
-    antiAliasing: 4
+    antiAliasing: 0
     softParticles: 0
     softVegetation: 1
     realtimeReflectionProbes: 0

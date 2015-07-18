@@ -41,7 +41,6 @@ public class Visitor : MonoBehaviour {
 		//regularCameraRig.gameObject.SetActive(false);
 		//vrCameraRig.gameObject.SetActive(false);
 
-		/*
 		// VR mode.
 		if (King.isInVRMode) {
 			regularCameraRig.gameObject.SetActive(false);
@@ -61,22 +60,22 @@ public class Visitor : MonoBehaviour {
 			sight.anchor = regularCenterOfView;
 			cameras.Add(regularCameraRig.GetComponentInChildren<Camera>());
 		}
-		*/
 
 
 
 		// Using Unity's native VR.
+		/*
 		regularCameraRig.gameObject.SetActive(true);
 		vrCameraRig.gameObject.SetActive(false);
 		
 		sight.anchor = regularCenterOfView;
 		cameras.Add(regularCameraRig.GetComponentInChildren<Camera>());
 
-
 		if (King.isInVRMode)
 			regularCameraRig.GetComponent<MouseCameraControl>().enabled = false;
 		else
 			regularCameraRig.GetComponent<MouseCameraControl>().enabled = true;
+		*/
 
 
 
@@ -88,6 +87,9 @@ public class Visitor : MonoBehaviour {
 
 		screenFader.anchor = sight.anchor;
 	}
+
+	public float longPressDelay = 0.75f;
+	float homeButtonDownTime = 0.0f;
 
 	void Update() {
 		UpdateItemInHand();
@@ -101,6 +103,29 @@ public class Visitor : MonoBehaviour {
 			StartCoroutine(RunDemoClosingCo());
 		}
 		#endif
+
+		if (Input.GetKeyDown(KeyCode.Escape))
+		{
+			homeButtonDownTime = Time.realtimeSinceStartup;
+		}
+		else if (Input.GetKey(KeyCode.Escape) && ((Time.realtimeSinceStartup - homeButtonDownTime) >= longPressDelay))
+		{
+			// reset so something else doesn't trigger afterwards
+			Input.ResetInputAxes();
+			homeButtonDownTime = 0.0f;
+			#if UNITY_ANDROID && !UNITY_EDITOR
+			// show the platform UI
+			OVRPluginEvent.Issue(RenderEventType.PlatformUI);
+			#endif
+		}
+		else if (Input.GetKeyUp(KeyCode.Escape))
+		{
+			float elapsedTime = (Time.realtimeSinceStartup - homeButtonDownTime);
+			if (elapsedTime < longPressDelay)
+			{
+				// Show an in-game menu.
+			}
+		}
 	}
 
 	IEnumerator RunDemoClosingCo() {

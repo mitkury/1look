@@ -11,6 +11,7 @@ public class PlaceManager : MonoBehaviour {
 	public Place currentPlace { get; private set; }
 	public bool placesAreLoading { get; private set; }
 	public List<Place> places = new List<Place>();
+	public List<int> scenesToExcept = new List<int>();
 
 	/*
 	void LoadPlace(int levelIndex) {
@@ -104,13 +105,13 @@ public class PlaceManager : MonoBehaviour {
 		King.visitor.SetBackground(Color.black);
 		yield return new WaitForSeconds(0.1f);
 
-		var spinningBottle = GameObject.Find("Title");
+		var spinningBottle = GameObject.FindObjectOfType<Title>().gameObject;
 
 		var prevLoadingPriority = Application.backgroundLoadingPriority;
-		Application.backgroundLoadingPriority = ThreadPriority.Low;
+		Application.backgroundLoadingPriority = ThreadPriority.High;
 
 		for(int i = 0; i < Application.levelCount; i++) {
-			if (i == Application.loadedLevel)
+			if (i == Application.loadedLevel || scenesToExcept.Find(s => s == i) == i)
 				continue;
 
 			newlyLoadedPlace = null;
@@ -131,12 +132,6 @@ public class PlaceManager : MonoBehaviour {
 			while(newlyLoadedPlace == null)
 				yield return null;
 		}
-
-		King.visitor.screenFader.FadeIn(2);
-		yield return new WaitForSeconds(2.1f);
-
-		if (spinningBottle != null)
-			spinningBottle.SetActive(false);
 
 		placesAreLoading = false;
 
