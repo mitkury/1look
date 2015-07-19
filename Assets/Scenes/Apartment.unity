@@ -1460,6 +1460,7 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: .0219999999
+  m_StereoMirrorMode: 0
 --- !u!1 &338123787
 GameObject:
   m_ObjectHideFlags: 0
@@ -4639,6 +4640,7 @@ MonoBehaviour:
   m_SubmitButton: Submit
   m_CancelButton: Cancel
   m_InputActionsPerSecond: 10
+  m_RepeatDelay: .5
   m_AllowActivationOnMobileDevice: 0
 --- !u!114 &989563617
 MonoBehaviour:
@@ -5070,6 +5072,22 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1606cf0211d4c4c8e8993e27ad277408, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1085120208 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 160362, guid: 1606cf0211d4c4c8e8993e27ad277408, type: 2}
+  m_PrefabInternal: {fileID: 1085120207}
+--- !u!65 &1085120209
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1085120208}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: .673388004, y: .708040833, z: .933730841}
+  m_Center: {x: -.00910899043, y: .00315952208, z: -.0685444251}
 --- !u!1001 &1088076138
 Prefab:
   m_ObjectHideFlags: 0

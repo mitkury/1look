@@ -41,6 +41,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ee6bec050e4642669b9945eb478e001, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  places: []
+  scenesToExcept: 00000000
 --- !u!114 &11471822
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -63,6 +65,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3ddb8e009f334e03b9d85d525db2e98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  menuPrefab: {fileID: 171806, guid: 095fc5b0ab03d4182af5e4be8354110e, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

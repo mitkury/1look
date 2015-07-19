@@ -77,8 +77,6 @@ public class Visitor : MonoBehaviour {
 			regularCameraRig.GetComponent<MouseCameraControl>().enabled = true;
 		*/
 
-
-
 		soundPlayer = GetComponent<PlaysSoundOnRequest>();
 
 		// Prepare an object for fading main camera in/out.
@@ -87,9 +85,6 @@ public class Visitor : MonoBehaviour {
 
 		screenFader.anchor = sight.anchor;
 	}
-
-	public float longPressDelay = 0.75f;
-	float homeButtonDownTime = 0.0f;
 
 	void Update() {
 		UpdateItemInHand();
@@ -103,29 +98,6 @@ public class Visitor : MonoBehaviour {
 			StartCoroutine(RunDemoClosingCo());
 		}
 		#endif
-
-		if (Input.GetKeyDown(KeyCode.Escape))
-		{
-			homeButtonDownTime = Time.realtimeSinceStartup;
-		}
-		else if (Input.GetKey(KeyCode.Escape) && ((Time.realtimeSinceStartup - homeButtonDownTime) >= longPressDelay))
-		{
-			// reset so something else doesn't trigger afterwards
-			Input.ResetInputAxes();
-			homeButtonDownTime = 0.0f;
-			#if UNITY_ANDROID && !UNITY_EDITOR
-			// show the platform UI
-			OVRPluginEvent.Issue(RenderEventType.PlatformUI);
-			#endif
-		}
-		else if (Input.GetKeyUp(KeyCode.Escape))
-		{
-			float elapsedTime = (Time.realtimeSinceStartup - homeButtonDownTime);
-			if (elapsedTime < longPressDelay)
-			{
-				// Show an in-game menu.
-			}
-		}
 	}
 
 	IEnumerator RunDemoClosingCo() {

@@ -6,6 +6,9 @@ public class King : SingletonComponent<King> {
 	
 	public static Visitor visitor { get; private set; }
 	public static PlaceManager placeManager { get; private set; }
+	public static Menu menu { get; private set; }
+
+	public GameObject menuPrefab;
 
 	void Awake() {
 		#if UNITY_STANDALONE
@@ -26,6 +29,9 @@ public class King : SingletonComponent<King> {
 		if (visitor == null) {
 			Debug.LogError("King couldn't locate a visitor's instance on the scene.");
 		}
+
+		menu = GameObject.Instantiate(menuPrefab).GetComponent<Menu>();
+		menu.transform.parent = transform;
 	}
 
 	void Start() {

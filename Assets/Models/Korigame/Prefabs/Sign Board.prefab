@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 452896}
   - 33: {fileID: 3309598}
   - 23: {fileID: 2362698}
+  - 65: {fileID: 6525102}
   m_Layer: 0
   m_Name: Sign Board
   m_TagString: Untagged
@@ -27,6 +28,7 @@ GameObject:
   - 4: {fileID: 409448}
   - 33: {fileID: 3350870}
   - 23: {fileID: 2377288}
+  - 65: {fileID: 6546710}
   m_Layer: 0
   m_Name: Chain
   m_TagString: Untagged
@@ -44,6 +46,7 @@ GameObject:
   - 4: {fileID: 449768}
   - 33: {fileID: 3370878}
   - 23: {fileID: 2300064}
+  - 65: {fileID: 6502504}
   m_Layer: 0
   m_Name: Chain
   m_TagString: Untagged
@@ -182,6 +185,42 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 198934}
   m_Mesh: {fileID: 4300020, guid: d83b5fa58951846c988d3b6108025c04, type: 3}
+--- !u!65 &6502504
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 198934}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: .111254036, y: .106088012, z: .439289004}
+  m_Center: {x: 2.34718613e-07, y: -1.23493527e-09, z: .04210262}
+--- !u!65 &6525102
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 118088}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: .0554340817, y: 1.03383803, z: .314056039}
+  m_Center: {x: -1.63018599e-10, y: -1.63018488e-10, z: .00273499638}
+--- !u!65 &6546710
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 141204}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: .111254036, y: .106088012, z: .439289004}
+  m_Center: {x: -3.69996167e-09, y: 5.83697108e-08, z: .0421023816}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

@@ -21,13 +21,18 @@ public class Sight : MonoBehaviour {
 		UpdateTarget();
 		UpdateReticle();
 		UpdateFocus();
+
+		if (Input.GetMouseButtonDown(0))
+		{
+			focusOnTargetWithoutInterruptionSec = 999f;
+		}
 	}
 
 	void OnEnable() {
 		reticle.gameObject.SetActive(true);
 		reticle.SetBody(0);
 
-		OVRTouchpad.TouchHandler += HandleTouchHandler;
+		//OVRTouchpad.TouchHandler += HandleTouchHandler;
 	}
 
 	void OnDisable() {
@@ -35,7 +40,7 @@ public class Sight : MonoBehaviour {
 		hitInfo = new RaycastHit();
 		focusOnTargetWithoutInterruptionSec = 0;
 		
-		OVRTouchpad.TouchHandler -= HandleTouchHandler;
+		//OVRTouchpad.TouchHandler -= HandleTouchHandler;
 	}
 	
 	void HandleTouchHandler (object sender, System.EventArgs e) {
