@@ -5,11 +5,17 @@ using System.Collections.Generic;
 [RequireComponent(typeof(GameInstantiator))]
 public class Place : MonoBehaviour {
 
+	public enum PlaceState {
+		Playable,
+		Transition
+	}
+
 	public Color background = Color.blue;
 	public Color ambientColor = Color.grey;
 	public Color fogColor = Color.grey;
 	public float fogDensity = 0f;
 	public Waypoint vantagePoint;
+	public PlaceState placeState;
 
 	public List<InteractiveThing> interactiveThings { get; private set; }
 

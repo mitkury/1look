@@ -12,6 +12,10 @@ public class Menu : MonoBehaviour {
 	RaycastHit hitInfo;
 	LayerMask layerMask = 1;
 	MenuButton buttonInFocus;
+	PlaysSoundOnRequest soundPlayer;
+
+	Vector3 onShowPosition;
+	Vector3 onHidePosition;
 
 	public void Show() { 
 		SetVisibility(true);
@@ -29,45 +33,56 @@ public class Menu : MonoBehaviour {
 	}
 
 	public void RestartGame() {
-		Debug.Log("Restart");
+		Hide();
+		King.RestartGame();
 	}
 
 	void SetVisibility(bool show) {
 		isVisible = show;
 
-		var onShowPosition = King.visitor.transform.position + Vector3.forward * 1.3f + Vector3.up * 1.88f;
-		var onHidePosition = onShowPosition + Vector3.up * 2f;
-		//body.transform.position = King.visitor.transform.position + Vector3.forward * 1.3f + Vector3.up * 1.88f;
-
-		reticle.SetBodyScale(0f);
-
 		var targetPosition = onShowPosition;
 		var targetScaleY = 1f;
-		var targetEase = LeanTweenType.easeInOutBounce;
-
-		King.visitor.sight.enabled = !show;
+		var targetEase = LeanTweenType.easeOutBounce;
 
 		if (!show) {
+			reticle.SetBodyScale(0f);
+
 			targetPosition = onHidePosition;
 			targetScaleY = 0f;
 			targetEase = LeanTweenType.easeInSine;
-		}
 
-		if (show) {
+			if (King.placeManager.currentPlace != null && King.placeManager.currentPlace.placeState == Place.PlaceState.Playable) {
+				King.visitor.sight.enabled = true;
+			}
+
+			buttonInFocus = null;
+
+			soundPlayer.PlayOneShot(1);
+		} else {
 			body.SetActive(true);
+
+			soundPlayer.PlayOneShot(0);
 		}
 
 		LeanTween.cancel(body);
 
 		LeanTween.move(body, targetPosition, 1f).setOnComplete(delegate() {
 			body.SetActive(show);
+
 		}).setEase(targetEase);
 
-		LeanTween.scaleY(body, targetScaleY, 1f);
+		LeanTween.scaleY(body, targetScaleY, 1f).setEase(targetEase);
 
 	}
 
 	void Start () {
+		soundPlayer = GetComponent<PlaysSoundOnRequest>();
+
+		onShowPosition = King.visitor.transform.position + Vector3.forward * 1.3f + Vector3.up * 1.88f;
+		onHidePosition = onShowPosition + Vector3.up * 1.6f;
+
+		body.transform.position = onHidePosition;
+
 		reticle.SetBody(0);
 
 		body.SetActive(false);
@@ -77,42 +92,61 @@ public class Menu : MonoBehaviour {
 		UpdateVisibility();
 		UpdateMenuReticle();
 
-		if (Input.GetMouseButtonDown(0) && buttonInFocus != null) {
+		if (Input.GetMouseButtonDown(0) && isVisible && buttonInFocus != null) {
 			buttonInFocus.Press(this);
 		}
+
+		#if UNITY_EDITOR
+		if (Input.GetKeyDown(KeyCode.Q)) {
+			System.DateTime now = System.DateTime.Now;
+			string format = "yyyy_MMM-d_HH-mm-ff";
+			string name = now.ToString(format);
+			Application.CaptureScreenshot("Screenshots/"+name+".png", 2);
+		}
+		#endif
 	}
 
 	void UpdateVisibility() {
+
+		if (Input.GetKeyDown(KeyCode.Escape)) {
+			homeButtonDownTime = Time.realtimeSinceStartup;
+		} else if (Input.GetKeyUp(KeyCode.Escape)) {
+			homeButtonDownTime = 0f;
+		}
+
+		float elapsedTime = homeButtonDownTime != 0f ? Time.realtimeSinceStartup - homeButtonDownTime : 0f;
+
+		if (elapsedTime >= longPressDelay) {
+			homeButtonDownTime = 0f;
+			Debug.Log("Open the platform UI");
+			#if UNITY_ANDROID && !UNITY_EDITOR
+			// Show the platform UI
+			OVRPluginEvent.Issue(RenderEventType.PlatformUI);
+			#endif
+		}
+
+		if (isVisible) {
+			if (King.visitor.sight.enabled) {
+				King.visitor.sight.enabled = false;
+			}
+		}
+
+		if (King.placeManager.currentPlace == null || King.placeManager.currentPlace.placeState != Place.PlaceState.Playable) {
+			if (isVisible) {
+				Hide();
+			}
+
+			return;
+		}
+
 		if (!isVisible) {
-			if (Input.GetKeyDown(KeyCode.Escape))
-			{
-				homeButtonDownTime = Time.realtimeSinceStartup;
-			}
-			else if (Input.GetKey(KeyCode.Escape) && (homeButtonDownTime > 0f && (Time.realtimeSinceStartup - homeButtonDownTime) >= longPressDelay))
-			{
-				// reset so something else doesn't trigger afterwards
-				Input.ResetInputAxes();
-				homeButtonDownTime = Time.realtimeSinceStartup;
-				#if UNITY_ANDROID && !UNITY_EDITOR
-				// show the platform UI
-				OVRPluginEvent.Issue(RenderEventType.PlatformUI);
-				#endif
-			}
-			else if (Input.GetKeyUp(KeyCode.Escape))
-			{
-				float elapsedTime = (Time.realtimeSinceStartup - homeButtonDownTime);
-				if (elapsedTime < longPressDelay)
-				{
-					Show();
-				}
-				
-				homeButtonDownTime = 0f;
+			if (Input.GetKeyUp(KeyCode.Escape)) {
+				Show();
 			}
 		} else {
-			if (Input.GetKeyDown(KeyCode.Escape))
-			{
+			if (Input.GetKeyUp(KeyCode.Escape)) {
 				Hide();
-			}		
+			}	
 		}
 	}
 

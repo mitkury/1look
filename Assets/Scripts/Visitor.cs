@@ -32,11 +32,13 @@ public class Visitor : MonoBehaviour {
 	void Awake() {
 		DontDestroyOnLoad(gameObject);
 		//prevPosition = transform.position;
+
+		sight = GetComponent<Sight>();
+		inventory = GetComponentInChildren<Inventory>();
 	}
 	
 	void Start () {
-		sight = GetComponent<Sight>();
-		inventory = GetComponentInChildren<Inventory>();
+
 
 		//regularCameraRig.gameObject.SetActive(false);
 		//vrCameraRig.gameObject.SetActive(false);

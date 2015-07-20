@@ -7,16 +7,20 @@ public class Wine : Interaction {
 	InteractiveThing interactiveThing;
 
 	public string targetPlaceName = "Darkness";
-	public float moveAfterSec = 3f;
+	public float activateAfterSec = 35f;
+	public float goToSleepAfterSec = 3f;
 	public GameObject goForActivation;
 
 	void Start () {
 		interactiveThing = GetComponent<InteractiveThing>();
 		interactiveThing.isAbleToInteract = false;
+		King.visitor.sight.enabled = false;
+
+		StartCoroutine(ActivateAfterSec(activateAfterSec));
 	}
 
 	void Update() {
-		if (!particlesAreActivated && interactiveThing.isAbleToInteract)
+		if (!particlesAreActivated && (interactiveThing.isAbleToInteract || King.visitor.sight.enabled))
 			ActivateParticles();
 	}
 
@@ -26,7 +30,14 @@ public class Wine : Interaction {
 		if (goForActivation != null)
 			goForActivation.SetActive(true);
 
+		interactiveThing.isAbleToInteract = true;
 		King.visitor.sight.enabled = true;
+	}
+
+	IEnumerator ActivateAfterSec(float time) {
+		yield return new WaitForSeconds(time);
+
+		interactiveThing.isAbleToInteract = true;
 	}
 
 	IEnumerator GoToSleepInSecCo(float time) {
@@ -43,6 +54,6 @@ public class Wine : Interaction {
 	}
 
 	public void OnItemTakeByVisitor(ObtainableItem item) {
-		StartCoroutine(GoToSleepInSecCo(moveAfterSec));
+		StartCoroutine(GoToSleepInSecCo(goToSleepAfterSec));
 	}
 }

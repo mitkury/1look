@@ -10,6 +10,37 @@ public class King : SingletonComponent<King> {
 
 	public GameObject menuPrefab;
 
+	public static bool isInVRMode {
+		get {
+			#if UNITY_EDITOR || UNITY_STANDALONE
+			return false;
+			#endif
+			
+			return true;
+		}
+	}
+
+	bool isRestarting;
+
+	public static void RestartGame() {
+		Instance.StartCoroutine(Instance.RestartGameCo());
+	}
+
+	IEnumerator RestartGameCo() {
+		if (isRestarting)
+			yield break;
+
+		isRestarting = true;
+
+		King.visitor.screenFader.FadeIn(2f);
+		LeanTween.value(gameObject, delegate(float value) { 
+			AudioListener.volume = value;
+		}, 1f, 0f, 2f);
+		yield return new WaitForSeconds(2.1f);
+
+		Application.LoadLevel(0);
+	}
+
 	void Awake() {
 		#if UNITY_STANDALONE
 		Cursor.visible = false;
@@ -17,7 +48,7 @@ public class King : SingletonComponent<King> {
 		#endif
 
 		#if UNITY_EDITOR
-		QualitySettings.antiAliasing = 4;
+		QualitySettings.antiAliasing = 8;
 		QualitySettings.vSyncCount = 1;
 		#endif
 
@@ -158,15 +189,5 @@ public class King : SingletonComponent<King> {
 		}
 	}
 	#endif
-
-	public static bool isInVRMode {
-		get {
-			#if UNITY_EDITOR || UNITY_STANDALONE
-			return false;
-			#endif
-
-			return true;
-		}
-	}
 
 }

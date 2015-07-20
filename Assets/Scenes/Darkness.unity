@@ -1064,6 +1064,7 @@ MonoBehaviour:
   fogColor: {r: .5, g: .5, b: .5, a: 1}
   fogDensity: 0
   vantagePoint: {fileID: 0}
+  placeState: 1
 --- !u!114 &2102392843
 MonoBehaviour:
   m_ObjectHideFlags: 0
