@@ -57,6 +57,7 @@ public class King : SingletonComponent<King> {
 		placeManager = GetComponent<PlaceManager>();
 		Application.targetFrameRate = 60;
 
+
 		if (visitor == null) {
 			Debug.LogError("King couldn't locate a visitor's instance on the scene.");
 		}
